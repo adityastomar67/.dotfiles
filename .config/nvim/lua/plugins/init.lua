@@ -17,6 +17,7 @@ return packer.startup(function()
    use "nvim-lua/plenary.nvim"
    use "chiel92/vim-autoformat"
    use "glepnir/dashboard-nvim"
+   use "rafamadriz/friendly-snippets"
 
    use {
       "wbthomason/packer.nvim",
