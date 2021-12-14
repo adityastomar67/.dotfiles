@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+clear
+for (( ; ; ))
+do
+    echo -e "\e[1mCurrently Downloading:\e[0m"
+    echo -e "---------------------------------------"
+    transmission-remote -l
+    sleep $1
+    clear
+done

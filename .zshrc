@@ -1,14 +1,47 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Basic stff 
+# source ~/.config/zsh/.zprofile #.zshenv stuff
+export TERM="xterm-256color"
+export HISTFILE=~/.config/zsh/.zsh_history
+
+export EDITOR='nvim'
+export TERMINAL='alacritty'
+export BROWSER='firefox'
+export MANPAGER='nvim +Man!'
+
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh 
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="spaceship"
+
+##Theme.sh Config
+#if command -v theme.sh > /dev/null; then
+#	[ -e ~/.theme_history ] && theme.sh "$(theme.sh -l|tail -n1)"
+#
+#	# Optional
+#
+#	# Bind C-o to the last theme.
+#	last_theme() {
+#		theme.sh "$(theme.sh -l|tail -n2|head -n1)"
+#	}
+#
+#	zle -N last_theme
+#	bindkey '^O' last_theme
+#
+#	alias th='theme.sh -i'
+#
+#	# Interactively load a light theme
+#	alias thl='theme.sh --light -i'
+#
+#	# Interactively load a dark theme
+#	alias thd='theme.sh --dark -i'
+#fi
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME="spaceship"
@@ -66,6 +99,52 @@ DISABLE_AUTO_UPDATE="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# Basic zsh settings
+PATH=$PATH:$HOME/.scripts #making my scripts run without typing the whole path
+bindkey -v # vi-mode
+autoload -Uz compinit && compinit #need the next two lines for case insensitive tab completion
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+
+# # Prompt Settings
+declare -a PROMPTS
+PROMPTS=(    
+    "≫"
+    "()"
+    "▶"
+    ">>>"
+    "-->"
+    "➤"
+    "➥"
+    "➧"
+    "➩"
+    "➯"
+    "➰"
+    "➱"
+    "➲"
+    "➳"
+    "➵"
+    "➸"
+    "➺"
+    "➼"
+    "➾"
+    "➿"
+    "⟁"
+    "⟂"
+    "⟄"
+)
+RANDOM=$$$(date +%s)
+ignition=${PROMPTS[$RANDOM % ${#RANDOM[*]}+1]}
+PROMPT='%F{yellow}%1~%f %F{green}$ignition%f '
+
+# ## Git Settings
+autoload -Uz vcs_info
+precmd_vcs_info() { vcs_info }
+precmd_functions+=( precmd_vcs_info )
+setopt prompt_subst
+RPROMPT=\$vcs_info_msg_0_
+zstyle ':vcs_info:git:*' formats '%F{yellow}(%b)%r%f'
+zstyle ':vcs_info:*' enable git
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -73,7 +152,7 @@ DISABLE_AUTO_UPDATE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(web-search git zsh-autosuggestions)
  
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -162,6 +241,23 @@ fi
 IFS=$SAVEIFS
 
 ### ALIASES ###
+## App launchers
+alias tsm='transmission-remote'
+alias pvpn='protonvpn-cli'
+alias s='startx'
+alias f='ranger'
+alias t='bpytop'
+alias tty='tty-clock -C6 -c -t'
+alias pac='sudo pacman'
+alias weather='clear && curl wttr.in'
+alias shot='flameshot gui'
+alias kill='killall -q'
+alias suck='rm -f config.h ; sudo make install'
+alias wal='feh --bg-fill -z'
+alias script='node awc.js'
+alias lock='xscreensaver-command -lock'
+alias handbrake='ghb'
+
 # omz
 alias zshconfig="geany ~/.zshrc"
 alias ohmyzsh="thunar ~/.oh-my-zsh"
@@ -325,6 +421,22 @@ alias tips='lbrynet txo spend --type=support --is_not_my_input --blocking'
 # Thinkorswim
 alias tos="~/thinkorswim/thinkorswim"
 
+## Terminal maintenance
+alias rec='gpg --recv-keys --keyserver hkp://pgp.mit.edu'
+alias todo='cat ~/Dropbox/writing/notes/To-do.md'
+alias todoe='nvim ~/Dropbox/writing/notes/To-do.md'
+alias reset='cd ~; clear; source ~/.config/zsh/.zprofile'
+alias fetch='clear && neofetch && fortune ~/.scripts/quotes/quotes'
+
+## Journal launching aliases
+alias j1='cd ~/Dropbox/writing/journal; nvim volume-1.md'
+alias j='date +"%R - %a, %B %d, %Y" | xclip -select clipboard; cd ~/Dropbox/writing/journal; nvim volume-6.md'
+alias jj='date +"%R - %a, %B %d, %Y" | xclip -select clipboard; cd ~/Dropbox/writing/journal; vim volume-6.md'
+
+## Snippets
+alias ddate='date +"%R - %a, %B %d, %Y" | xclip -select clipboard && date +"%R - %a, %B %d, %Y"' 
+alias dday='date +"%Y.%m.%d - " | xclip -select clipboard ; date +"%Y.%m.%d"'
+
 # force all kakoune windows into one session
 alias kak="/usr/bin/kak -c mysession"
 alias kaks="/usr/bin/kak -s mysession"
@@ -332,7 +444,10 @@ alias kakd="/usr/bin/kak -d -s mysession &"
 
 # Additional Aliases
 alias dsa='cd /home/adi/Study/DS\ Algo/ && v practice.cpp'
-alias work='cd /home/adi/Workspace/ && v'
+alias work='v /home/adi/Workspace/ '
 alias src='cd ~/ && source .zshrc'
 
 export PATH=~/.local/bin:$PATH
+
+# Calling scrpits
+motivate
