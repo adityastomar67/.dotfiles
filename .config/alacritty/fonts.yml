@@ -4,18 +4,18 @@
 # Font configuration
 font:
   # Normal (roman) font face
-  normal:
-    family: "Fira Code"
+  normal: "Hack Nerd Font Mono"
+    family: 
     style: Regular
 
   # Bold font face
   bold:
-    family: "Fira Code"
+    family: "Hack Nerd Font Mono"
     style: Bold
 
   # Italic font face
   italic:
-    family: "Fira Code"
+    family: "Hack Nerd Font Mono"
     style: Italic
 
   # Bold italic font face

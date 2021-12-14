@@ -11,7 +11,7 @@ scrolling:
   history: 10000
   multiplier: 3
 background_opacity: .7
-window.dynamic_title: true
+window.dynamic_title: true 
 
 # Font Customization
 font:
@@ -85,3 +85,5 @@ cursor:
 
 key_bindings:
   - { key: N, mods: Control, action: SpawnNewInstance }
+
+live_config_reload: true

@@ -45,11 +45,11 @@ M.options = {
 M.ui = {
    hl_override = "", -- path of your file that contains highlights
    italic_comments = false,
-   theme = "onedark", -- default theme
+   theme = "gruvbox", -- default theme
 
    -- Change terminal bg to nvim theme's bg color so it'll match well
    -- For Ex : if you have onedark set in nvchad, set onedark's bg color on your terminal
-   transparency = false,
+   transparency = true,
 }
 
 ---- PLUGIN OPTIONS ----
