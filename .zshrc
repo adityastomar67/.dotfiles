@@ -447,6 +447,7 @@ alias kakd="/usr/bin/kak -d -s mysession &"
 alias dsa='cd /home/adi/Study/DS\ Algo/ && v practice.cpp'
 alias work='v /home/adi/Workspace/ '
 alias src='cd ~/ && source .zshrc'
+alias fetch='clear && neofetch --ascii ~/.config/ascii-neofetch.txt'
 
 export PATH=~/.local/bin:$PATH
 
