@@ -108,31 +108,14 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 # # Prompt Settings
 declare -a PROMPTS
 PROMPTS=(    
-    "≫"
-    "○"
-    "❍"
-    "▶"
-    ">>>"
-    "-->"
-    "➤"
-    "➥"
-    "➧"
-    "➩"
-    "➯"
-    "➰"
-    "➱"
-    "➲"
-    "➳"
-    "➵"
-    "➸"
-    "➺"
-    "➼"
-    "➾"
-    "➿"
-    "⟁"
-    "⟂"
-    "⟄"
-)
+     "≫"
+     "○"
+     "❍"
+     "▶"
+     ">>>"
+     "-->"
+     "➤"
+   )
 RANDOM=$$$(date +%s)
 ignition=${PROMPTS[$RANDOM % ${#RANDOM[*]}+1]}
 PROMPT='%F{yellow}%1~%f %F{green}$ignition%f '
