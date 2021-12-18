@@ -1,18 +1,22 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Basic stff 
+# Basic stuff 
 # source ~/.config/zsh/.zprofile #.zshenv stuff
+
+#################### EXPORTS:BEGIN ####################
 export TERM="xterm-256color"
 export HISTFILE=~/.config/zsh/.zsh_history
-
+export PATH=~/.local/bin:$PATH
 export EDITOR='nvim'
 export TERMINAL='alacritty'
 export BROWSER='firefox'
 export MANPAGER='nvim +Man!'
+export ZSH=$HOME/.oh-my-zsh  # Path to your oh-my-zsh installation.
+#################### EXPORTS:END ####################
 
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh 
+# Directory
+mkdir -p $HOME/Downloads/git-repos
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -105,7 +109,7 @@ bindkey -v # vi-mode
 autoload -Uz compinit && compinit #need the next two lines for case insensitive tab completion
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
-# # Prompt Settings
+# Prompt Settings
 declare -a PROMPTS
 PROMPTS=(    
      "❍"
@@ -118,7 +122,7 @@ RANDOM=$$$(date +%s)
 ignition=${PROMPTS[$RANDOM % ${#RANDOM[*]}+1]}
 PROMPT='%F{green}$ignition%f %F{yellow}%1~%f ' 
 
-# ## Git Settings
+# Git Settings
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
@@ -130,9 +134,17 @@ zstyle ':vcs_info:*' enable git
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(web-search git zsh-autosuggestions)
+plugins=(
+    zsh-autosuggestions 
+    git 
+    history 
+    sudo 
+    web-search 
+    copydir 
+    copyfile 
+    copybuffer 
+    dirhistory
+  )
 
 # source $ZSH/oh-my-zsh.sh
 
@@ -157,16 +169,10 @@ plugins=(web-search git zsh-autosuggestions)
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # On-demand rehash
 zshcache_time="$(date +%s%N)"
-
 autoload -Uz add-zsh-hook
-
 rehash_precmd() {
   if [[ -a /var/cache/zsh/pacman ]]; then
     local paccache_time="$(date -r /var/cache/zsh/pacman +%s%N)"
@@ -176,13 +182,12 @@ rehash_precmd() {
     fi
   fi
 }
-
 add-zsh-hook -Uz precmd rehash_precmd
 
-### Function extract for common file formats ###
+#################### FUNCTIONS:BEGIN ####################
+# Function extract for common file formats
 SAVEIFS=$IFS
 IFS=$(echo -en "\n\b")
-
 function extract {
  if [ -z "$1" ]; then
     # display usage if no parameters given
@@ -219,33 +224,7 @@ function extract {
     done
 fi
 }
-
 IFS=$SAVEIFS
-
-### ALIASES ###
-## App launchers
-alias tsm='transmission-remote'
-alias pvpn='protonvpn-cli'
-alias s='startx'
-alias f='ranger'
-alias t='bpytop'
-alias tty='tty-clock -C6 -c -t'
-alias pac='sudo pacman'
-alias weather='clear && curl wttr.in'
-alias shot='flameshot gui'
-alias kill='killall -q'
-alias suck='rm -f config.h ; sudo make install'
-alias wal='feh --bg-fill -z'
-alias script='node awc.js'
-alias lock='xscreensaver-command -lock'
-alias handbrake='ghb'
-
-# omz
-alias zshconfig="geany ~/.zshrc"
-alias ohmyzsh="thunar ~/.oh-my-zsh"
-
-# root privileges
-alias doas="doas --"
 
 # navigation
 up () {
@@ -267,93 +246,161 @@ up () {
   fi
 }
 
-# navigation
+# Create a new React App
+react-app() {
+  npx create-react-app $1
+  cd $1
+  npm i -D eslint
+  npm i -D eslint-config-prettier eslint-plugin-prettier
+  npm i -D eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks
+  cp "${HOME}/.eslintrc.json" .
+  cp "${HOME}/.prettierrc" .
+  echo $1 > README.md
+  rm -rf yarn.lock
+  cd src
+  rm -f App.css App.test.js index.css logo.svg serviceWorker.js
+  mkdir components views 
+  git add -A
+  git commit -m "Initial commit."
+  cd ..
+  clear
+  code .
+}
+
+editZsh(){
+    lvim ~/.zshrc
+    source ~/.zshrc
+    backupToDrive ~/.zshrc
+    echo "New .zshrc sourced."
+}
+
+backupToDrive(){
+    cp "$1" /Users/<username>/Google\ Drive/Config/.zshrc
+    echo "New .zshrc backed up to Google Drive."
+}
+
+# function for find strings in files
+fif() {
+    findr --type f $1|xargs grep -n -i  $2
+}
+#################### FUNCTIONS:END ####################
+
+#################### ALIASES:BEGIN ####################
+## Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+## App launchers
+# alias tsm='transmission-remote'
+# alias pvpn='protonvpn-cli'
+# alias s='startx'
+# alias f='ranger'
+# alias t='bpytop'
+# alias tty='tty-clock -C6 -c -t'
+# alias pac='sudo pacman'
+# alias weather='clear && curl wttr.in'
+# alias shot='flameshot gui'
+# alias kill='killall -q'
+# alias suck='rm -f config.h ; sudo make install'
+# alias wal='feh --bg-fill -z'
+# alias script='node awc.js'
+# alias lock='xscreensaver-command -lock'
+# alias handbrake='ghb'
+
+## omz
+# alias zshconfig="vim ~/.zshrc"
+# alias ohmyzsh="thunar ~/.oh-my-zsh"
+
+## root privileges
+# alias doas="doas --"
+
+## navigation
 alias ..='cd ..'
 alias ...='cd ../..'
 alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 
-# vim and emacs
+## vim and emacs
 alias v="lvim"
-alias em="/usr/bin/emacs -nw"
-alias emacs="emacsclient -c -a 'emacs'"
-alias doomsync="~/.emacs.d/bin/doom sync"
-alias doomdoctor="~/.emacs.d/bin/doom doctor"
-alias doomupgrade="~/.emacs.d/bin/doom upgrade"
-alias doompurge="~/.emacs.d/bin/doom purge"
+# alias em="/usr/bin/emacs -nw"
+# alias emacs="emacsclient -c -a 'emacs'"
+# alias doomsync="~/.emacs.d/bin/doom sync"
+# alias doomdoctor="~/.emacs.d/bin/doom doctor"
+# alias doomupgrade="~/.emacs.d/bin/doom upgrade"
+# alias doompurge="~/.emacs.d/bin/doom purge"
 
-# bat
+## bat
 # alias cat='bat'
 
-# broot
-alias br='broot -dhp'
-alias bs='broot --sizes'
+## broot
+# alias br='broot -dhp'
+# alias bs='broot --sizes'
 
-# Changing "ls" to "exa"
+## Changing "ls" to "exa"
 # alias ls='exa -al --color=always --group-directories-first' # my preferred listing
 # alias la='exa -a --color=always --group-directories-first'  # all files and dirs
 # alias ll='exa -l --color=always --group-directories-first'  # long format
 # alias lt='exa -aT --color=always --group-directories-first' # tree listing
 # alias l.='exa -a | egrep "^\."'
 
-# pacman and yay
+## pacman and yay
 alias update='sudo pacman -Syu'                  # update All
-alias pacsyu='sudo pacman -Syyu'                 # update only standard pkgs
-alias yaysua='yay -Sua --noconfirm'              # update only AUR pkgs (yay)
-alias yaysyu='yay -Syu --noconfirm'              # update standard pkgs and AUR pkgs (yay)
-alias parsua='paru -Sua --noconfirm'             # update only AUR pkgs (paru)
-alias parsyu='paru -Syu --noconfirm'             # update standard pkgs and AUR pkgs (paru)
+# alias pacsyu='sudo pacman -Syyu'                 # update only standard pkgs
+# alias yaysua='yay -Sua --noconfirm'              # update only AUR pkgs (yay)
+# alias yaysyu='yay -Syu --noconfirm'              # update standard pkgs and AUR pkgs (yay)
+# alias parsua='paru -Sua --noconfirm'             # update only AUR pkgs (paru)
+# alias parsyu='paru -Syu --noconfirm'             # update standard pkgs and AUR pkgs (paru)
 alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
 alias cleanup='sudo pacman -Rns (pacman -Qtdq)'  # remove orphaned packages
 
-#ptSh
+## ptSh
 alias ls='ptls -la'
 alias me-in=ptpwd
 alias mkdir=ptmkdir
 alias touch=pttouch
 
-# get fastest mirrors
-alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
-alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
-alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
-alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
+## get fastest mirrors
+# alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
+# alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
+# alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
+# alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
 
-# Colorize grep output (good for log files)
+## Colorize grep output (good for log files)
 alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
+# alias egrep='egrep --color=auto'
+# alias fgrep='fgrep --color=auto'
 
-# confirm before overwriting something
+## confirm before overwriting something
 alias cp="cp -i"
 alias mv='mv -i'
 alias rm='rm -i'
 
-# adding flags
-alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
-alias lynx='lynx -cfg=~/.lynx/lynx.cfg -lss=~/.lynx/lynx.lss -vikeys'
-alias vifm='./.config/vifm/scripts/vifmrun'
-alias ncmpcpp='ncmpcpp ncmpcpp_directory=$HOME/.config/ncmpcpp/'
-alias mocp='mocp -M "$XDG_CONFIG_HOME"/moc -O MOCDir="$XDG_CONFIG_HOME"/moc'
+## adding flags
+# alias df='df -h'                          # human-readable sizes
+# alias free='free -m'                      # show sizes in MB
+# alias lynx='lynx -cfg=~/.lynx/lynx.cfg -lss=~/.lynx/lynx.lss -vikeys'
+# alias vifm='./.config/vifm/scripts/vifmrun'
+# alias ncmpcpp='ncmpcpp ncmpcpp_directory=$HOME/.config/ncmpcpp/'
+# alias mocp='mocp -M "$XDG_CONFIG_HOME"/moc -O MOCDir="$XDG_CONFIG_HOME"/moc'
 
 ## get top process eating memory
-alias psmem='ps auxf | sort -nr -k 4'
-alias psmem10='ps auxf | sort -nr -k 4 | head -10'
+# alias psmem='ps auxf | sort -nr -k 4'
+# alias psmem10='ps auxf | sort -nr -k 4 | head -10'
 
 ## get top process eating cpu ##
-alias pscpu='ps auxf | sort -nr -k 3'
-alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
+# alias pscpu='ps auxf | sort -nr -k 3'
+# alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
 
 # Merge Xresources
-alias merge='xrdb -merge ~/.Xresources'
+# alias merge='xrdb -merge ~/.Xresources'
 
 # git
 alias addup='git add -u'
 alias addall='git add .'
 alias branch='git branch'
 alias checkout='git checkout'
-alias clone='git clone'
+alias clone='cd $HOME/Downloads/git-repos/ && git clone'
 alias commit='git commit -m'
 alias fetch='git fetch'
 alias pull='git pull origin'
@@ -362,77 +409,80 @@ alias stat='git status'  # 'status' is protected name so using 'stat' instead
 alias tag='git tag'
 alias newtag='git tag -a'
 
-# get error messages from journalctl
-alias jctl="journalctl -p 3 -xb"
+## get error messages from journalctl
+# alias jctl="journalctl -p 3 -xb"
 
-# gpg encryption
-# verify signature for isos
-alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
-# receive the key of a developer
-alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
+## gpg encryption
+## verify signature for isos
+# alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
+## receive the key of a developer
+# alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
 
-# youtube-dl
-alias yta-aac="youtube-dl --extract-audio --audio-format aac "
-alias yta-best="youtube-dl --extract-audio --audio-format best "
-alias yta-flac="youtube-dl --extract-audio --audio-format flac "
-alias yta-m4a="youtube-dl --extract-audio --audio-format m4a "
-alias yta-mp3="youtube-dl --extract-audio --audio-format mp3 "
-alias yta-opus="youtube-dl --extract-audio --audio-format opus "
-alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis "
-alias yta-wav="youtube-dl --extract-audio --audio-format wav "
-alias ytv-best="youtube-dl -f bestvideo+bestaudio "
+## youtube-dl
+# alias yta-aac="youtube-dl --extract-audio --audio-format aac "
+# alias yta-best="youtube-dl --extract-audio --audio-format best "
+# alias yta-flac="youtube-dl --extract-audio --audio-format flac "
+# alias yta-m4a="youtube-dl --extract-audio --audio-format m4a "
+# alias yta-mp3="youtube-dl --extract-audio --audio-format mp3 "
+# alias yta-opus="youtube-dl --extract-audio --audio-format opus "
+# alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis "
+# alias yta-wav="youtube-dl --extract-audio --audio-format wav "
+# alias ytv-best="youtube-dl -f bestvideo+bestaudio "
 
-# switch between shells
-# I do not recommend switching default SHELL from bash.
+## switch between shells
+## I do not recommend switching default SHELL from bash.
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
-alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
+# alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 
-# bare git repo alias for dotfiles
-alias config="/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME"
+## bare git repo alias for dotfiles
+# alias config="/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME"
 
-# termbin
-alias tb="nc termbin.com 9999"
+## termbin
+# alias tb="nc termbin.com 9999"
 
-# the terminal rickroll
-alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+## the terminal rickroll
+# alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
-# Unlock LBRY tips
-alias tips='lbrynet txo spend --type=support --is_not_my_input --blocking'
+## Unlock LBRY tips
+# alias tips='lbrynet txo spend --type=support --is_not_my_input --blocking'
 
-# Thinkorswim
-alias tos="~/thinkorswim/thinkorswim"
+## Thinkorswim
+# alias tos="~/thinkorswim/thinkorswim"
 
 ## Terminal maintenance
-alias rec='gpg --recv-keys --keyserver hkp://pgp.mit.edu'
-alias todo='cat ~/Dropbox/writing/notes/To-do.md'
-alias todoe='nvim ~/Dropbox/writing/notes/To-do.md'
-alias reset='cd ~; clear; source ~/.config/zsh/.zprofile'
-alias quote='clear && neofetch && fortune ~/.scripts/quotes/quotes'
+# alias rec='gpg --recv-keys --keyserver hkp://pgp.mit.edu'
+# alias todo='cat ~/Dropbox/writing/notes/To-do.md'
+# alias todoe='nvim ~/Dropbox/writing/notes/To-do.md'
+# alias reset='cd ~; clear; source ~/.config/zsh/.zprofile'
+# alias quote='clear && neofetch && fortune ~/.scripts/quotes/quotes'
 
 ## Journal launching aliases
-alias j1='cd ~/Dropbox/writing/journal; nvim volume-1.md'
-alias j='date +"%R - %a, %B %d, %Y" | xclip -select clipboard; cd ~/Dropbox/writing/journal; nvim volume-6.md'
-alias jj='date +"%R - %a, %B %d, %Y" | xclip -select clipboard; cd ~/Dropbox/writing/journal; vim volume-6.md'
+# alias j1='cd ~/Dropbox/writing/journal; nvim volume-1.md'
+# alias j='date +"%R - %a, %B %d, %Y" | xclip -select clipboard; cd ~/Dropbox/writing/journal; nvim volume-6.md'
+# alias jj='date +"%R - %a, %B %d, %Y" | xclip -select clipboard; cd ~/Dropbox/writing/journal; vim volume-6.md'
 
 ## Snippets
-alias ddate='date +"%R - %a, %B %d, %Y" | xclip -select clipboard && date +"%R - %a, %B %d, %Y"' 
-alias dday='date +"%Y.%m.%d - " | xclip -select clipboard ; date +"%Y.%m.%d"'
+# alias ddate='date +"%R - %a, %B %d, %Y" | xclip -select clipboard && date +"%R - %a, %B %d, %Y"' 
+# alias dday='date +"%Y.%m.%d - " | xclip -select clipboard ; date +"%Y.%m.%d"'
 
-# force all kakoune windows into one session
-alias kak="/usr/bin/kak -c mysession"
-alias kaks="/usr/bin/kak -s mysession"
-alias kakd="/usr/bin/kak -d -s mysession &"
+## force all kakoune windows into one session
+# alias kak="/usr/bin/kak -c mysession"
+# alias kaks="/usr/bin/kak -s mysession"
+# alias kakd="/usr/bin/kak -d -s mysession &"
 
-# Additional Aliases
+## Additional Aliases
 alias dsa='cd /home/adi/Study/DS\ Algo/ && v practice.cpp'
 alias work='v /home/adi/Workspace/ '
 alias src='cd ~/ && source .zshrc'
 alias fetch='clear && neofetch --ascii ~/.config/ascii-neofetch.txt'
 alias c='command'
+alias findr='\fd'
 
-export PATH=~/.local/bin:$PATH
+## opens a random pornhub video
+alias porn='mpv "http://www.pornhub.com/random"'
+
+#################### ALIASES:END ####################
 
 # Calling scrpits
-motivate
-
+clear && motivate
