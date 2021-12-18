@@ -75,7 +75,7 @@ DISABLE_AUTO_UPDATE="true"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -108,8 +108,6 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 # # Prompt Settings
 declare -a PROMPTS
 PROMPTS=(    
-     "≫"
-     "○"
      "❍"
      "▶"
      ">>>"
@@ -118,7 +116,7 @@ PROMPTS=(
    )
 RANDOM=$$$(date +%s)
 ignition=${PROMPTS[$RANDOM % ${#RANDOM[*]}+1]}
-PROMPT='%F{yellow}%1~%f %F{green}$ignition%f '
+PROMPT='%F{green}$ignition%f %F{yellow}%1~%f ' 
 
 # ## Git Settings
 autoload -Uz vcs_info
@@ -135,7 +133,7 @@ zstyle ':vcs_info:*' enable git
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(web-search git zsh-autosuggestions)
- 
+
 # source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -410,7 +408,7 @@ alias rec='gpg --recv-keys --keyserver hkp://pgp.mit.edu'
 alias todo='cat ~/Dropbox/writing/notes/To-do.md'
 alias todoe='nvim ~/Dropbox/writing/notes/To-do.md'
 alias reset='cd ~; clear; source ~/.config/zsh/.zprofile'
-alias fetch='clear && neofetch && fortune ~/.scripts/quotes/quotes'
+alias quote='clear && neofetch && fortune ~/.scripts/quotes/quotes'
 
 ## Journal launching aliases
 alias j1='cd ~/Dropbox/writing/journal; nvim volume-1.md'
@@ -437,3 +435,4 @@ export PATH=~/.local/bin:$PATH
 
 # Calling scrpits
 motivate
+

@@ -4,23 +4,23 @@
 # Font configuration
 font:
   # Normal (roman) font face
-  normal: "Hack Nerd Font Mono"
-    family: 
+  normal:
+    family: Fira Code
     style: Regular
 
   # Bold font face
   bold:
-    family: "Hack Nerd Font Mono"
+    family: Fira Code
     style: Bold
 
   # Italic font face
   italic:
-    family: "Hack Nerd Font Mono"
+    family: Fira Code
     style: Italic
 
   # Bold italic font face
   bold_italic:
-    family: "Fira Code"
+    family: Fira Code
     style: Bold Italic
 
   # Point size
