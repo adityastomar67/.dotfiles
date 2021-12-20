@@ -1,3 +1,3 @@
 #!/bin/sh
 # feh --no-fehbg --bg-fill '/usr/share/backgrounds/astra.jpg'
-feh --no-fehbg --bg-fill "$HOME/.config/wall/wall25.jpg"
+feh --no-fehbg --bg-fill "$HOME/.config/wall/wall$((1 + $RANDOM % 26)).jpg"
