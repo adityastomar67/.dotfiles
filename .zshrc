@@ -23,17 +23,23 @@ export ZSH=$HOME/.oh-my-zsh  # Path to your oh-my-zsh installation.
 # Directory
 mkdir -p $HOME/Downloads/git-repos
 
+############### THEMES FOR ZSH ###############
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
-##### THEMES FOR ZSH ######
 # ZSH_THEME="daveverwer"
 # ZSH_THEME="robbyrussell"
 # ZSH_THEME="agnoster"   	# powerline
 # ZSH_THEME="dstufft"
 ZSH_THEME="spaceship"
+
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME="spaceship"
+# a theme from this variable instead of looking in $ZSH/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 ##Theme.sh Config
 #if command -v theme.sh > /dev/null; then
@@ -57,12 +63,7 @@ ZSH_THEME="spaceship"
 #	# Interactively load a dark theme
 #	alias thd='theme.sh --dark -i'
 #fi
-
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME="spaceship"
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+############### END ###############
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -295,6 +296,7 @@ fif() {
     findr --type f $1|xargs grep -n -i  $2
 }
 #################### FUNCTIONS:END ####################
+
 ## Aliases
 source ~/.aliases
 
