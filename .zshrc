@@ -21,7 +21,7 @@ export ZSH=$HOME/.oh-my-zsh  # Path to your oh-my-zsh installation.
 #################### EXPORTS:END ####################
 
 # Directory
-mkdir -p $HOME/Downloads/git-repos
+[ ! -d "$HOME/Downloads/git-repos" ] && mkdir $HOME/Downloads/git-repos
 
 ############### THEMES FOR ZSH ###############
 # Set name of the theme to load --- if set to "random", it will
@@ -309,7 +309,7 @@ bindkey -v
 # colorscript --exec alpha
 # colorscript --exec blocks1
 # colorscript --exec crunch
-colorscript --exec crunchbang-mini
+# colorscript --exec crunchbang-mini
 # colorscript --exec dna
 # colorscript --exec elfman
 # colorscript --exec faces

@@ -4,13 +4,13 @@ window:
     columns: 140
     lines: 38
   padding:
-    x: 20
-    y: 20
+    x: 10
+    y: 10
   decorations: full #Still won't show in a window manger, but will in a desktop environment
 scrolling:
   history: 10000
   multiplier: 3
-background_opacity: .7
+background_opacity: .8
 window.dynamic_title: true 
 
 # Font Customization
@@ -79,7 +79,7 @@ colors:
 cursor:
   style:
     shape: Beam
-    blinking: off
+    blinking: on
     blink-interval: 750
     unfocused_hollow: true
 
