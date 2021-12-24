@@ -13,9 +13,10 @@
 export TERM="xterm-256color"
 export HISTFILE=~/.config/zsh/.zsh_history
 export PATH=~/.local/bin:$PATH
+export PATH=~/.scripts:$PATH #making my scripts run without typing the whole path
 export EDITOR='nvim'
 export TERMINAL='alacritty'
-export BROWSER='firefox'
+export BROWSER='chrome'
 export MANPAGER='nvim +Man!'
 export ZSH=$HOME/.oh-my-zsh  # Path to your oh-my-zsh installation.
 #################### EXPORTS:END ####################
@@ -116,7 +117,7 @@ ENABLE_CORRECTION="true"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Basic zsh settings
-PATH=$PATH:$HOME/.scripts #making my scripts run without typing the whole path
+# PATH=$PATH:$HOME/.scripts #making my scripts run without typing the whole path
 bindkey -v # vi-mode
 autoload -Uz compinit && compinit #need the next two lines for case insensitive tab completion
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
