@@ -3,7 +3,7 @@
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 ## App launchers
-alias tsm='transmission-cli --no-downlimit'
+alias tsm='transmission-cli -D -w ~/Downloads/torrents'
 # alias pvpn='protonvpn-cli'
 # alias s='startx'
 # alias f='ranger'

@@ -22,7 +22,7 @@ bottom = false
 fixed-center = true
 
 width = 100%
-height = 24
+height = 15
 offset-x = 0
 offset-y = 0
 
@@ -47,9 +47,11 @@ font-1 = "Iosevka Nerd Font:size=12;3"
 font-2 = "google\-mdi:size=12;3"
 font-3 = "Iosevka:style=bold:"size=12;3"
 
-modules-left = mod sep bspwm
+# modules-left = mod sep bspwm
+modules-left = bspwm
 modules-center = mpd
-modules-right = volume sep backlight sep network sep battery sep date
+# modules-right =voume sep backlight sep network sep battery sep date
+modules-right = network sep date
 
 separator =
 spacing = 0
@@ -62,7 +64,7 @@ locale =
 tray-position = right
 tray-detached = false
 tray-maxsize = 16
-tray-transparent = false
+tray-transparent = true 
 tray-background = ${color.BACKGROUND}
 tray-offset-x = 0
 tray-offset-y = 0

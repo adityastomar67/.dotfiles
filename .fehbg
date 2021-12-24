@@ -1,3 +1,6 @@
 #!/bin/sh
-# feh --no-fehbg --bg-fill '/usr/share/backgrounds/astra.jpg'
-feh --no-fehbg --bg-fill "$HOME/.config/wall/wall$((1 + $RANDOM % 26)).jpg"
+
+count=$(command ls ~/.config/wall | grep "wall[0-9]*.jpg" | wc -l)
+feh --no-fehbg --bg-fill "$HOME/.config/wall/wall$((1 + RANDOM%$count)).jpg"
+# feh --no-fehbg --bg-fill '/usr/share/backgrounds/bouquet.jpg'
+

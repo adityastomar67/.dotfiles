@@ -23,6 +23,7 @@ export ZSH=$HOME/.oh-my-zsh  # Path to your oh-my-zsh installation.
 
 # Directory
 [ ! -d "$HOME/Downloads/git-repos" ] && mkdir $HOME/Downloads/git-repos
+[ ! -d "$HOME/Downloads/torrents" ] && mkdir $HOME/Downloads/torrents
 
 ############### THEMES FOR ZSH ###############
 # Set name of the theme to load --- if set to "random", it will
