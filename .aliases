@@ -18,6 +18,7 @@ alias tsm='transmission-cli -D -w ~/Downloads/torrents'
 # alias script='node awc.js'
 # alias lock='xscreensaver-command -lock'
 # alias handbrake='ghb'
+alias r='ranger'
 
 ## omz
 # alias zshconfig="vim ~/.zshrc"
