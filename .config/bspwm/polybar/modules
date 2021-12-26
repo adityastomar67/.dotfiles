@@ -28,7 +28,6 @@ format-muted-prefix-foreground = ${color.RED}
 label-volume = %percentage%%
 label-muted = " Mute"
 label-muted-foreground = #757575
-
 ramp-volume-0 = 奄
 ramp-volume-1 = 奄
 ramp-volume-2 = 奄
@@ -159,8 +158,8 @@ pin-workspaces = true
 inline-mode = false
 
 enable-click = true
-enable-scroll = true
-reverse-scroll = true
+enable-scroll = false 
+reverse-scroll = false
 
 fuzzy-match = true
 
@@ -193,9 +192,9 @@ label-monitor = %name%
 ;label-dimmed-focused-background = ${color.BACKGROUND}
 
 label-focused = %name%
-label-focused-foreground = ${color.BLUE}
+label-focused-foreground = ${color.RED}
 label-focused-background = ${color.BACKGROUND}
-label-focused-underline = ${color.BLUE}
+label-focused-underline = ${color.RED}
 label-focused-padding = 1
 
 label-occupied = %name%
@@ -205,9 +204,9 @@ label-occupied-background = ${color.BACKGROUND}
 label-occupied-padding = 1
 
 label-urgent = %name%
-label-urgent-foreground = ${color.RED}
+label-urgent-foreground = ${color.BLUE}
 label-urgent-background = ${color.BACKGROUND}
-label-urgent-underline = ${color.RED}
+label-urgent-underline = ${color.BLUE}
 label-urgent-padding = 1
 
 label-empty = %name%
@@ -354,7 +353,7 @@ ramp-signal-2 = 
 ramp-signal-3 = 
 ramp-signal-4 = 
 ramp-signal-font = 3
-ramp-signal-foreground = ${color.CYAN}
+ramp-signal-foreground = ${color.RED}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
