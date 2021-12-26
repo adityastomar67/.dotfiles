@@ -17,4 +17,4 @@ cd ~/.config/Code/User
 mv settings.json settings.json_old
 mv keybindings.json keybindings.json_old
 
-cp ~/.vscode/*.json ~/.config/Code/User/
+cp ~/.dotfiles/.vscode/*.json ~/.config/Code/User/

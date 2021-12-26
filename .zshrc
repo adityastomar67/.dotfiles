@@ -131,10 +131,12 @@ PROMPTS=(
      ">>>"
      "-->"
      "➤"
+     "󰮯 "
    )
-RANDOM=$$$(date +%s)
-ignition=${PROMPTS[$RANDOM % ${#RANDOM[*]}+1]}
-PROMPT='%F{green}$ignition%f %F{yellow}%1~%f ' 
+# RANDOM=$$$(date +%s)
+# ignition=${PROMPTS[$RANDOM % ${#RANDOM[*]}+1]}
+ignition=${PROMPTS[1 + $RANDOM%6]}
+PROMPT='%F{yellow}$ignition%f %F{blue}%1~%f ' 
 
 # Git Settings
 autoload -Uz vcs_info
