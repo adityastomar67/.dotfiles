@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
+# ░░░░█████╗░██╗░░░░░██╗░█████╗░░██████╗███████╗░██████╗
+# ░░░██╔══██╗██║░░░░░██║██╔══██╗██╔════╝██╔════╝██╔════╝
+# ░░░███████║██║░░░░░██║███████║╚█████╗░█████╗░░╚█████╗░
+# ░░░██╔══██║██║░░░░░██║██╔══██║░╚═══██╗██╔══╝░░░╚═══██╗
+# ██╗██║░░██║███████╗██║██║░░██║██████╔╝███████╗██████╔╝
+# ╚═╝╚═╝░░╚═╝╚══════╝╚═╝╚═╝░░╚═╝╚═════╝░╚══════╝╚═════╝░
 
 ## Easier navigation: .., ..., ...., ....., ~ and -
 alias ..='cd ..'
@@ -381,7 +387,7 @@ alias src='cd ~/ && source .zshrc'
 alias fetch='clear && neofetch --ascii ~/.config/ascii-neofetch.txt'
 alias c='command'
 alias findr='\fd'
-alias chx='chmod +x'
+alias x='chmod +x'
 
 ## opens a random pornhub video
 alias porn='mpv "http://www.pornhub.com/random"'
