@@ -148,6 +148,57 @@ alias mergepdf='gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=_merged.p
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
+# System state
+
+alias reboot="sudo /sbin/reboot"
+alias poweroff="sudo /sbin/poweroff"
+alias halt="sudo /sbin/halt"
+alias shutdown="sudo /sbin/shutdown"
+alias flighton='sudo rfkill block all'
+alias flightoff='sudo rfkill unblock all'
+alias snr='sudo service network-manager restart'
+# Show open ports
+
+alias ports='sudo netstat -tulanp'
+# Free and Used
+
+alias meminfo="free -m -l -t"
+# Get top process eating memory
+
+alias psmem="ps auxf | sort -nr -k 4"
+alias psmem10="ps auxf | sort -nr -k 4 | head -10"
+# Get top process eating cpu
+
+alias pscpu="ps auxf | sort -nr -k 3"
+alias pscpu10="ps auxf | sort -nr -k 3 | head -10"
+# Get details of a process
+
+alias paux='ps aux | grep'
+# Get server cpu info
+
+alias cpuinfo="lscpu"
+# Older system use /proc/cpuinfo
+
+alias cpuinfo="less /proc/cpuinfo"
+# Get GPU ram on desktop / laptop
+
+alias gpumeminfo="grep -i --color memory /var/log/Xorg.0.log"
+# Resume wget by default
+
+alias wget="wget -c"
+# Grabs the disk usage in the current directory
+
+alias usage='du -ch | grep total'
+# Gets the total disk usage on your machine
+
+alias totalusage='df -hl --total | grep total'
+# Shows the individual partition usages without the temporary memory values
+
+alias partusage='df -hlT --exclude-type=tmpfs --exclude-type=devtmpfs'
+# Gives you what is using the most space. Both directories and files. Varies on current directory
+
+alias most='du -hsx * | sort -rh | head -10'
+
 ## Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -156,7 +207,6 @@ alias path='echo -e ${PATH//:/\\n}'
 alias tsm='transmission-cli -D -w ~/Downloads/torrents'
 # alias pvpn='protonvpn-cli'
 # alias s='startx'
-# alias f='ranger'
 # alias t='bpytop'
 # alias tty='tty-clock -C6 -c -t'
 # alias pac='sudo pacman'
@@ -331,6 +381,7 @@ alias src='cd ~/ && source .zshrc'
 alias fetch='clear && neofetch --ascii ~/.config/ascii-neofetch.txt'
 alias c='command'
 alias findr='\fd'
+alias chx='chmod +x'
 
 ## opens a random pornhub video
 alias porn='mpv "http://www.pornhub.com/random"'

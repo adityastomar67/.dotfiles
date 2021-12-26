@@ -1,3 +1,4 @@
+# EXTENSIONs
 code --install-extension alexdima.copy-relative-path@0.0.2
 code --install-extension alexkrechik.cucumberautocomplete@2.15.1
 code --install-extension dariofuzinato.vue-peek@1.0.2
@@ -10,3 +11,10 @@ code --install-extension ms-python.python@2021.9.1191016588
 code --install-extension ms-vscode.sublime-keybindings@4.0.10
 code --install-extension octref.vetur@0.34.1
 code --install-extension teabyii.ayu@0.20.2
+
+cd ~/.config/Code/User
+
+mv settings.json settings.json_old
+mv keybindings.json keybindings.json_old
+
+cp ~/.vscode/*.json ~/.config/Code/User/
