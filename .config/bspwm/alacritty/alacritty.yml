@@ -16,7 +16,7 @@ window.dynamic_title: true
 # Font Customization
 font:
   normal:
-    family: "Fira Code"
+    family: "Operator Mono Lig"
     style: Regular
   bold:
     family: "Fira Code"
