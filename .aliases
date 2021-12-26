@@ -277,7 +277,7 @@ alias touch=pttouch
 ## confirm before overwriting something
 alias cp="cp -i"
 alias mv='mv -i'
-alias rm='rm -i'
+alias rm='rm -rfi'
 
 ## adding flags
 # alias df='df -h'                          # human-readable sizes
