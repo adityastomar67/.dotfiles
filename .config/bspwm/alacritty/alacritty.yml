@@ -4,8 +4,8 @@ window:
     columns: 140
     lines: 38
   padding:
-    x: 10
-    y: 10
+    x: 30
+    y: 20
   decorations: full #Still won't show in a window manger, but will in a desktop environment
 scrolling:
   history: 10000
