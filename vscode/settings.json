@@ -2,15 +2,16 @@
   // Debug:
   "debug.allowBreakpointsEverywhere": true,
   // Editor:
+  "editor.cursorStyle": "underline-thin",
   "editor.accessibilitySupport": "off",
   "editor.codeLens": true,
   "editor.colorDecorators": true,
   "editor.dragAndDrop": false,
   "editor.folding": false,
   "editor.showFoldingControls": "mouseover",
-  "editor.fontFamily": "Fira Code",
+  "editor.fontFamily": "'Operator Mono Lig', 'Fira Code'",
   "editor.fontLigatures": true,
-  "editor.fontSize": 17,
+  "editor.fontSize": 13,
   "explorer.openEditors.visible": 0,
   "editor.glyphMargin": true,
   "editor.minimap.enabled": false,
@@ -29,6 +30,7 @@
   "editor.cursorSurroundingLines": 3,
   "editor.useTabStops": true,
   "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
   "editor.tabCompletion": "on",
   "editor.wordWrap": "on",
   "editor.wordWrapColumn": 80,
@@ -47,9 +49,9 @@
     ".babelrc": "jsonc",
     ".eslintrc": "jsonc",
     "*.pyi": "python",
-    "*.bats": "shellscript",
+    "*.bats": "shellscript"
   },
-  "files.autoSave": "onFocusChange",
+  "files.autoSave": "afterDelay",
   "files.exclude": {
     "**/.DS_Store": true,
     "**/node_modules": true,
@@ -63,7 +65,7 @@
     "**/.coverage": true,
     "**/*.py[co]": true,
     "**/htmlcoverage": true,
-    "**/docs/build": true,
+    "**/docs/build": true
   },
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter.notebook.ipynb"
@@ -73,9 +75,9 @@
   "telemetry.enableTelemetry": false,
   // Terminal:
   "terminal.integrated.defaultProfile.osx": "zsh",
-  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.env.osx": {
-    "SOBOLE_THEME_MODE": "dark",
+    "SOBOLE_THEME_MODE": "dark"
   },
   "terminal.integrated.enableBell": true,
   // Workbench:
@@ -97,7 +99,9 @@
   "workbench.editor.showIcons": false,
   "workbench.editor.decorations.badges": false,
   "workbench.editor.decorations.colors": false,
+  "window.zoomLevel": -1,
   // Tools, extensions, and languages:
+  "tabnine.experimentalAutoImports": true,
   "git.autofetch": false,
   "git.showInlineOpenFileAction": false,
   "git.autorefresh": true,
@@ -108,7 +112,68 @@
   "python.terminal.activateEnvironment": true,
   "python.workspaceSymbols.enabled": false,
   "python.linting.enabled": false,
-  // "python.languageServer": "Microsoft",
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.runInTerminal": true,
+  "code-runner.saveAllFilesBeforeRun": true,
+  "code-runner.executorMap": {
+    "javascript": "node",
+    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+    "c": "clear && cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "cpp": "clear && cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "php": "php",
+    "python": "python -u",
+    "perl": "perl",
+    "perl6": "perl6",
+    "ruby": "ruby",
+    "go": "go run",
+    "lua": "lua",
+    "groovy": "groovy",
+    "powershell": "powershell -ExecutionPolicy ByPass -File",
+    "bat": "cmd /c",
+    "shellscript": "bash",
+    "fsharp": "fsi",
+    "csharp": "scriptcs",
+    "vbscript": "cscript //Nologo",
+    "typescript": "ts-node",
+    "coffeescript": "coffee",
+    "scala": "scala",
+    "swift": "swift",
+    "julia": "julia",
+    "crystal": "crystal",
+    "ocaml": "ocaml",
+    "r": "Rscript",
+    "applescript": "osascript",
+    "clojure": "lein exec",
+    "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+    "racket": "racket",
+    "scheme": "csi -script",
+    "ahk": "autohotkey",
+    "autoit": "autoit3",
+    "dart": "dart",
+    "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    "haskell": "runhaskell",
+    "nim": "nim compile --verbosity:0 --hints:off --run",
+    "lisp": "sbcl --script",
+    "kit": "kitc --run",
+    "v": "v run",
+    "sass": "sass --style expanded",
+    "scss": "scss --style expanded",
+    "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+    "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "python.languageServer": "Pylance",
   "typescript.updateImportsOnFileMove.enabled": "never",
   "typescript.suggest.autoImports": false,
   "javascript.suggest.autoImports": false,
@@ -129,6 +194,7 @@
     "editorSuggestWidget.selectedBackground": "#1c2a42",
     "tab.inactiveForeground": "#676b6a",
     "sideBar.foreground": "#b3b1adBB",
-    "sideBarTitle.foreground": "#0a0e14",
+    "sideBarTitle.foreground": "#0a0e14"
   },
+  "glassit.alpha": 245
 }

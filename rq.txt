@@ -4,3 +4,4 @@ tty-qclock
 cbonsai -- terminal art
 picom-tryone-git
 yay
+visual-studio-code-bin
