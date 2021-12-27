@@ -388,6 +388,7 @@ alias fetch='clear && neofetch --ascii ~/.config/ascii-neofetch.txt'
 alias c='command'
 alias findr='\fd'
 alias x='chmod +x'
-
+alias edex='cd ~/.dotfiles/apps && ./edex.AppImage'
+alias retro='cd ~/.dotfiles/apps && ./retro.AppImage'
 ## opens a random pornhub video
 alias porn='mpv "http://www.pornhub.com/random"'
