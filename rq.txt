@@ -1,2 +1,6 @@
 edex-ui
 cool-retro-term
+tty-qclock
+cbonsai -- terminal art
+picom-tryone-git
+yay

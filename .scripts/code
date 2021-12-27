@@ -11,6 +11,8 @@ code --install-extension ms-python.python@2021.9.1191016588
 code --install-extension ms-vscode.sublime-keybindings@4.0.10
 code --install-extension octref.vetur@0.34.1
 code --install-extension teabyii.ayu@0.20.2
+code --install-extension s-nlf-fh.glassit
+
 
 cd ~/.config/Code/User
 
