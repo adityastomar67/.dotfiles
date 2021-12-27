@@ -22,9 +22,7 @@
   "explorer.compactFolders": false,
   "editor.occurrencesHighlight": false,
   "editor.overviewRulerBorder": false,
-  "editor.rulers": [
-    80
-  ],
+  "editor.rulers": [],
   "editor.scrollBeyondLastLine": false,
   "editor.snippetSuggestions": "none",
   "editor.cursorSurroundingLines": 3,
