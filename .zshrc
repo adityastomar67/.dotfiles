@@ -35,7 +35,7 @@ export ZSH=$HOME/.oh-my-zsh  # Path to your oh-my-zsh installation.
 
 # ZSH_THEME="daveverwer"
 # ZSH_THEME="robbyrussell"
-# ZSH_THEME="agnoster"   	# powerline
+# ZSH_THEME="agnoster" 
 # ZSH_THEME="dstufft"
 ZSH_THEME="spaceship"
 
@@ -153,13 +153,10 @@ zstyle ':vcs_info:*' enable git
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(
-    zsh-autosuggestions 
+    zsh-autocomplete 
     git 
-    history 
-    sudo 
-    web-search 
-    copydir 
-    copyfile 
+    history
+    web-search
     copybuffer 
     dirhistory
   )
