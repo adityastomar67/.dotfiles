@@ -9,7 +9,7 @@ code --force --install-extension mikestead.dotenv@1.0.1
 code --force --install-extension mjmcloug.vscode-elixir@1.1.0
 code --force --install-extension ms-vscode.sublime-keybindings@4.0.10
 code --force --install-extension octref.vetur@0.34.1
-code --force --install-extension teabyii.ayu@0.20.2
+# code --force --install-extension teabyii.ayu@0.20.2
 code --force --install-extension s-nlf-fh.glassit
 code --force --install-extension ms-vscode.cpptools
 code --force --install-extension formulahendry.code-runner
@@ -19,7 +19,8 @@ code --force --install-extension ms-python.python
 code --force --install-extension tabnine.tabnine-vscode
 code --force --install-extension ms-python.vscode-pylance
 code --force --install-extension coenraads.bracket-pair-colorizer
-code --force --install-extension Yummygum.city-lights-icon-vsc
+code --force --install-extension monokai.theme-monokai-pro-vscode
+code --force --install-extension GitHub.github-vscode-theme
 
 cd ~/.config/Code/User
 

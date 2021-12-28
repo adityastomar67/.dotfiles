@@ -6,3 +6,6 @@ picom-tryone-git
 yay
 visual-studio-code-binfeh
 feh
+lvim
+bat
+rxfetch

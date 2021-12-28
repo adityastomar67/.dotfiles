@@ -96,7 +96,7 @@
   "workbench.editor.showTabs": false,
   "workbench.editor.highlightModifiedTabs": false,
   "workbench.editor.showIcons": false,
-  "workbench.iconTheme": "city-lights-icons-vsc",
+  "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Monochrome Icons",
   "workbench.editor.decorations.badges": false,
   "workbench.editor.decorations.colors": false,
   "window.zoomLevel": -1,
@@ -190,7 +190,7 @@
   "vetur.experimental.templateInterpolationService": true,
   "rust-analyzer.inlayHints.enable": false,
   // Theme:
-  "workbench.colorTheme": "Ayu Dark",
+  "workbench.colorTheme": "Github Dark",
   "editor.semanticHighlighting.enabled": false,
   "workbench.colorCustomizations": {
     "activityBar.activeBorder": "#e5b358",

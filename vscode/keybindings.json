@@ -194,5 +194,10 @@
         "key": "ctrl+alt+f",
         "command": "editor.action.formatDocument",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+n",
+        "command": "code-runner.run",
+        "when": "editorTextFocus"
     }
 ]
