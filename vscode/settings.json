@@ -14,6 +14,7 @@
   "editor.fontSize": 13,
   "explorer.openEditors.visible": 0,
   "editor.glyphMargin": true,
+  "editor.lineNumbers": "off",
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "selection",
   "editor.renderIndentGuides": false,
@@ -95,6 +96,7 @@
   "workbench.editor.showTabs": false,
   "workbench.editor.highlightModifiedTabs": false,
   "workbench.editor.showIcons": false,
+  "workbench.iconTheme": "city-lights-icons-vsc",
   "workbench.editor.decorations.badges": false,
   "workbench.editor.decorations.colors": false,
   "window.zoomLevel": -1,
@@ -166,10 +168,18 @@
     "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
   },
   "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
+    "editor.defaultFormatter": "vscode.html-language-features",
+    "editor.tabSize": 4
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 4
+  },
+  "[cpp]": {
+    "editor.wordBasedSuggestions": true,
+    "editor.suggest.insertMode": "replace",
+    "editor.semanticHighlighting.enabled": true,
+    "editor.tabSize": 4
   },
   "python.languageServer": "Pylance",
   "typescript.updateImportsOnFileMove.enabled": "never",
@@ -181,7 +191,6 @@
   "rust-analyzer.inlayHints.enable": false,
   // Theme:
   "workbench.colorTheme": "Ayu Dark",
-  "workbench.iconTheme": "ayu",
   "editor.semanticHighlighting.enabled": false,
   "workbench.colorCustomizations": {
     "activityBar.activeBorder": "#e5b358",

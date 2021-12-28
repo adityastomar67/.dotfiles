@@ -1,0 +1,29 @@
+# EXTENSIONs
+code --force --install-extension alexdima.copy-relative-path@0.0.2
+code --force --install-extension alexkrechik.cucumberautocomplete@2.15.1
+code --force --install-extension dariofuzinato.vue-peek@1.0.2
+code --force --install-extension EditorConfig.EditorConfig@0.16.4
+code --force --install-extension justusadam.language-haskell@3.4.0
+# code --force --install-extension matklad.rust-analyzer@0.2.727
+code --force --install-extension mikestead.dotenv@1.0.1
+code --force --install-extension mjmcloug.vscode-elixir@1.1.0
+code --force --install-extension ms-vscode.sublime-keybindings@4.0.10
+code --force --install-extension octref.vetur@0.34.1
+code --force --install-extension teabyii.ayu@0.20.2
+code --force --install-extension s-nlf-fh.glassit
+code --force --install-extension ms-vscode.cpptools
+code --force --install-extension formulahendry.code-runner
+code --force --install-extension esbenp.prettier-vscode
+code --force --install-extension ritwickdey.liveserver
+code --force --install-extension ms-python.python
+code --force --install-extension tabnine.tabnine-vscode
+code --force --install-extension ms-python.vscode-pylance
+code --force --install-extension coenraads.bracket-pair-colorizer
+code --force --install-extension Yummygum.city-lights-icon-vsc
+
+cd ~/.config/Code/User
+
+[ -f "settings.json" ] && mv settings.json settings.json_old
+[ -f "keybindings.json" ] && mv keybindings.json keybindings.json_old
+
+cp ~/.dotfiles/vscode/*.json ~/.config/Code/User/
