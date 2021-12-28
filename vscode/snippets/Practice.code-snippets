@@ -1,0 +1,14 @@
+{
+	"Code for DSA": {
+		"prefix": "practice",
+		"body": [
+			"#include \"custom.h\"",
+			"",
+			"void solve()",
+			"{",
+			"    int i, j, n, m , count = 0;",
+			"}"
+		],
+		"description": "Code for DSA"
+	}
+}
