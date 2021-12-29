@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-## Copyright (C) 2020-2021 Aditya Shakya <adi1090x@gmail.com>
-## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
-
-## i3lock for bspwm for Archcraft OS.
-
 ## Get colors -----------------
 FG="$(xrdb -query | grep 'foreground:'| awk '{print $NF}')"
 BG="$(xrdb -query | grep 'background:'| awk '{print $NF}')"
@@ -55,16 +50,16 @@ i3lock \
 --date-size=18													\
 --greeter-text="${TOTD}"			\
 --greeter-color=${CYAN}				\
---verif-text="verifying..."			\
---wrong-text="wrong!"				\
---noinput-text="Empty"				\
+--verif-text="Mila Rhe Hai..."			\
+--wrong-text="Galat Dala Hai..."				\
+--noinput-text="Kuch Toh Bharo..."				\
 --lock-text="Locking..."			\
 --lockfailed-text="Failed to lock"	\
 --radius 120				\
---ring-width 8.0			\
+--ring-width 9.0			\
 --screen 1					\
 --clock						\
 --indicator					\
 --time-str="%I:%M %p"		\
 --date-str="%b %d, %G"		\
-#--blur 5					\
+--blur 12					\
