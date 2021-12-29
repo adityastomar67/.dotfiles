@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 
-## Copyright (C) 2020-2021 Aditya Shakya <adi1090x@gmail.com>
-## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
-
-DIR="$HOME/.config/bspwm"
+DIR="$HOME/.config"
 
 rofi_command="rofi -theme $DIR/rofi/themes/network.rasi"
 
@@ -53,10 +50,10 @@ case $chosen in
 		fi 
         ;;
     $bmon)
-        alacritty --class 'alacritty-float,alacritty-float' --config-file ~/.config/bspwm/alacritty/alacritty.yml -e bmon
+        alacritty --class 'alacritty-float,alacritty-float' --config-file ~/.config/alacritty/alacritty.yml -e bmon
         ;;
     $launch_cli)
-        alacritty --class 'alacritty-float,alacritty-float' --config-file ~/.config/bspwm/alacritty/alacritty.yml -e nmtui
+        alacritty --class 'alacritty-float,alacritty-float' --config-file ~/.config/alacritty/alacritty.yml -e nmtui
         ;;
     $launch)
         nm-connection-editor
