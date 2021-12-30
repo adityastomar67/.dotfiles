@@ -390,5 +390,6 @@ alias findr='\fd'
 alias x='chmod +x'
 alias edex='cd ~/.dotfiles/apps && ./edex.AppImage'
 alias retro='cd ~/.dotfiles/apps && ./retro.AppImage'
+alias :q='exit'
 ## opens a random pornhub video
 alias porn='mpv "http://www.pornhub.com/random"'
