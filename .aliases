@@ -252,7 +252,7 @@ alias cat='bat'
 # alias bs='broot --sizes'
 
 ## Changing "ls" to "exa"
-alias ls='clear && echo "\033[3;4:2;33mDirectory --> $(pwd)\033[23;4:0m\n" && exa -al --color=always --icons --git --group-directories-first' # my preferred listing
+alias ls='clear && echo " \033[3;4:2;33mDirectory --> $(pwd)\033[23;4:0m\n" && exa -al --color=always --icons --git --group-directories-first' # my preferred listing
 alias la='exa -a --color=always --icons --group-directories-first'  # all files and dirs
 alias ll='exa -l --color=always --icons --group-directories-first'  # long format
 alias lt='exa -aT --level=2 --color=always --group-directories-first' # tree listing
