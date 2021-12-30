@@ -70,7 +70,11 @@ ZSH_THEME="spaceship"
 ### Prompt Settings
 declare -a PROMPTS
 PROMPTS=(    
+<<<<<<< HEAD
      "ﱤ"
+=======
+     ""
+>>>>>>> d144df4c9ecde2e61ffa4c6cc4e9c9bb2e76a391
      "▶"
      ">>>"  
      "-->"
