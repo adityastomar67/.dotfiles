@@ -6,211 +6,30 @@
 # ██╗██║░░██║███████╗██║██║░░██║██████╔╝███████╗██████╔╝
 # ╚═╝╚═╝░░╚═╝╚══════╝╚═╝╚═╝░░╚═╝╚═════╝░╚══════╝╚═════╝░
 
+## Example aliases
+# alias zshconfig="nvim ~/.zshrc"
+# alias ohmyzsh="nvim ~/.oh-my-zsh"
+
+## Root privileges
+# alias doas="doas --"
+
 ## Easier navigation: .., ..., ...., ....., ~ and -
 alias ..='cd ..'
 alias ...='cd ../..'
 alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
-alias ~="cd ~" # `cd` is probably faster to type though
-alias -- -="cd -"
 
-# Shortcuts
+## Directory Shortcuts
 alias d="cd ~/Documents/"
 alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
-# alias g="git"
-
-# Detect which `ls` flavor is in use
-if ls --color >/dev/null 2>&1; then # GNU `ls`
-	colorflag="--color"
-	export LS_COLORS='no=00:fi=00:di=01;31:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:'
-else # macOS `ls`
-	colorflag="-G"
-	export LSCOLORS='BxBxhxDxfxhxhxhxhxcxcx'
-fi
-
-# List all files colorized in long format
-# alias l="ls -lF ${colorflag}"
-
-# List all files colorized in long format, excluding . and ..
-# alias la="ls -lAF ${colorflag}"
-
-# List only directories
-alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
-
-# Always use color output for `ls`
-# alias ls="command ls ${colorflag}"
-
-# Always enable colored `grep` output
-# Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
-alias grep='grep --color=auto'
-# alias fgrep='fgrep --color=auto'
-# alias egrep='egrep --color=auto'
-
-# Enable aliases to be sudo’ed
-# alias sudo='sudo '
-
-# Get week number
-alias week='date +%V'
-
-# Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-# alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup'
-
-# Google Chrome
-alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
-alias canary='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary'
-
-# IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ipconfig getifaddr en0"
-alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
-
-# Show active network interfaces
-alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'"
-
-# Flush Directory Service cache
-alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
-
-# Clean up LaunchServices to remove duplicates in the “Open With” menu
-alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
-
-# Canonical hex dump; some systems have this symlinked
-command -v hd >/dev/null || alias hd="hexdump -C"
-
-# macOS has no `md5sum`, so use `md5` as a fallback
-command -v md5sum >/dev/null || alias md5sum="md5"
-
-# macOS has no `sha1sum`, so use `shasum` as a fallback
-command -v sha1sum >/dev/null || alias sha1sum="shasum"
-
-# JavaScriptCore REPL
-jscbin="/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/jsc"
-[ -e "${jscbin}" ] && alias jsc="${jscbin}"
-unset jscbin
-
-# Trim new lines and copy to clipboard
-alias c="tr -d '\n' | pbcopy"
-
-# Recursively delete `.DS_Store` files
-# alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
-
-## Empty the Trash on all mounted volumes and the main HDD.
-## Also, clear Apple’s System Logs to improve shell startup speed.
-## Finally, clear download history from quarantine. https://mths.be/bum
-# alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
-
-## Show/hide hidden files in Finder
-# alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
-# alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
-
-## Hide/show all desktop icons (useful when presenting)
-# alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
-# alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
-
-# URL-encode strings
-alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
-
-# Merge PDF files, preserving hyperlinks
-# Usage: `mergepdf input{1,2,3}.pdf`
-alias mergepdf='gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=_merged.pdf'
-
-## Disable Spotlight
-# alias spotoff="sudo mdutil -a -i off"
-## Enable Spotlight
-# alias spoton="sudo mdutil -a -i on"
-
-## PlistBuddy alias, because sometimes `defaults` just doesn’t cut it
-# alias plistbuddy="/usr/libexec/PlistBuddy"
-
-## Airport CLI alias
-# alias airport='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport'
-
-## Intuitive map function
-## For example, to list all directories that contain a certain file:
-## find . -name .gitattributes | map dirname
-# alias map="xargs -n1"
-
-## One of @janmoesen’s ProTip™s
-# for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
-# 	alias "${method}"="lwp-request -m '${method}'"
-# done
-
-## Stuff I never really use but cannot delete either because of http://xkcd.com/530/
-# alias stfu="osascript -e 'set volume output muted true'"
-# alias pumpitup="osascript -e 'set volume output volume 100'"
-
-## Kill all the tabs in Chrome to free up memory
-## [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
-# alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
-
-## Lock the screen (when going AFK)
-# alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
-
-## Reload the shell (i.e. invoke as a login shell)
-# alias reload="exec ${SHELL} -l"
-
-# Print each PATH entry on a separate line
-alias path='echo -e ${PATH//:/\\n}'
-
-# System state
-
-alias reboot="sudo /sbin/reboot"
-alias poweroff="sudo /sbin/poweroff"
-alias halt="sudo /sbin/halt"
-alias shutdown="sudo /sbin/shutdown"
-alias flighton='sudo rfkill block all'
-alias flightoff='sudo rfkill unblock all'
-alias snr='sudo service network-manager restart'
-# Show open ports
-
-alias ports='sudo netstat -tulanp'
-# Free and Used
-
-alias meminfo="free -m -l -t"
-# Get top process eating memory
-
-alias psmem="ps auxf | sort -nr -k 4"
-alias psmem10="ps auxf | sort -nr -k 4 | head -10"
-# Get top process eating cpu
-
-alias pscpu="ps auxf | sort -nr -k 3"
-alias pscpu10="ps auxf | sort -nr -k 3 | head -10"
-# Get details of a process
-
-alias paux='ps aux | grep'
-# Get server cpu info
-
-alias cpuinfo="lscpu"
-# Older system use /proc/cpuinfo
-
-alias cpuinfo="less /proc/cpuinfo"
-# Get GPU ram on desktop / laptop
-
-alias gpumeminfo="grep -i --color memory /var/log/Xorg.0.log"
-# Resume wget by default
-
-alias wget="wget -c"
-# Grabs the disk usage in the current directory
-
-alias usage='du -ch | grep total'
-# Gets the total disk usage on your machine
-
-alias totalusage='df -hl --total | grep total'
-# Shows the individual partition usages without the temporary memory values
-
-alias partusage='df -hlT --exclude-type=tmpfs --exclude-type=devtmpfs'
-# Gives you what is using the most space. Both directories and files. Varies on current directory
-
-alias most='du -hsx * | sort -rh | head -10'
-
-## Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias dt="cd ~/.dotfiles"
+alias p="cd ~/Projects"
+alias wk='cd ~/Workspace'
 
 ## App launchers
 alias tsm='transmission-cli -D -w ~/Downloads/torrents'
+alias r='ranger'
 # alias pvpn='protonvpn-cli'
 # alias s='startx'
 # alias t='bpytop'
@@ -224,68 +43,46 @@ alias tsm='transmission-cli -D -w ~/Downloads/torrents'
 # alias script='node awc.js'
 # alias lock='xscreensaver-command -lock'
 # alias handbrake='ghb'
-alias r='ranger'
-
-## omz
-# alias zshconfig="vim ~/.zshrc"
-# alias ohmyzsh="thunar ~/.oh-my-zsh"
-
-## root privileges
-# alias doas="doas --"
-
-## navigation
 
 ## vim and emacs
-alias v="lvim"
+alias v="nvim"
 # alias em="/usr/bin/emacs -nw"
 # alias emacs="emacsclient -c -a 'emacs'"
 # alias doomsync="~/.emacs.d/bin/doom sync"
 # alias doomdoctor="~/.emacs.d/bin/doom doctor"
 # alias doomupgrade="~/.emacs.d/bin/doom upgrade"
-# alias doompurge="~/.emacs.d/bin/doom purge"
 
-## bat
+## Confirm before overwriting something
+alias cp="cp -i"
+alias mv='mv -i'
+alias rm='rm -rfi'
+
+## File printing with Bat instead of cat
 alias cat='bat'
 
-## broot
+## Broot
 # alias br='broot -dhp'
 # alias bs='broot --sizes'
 
-## Changing "ls" to "exa"
-alias ls='clear && echo " \033[3;4:2;33mDirectory --> $(pwd)\033[23;4:0m\n" && exa -al --color=always --icons --git --group-directories-first' # my preferred listing
-alias la='exa -a --color=always --icons --group-directories-first'  # all files and dirs
-alias ll='exa -l --color=always --icons --group-directories-first'  # long format
-alias lt='exa -aT --level=2 --color=always --group-directories-first' # tree listing
-alias l.='exa -a | egrep "^\."'
+## Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
 
-## pacman and yay
-alias update='sudo pacman -Syu' # update All
-# alias pacsyu='sudo pacman -Syyu'                 # update only standard pkgs
-# alias yaysua='yay -Sua --noconfirm'              # update only AUR pkgs (yay)
-# alias yaysyu='yay -Syu --noconfirm'              # update standard pkgs and AUR pkgs (yay)
-# alias parsua='paru -Sua --noconfirm'             # update only AUR pkgs (paru)
-# alias parsyu='paru -Syu --noconfirm'             # update standard pkgs and AUR pkgs (paru)
-alias unlock='sudo rm /var/lib/pacman/db.lck'   # remove pacman lock
-alias cleanup='sudo pacman -Rns (pacman -Qtdq)' # remove orphaned packages
+## System state
+alias reboot="sudo /sbin/reboot"
+alias poweroff="sudo /sbin/poweroff"
+alias halt="sudo /sbin/halt"
+alias shutdown="sudo /sbin/shutdown"
+alias flighton='sudo rfkill block all'
+alias flightoff='sudo rfkill unblock all'
+alias snr='sudo service network-manager restart'
 
-## ptSh
-# alias ls='ptls -la'
-alias me-in=ptpwd
-alias mkdir=ptmkdir
-alias touch=pttouch
-
-## get fastest mirrors
+## Get fastest mirrors
 # alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
 # alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
 # alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
 # alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
 
-## confirm before overwriting something
-alias cp="cp -i"
-alias mv='mv -i'
-alias rm='rm -rfi'
-
-## adding flags
+## Adding flags
 # alias df='df -h'                          # human-readable sizes
 # alias free='free -m'                      # show sizes in MB
 # alias lynx='lynx -cfg=~/.lynx/lynx.cfg -lss=~/.lynx/lynx.lss -vikeys'
@@ -293,18 +90,24 @@ alias rm='rm -rfi'
 # alias ncmpcpp='ncmpcpp ncmpcpp_directory=$HOME/.config/ncmpcpp/'
 # alias mocp='mocp -M "$XDG_CONFIG_HOME"/moc -O MOCDir="$XDG_CONFIG_HOME"/moc'
 
-## get top process eating memory
+## Get top process eating memory
 # alias psmem='ps auxf | sort -nr -k 4'
 # alias psmem10='ps auxf | sort -nr -k 4 | head -10'
 
-## get top process eating cpu ##
+## Get top process eating cpu
 # alias pscpu='ps auxf | sort -nr -k 3'
 # alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
 
-# Merge Xresources
-# alias merge='xrdb -merge ~/.Xresources'
+# Gives you what is using the most space. Both directories and files. Varies on current directory
+# alias most='du -hsx * | sort -rh | head -10'
 
-# git
+# Get details of a process
+# alias paux='ps aux | grep'
+
+# Merge Xresources
+alias merge='xrdb -merge ~/.Xresources'
+
+# Git
 alias addup='git add -u'
 alias addall='git add .'
 alias branch='git branch'
@@ -322,10 +125,8 @@ alias newtag='git tag -a'
 # alias jctl="journalctl -p 3 -xb"
 
 ## gpg encryption
-## verify signature for isos
-# alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
-## receive the key of a developer
-# alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
+# alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"          # Verify signature for isos
+# alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys" # Receive the key of a developer
 
 ## youtube-dl
 # alias yta-aac="youtube-dl --extract-audio --audio-format aac "
@@ -338,19 +139,57 @@ alias newtag='git tag -a'
 # alias yta-wav="youtube-dl --extract-audio --audio-format wav "
 # alias ytv-best="youtube-dl -f bestvideo+bestaudio "
 
-## switch between shells
-## I do not recommend switching default SHELL from bash.
+## ptSh
+# alias ls='ptls -la'
+alias me-in=ptpwd
+alias mkdir=ptmkdir
+alias touch=pttouch
+
+## Changing "ls" to "exa"
+alias ls='echo " \033[3;4:2;33mDirectory --> $(pwd)\033[23;4:0m\n" && exa -al --color=always --icons --git --group-directories-first' # my preferred listing
+alias la='exa -a --color=always --icons --group-directories-first'  # all files and dirs
+alias ll='exa -l --color=always --icons --group-directories-first'  # long format
+alias lt='exa -aT --level=2 --color=always --group-directories-first' # tree listing
+alias l.='exa -a | egrep "^\."'
+
+## List all files colorized in long format
+# alias l="ls -lF ${colorflag}"
+
+## List all files colorized in long format, excluding . and ..
+# alias la="ls -lAF ${colorflag}"
+
+## List only directories
+alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
+
+## Always enable colored `grep` output, Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
+alias grep='grep --color=auto'
+# alias fgrep='fgrep --color=auto'
+# alias egrep='egrep --color=auto'
+
+## switch between shells, I do not recommend switching default SHELL from bash.
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 # alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 
-## bare git repo alias for dotfiles
-# alias config="/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME"
+## pacman and yay
+alias update='sudo pacman -Syu' # update All
+# alias pacsyu='sudo pacman -Syyu'                 # update only standard pkgs
+# alias yaysua='yay -Sua --noconfirm'              # update only AUR pkgs (yay)
+# alias yaysyu='yay -Syu --noconfirm'              # update standard pkgs and AUR pkgs (yay)
+# alias parsua='paru -Sua --noconfirm'             # update only AUR pkgs (paru)
+# alias parsyu='paru -Syu --noconfirm'             # update standard pkgs and AUR pkgs (paru)
+alias unlock='sudo rm /var/lib/pacman/db.lck'   # remove pacman lock
+alias cleanup='sudo pacman -Rns (pacman -Qtdq)' # remove orphaned packages
 
-## termbin
+## Snippets
+alias ddate='date +"%R - %a, %B %d, %Y" | xclip -select clipboard && date +"%R - %a, %B %d, %Y"'
+alias dday='date +"%Y.%m.%d - " | xclip -select clipboard ; date +"%Y.%m.%d"'
+alias week='date +%V'
+
+## Termbin
 # alias tb="nc termbin.com 9999"
 
-## the terminal rickroll
+## The terminal rickroll
 # alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
 ## Unlock LBRY tips
@@ -371,18 +210,16 @@ alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 # alias j='date +"%R - %a, %B %d, %Y" | xclip -select clipboard; cd ~/Dropbox/writing/journal; nvim volume-6.md'
 # alias jj='date +"%R - %a, %B %d, %Y" | xclip -select clipboard; cd ~/Dropbox/writing/journal; vim volume-6.md'
 
-## Snippets
-# alias ddate='date +"%R - %a, %B %d, %Y" | xclip -select clipboard && date +"%R - %a, %B %d, %Y"'
-# alias dday='date +"%Y.%m.%d - " | xclip -select clipboard ; date +"%Y.%m.%d"'
-
-## force all kakoune windows into one session
+## Force all kakoune windows into one session
 # alias kak="/usr/bin/kak -c mysession"
 # alias kaks="/usr/bin/kak -s mysession"
 # alias kakd="/usr/bin/kak -d -s mysession &"f
 
+## Resume wget by default
+alias wget="wget -c"
+
 ## Additional Aliases
 alias dsa='cd /home/adi/Study/DS\ Algo/ && v practice.cpp'
-alias work='v /home/adi/Workspace/ '
 alias src='cd ~/ && source .zshrc'
 alias fetch='clear && neofetch --ascii ~/.config/ascii-neofetch.txt'
 alias c='command'
@@ -391,5 +228,6 @@ alias x='chmod +x'
 alias edex='cd ~/.dotfiles/apps && ./edex.AppImage'
 alias retro='cd ~/.dotfiles/apps && ./retro.AppImage'
 alias :q='exit'
-## opens a random pornhub video
-alias porn='mpv "http://www.pornhub.com/random"'
+alias porn='mpv "http://www.pornhub.com/random"' # Opens Random PornHub Video
+
+# _________________ END _____________________ #

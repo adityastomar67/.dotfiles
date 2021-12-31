@@ -16,11 +16,11 @@ export TERM="xterm-256color"               # Default term
 export HISTFILE=~/.config/zsh/.zsh_history # Path to History File
 export PATH=~/.local/bin:$PATH             # Bin Path to run Commands
 export PATH=~/.scripts:$PATH               # Making my scripts run without typing the whole path
-export EDITOR='nvim'                       # Default Code Editor
-export TERMINAL='alacritty'                # default Terminal
-export BROWSER='google-chrome-stable'      # Default Browser
-export MANPAGER='nvim +Man!'               # Manual Page in NVim
 export ZSH=$HOME/.oh-my-zsh                # Path to your oh-my-zsh installation.
+# export EDITOR='nvim'                       # Default Code Editor
+# export TERMINAL='alacritty'                # default Terminal
+# export BROWSER='google-chrome-stable'      # Default Browser
+# export MANPAGER='nvim +Man!'               # Manual Page in NVim
 
 ### Directory
 [ ! -d "$HOME/Downloads/git-repos" ] && mkdir $HOME/Downloads/git-repos
@@ -133,9 +133,6 @@ ENABLE_CORRECTION="true"
 ## Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-autoload -Uz compinit && compinit                                  # need the next two lines for case insensitive tab completion
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'       # Matchlist
-
 ### Plugins
 ## Standard plugins can be found in $ZSH/plugins/ & Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(
@@ -148,6 +145,8 @@ plugins=(
   )
 # source $ZSH/oh-my-zsh.sh
 
+autoload -Uz compinit && compinit                                  # need the next two lines for case insensitive tab completion
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'       # Matchlist
 
 ### User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
