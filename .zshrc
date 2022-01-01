@@ -8,7 +8,7 @@
 ## If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-### Basic stuff 
+### Basic stuff
 # source ~/.config/zsh/.zprofile #.zshenv stuff
 
 ### Exports
@@ -17,20 +17,19 @@ export HISTFILE=~/.config/zsh/.zsh_history # Path to History File
 export PATH=~/.local/bin:$PATH             # Bin Path to run Commands
 export PATH=~/.scripts:$PATH               # Making my scripts run without typing the whole path
 export ZSH=$HOME/.oh-my-zsh                # Path to your oh-my-zsh installation.
-# export EDITOR='nvim'                       # Default Code Editor
-# export TERMINAL='alacritty'                # default Terminal
-# export BROWSER='google-chrome-stable'      # Default Browser
-# export MANPAGER='nvim +Man!'               # Manual Page in NVim
+export EDITOR='nvim'                       # Default Code Editor
+export TERMINAL='alacritty'                # default Terminal
+export BROWSER='google-chrome-stable'      # Default Browser
+export MANPAGER='nvim +Man!'               # Manual Page in NVim
 
 ### Directory
 [ ! -d "$HOME/Downloads/git-repos" ] && mkdir $HOME/Downloads/git-repos
 [ ! -d "$HOME/Downloads/torrents" ] && mkdir $HOME/Downloads/torrents
 
-### Functions
-source ~/.functions
-
-### Aliases - For a full list of active aliases, run `alias`.
-source ~/.aliases
+### Sources
+source ~/.functions # functions to improve productivity
+source ~/.aliases   # Aliases - For a full list of active aliases, run `alias`.
+source ~/.z-prompt  # For custom zsh prompt.
 
 ### Vi Mode
 bindkey -v
@@ -42,7 +41,7 @@ bindkey -v
 ## See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="daveverwer"
 # ZSH_THEME="robbyrussell"
-# ZSH_THEME="agnoster" 
+# ZSH_THEME="agnoster"
 # ZSH_THEME="dstufft"
 ZSH_THEME="spaceship"
 
@@ -66,30 +65,6 @@ ZSH_THEME="spaceship"
 ## Interactively load a dark theme
 #	alias thd='theme.sh --dark -i'
 #fi
-
-### Prompt Settings
-declare -a PROMPTS
-PROMPTS=(    
-     " "
-     "▶"
-     ">>>"  
-     "-->"
-     "➤"
-     "󰮯 "
-   )
-# RANDOM=$$$(date +%s)
-# ignition=${PROMPTS[$RANDOM % ${#RANDOM[*]}+1]}
-ignition=${PROMPTS[1 + $RANDOM%6]}
-PROMPT='%F{yellow}$ignition%f %F{blue}%1~%f ' 
-
-## Git Prompt Settings
-autoload -Uz vcs_info
-precmd_vcs_info() { vcs_info }
-precmd_functions+=( precmd_vcs_info )
-setopt prompt_subst
-RPROMPT=\$vcs_info_msg_0_
-zstyle ':vcs_info:git:*' formats '%F{blue}(%b)%r%f '
-zstyle ':vcs_info:*' enable git
 
 ## Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -136,17 +111,17 @@ ENABLE_CORRECTION="true"
 ### Plugins
 ## Standard plugins can be found in $ZSH/plugins/ & Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(
-    zsh-autocomplete 
-    git 
-    history
-    web-search
-    copybuffer 
-    dirhistory
-  )
+  zsh-autocomplete
+  git
+  history
+  web-search
+  copybuffer
+  dirhistory
+)
 # source $ZSH/oh-my-zsh.sh
 
-autoload -Uz compinit && compinit                                  # need the next two lines for case insensitive tab completion
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'       # Matchlist
+autoload -Uz compinit && compinit                            # need the next two lines for case insensitive tab completion
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' # Matchlist
 
 ### User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
