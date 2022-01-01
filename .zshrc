@@ -15,45 +15,47 @@ setopt appendhistory
 # source ~/.config/zsh/.zprofile #.zshenv stuff
 
 ### Exports
-export TERM="xterm-256color"          # Default term
-export PATH=~/.local/bin:$PATH        # Bin Path to run Commands
-export PATH=~/.scripts:$PATH          # Making my scripts run without typing the whole path
-export ZSH=$HOME/.oh-my-zsh           # Path to your oh-my-zsh installation.
-export EDITOR='nvim'                  # Default Code Editor
-export TERMINAL='alacritty'           # default Terminal
-export BROWSER='google-chrome-stable' # Default Browser
-export MANPAGER='nvim +Man!'          # Manual Page in NVim
+export TERM="xterm-256color"   # Default term
+export PATH=~/.local/bin:$PATH # Bin Path to run Commands
+export PATH=~/.scripts:$PATH   # Making my scripts run without typing the whole path
+export EDITOR='nvim'           # Default Code Editor
+export TERMINAL='alacritty'    # default Terminal
+export BROWSER='brave'         # Default Browser
+export MANPAGER='nvim +Man!'   # Manual Page in NVim
 
 ### Directory
 [ ! -d "$HOME/Downloads/git-repos" ] && mkdir $HOME/Downloads/git-repos
 [ ! -d "$HOME/Downloads/torrents" ] && mkdir $HOME/Downloads/torrents
 
-### Sources
-source ~/.functions # functions to improve productivity
-source ~/.aliases   # Aliases - For a full list of active aliases, run `alias`.
-source ~/.z-prompt  # For custom zsh prompt.
-
-### Key Bindings
-bindkey -v                                 # Vi Mode
-bindkey "^k" up-line-or-beginning-search   # Up
-bindkey "^j" down-line-or-beginning-search # Down
-
 ### Plugins
 ## Standard plugins can be found in $ZSH/plugins/ & Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(
   zsh-autocomplete
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  zsh-autopair
   git
   history
   web-search
   copybuffer
   dirhistory
 )
-# source $ZSH/oh-my-zsh.sh
+
+### Sourcing
+source ~/.oh-my-zsh/oh-my-zsh.sh # For plugins
+source ~/.functions              # functions to improve productivity
+source ~/.aliases                # Aliases - For a full list of active aliases, run `alias`.
+source ~/.z-prompt               # For custom zsh prompt.
+
+### Key Bindings
+bindkey -v                                 # Vi Mode
+bindkey "^k" up-line-or-beginning-search   # Up
+bindkey "^j" down-line-or-beginning-search # Down
+
 autoload -Uz compinit && compinit                            # need the next two lines for case insensitive tab completion
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' # Matchlist
 
 ### Basic zsh settings
-
 ### Themes
 ## Set name of the theme to load --- if set to "random", it will load a random theme each time oh-my-zsh is loaded, in which case, to know which specific one was loaded, run: echo $RANDOM_THEME
 ## See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes

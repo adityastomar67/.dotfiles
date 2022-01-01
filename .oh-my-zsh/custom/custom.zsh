@@ -8,3 +8,4 @@
 # brainstormr=~/Projects/development/planetargon/brainstormr
 # cd $brainstormr
 #
+# source ~/.aliases # Aliases - For a full list of active aliases, run `alias`.
