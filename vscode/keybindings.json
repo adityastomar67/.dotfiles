@@ -1,6 +1,6 @@
 [
     {
-        "key": "alt+left",
+        "key": "alt+h",
         "command": "workbench.action.navigateBack"
     },
     {
@@ -8,7 +8,7 @@
         "command": "-workbench.action.navigateBack"
     },
     {
-        "key": "alt+right",
+        "key": "alt+l",
         "command": "workbench.action.navigateForward"
     },
     {

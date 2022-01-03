@@ -21,7 +21,11 @@ export PATH=~/.scripts:$PATH   # Making my scripts run without typing the whole 
 export EDITOR='nvim'           # Default Code Editor
 export TERMINAL='alacritty'    # default Terminal
 export BROWSER='brave'         # Default Browser
-export MANPAGER='nvim +Man!'   # Manual Page in NVim
+
+## Set MANPAGER, Uncomment only one of these!
+export MANPAGER="sh -c 'col -bx | bat -l man -p'" # "bat" as manpager
+# export MANPAGER='/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"' # "vim" as manpager
+# export MANPAGER="nvim -c 'set ft=man' -" # "nvim" as manpager
 
 ### Directory
 [ ! -d "$HOME/Downloads/git-repos" ] && mkdir $HOME/Downloads/git-repos
@@ -30,10 +34,8 @@ export MANPAGER='nvim +Man!'   # Manual Page in NVim
 ### Plugins
 ## Standard plugins can be found in $ZSH/plugins/ & Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(
-  zsh-autocomplete
   zsh-autosuggestions
   zsh-syntax-highlighting
-  zsh-autopair
   git
   history
   web-search
