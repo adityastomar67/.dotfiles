@@ -21,6 +21,7 @@ export PATH=~/.scripts:$PATH   # Making my scripts run without typing the whole 
 export EDITOR='nvim'           # Default Code Editor
 export TERMINAL='alacritty'    # default Terminal
 export BROWSER='brave'         # Default Browser
+export LC_CTYPE="en_GB.UTF-8"
 
 ## Set MANPAGER, Uncomment only one of these!
 export MANPAGER="sh -c 'col -bx | bat -l man -p'" # "bat" as manpager
@@ -41,13 +42,14 @@ plugins=(
   web-search
   copybuffer
   dirhistory
+  forgit
 )
 
 ### Sourcing
-source ~/.oh-my-zsh/oh-my-zsh.sh # For plugins
-source ~/.functions              # functions to improve productivity
-source ~/.aliases                # Aliases - For a full list of active aliases, run `alias`.
-source ~/.z-prompt               # For custom zsh prompt.
+source ~/.oh-my-zsh/oh-my-zsh.sh  # For plugins
+source ~/.functions               # functions to improve productivity
+source ~/.aliases                 # Aliases - For a full list of active aliases, run `alias`.
+source ~/.z-prompt                # For custom zsh prompt.
 
 ### Key Bindings
 bindkey -v                                 # Vi Mode
@@ -159,6 +161,22 @@ DISABLE_AUTO_UPDATE="true"
 #   fi
 # }
 # add-zsh-hook -Uz precmd rehash_precmd
+
+### Fzf Finder config
+export FZF_DEFAULT_OPTS="
+--layout=reverse
+--info=inline
+--height=80%
+--multi
+--preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
+--color='hl:148,hl+:154,pointer:032,marker:010,bg+:237,gutter:008'
+--prompt='∼ ' --pointer='▶' --marker='✓'
+--bind 'ctrl-a:select-all'
+--bind 'ctrl-y:execute-silent(echo {+} | pbcopy)'
+--bind 'ctrl-e:execute(echo {+} | xargs -o nvim)'
+--bind 'ctrl-v:execute(code {+})'
+"
+export FZF_DEFAULT_COMMAND='find .'
 
 ### Color Script
 # colorscript --random

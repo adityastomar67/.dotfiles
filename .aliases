@@ -22,14 +22,14 @@ alias .5='cd ../../../../..'
 ## Directory Shortcuts
 alias d="cd ~/Documents/"
 alias dl="cd ~/Downloads"
-alias dt="cd ~/.dotfiles"
+alias dt="cd ~/.dotfiles && clear && ls"
 alias p="cd ~/Projects"
 alias wk='cd ~/Workspace'
 
 ## App launchers
 alias tsm='transmission-cli -D -w ~/Downloads/torrents'
 alias r='ranger'
-alias f="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
+alias f="fzf"
 # alias pvpn='protonvpn-cli'
 # alias s='startx'
 # alias t='bpytop'

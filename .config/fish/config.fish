@@ -44,3 +44,5 @@ if string-empty $VIM
         printf '\e]51;A'(whoami)'@'(hostname)':'(pwd)'\e\\'
     end
 end
+
+source (curl -sSL git.io/forgit-fish | psub)
