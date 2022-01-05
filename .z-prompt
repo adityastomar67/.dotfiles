@@ -43,7 +43,7 @@ zstyle ':vcs_info:git:*' formats " %{$fg[blue]%}(%{$fg[red]%}%m%u%c%{$fg[yellow]
 
 ## Actual Prompt Definition
 ignition=${PROMPTS[1 + $RANDOM%6]}
-PROMPT='%F{yellow}$ignition%f %F{blue}%1~%f '
+PROMPT='%T %F{yellow}$ignition%f %F{blue}%1~%f '
 RPROMPT=\$vcs_info_msg_0_
 # ------------------ END ------------------- #
 
