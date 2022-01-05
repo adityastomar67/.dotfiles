@@ -212,3 +212,6 @@ zsh
 zsh-completions-git
 notflix
 fzf
+mpv
+webtorrent
+dmenu

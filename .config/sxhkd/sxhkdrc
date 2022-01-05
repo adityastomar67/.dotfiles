@@ -162,11 +162,12 @@ alt + shift + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 # Hide/Unhide Window
-super + shift + i
+super + shift + h
    winmask
 
-## Dmenu Run
-shift + Return
-   dmenu_run
+# run program launcher
+alt + ctrl + Return
+	bash ~/.scripts/dmenu
+
 
 ##---------- EOF ----------##

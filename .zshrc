@@ -21,7 +21,7 @@ export PATH=~/.scripts:$PATH   # Making my scripts run without typing the whole 
 export EDITOR='nvim'           # Default Code Editor
 export TERMINAL='alacritty'    # default Terminal
 export BROWSER='brave'         # Default Browser
-export LC_CTYPE="en_GB.UTF-8"
+# export LC_CTYPE="en_GB.UTF-8"
 
 ## Set MANPAGER, Uncomment only one of these!
 export MANPAGER="sh -c 'col -bx | bat -l man -p'" # "bat" as manpager

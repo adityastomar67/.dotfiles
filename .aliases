@@ -1,3 +1,4 @@
+#!/bin/sh
 # ░░░░█████╗░██╗░░░░░██╗░█████╗░░██████╗███████╗░██████╗
 # ░░░██╔══██╗██║░░░░░██║██╔══██╗██╔════╝██╔════╝██╔════╝
 # ░░░███████║██║░░░░░██║███████║╚█████╗░█████╗░░╚█████╗░
@@ -53,8 +54,8 @@ alias v="nvim"
 # alias doomupgrade="~/.emacs.d/bin/doom upgrade"
 
 ## Confirm before overwriting something
-alias cp="cp -i"
-alias mv='mv -i'
+alias cp="rsync -r --progress"
+alias mv='mv -ig'
 alias rm='rm -rfi'
 
 ## File printing with Bat instead of cat
