@@ -25,6 +25,7 @@ cups
 debtap
 dialog
 discord
+dmenu
 docker
 dosfstools
 droidcam
@@ -42,6 +43,7 @@ firefox
 flameshot
 fnm-bin
 fortune
+fzf
 fzf
 gimp
 git
@@ -74,6 +76,7 @@ lvim
 lxappearance
 mediainfo
 mpv
+mpv
 mtools
 nautilus
 nautilus-bluetooth
@@ -84,10 +87,11 @@ neovide-bin
 neovim
 neovim-remote
 nerd-fonts-jetbrains-mono
-networkmanager
 network-manager-applet
+networkmanager
 newsboat
 nmon
+notflix
 noto-fonts-emoji
 npm
 ntfs-3g
@@ -151,6 +155,7 @@ virtualbox-bin-guest-iso
 visual-studio-code-binfeh
 vscodium-bin
 vscodium-bin-marketplace
+webtorrent
 wget
 wireless_tools
 wpa_supplicant
@@ -160,9 +165,9 @@ xclip
 xf86-video-vesa
 xorg-bdftopcf
 xorg-docs
+xorg-font-util
 xorg-fonts-100dpi
 xorg-fonts-75dpi
-xorg-font-util
 xorg-iceauth
 xorg-mkfontscale
 xorg-server-devel
@@ -210,8 +215,3 @@ zoom
 zoxide-bin
 zsh
 zsh-completions-git
-notflix
-fzf
-mpv
-webtorrent
-dmenu

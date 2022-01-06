@@ -56,7 +56,7 @@ alias v="nvim"
 
 ## Confirm before overwriting something
 alias cp="rsync -r --progress"
-alias mv='mv -ig'
+alias mv='mv -i'
 alias rm='rm -rfi'
 
 ## File printing with Bat instead of cat
