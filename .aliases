@@ -31,6 +31,7 @@ alias wk='cd ~/Workspace'
 alias tsm='transmission-cli -D -w ~/Downloads/torrents'
 alias r='ranger'
 alias f="fzf"
+alias music="youtube-viewer"
 # alias pvpn='protonvpn-cli'
 # alias s='startx'
 # alias t='bpytop'

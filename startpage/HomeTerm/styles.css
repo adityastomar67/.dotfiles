@@ -1,0 +1,277 @@
+/**
+* Theme Definitions
+*/
+
+:root {
+  --body-bg: #3f3f3f;
+  --bg: #1f1f1f;
+  --fg: #d4d4d4;
+  --directory: #83a06c;
+  --prompt: #83a06c;
+  --cursor: var(--fg);
+  --listItem: var(--fg);
+  --listTitle: var(--fg);
+  --link: var(--fg);
+  --tree: var(--fg);
+
+  --fontSize: 13px;
+  --fontFamily: "Source Code Pro", monospace;
+}
+
+body.dark {
+  /* Empty definition to handle switching back to "dark" as default */
+}
+
+body.light {
+  --body-bg: #f3f3f3;
+  --bg: #fefefe;
+  --fg: #1e1e1e;
+  --directory: #526e39;
+  --prompt: #526e39;
+  --cursor: var(--fg);
+  --listItem: var(--fg);
+  --listTitle: var(--fg);
+  --link: var(--fg);
+  --tree: var(--fg);
+}
+
+body.laserwave {
+  --body-bg: #1c1720;
+  --bg: #27212e;
+  --fg: #ffffff;
+  --directory: #40b4c4;
+  --prompt: #eb64b9;
+  --cursor: var(--prompt);
+  --listItem: var(--fg);
+  --listTitle: var(--fg);
+  --link: var(--fg);
+  --tree: var(--fg);
+}
+
+body.nord {
+  --body-bg: #2e3440;
+  --bg: #3b4252;
+  --fg: #eceff4;
+  --directory: #5e81ac;
+  --prompt: #8fbcbb;
+  --cursor: #88c0d0;
+  --listItem: var(--fg);
+  --listTitle: var(--fg);
+  --link: var(--fg);
+  --tree: var(--fg);
+}
+
+body.dracula {
+  --body-bg: #191a20;
+  --bg: #282a35;
+  --fg: #f8f8f2;
+  --directory: #8be9fd;
+  --prompt: #e97fc0;
+  --cursor: #6272a4;
+  --listItem: var(--fg);
+  --listTitle: var(--fg);
+  --link: var(--fg);
+  --tree: var(--fg);
+}
+
+body.greyscale {
+  --body-bg: #2a2a2a;
+  --bg: #1d1d1d;
+  --fg: #fff;
+  --directory: #888;
+  --prompt: #7a7a7a;
+  --cursor: var(--prompt);
+  --listItem: var(--fg);
+  --listTitle: var(--fg);
+  --link: var(--fg);
+  --tree: var(--fg);
+}
+
+body.nightowl {
+  --body-bg: #00101d;
+  --bg: #011627;
+  --fg: #d6deeb;
+  --directory: #ffcb8b;
+  --prompt: #c792ea;
+  --cursor: var(--prompt);
+  --listItem: var(--fg);
+  --listTitle: var(--fg);
+  --link: var(--fg);
+  --tree: var(--fg);
+}
+
+/**
+* Terminal Default Styling
+*/
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--body-bg);
+  color: var(--fg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fontFamily);
+  font-size: var(--fontSize);
+}
+
+#terminal {
+  background-color: var(--bg);
+  box-sizing: border-box;
+  width: 700px;
+  height: 450px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  padding: 1.5em 0em;
+}
+
+#terminal-content {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  padding: 0em 1.5em;
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#terminal-content::-webkit-scrollbar {
+  display: none;
+}
+
+#terminal-content p {
+  margin: 0px;
+}
+
+/**
+* Prompt Styling
+*/
+
+.prompt {
+  display: flex;
+}
+
+#prompt-input {
+  background-color: transparent;
+  border: none;
+  color: var(--fg);
+  flex-grow: 1;
+  padding: 0.5em;
+  font-family: var(--fontFamily);
+  font-size: var(--fontSize);
+}
+
+#prompt-input:focus {
+  outline: none;
+}
+
+.prompt-title {
+  color: var(--prompt);
+  padding: 0.5em 0em;
+}
+
+.prompt-cursor {
+  color: var(--cursor);
+  margin-left: 0.5em;
+}
+
+.prompt-text {
+  padding: 0.5em;
+  flex-grow: 1;
+}
+
+/**
+* Terminal Output generic styles
+*/
+
+.terminal-output {
+  margin: 0.5em 0em;
+}
+
+.default-list {
+  margin: 0px;
+  padding: 0em 1em;
+}
+
+/**
+* LS Command Styling
+*/
+
+.ls-list {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ls-item {
+  padding: 0em 0.5em;
+}
+
+.ls-item.directory {
+  color: var(--directory);
+}
+
+/**
+* Tree Command Styling
+*/
+
+.tree-list {
+  margin: 0px;
+  padding: 0em 0em 0em 1.25em;
+  list-style: none;
+}
+
+.tree-list-item {
+  color: var(--fg);
+  position: relative;
+  padding: 0.25em 0em 0em 0.1em;
+}
+
+.tree-list-item::before,
+.tree-list-item::after {
+  content: "";
+  position: absolute;
+  left: -0.8rem;
+}
+
+.tree-list-item::before {
+  border-top: 1px solid var(--tree);
+  top: 0.8em;
+  width: 0.75em;
+}
+
+.tree-list-item::after {
+  border-left: 1px solid var(--tree);
+  height: 100%;
+  top: 0.3em;
+}
+
+.tree-list-item:last-child::after {
+  /* Create the right angle on the last child */
+  height: 0.5em;
+}
+
+.tree-list-item.directory {
+  color: var(--directory);
+}
+
+/**
+* Misc Styling
+*/
+
+.github-link {
+  color: var(--link);
+  margin: 1em;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  text-decoration: none;
+}

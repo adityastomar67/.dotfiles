@@ -1,0 +1,9 @@
+{
+  "name": "HomeTerm",
+  "version": "1.0",
+  "description": "Terminal themed new tab page.",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "manifest_version": 2
+}
