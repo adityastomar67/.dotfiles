@@ -37,13 +37,11 @@ element-desktop-nightly-bin
 exa
 fd
 feh
-feh
 figlet
 firefox
 flameshot
 fnm-bin
 fortune
-fzf
 fzf
 gimp
 git
@@ -76,7 +74,6 @@ lvim
 lxappearance
 mediainfo
 mpv
-mpv
 mtools
 nautilus
 nautilus-bluetooth
@@ -87,8 +84,8 @@ neovide-bin
 neovim
 neovim-remote
 nerd-fonts-jetbrains-mono
-network-manager-applet
 networkmanager
+network-manager-applet
 newsboat
 nmon
 notflix
@@ -165,9 +162,9 @@ xclip
 xf86-video-vesa
 xorg-bdftopcf
 xorg-docs
-xorg-font-util
 xorg-fonts-100dpi
 xorg-fonts-75dpi
+xorg-font-util
 xorg-iceauth
 xorg-mkfontscale
 xorg-server-devel
@@ -206,7 +203,6 @@ xorg-xwud
 xterm
 yapf
 yarn
-yay
 yay
 youtube-dl
 zathura

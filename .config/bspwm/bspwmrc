@@ -147,7 +147,7 @@ exec mpd &
 
 # Start bspwm scripts
 bspcolors
-bspbar
+# $HOME/.config/polybar/launch.sh &
 bspcomp
 bspfloat &
 

@@ -7,9 +7,9 @@
 .old
 .pacmanlist
 .pylist
-.stow-local-ignore
-README.md
 python_req.txt
+README.md
 rq.txt
 startpage
+.stow-local-ignore
 vscode

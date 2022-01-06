@@ -166,8 +166,7 @@ super + shift + h
    winmask
 
 # run program launcher
-alt + ctrl + Return
-	bash ~/.scripts/dmenu
-
+shift + Return
+    dmenu_run
 
 ##---------- EOF ----------##

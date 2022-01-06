@@ -23,7 +23,7 @@ alias .5='cd ../../../../..'
 ## Directory Shortcuts
 alias d="cd ~/Documents/"
 alias dl="cd ~/Downloads"
-alias dt="cd ~/.dotfiles && clear && ls"
+alias dt="cd ~/.dotfiles && clear && ls && echo '\n'"
 alias p="cd ~/Projects"
 alias wk='cd ~/Workspace'
 

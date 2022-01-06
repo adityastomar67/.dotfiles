@@ -29,7 +29,7 @@ function cond() {
 ## Sorting file's content
 function srt() {
 	mv "$1" "$1.bak"
-	sort "$1.bak" > $1
+	sort "$1.bak" | uniq > $1
 	rm "$1.bak"
 }
 
