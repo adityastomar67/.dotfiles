@@ -31,7 +31,7 @@
   "editor.cursorSurroundingLines": 3,
   "editor.useTabStops": true,
   "editor.formatOnPaste": false,
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.tabCompletion": "on",
   "editor.wordWrap": "on",
   "editor.wordWrapColumn": 80,

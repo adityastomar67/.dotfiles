@@ -15,6 +15,7 @@ code --force --install-extension coenraads.bracket-pair-colorizer
 code --force --install-extension monokai.theme-monokai-pro-vscode
 code --force --install-extension GitHub.github-vscode-theme
 code --force --install-extension vscodevim.vim
+code --force --install-extension foxundermoon.shell-format
 
 cd ~/.config/Code/User
 

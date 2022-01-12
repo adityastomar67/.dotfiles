@@ -16,3 +16,5 @@ vscode
 .ssh
 .gitconfig
 init.sh
+.config/nvim-NvChad
+.config/NVIM.BAK
