@@ -198,4 +198,6 @@ export FZF_DEFAULT_COMMAND='find .'
 # colorscript --exec tux
 
 ### Calling scrpits
-clear && motivate
+echo -en "\x1b[2J\x1b[1;1H" ; echo
+motivate
+echo

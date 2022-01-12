@@ -23,7 +23,7 @@ alias .5='cd ../../../../..'
 ## Directory Shortcuts
 alias d="cd ~/Documents/"
 alias dl="cd ~/Downloads"
-alias dt="cd ~/.dotfiles && clear && ls && echo '\n'"
+alias dt="cd ~/.dotfiles && clear && ls && echo "
 alias p="cd ~/Projects"
 alias wk='cd ~/Workspace'
 
@@ -77,7 +77,7 @@ alias shutdown="sudo /sbin/shutdown"
 alias flighton='sudo rfkill block all'
 alias flightoff='sudo rfkill unblock all'
 alias snr='sudo service network-manager restart'
-alias clear='echo -en "\x1b[2J\x1b[1;1H" ; echo; echo'
+alias clear='echo -en "\x1b[2J\x1b[1;1H" ; echo; motivate; echo'
 
 
 ## Get fastest mirrors
