@@ -1,6 +1,6 @@
 #!/bin/bash
 # Script to Download my Updated Wallpapers from Github
-
+mkdir -p $HOME/.config/wall/Wallpapers
 [ -d "$HOME/.config/wall/Wallpapers" ] && rm -rf ~/.config/wall/Wallpapers
 
 cd ~/.config/wall/
