@@ -13,3 +13,5 @@ rq.txt
 startpage
 .stow-local-ignore
 vscode
+.ssh
+.gitconfig
