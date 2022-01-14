@@ -48,13 +48,13 @@ plugins=(
 )
 
 ### Sourcing
-source ~/.oh-my-zsh/oh-my-zsh.sh  # For plugins
-source ~/.functions               # functions to improve productivity
-source ~/.aliases                 # Aliases - For a full list of active aliases, run `alias`.
-source ~/.z-prompt                # For custom zsh prompt.
+source ~/.oh-my-zsh/oh-my-zsh.sh # For plugins
+source ~/.functions              # functions to improve productivity
+source ~/.aliases                # Aliases - For a full list of active aliases, run `alias`.
+source ~/.z-prompt               # For custom zsh prompt.
 
 ### Key Bindings
-bindkey -v                                 # Vi Mode
+bindkey "^v"                               # Vi Mode
 bindkey "^k" up-line-or-beginning-search   # Up
 bindkey "^j" down-line-or-beginning-search # Down
 
@@ -200,6 +200,7 @@ export FZF_DEFAULT_COMMAND='find .'
 # colorscript --exec tux
 
 ### Calling scrpits
-echo -en "\x1b[2J\x1b[1;1H" ; echo
+echo -en "\x1b[2J\x1b[1;1H"
+echo
 motivate
 echo
