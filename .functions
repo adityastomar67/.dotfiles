@@ -6,6 +6,17 @@
 # ██╗██║░░░░░╚██████╔╝██║░╚███║╚█████╔╝░░░██║░░░██║╚█████╔╝██║░╚███║██████╔╝
 # ╚═╝╚═╝░░░░░░╚═════╝░╚═╝░░╚══╝░╚════╝░░░░╚═╝░░░╚═╝░╚════╝░╚═╝░░╚══╝╚═════╝░
 
+## Setup Repo
+function repo() {
+    git init
+    touch README.md .gitignore
+    git branch -m main
+    git remote add origin "$1"
+    git add .
+    git commit -m "First Commit"
+    git push origin HEAD
+}
+
 ## Recursively delete `passed type' files
 function del() {
 	find . -type f -name "$1" -ls -delete

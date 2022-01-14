@@ -1,4 +1,5 @@
 #!/bin/bash
+
 cd ../.fonts
 sudo cp * /usr/share/fonts/OTF/ 
 mkdir -p ~/.local/share/fonts

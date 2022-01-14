@@ -31,6 +31,8 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'" # "bat" as manpager
 ### Directory
 [ ! -d "$HOME/Downloads/git-repos" ] && mkdir $HOME/Downloads/git-repos
 [ ! -d "$HOME/Downloads/torrents" ] && mkdir $HOME/Downloads/torrents
+[ ! -d "$HOME/Workspace" ] && mkdir $HOME/Workspace
+[ ! -d "$HOME/Study-Material" ] && mkdir $HOME/Study-Material
 
 ### Plugins
 ## Standard plugins can be found in $ZSH/plugins/ & Custom plugins may be added to $ZSH_CUSTOM/plugins/
