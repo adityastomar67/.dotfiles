@@ -1,0 +1,22 @@
+[global/wm]
+include-file = ~/.config/polybar/colors.ini
+include-file = ~/.config/polybar/modules.ini
+
+[bar/main]
+wm-restack = bspwm
+bottom = true
+fixed-center = true
+width = 100%
+height = 20
+background = ${color.background}
+foreground = ${color.foreground}
+border-bottom-size = 5
+border-top-size = 0
+border-bottom-color = ${color.background}
+border-top-color = ${color.background}
+padding = 1
+font-0 = "JetBrains Mono Medium:size=7.5;3"
+font-1 = "feather:size=11;3"
+modules-left = cpu memory
+modules-center = workspaces
+modules-right = alsa backlight battery network date

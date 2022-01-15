@@ -41,6 +41,7 @@
   "editor.gotoLocation.multipleDeclarations": "peek",
   "editor.gotoLocation.multipleImplementations": "peek",
   "editor.gotoLocation.multipleTypeDefinitions": "peek",
+  "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "explorer.decorations.badges": false,
   "extensions.ignoreRecommendations": true,
@@ -192,7 +193,7 @@
   "vetur.experimental.templateInterpolationService": true,
   "rust-analyzer.inlayHints.enable": false,
   // Theme:
-  "workbench.colorTheme": "Github Dark",
+  "workbench.colorTheme": "Pitch Black",
   "editor.semanticHighlighting.enabled": false,
   "workbench.colorCustomizations": {
     "activityBar.activeBorder": "#e5b358",

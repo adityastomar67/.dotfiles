@@ -1,5 +1,8 @@
 call plug#begin('~/.config/nvim/plugged')
 Plug 'junegunn/goyo.vim'
+Plug 'nvim-telescope/telescope-file-browser.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'junegunn/limelight.vim'
 Plug 'ctrlpvim/ctrlp.vim' 
 Plug 'neoclide/coc.nvim', {'branch': 'release'} 
@@ -46,6 +49,9 @@ nnoremap <Up>    :resize -2<CR>
 nnoremap <Down>  :resize +2<CR>
 nnoremap <Left>  :vertical resize +2<CR>
 nnoremap <Right> :vertical resize -2<CR>
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
 
 "Color Settings
 colorscheme gruvbox

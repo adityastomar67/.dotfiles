@@ -169,4 +169,8 @@ super + shift + h
 shift + Return
     dmenu_run
 
+# Change Wallpaper
+alt + w
+    ./.fehbg
+
 ##---------- EOF ----------##

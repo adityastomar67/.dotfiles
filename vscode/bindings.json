@@ -1,0 +1,36 @@
+[
+    {
+        "key": "ctrl+alt+f",
+        "command": "editor.action.formatDocument",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+n",
+        "command": "code-runner.run",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+k",
+        "command": "editor.action.insertCursorAbove",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+alt+j",
+        "command": "editor.action.insertCursorBelow",
+        "when": "textInputFocus"
+    },
+    { 
+        "key": "ctrl+b",     
+        "command": "workbench.action.toggleSidebarVisibility" 
+    },
+    { 
+        "key": "ctrl+d",
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus" 
+    },
+    {
+         "key": "alt+shift+p",
+         "command": "selectNextPageSuggestion",
+         "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    }
+]

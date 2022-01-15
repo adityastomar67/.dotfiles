@@ -10,6 +10,7 @@ cmatrix
 colorpicker
 cool-retro-term
 cowsay
+dmenu
 dunst
 exa
 fd
@@ -98,6 +99,7 @@ xorg-xev
 xorg-xgamma
 xorg-xhost
 xorg-xinit
+aria2
 xorg-xinput
 xorg-xkbevd
 xorg-xkbutils
@@ -118,9 +120,8 @@ xorg-xwud
 xterm
 yay
 youtube-dl
+youtube-viewer
 zathura
 zip
 zoom
 zsh
-youtube-viewer
-ueberzug
