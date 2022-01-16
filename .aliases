@@ -34,6 +34,7 @@ alias f="fzf"
 alias music="youtube-viewer"
 alias anime="ani-cli"
 alias flix="notflix"
+alias scim='sc-im'
 # alias pvpn='protonvpn-cli'
 # alias s='startx'
 # alias t='bpytop'

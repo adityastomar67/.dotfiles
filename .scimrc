@@ -1,0 +1,47 @@
+## Configuration
+# number starts number input (0 is command repeat in vim)
+set autocalc
+set numeric_decimal=0
+set overlap
+set xlsx_readformulas
+set numeric=0
+set xlsx_readformulas=1
+set tm_gmtoff=0
+set copy_to_clipboard_delimited_tab=1
+set default_copy_to_clipboard_cmd="pbcopy <"
+set default_paste_from_clipboard_cmd="pbpaste"
+
+#set ignorecase
+
+## Light theme issues
+# https://github.com/andmarti1424/sc-im/issues/297
+color "type=INPUT fg=BLACK bg=DEFAULT_COLOR"
+color "type=NORMAL fg=BLACK bg=DEFAULT_COLOR"
+color "type=WELCOME fg=BLACK bg=DEFAULT_COLOR"
+#color "type=CELL_SELECTION_SC fg=WHITE bg=BLACK"
+color "type=MODE fg=BLACK bg=DEFAULT_COLOR"
+
+## Vim scroll (has to be capital C)
+set half_page_scroll=1
+nnoremap "<C-u>" "<C-b>"
+nnoremap "<C-d>" "<C-f>"
+
+## Formatting
+nnoremap "fd" "<C-d>"
+nnoremap "fs" ":format \"0.0##,#E+###\"<cr>"
+nnoremap "fp" ":format \"#,###,##0%\"<cr>"
+nnoremap "fa" ":format \"$#,###,##0.00 ;($#,###,##0.00)\"<cr>"
+
+## unfreeze (fr, fc)
+nnoremap "ff" ":unfreeze<cr>"
+
+## Left right scroll (alt-h, alt-l)
+nnoremap "˙" "zH"
+nnoremap "¬" "zL"
+
+## Reverse the pasting so that always paste with moving references
+nnoremap "p" "Pc"
+nnoremap "Pc" "p"
+
+## Row select
+nnoremap "V" "g0v$"
