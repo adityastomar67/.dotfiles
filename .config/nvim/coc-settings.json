@@ -23,10 +23,7 @@
   "diagnostic.signOffset": 9999999,
   "diagnostic.highlightOffset": 9999999,
   "diagnostic.refreshOnInsertMode": true,
-  "html-css-support.styleSheets": [
-    "css/style.css",
-    "style.css"
-  ],
+  "html-css-support.styleSheets": ["css/style.css", "style.css"],
   "snippets.userSnippetsDirectory": "~/.config/nvim/snippets",
   "snippets.ultisnips.enable": false,
   "snippets.ultisnips.usePythonx": false,
@@ -57,17 +54,8 @@
   "languageserver": {
     "clangd": {
       "command": "clangd",
-      "rootPatterns": [
-        "compile_flags.txt",
-        "compile_commands.json"
-      ],
-      "filetypes": [
-        "c",
-        "cc",
-        "cpp",
-        "c++",
-        "objc",
-        "objcpp"
-      ]
+      "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+      "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
     }
   }
+}

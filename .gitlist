@@ -2,55 +2,10 @@ forgit
 clone https://github.com/pystardust/ani-cli.git && cd ani-cli && sudo make && cd .. && rm -rf ani-cli
 clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-{
-    "diagnostic.errorSign": "✖",
-    "diagnostic.warningSign": "⚠",
-    "diagnostic.infoSign": "ℹ",
-    "diagnostic.hintSign": "➤",
-    "suggest.noselect": false,
-    "suggest.echodocSupport": true,
-    "codeLens.enable": true,
-    "signature.enable": true,
-    "suggest.preferCompleteThanJumpPlaceholder": true,
-    "typescript.preferences.quoteStyle": "single",
-    "typescript.preferences.importModuleSpecifier": "auto",
-    "eslint.autoFixOnSave": true,
-    "tsserver.implicitProjectConfig.experimentalDecorators": true,
-    "html.suggest.angular1": false,
-    "html.suggest.ionic": false,
-    "html.suggest.html5": true,
-    "python.venvFolders": ["envs",".pyenv",".direnv", "~/.local/share/virtualenvs", "~/.cache/pypoetry/virtualenvs"],
-    "python.workspaceSymbols.exclusionPatterns": [],
-    "python.jediEnabled": false,
-    "python.linting.pylintEnabled": true,
-    "python.linting.pylintArgs": ["--load-plugins", "pylint_django"],
-    "python.formatting.blackPath":"~/.local/bin/black",
-    "python.linting.mypyEnabled": true,
-    "python.linting.mypyPath": "~/.local/bin/mypy",
-    "python.formatting.provider": "black",
-    "python.sortImports.path": "/home/calev/.local/bin/isort",
-    "git.addedSign.text": "▎",
-    "git.changedSign.text": "▎",
-    "git.removedSign.text": "▎",
-    "git.changeRemovedSign.text": "▶",
-    "git.topRemovedSign.text": "◥",
-    "git.addedSign.hlGroup": "GitGutterAdd",
-    "git.changedSign.hlGroup": "GitGutterChange",
-    "git.removedSign.hlGroup": "GitGutterDelete",
-    "git.topRemovedSign.hlGroup": "GitGutterDelete",
-    "git.changeRemovedSign.hlGroup": "GitGutterChangeDelete",
-    "explorer.icon.enableNerdfont": true,
-    "explorer.width": 40,
-    "explorer.keyMappings.global": {
-       "<right>": "expand",
-       "<left>": "shrink"
-    },
-    "explorer.quitOnOpen": true
-}
+sudo git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 sudo curl -sL "https://raw.githubusercontent.com/Bugswriter/notflix/master/notflix" -o /usr/local/bin/notflix && sudo chmod +x /usr/local/bin/notflix
 
 sudo curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 sudo curl -Lo /usr/local/bin/copilot https://github.com/aws/copilot-cli/releases/latest/download/copilot-linux && sudo chmod +x /usr/local/bin/copilot && copilot --help
-
 
