@@ -6,17 +6,15 @@
   "suggest.autoTrigger": "always",
   "suggest.floatEnable": true,
   "suggest.removeDuplicateItems": true,
-  
   "coc.preferences.colorSupport": false,
   "coc.preferences.formatOnSaveFiletypes": [
-          "html",
-          "css",
-          "javascript",
-          "python",
-          "c_cpp"
+    "html",
+    "css",
+    "javascript",
+    "python",
+    "c_cpp"
   ],
   "callHierarchy.splitCommand": "call BreakHabitsWindow()",
-  
   "diagnostic.errorSign": "•",
   "diagnostic.warningSign": "!",
   "diagnostic.infoSign": "¶",
@@ -25,16 +23,13 @@
   "diagnostic.signOffset": 9999999,
   "diagnostic.highlightOffset": 9999999,
   "diagnostic.refreshOnInsertMode": true,
-  
   "html-css-support.styleSheets": [
-          "css/style.css",
-          "style.css"
+    "css/style.css",
+    "style.css"
   ],
-  
   "snippets.userSnippetsDirectory": "~/.config/nvim/snippets",
   "snippets.ultisnips.enable": false,
   "snippets.ultisnips.usePythonx": false,
-  
   "suggest.completionItemKindLabels": {
     "variable": "\uf71b",
     "constant": "\uf8ff",
@@ -59,11 +54,20 @@
     "typeParameter": "\uf278",
     "default": "\uf29c"
   },
-
   "languageserver": {
-  "clangd": {
-    "command": "clangd",
-    "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
-    "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
-  }
+    "clangd": {
+      "command": "clangd",
+      "rootPatterns": [
+        "compile_flags.txt",
+        "compile_commands.json"
+      ],
+      "filetypes": [
+        "c",
+        "cc",
+        "cpp",
+        "c++",
+        "objc",
+        "objcpp"
+      ]
+    }
   }
