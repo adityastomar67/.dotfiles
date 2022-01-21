@@ -1,3 +1,5 @@
+# Directories #
+###############
 .config/wall
 .config/nvim/plugged
 .config/youtube-viewer/watched.txt
@@ -44,3 +46,4 @@ Thumbs.db
 # Editor files #
 ################
 .vscode
+.prettierrc
