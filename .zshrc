@@ -204,5 +204,3 @@ echo -en "\x1b[2J\x1b[1;1H"
 echo
 motivate
 echo
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
