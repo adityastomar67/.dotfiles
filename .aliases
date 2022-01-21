@@ -81,13 +81,14 @@ alias flighton='sudo rfkill block all'
 alias flightoff='sudo rfkill unblock all'
 alias snr='sudo service network-manager restart'
 alias clear='echo -en "\x1b[2J\x1b[1;1H" ; echo; motivate; echo'
+alias touch=touchdir
 
 
 ## Get fastest mirrors
 alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
-# alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
-# alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
-# alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
+alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
+alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
+alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
 
 ## Adding flags
 alias df='df -h'                          # human-readable sizes
@@ -98,8 +99,8 @@ alias free='free -m'                      # show sizes in MB
 # alias mocp='mocp -M "$XDG_CONFIG_HOME"/moc -O MOCDir="$XDG_CONFIG_HOME"/moc'
 
 ## Get top process eating memory
-# alias psmem='ps auxf | sort -nr -k 4'
-# alias psmem10='ps auxf | sort -nr -k 4 | head -10'
+alias psmem='ps auxf | sort -nr -k 4'
+alias psmem10='ps auxf | sort -nr -k 4 | head -10'
 
 ## Get top process eating cpu
 # alias pscpu='ps auxf | sort -nr -k 3'
@@ -150,7 +151,7 @@ alias newtag='git tag -a'
 # alias ls='ptls -la'
 alias me-in=ptpwd
 alias mkdir=ptmkdir
-alias touch=pttouch
+# alias touch=pttouch
 
 ## Changing "ls" to "exa"
 alias ls='exa -al --color=always --icons --git --group-directories-first' # my preferred listing

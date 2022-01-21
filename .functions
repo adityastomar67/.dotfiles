@@ -8,14 +8,16 @@
 
 ## Setup Repo
 function repo() {
-    git init
-    touch README.md .gitignore
-    git branch -m main
-    git remote add origin "$1"
-    git add .
-    git commit -m "First Commit"
-    git push origin HEAD
+	git init
+	touch README.md .gitignore
+	git branch -m main
+	git remote add origin "$1"
+	git add .
+	git commit -m "First Commit"
+	git push origin HEAD
 }
+
+function touchdir() { mkdir -p "$(dirname "$1")" && touch "$1"; }
 
 ## Recursively delete `passed type' files
 function del() {
@@ -40,7 +42,7 @@ function cond() {
 ## Sorting file's content
 function srt() {
 	mv "$1" "$1.bak"
-	sort "$1.bak" | uniq > $1
+	sort "$1.bak" | uniq >$1
 	rm "$1.bak"
 }
 

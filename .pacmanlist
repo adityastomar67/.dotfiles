@@ -63,8 +63,11 @@ python-pip
 qt5ct
 ranger
 reflector
-ripgrep-git
+ripgrep
+the_silver_searcher
 rofi
+zathura-pdf-poppler
+zathura-pdf-mupdf
 ruby
 rxfetch
 scrcpy
@@ -119,6 +122,7 @@ xorg-xkbutils
 xorg-xkill
 xorg-xlsatoms
 xorg-xlsclients
+usiversal-ctags
 xorg-xpr
 xorg-xprop
 xorg-xrandr
