@@ -1,41 +1,53 @@
-! -----------------------------------------------------------------------------
-! Copyright (C) 2020-2021 Aditya Shakya <adi1090x@gmail.com>
-! Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
-!
-! Bouquet color scheme
-! -----------------------------------------------------------------------------
+! special
+*.foreground:   #EEEEEE
+*.background:   #050505
+*.cursorColor:  #EEEEEE
 
-*background: #191D27
-*foreground: #767D8A
+! black
+*.color0:       #282a36
+*.color8:       #414458
 
-! Black + DarkGrey
-*color0:  #27292D
-*color8:  #3B3D41
+! red
+*.color1:       #f37f97
+*.color9:       #ffa3c3
 
-! DarkRed + Red
-*color1:  #ec7875
-*color9:  #fb8784
+! green
+*.color2:       #5ae6b4
+*.color10:      #9be6cb
 
-! DarkGreen + Green
-*color2:  #61c766
-*color10: #70d675
+! yellow
+*.color3:       #f7ca7a
+*.color11:      #ffe7a9
 
-! DarkYellow + Yellow
-*color3:  #fdd835
-*color11: #ffe744
+! blue
+*.color4:       #8297f4
+*.color12:      #8ab1ff
 
-! DarkBlue + Blue
-*color4:  #42a5f5
-*color12: #51b4ff
+! magenta
+*.color5:       #ea8bff
+*.color13:      #f59cff
 
-! DarkMagenta + Magenta
-*color5:  #ba68c8
-*color13: #c979d7
+! cyan
+*.color6:       #79e6f3
+*.color14:      #a2ffff
 
-! DarkCyan + Cyan
-*color6:  #4dd0e1
-*color14: #5cdff0
+! white
+*.color7:       #EEEEEE
+*.color15:      #eceff4
 
-! LightGrey + White
-*color7:  #d8d8d8
-*color15: #fdf6e3
+!*.color0:	#445158
+!*.color1:	#FF6565
+!*.color2:	#2CC46E
+!*.color3:	#ECC46F
+!*.color4:	#6F97EC
+!*.color5:	#FA5477
+!*.color6:	#64B9F2
+!*.color7:	#D2D2D4
+!*.color8:	#5E6B72
+!*.color9:	#FF7272
+!*.color10:	#46DE88
+!*.color11:	#FFDE89
+!*.color12:	#89B1FF
+!*.color13:	#FF6E91
+!*.color14:	#71C6FF
+!*.color15:	#F1F1F3

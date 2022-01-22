@@ -15,4 +15,4 @@ A bunch of files that start with . and makes linux more awesome.
 - Font : [Iosevka](https://github.com/be5invis/Iosevka.git)
 - Terminal : [st](https://github.com/siduck76/st)
 - Shell : [zsh](https://wiki.archlinux.org/index.php/Zsh)
-ASCII Arts by - https://fsymbols.com/text-art/
+- ASCII : [fsymbols](https://fsymbols.com/text-art)
