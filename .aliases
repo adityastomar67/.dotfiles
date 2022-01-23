@@ -48,6 +48,7 @@ alias weather='clear && curl wttr.in/gwalior'
 # alias script='node awc.js'
 # alias lock='xscreensaver-command -lock'
 # alias handbrake='ghb'
+alias py=python
 
 ## vim and emacs
 alias v="nvim"
