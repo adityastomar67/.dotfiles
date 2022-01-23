@@ -427,6 +427,10 @@
         "editor.semanticHighlighting.enabled": true,
         "editor.tabSize": 4
     },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "python.formatting.autopep8Path": "black",
     "python.languageServer": "Pylance",
     "typescript.updateImportsOnFileMove.enabled": "never",
     "typescript.suggest.autoImports": false,

@@ -5,7 +5,7 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "alt+n",
+        "key": "shift+enter",
         "command": "code-runner.run",
         "when": "editorTextFocus"
     },
@@ -19,18 +19,28 @@
         "command": "editor.action.insertCursorBelow",
         "when": "textInputFocus"
     },
-    { 
-        "key": "ctrl+b",     
-        "command": "workbench.action.toggleSidebarVisibility" 
-    },
-    { 
-        "key": "ctrl+d",
-        "command": "editor.action.addSelectionToNextFindMatch",
-        "when": "editorFocus" 
+    {
+        "key": "ctrl+b",
+        "command": "workbench.action.toggleSidebarVisibility"
     },
     {
-         "key": "alt+shift+p",
-         "command": "selectNextPageSuggestion",
-         "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+        "key": "ctrl+d",
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+shift+p",
+        "command": "selectNextPageSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "alt+j",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+k",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
     }
 ]
