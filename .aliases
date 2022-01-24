@@ -67,8 +67,8 @@ alias rm='rm -rfi'
 alias cat='bat'
 
 ## Broot
-# alias br='broot -dhp'
-# alias bs='broot --sizes'
+alias br='broot -dhp'
+alias bs='broot --sizes'
 
 ## Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'

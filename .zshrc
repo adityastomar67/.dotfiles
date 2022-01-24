@@ -52,6 +52,7 @@ source ~/.oh-my-zsh/oh-my-zsh.sh # For plugins
 source ~/.functions              # functions to improve productivity
 source ~/.aliases                # Aliases - For a full list of active aliases, run `alias`.
 source ~/.z-prompt               # For custom zsh prompt.
+source /home/adi/.config/broot/launcher/bash/br
 
 ### Key Bindings
 bindkey "^v"                               # Vi Mode

@@ -31,3 +31,5 @@ fi
 
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+source /home/adi/.config/broot/launcher/bash/br
