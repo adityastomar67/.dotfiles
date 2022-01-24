@@ -25,6 +25,7 @@ gcc
 git
 gnome-keyring
 gnuplot
+python-pywal
 google-chrome
 htop
 lazygit

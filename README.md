@@ -17,6 +17,10 @@ A bunch of files that start with . and makes linux more awesome.
 - Shell : [zsh](https://wiki.archlinux.org/index.php/Zsh)
 - ASCII : [fsymbols](https://fsymbols.com/text-art)
 
+
+
+
+
 ```
 █▄▄ █▄█   ▄▄   ▄▀█ █▀▄ █ ▀█▀ █▄█ ▄▀█ █▀ ▀█▀ █▀█ █▀▄▀█ ▄▀█ █▀█ █▄▄ ▀▀█
 █▄█ ░█░   ░░   █▀█ █▄▀ █ ░█░ ░█░ █▀█ ▄█ ░█░ █▄█ █░▀░█ █▀█ █▀▄ █▄█ ░░█

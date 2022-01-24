@@ -33,8 +33,8 @@ workspaces() {
 }
 workspaces
 
-bspc config border_width 1 
-bspc config window_gap 8 
+bspc config border_width 0 
+bspc config window_gap 10 
 bspc config split_ratio 0.50
 
 bspc config focused_border_color "#FF8E00" 
@@ -140,7 +140,8 @@ xfce4-power-manager &
 xsetroot -cursor_name left_ptr
 
 # Restore wallpaper
-bash $HOME/.fehbg
+# bash $HOME/.fehbg_
+bash $HOME/.wallpy
 
 # Start mpd
 exec mpd &

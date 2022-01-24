@@ -171,6 +171,7 @@ shift + Return
 
 # Change Wallpaper
 alt + w
-    ./.fehbg
+   #  ./.fehbg_
+    ./.wallpy
 
 ##---------- EOF ----------##

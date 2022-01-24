@@ -46,4 +46,5 @@ Thumbs.db
 # Editor files #
 ################
 .vscode
+.prettierrc.fehbg
 .prettierrc

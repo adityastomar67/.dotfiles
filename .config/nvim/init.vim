@@ -24,6 +24,7 @@ Plug 'tpope/vim-markdown'
 Plug 'ap/vim-css-color'
 Plug 'github/copilot.vim'
 Plug 'morhetz/gruvbox'
+Plug 'dylanaraps/wal.vim'
 call plug#end()
 
 """ General Settings
@@ -73,9 +74,9 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 
 """ Color Settings
-colorscheme gruvbox
+colorscheme wal
 set background=dark
-set termguicolors
+"set termguicolors
 let g:limelight_conceal_ctermfg = 240
 let g:limelight_conceal_guifg = '#777777'
 hi! Normal ctermbg=NONE guibg=NONE 
