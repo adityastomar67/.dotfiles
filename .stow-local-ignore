@@ -1,10 +1,8 @@
 .bash_it
-bin
 .config/NVIM.BAK
 .config/nvim-NvChad
 .fonts
 .git
-.gitconfig
 .gitignore
 .gitlist
 init.sh

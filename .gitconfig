@@ -1,6 +1,6 @@
 [user]
-	name = Aditya Singh Tomar
 	email = adityastomar12@gmail.com
+	name = Aditya Singh Tomar
 
 [alias]
 	branches = "bash $HOME/.dotfiles/bin/git/branches"
