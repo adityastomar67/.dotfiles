@@ -69,7 +69,7 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' # Matchlist
 # ZSH_THEME="robbyrussell"
 # ZSH_THEME="agnoster"
 # ZSH_THEME="dstufft"
-ZSH_THEME="spaceship"
+# ZSH_THEME="spaceship"
 
 ## Set list of themes to pick from when loading at random Setting this variable when ZSH_THEME="spaceship" a theme from this variable instead of looking in $ZSH/themes/
 ## If set to an empty array, this variable will have no effect.

@@ -49,7 +49,6 @@ alias weather='clear && curl wttr.in/gwalior'
 # alias lock='xscreensaver-command -lock'
 # alias handbrake='ghb'
 alias py=python
-alias snote='~/Downloads/standard-notes-3.9.20-linux-x86_64.AppImage'
 
 ## vim and emacs
 alias v="nvim"
