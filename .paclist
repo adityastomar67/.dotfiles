@@ -25,7 +25,6 @@ gcc
 git
 gnome-keyring
 gnuplot
-python-pywal
 google-chrome
 htop
 lazygit
@@ -61,6 +60,7 @@ prettier
 pulseaudio-bluetooth
 pulsemixer
 python-pip
+python-pywal
 qt5ct
 ranger
 reflector

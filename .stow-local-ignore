@@ -1,8 +1,13 @@
 .bash_it
+bin
+.config/NVIM.BAK
+.config/nvim-NvChad
 .fonts
 .git
+.gitconfig
 .gitignore
 .gitlist
+init.sh
 .inputrc
 .old
 .pacmanlist
@@ -10,12 +15,7 @@
 python_req.txt
 README.md
 rq.txt
+.ssh
 startpage
 .stow-local-ignore
 vscode
-.ssh
-.gitconfig
-init.sh
-.config/nvim-NvChad
-.config/NVIM.BAK
-bin
