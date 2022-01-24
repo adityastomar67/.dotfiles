@@ -173,5 +173,9 @@ shift + Return
 alt + w
     ./.wallpy
    #  ./.fehbg_
+   
+# For Starting Standard Note
+alt + s
+    ~/Downloads/standard-notes-3.9.20-linux-x86_64.AppImage
 
 ##---------- EOF ----------##
