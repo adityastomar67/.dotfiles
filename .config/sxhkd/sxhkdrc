@@ -174,4 +174,7 @@ alt + w
     ./.wallpy
    #  ./.fehbg_
 
+# Mousepad Enable/Disable
+ctrl + shift + {e,d}
+    xinput {enable,disable} 'SynPS/2 Synaptics TouchPad'
 ##---------- EOF ----------##

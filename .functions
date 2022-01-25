@@ -17,6 +17,8 @@ function repo() {
 	git push origin HEAD
 }
 
+function prog() { g++ "$1" && ./a.out && rm -f a.out }
+
 function touchdir() { mkdir -p "$(dirname "$1")" && touch "$1"; }
 
 ## Recursively delete `passed type' files

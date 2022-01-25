@@ -41,8 +41,7 @@ alias scim='sc-im'
 alias tty='tty-clock -C6 -c -t'
 alias pac='sudo pacman -S'
 alias weather='clear && curl wttr.in/gwalior'
-# alias shot='flameshot gui'
-# alias kill='killall -q'
+# alias shot='flameshot gui' alias kill='killall -q'
 # alias suck='rm -f config.h ; sudo make install'
 # alias wal='feh --bg-fill -z'
 # alias script='node awc.js'
@@ -239,5 +238,4 @@ alias edex='cd ~/.dotfiles/apps && ./edex.AppImage'
 alias retro='cd ~/.dotfiles/apps && ./retro.AppImage'
 alias :q='exit'
 alias porn='mpv "http://www.pornhub.com/random"' # Opens Random PornHub Video
-
 # _________________ END _____________________ #

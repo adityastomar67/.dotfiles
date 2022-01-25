@@ -16,7 +16,8 @@
         "css",
         "javascript",
         "python",
-        "c_cpp"
+        "cpp",
+        "c"
     ],
     "diagnostic.messageTarget": "echo",
     "html.format.enable": true,
