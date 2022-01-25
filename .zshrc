@@ -18,10 +18,16 @@ setopt appendhistory
 export TERM="xterm-256color"   # Default term
 export PATH=~/.local/bin:$PATH # Bin Path to run Commands
 export PATH=~/.scripts:$PATH   # Making my scripts run without typing the whole path
-export EDITOR='nvim'           # Default Code Editor
 export TERMINAL='alacritty'    # default Terminal
 export BROWSER='brave'         # Default Browser
 export LC_CTYPE="en_IN.UTF-8"
+
+## Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='lvim'
+else
+  export EDITOR='nvim'
+fi
 
 ## Set MANPAGER, Uncomment only one of these!
 export MANPAGER="sh -c 'col -bx | bat -l man -p'" # "bat" as manpager
@@ -138,16 +144,6 @@ DISABLE_AUTO_UPDATE="true"
 ### User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
 
-## You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-## Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='nvim'
-# else
-#   export EDITOR='lvim'
-# fi
-
 ## Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -200,7 +196,8 @@ export FZF_DEFAULT_COMMAND='find .'
 # colorscript --exec tiefighter1row
 # colorscript --exec tux
 
-### Calling scrpits
+### Calling scrpits and Operations
+tmux
 echo -en "\x1b[2J\x1b[1;1H"
 echo
 motivate

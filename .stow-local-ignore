@@ -4,12 +4,12 @@
 .fonts
 .git
 .gitignore
-.gitlist
 init.sh
 .inputrc
 .old
-.pacmanlist
-.pylist
+list.pacman
+list.git
+list.pip
 python_req.txt
 README.md
 rq.txt
@@ -17,3 +17,4 @@ rq.txt
 startpage
 .stow-local-ignore
 vscode
+.prettierrc
