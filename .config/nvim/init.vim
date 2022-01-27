@@ -31,7 +31,22 @@ call plug#end()
 set encoding=UTF-8 nobackup nowritebackup nocursorline splitbelow splitright wildmode=longest,list,full
 set shiftwidth=4 autoindent smartindent tabstop=4 softtabstop=4 expandtab spell spelllang=en_us
 set fillchars+=eob:\ 
+"set number relativenumber
+set tabstop=4  
 au BufRead,BufNewFile *.fountain set filetype=fountain
+
+""" Usage of Mouse
+if has('mouse')
+  if &term =~ 'xterm'
+    set mouse=a
+  else
+    set mouse=nvi
+  endif
+endif
+
+""" Keyword Highlighting
+au Colorscheme * :hi Keyword gui=italic cterm=italic
+au Colorscheme * :hi Comment gui=italic cterm=italic
 
 """ Status Line
 set laststatus=0
@@ -72,6 +87,7 @@ nnoremap <Right> :vertical resize -2<CR>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
+imap qq <Esc>
 
 """ Color Settings
 colorscheme wal

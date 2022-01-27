@@ -175,7 +175,7 @@ export FZF_DEFAULT_OPTS="
 --bind 'ctrl-e:execute(echo {+} | xargs -o nvim)'
 --bind 'ctrl-v:execute(code {+})'
 "
-export FZF_DEFAULT_COMMAND='find .'
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
 ### Color Script
 # colorscript --random

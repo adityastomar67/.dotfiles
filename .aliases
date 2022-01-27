@@ -35,6 +35,7 @@ alias music="youtube-viewer"
 alias anime="ani-cli"
 alias flix="notflix"
 alias scim='sc-im'
+alias dmenu='dmenu -i -l 10 -fn "Iosevka Nerd Font" -p "Select File: " -nb "#282a36" -nf "#f8f8f2" -sf "#44475a" -sb "#bd93f9" '
 # alias pvpn='protonvpn-cli'
 # alias s='startx'
 # alias t='bpytop'
