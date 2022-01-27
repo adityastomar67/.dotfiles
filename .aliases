@@ -81,7 +81,7 @@ alias shutdown="sudo /sbin/shutdown"
 alias flighton='sudo rfkill block all'
 alias flightoff='sudo rfkill unblock all'
 alias snr='sudo service network-manager restart'
-alias clear='echo -en "\x1b[2J\x1b[1;1H" ; echo; motivate; echo'
+alias clear='echo -en "\x1b[2J\x1b[1;1H" ; echo; header; echo'
 
 ## Get fastest mirrors
 alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"

@@ -61,7 +61,7 @@ source ~/.z-prompt               # For custom zsh prompt.
 source /home/adi/.config/broot/launcher/bash/br
 
 ### Key Bindings
-bindkey "^v"                               # Vi Mode
+# bindkey ^v                                 # Vi Mode
 bindkey "^k" up-line-or-beginning-search   # Up
 bindkey "^j" down-line-or-beginning-search # Down
 
@@ -200,5 +200,6 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 # tmux
 echo -en "\x1b[2J\x1b[1;1H"
 echo
-motivate
+# motivate
+header
 echo
