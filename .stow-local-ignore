@@ -18,3 +18,5 @@ startpage
 .stow-local-ignore
 vscode
 .prettierrc
+bin
+walls
