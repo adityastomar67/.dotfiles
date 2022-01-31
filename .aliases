@@ -41,7 +41,7 @@ alias dmenu='dmenu -i -l 10 -fn "Iosevka Nerd Font" -p "Select File: " -nb "#282
 # alias t='bpytop'
 alias tty='tty-clock -C6 -c -t'
 alias pac='sudo pacman -S'
-alias weather='clear && curl wttr.in/gwalior'
+alias weather='clear && curl -s wttr.in/gwalior | head -n $(($(curl -s wttr.in/gwalior | wc -l)  - 2)) | tail -n $(($(curl -s wttr.in/gwalior | wc -l)  - 4))'
 # alias shot='flameshot gui' alias kill='killall -q'
 # alias suck='rm -f config.h ; sudo make install'
 # alias wal='feh --bg-fill -z'
