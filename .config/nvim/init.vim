@@ -87,6 +87,8 @@ nnoremap <Right> :vertical resize -2<CR>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <C-Space>- :sp<CR>
+nnoremap <C-Space>\ :vsp<CR>
 imap qq <Esc>
 
 """ Color Settings

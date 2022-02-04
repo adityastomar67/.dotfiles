@@ -455,6 +455,10 @@
     },
     "glassit.alpha": 200,
     "bracketPairColorizer.depreciation-notice": false,
+    "prettier.trailingComma": "es5",
+    "prettier.tabWidth": 4,
+    "prettier.semi": false,
+    "prettier.singleQuote": true,
     "security.workspace.trust.untrustedFiles": "open",
     "github-enterprise.uri": "vscode://vscode.github-authentication/did-authenticate?windowid=1&code=503fca41a4dc646fd075&state=0afbe2f6-e2ea-452b-a7ad-1e09c902b6cb"
 }
