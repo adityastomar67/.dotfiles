@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo pacman -S - < list.pacman
+
 fonts
 wall
 apps

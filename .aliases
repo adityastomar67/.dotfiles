@@ -30,6 +30,7 @@ alias wk='cd ~/Workspace'
 ## App launchers
 alias tsm='transmission-cli -D -w ~/Downloads/torrents'
 alias r='ranger'
+alias z='zathura'
 alias f="fzf"
 alias music="youtube-viewer"
 alias anime="ani-cli"
