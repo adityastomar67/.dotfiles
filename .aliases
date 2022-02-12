@@ -112,6 +112,10 @@ alias most='du -hsx * | sort -rh | head -10'
 # Get details of a process
 # alias paux='ps aux | grep'
 
+# Get Terminal Copy & Paste Buffer
+alias copy='xsel --clipboard --input'
+alias paste='xsel --clipboard --output'
+
 # Merge Xresources
 alias merge='xrdb -merge ~/.Xresources'
 

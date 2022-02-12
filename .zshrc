@@ -67,6 +67,7 @@ bindkey "^j" down-line-or-beginning-search # Down
 
 autoload -Uz compinit && compinit                            # need the next two lines for case insensitive tab completion
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' # Matchlist
+complete -C aws_completer aws
 
 ### Basic zsh settings
 ### Themes
@@ -145,7 +146,7 @@ DISABLE_AUTO_UPDATE="true"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 ## Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+export ARCHFLAGS="-arch x86_64"
 
 ### On-demand rehash
 # zshcache_time="$(date +%s%N)"
