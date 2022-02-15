@@ -39,10 +39,12 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'" # "bat" as manpager
 [ ! -d "$HOME/Downloads/torrents" ] && mkdir $HOME/Downloads/torrents
 [ ! -d "$HOME/Workspace" ] && mkdir $HOME/Workspace
 [ ! -d "$HOME/Study-Material" ] && mkdir $HOME/Study-Material
+[ ! -d "$HOME/.nano-backups" ] && mkdir $HOME/.nano-backups
 
 ### Plugins
 ## Standard plugins can be found in $ZSH/plugins/ & Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(
+  z
   zsh-autosuggestions
   zsh-syntax-highlighting
   git

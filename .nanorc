@@ -8,24 +8,26 @@
 # Settings for `nano` editor
 # Full list of settings might be shown via `man nano` or here: https://www.nano-editor.org/dist/v3/nanorc.5.html
 
-# Editor:
-set morespace
+# Includes syntax highlighting
+include "~/.nano/*.nanorc"
 
+# Other Settings
 set tabstospaces
 set trimblanks
-
 set softwrap
 set atblanks
 set constantshow
-
-# UX:
-set smooth
-
-# Extra files:
 set backup
 set backupdir "~/.nano-backups"
 set historylog
-
-# line numbers are copied with text,
-# it is not useful:
+set tabsize 4
+set tabstospaces
+set smarthome
+set constantshow
+set nohelp
+# set smooth
 # set linenumbers
+unset autoindent
+unset noconvert
+unset nonewlines
+unset softwrap

@@ -30,7 +30,7 @@ alias wk='cd ~/Workspace'
 ## App launchers
 alias tsm='transmission-cli -D -w ~/Downloads/torrents'
 alias r='ranger'
-alias z='zathura'
+alias zth='zathura'
 alias f="fzf"
 alias music="youtube-viewer"
 alias anime="ani-cli"
@@ -51,8 +51,9 @@ alias weather='clear && curl -s wttr.in/gwalior | head -n $(($(curl -s wttr.in/g
 # alias handbrake='ghb'
 alias py=python
 
-## vim and emacs
+## Editors
 alias v="nvim"
+alias nano='nano -00x'
 # alias em="/usr/bin/emacs -nw"
 # alias emacs="emacsclient -c -a 'emacs'"
 # alias doomsync="~/.emacs.d/bin/doom sync"
@@ -198,6 +199,8 @@ alias cleanup='sudo pacman -Rns (pacman -Qtdq)' # remove orphaned packages
 alias ddate='date +"%R - %a, %B %d, %Y" | xclip -select clipboard && date +"%R - %a, %B %d, %Y"'
 alias dday='date +"%Y.%m.%d - " | xclip -select clipboard ; date +"%Y.%m.%d"'
 alias week='date +%V'
+alias ping='ping -c 5'
+alias fastping='ping -c 100 -s .2'
 
 ## Termbin
 # alias tb="nc termbin.com 9999"
@@ -242,4 +245,6 @@ alias edex='cd ~/.dotfiles/apps && ./edex.AppImage'
 alias retro='cd ~/.dotfiles/apps && ./retro.AppImage'
 alias :q='exit'
 alias porn='mpv "http://www.pornhub.com/random"' # Opens Random PornHub Video
+alias ip='curl ipinfo.io/ip'
+alias calc='bc -l'
 # _________________ END _____________________ #
