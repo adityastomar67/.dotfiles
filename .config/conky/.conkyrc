@@ -1,7 +1,7 @@
 conky.config = {
-    alignment = 'bottom_middle',
+    alignment = 'bottom_right',
 	background = false,
-	border_inner_margin = 15,
+	border_inner_margin = 0,
 	border_width = 1,
 	default_color = '5A5B3F',  --ffffff # grey 5f5f5f 3F3F3F 183149 3B3B3B 26211F
 	double_buffer = true,
@@ -9,8 +9,8 @@ conky.config = {
 	draw_graph_borders = true,
 	draw_outline = false,
 	draw_shades = false,
-	gap_x = 30,
-	gap_y = 60,
+	gap_x = 2,
+	gap_y = 2,
 	maximum_width = 650,
 	double_buffer = true,
 	override_utf8_locale = true,
@@ -43,12 +43,5 @@ conky.config = {
     own_window_type = 'desktop',
 }
 conky.text = [[
-
-${font Enlightica:weight=Light:size=78}${alignc}${color4}${time %I:%M}${font}
-
-${goto 15}${font Raleway:weight=Light:size=32}${alignc} ${time %A %B %d}${font}
-${alignc}${voffset 6}${offset 12}${font GE_Inspira:pixelsize=14}${color 86877A}HD ${offset 9}$color4${fs_free /} / ${fs_size /}${offset 30}${color 86877A}RAM ${offset 9}$color4$mem / $memmax${offset 30}${color 86877A}CPU ${offset 9}$color4${cpu cpu0}%
-${alignc}      ${color4} __________________________________________________________________________
-
-${font Signerica Medium:pixelsize=48}${alignc}${color1}$USER@machine${color}
+${font Signerica Thin:pixelsize=20}${alignc}${color1}adiyastomar67${color}
 ]]
