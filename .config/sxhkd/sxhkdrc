@@ -41,7 +41,7 @@ ctrl + alt + {v,n,r,b}
 	alacritty --config-file ~/.config/alacritty/alacritty.yml -e {vim,nvim,range,bashtop}
 
 # Color Picker
-super + p
+super + shift + p
 	color-gpick
 
 # Lockscreen
