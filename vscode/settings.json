@@ -455,7 +455,7 @@
         "sideBarTitle.foreground": "#FFFFFF"
         // "sideBarTitle.foreground": "#0a0e14",
     },
-    "glassit.alpha": 200,
+    "glassit.alpha": 220,
     "bracketPairColorizer.depreciation-notice": false,
     "prettier.trailingComma": "es5",
     "prettier.tabWidth": 4,
