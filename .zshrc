@@ -132,14 +132,14 @@ DISABLE_AUTO_UPDATE="true"
 ## Uncomment the following line to display red dots whilst waiting for completion.
 ## You can also set it to another string to have that shown instead of the default red dots. e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 ## Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 ## Uncomment the following line if you want to disable marking untracked files under VCS as dirty. This makes repository status check for large repositories much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 ## Uncomment the following line if you want to change the command execution time stamp shown in the history command output.
 ## You can set one of the optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd" or set a custom format using the strftime function format specifications, see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="mm/dd/yyyy"
 
 ## Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -151,18 +151,18 @@ DISABLE_AUTO_UPDATE="true"
 export ARCHFLAGS="-arch x86_64"
 
 ### On-demand rehash
-# zshcache_time="$(date +%s%N)"
-# autoload -Uz add-zsh-hook
-# rehash_precmd() {
-#   if [[ -a /var/cache/zsh/pacman ]]; then
-#     local paccache_time="$(date -r /var/cache/zsh/pacman +%s%N)"
-#     if (( zshcache_time < paccache_time )); then
-#       rehash
-#       zshcache_time="$paccache_time"
-#     fi
-#   fi
-# }
-# add-zsh-hook -Uz precmd rehash_precmd
+zshcache_time="$(date +%s%N)"
+autoload -Uz add-zsh-hook
+ rehash_precmd() {
+   if [[ -a /var/cache/zsh/pacman ]]; then
+     local paccache_time="$(date -r /var/cache/zsh/pacman +%s%N)"
+     if (( zshcache_time < paccache_time )); then
+       rehash
+       zshcache_time="$paccache_time"
+     fi
+   fi
+ }
+add-zsh-hook -Uz precmd rehash_precmd
 
 ### Fzf Finder config
 export FZF_DEFAULT_OPTS="

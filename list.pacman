@@ -8,6 +8,8 @@ bat
 bison
 brave-bin
 broot
+btop
+ccls
 cheese
 cmatrix
 colorpicker
@@ -17,7 +19,6 @@ dmenu
 dunst
 exa
 fd
-ccls
 feh
 figlet
 firefox
@@ -29,6 +30,7 @@ gnome-keyring
 gnuplot
 google-chrome
 htop
+joplin-desktop-bin
 lazygit
 libmp4v2
 libxft-bgra
@@ -65,7 +67,6 @@ python-pip
 python-pywal
 qt5ct
 ranger
-joplin-desktop-bin
 reflector
 ripgrep
 rofi

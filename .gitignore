@@ -4,6 +4,8 @@
 .config/nvim/plugged
 .config/youtube-viewer/watched.txt
 .config/youtube-viewer/watched.txt
+.config/nvim/snippets
+.config/nvim/spell
 walls
 .fehbg
 

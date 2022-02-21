@@ -127,7 +127,6 @@ alias branch='git branch'
 alias checkout='git checkout'
 alias clone='cd $HOME/Downloads/git-repos/ && git clone'
 alias commit='git commit -m'
-alias fetch='git fetch'
 alias pull='git pull origin'
 alias push='git push origin'
 alias stat='git status' # 'status' is protected name so using 'stat' instead
@@ -219,7 +218,7 @@ alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/mas
 # alias todo='cat ~/Dropbox/writing/notes/To-do.md'
 # alias todoe='nvim ~/Dropbox/writing/notes/To-do.md'
 # alias reset='cd ~; clear; source ~/.config/zsh/.zprofile'
-# alias quote='clear && neofetch && fortune ~/.scripts/quotes/quotes'
+alias quote='clear && neofetch && fortune ~/.scripts/quotes/quotes'
 
 ## Journal launching aliases
 # alias j1='cd ~/Dropbox/writing/journal; nvim volume-1.md'
