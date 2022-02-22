@@ -23,7 +23,7 @@ Plug 'vim-scripts/fountain.vim'
 Plug 'tpope/vim-markdown'
 Plug 'ap/vim-css-color'
 Plug 'github/copilot.vim'
-Plug 'rafamadriz/gruvbox'
+Plug 'morhetz/gruvbox'
 Plug 'dylanaraps/wal.vim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 call plug#end()
@@ -93,13 +93,19 @@ nnoremap <C-Space>\ :vsp<CR>
 imap qq <Esc>
 
 """ Color Settings
-let g:gruvbox_italic_comment = 1
-let g:gruvbox_italic_keyword = 1
-let g:gruvbox_italic_function = 1
+let g:tokyonight_style = "night"
+let g:tokyonight_italic_functions = 1
+let g:tokyonight_italic_variables = 1
+let g:tokyonight_transparent = 1
+let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
 
-colorscheme gruvbox
+let g:tokyonight_colors = {
+  \ 'hint': 'orange',
+  \ 'error': '#ff0000'
+\ }
+colorscheme tokyonight
 set background=dark
-"set termguicolors
+set termguicolors
 let g:limelight_conceal_ctermfg = 240
 let g:limelight_conceal_guifg = '#777777'
 hi! Normal ctermbg=NONE guibg=NONE 
