@@ -180,25 +180,6 @@ export FZF_DEFAULT_OPTS="
 "
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
-### Color Script
-# colorscript --random
-# colorscript --exec bars
-# colorscript --exec alpha
-# colorscript --exec blocks1
-# colorscript --exec crunch
-# colorscript --exec crunchbang-mini
-# colorscript --exec dna
-# colorscript --exec elfman
-# colorscript --exec faces
-# colorscript --exec fade
-# colorscript --exec jangofett
-# colorscript --exec panes
-# colorscript --exec rails
-# colorscript --exec square
-# colorscript --exec tanks
-# colorscript --exec tiefighter1row
-# colorscript --exec tux
-
 ### Calling scrpits and Operations
 # tmux
 echo -en "\x1b[2J\x1b[1;1H"
