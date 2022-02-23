@@ -7,33 +7,42 @@
 
 """ PLUGINS - vim-plug
 call plug#begin('~/.config/nvim/plugged')
+Plug 'airblade/vim-rooter'
+Plug 'ap/vim-css-color'
+Plug 'ctrlpvim/ctrlp.vim' 
+Plug 'dylanaraps/wal.vim'
+Plug 'fisadev/vim-isort'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'github/copilot.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'airblade/vim-rooter'
 Plug 'junegunn/goyo.vim'
-Plug 'nvim-telescope/telescope-file-browser.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
 Plug 'junegunn/limelight.vim'
-Plug 'ctrlpvim/ctrlp.vim' 
-Plug 'neoclide/coc.nvim', {'branch': 'release'} 
-Plug 'psf/black', { 'branch': 'main' }
-Plug 'fisadev/vim-isort'
-Plug 'vim-scripts/fountain.vim' 
-Plug 'tpope/vim-markdown'
-Plug 'ap/vim-css-color'
-Plug 'github/copilot.vim'
+Plug 'kyazdani42/nvim-tree.lua'
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'morhetz/gruvbox'
-Plug 'dylanaraps/wal.vim'
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'} 
+Plug 'numToStr/Comment.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope-file-browser.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'psf/black', { 'branch': 'main' }
+Plug 'tpope/vim-markdown'
+Plug 'vim-scripts/fountain.vim' 
 call plug#end()
+
+""" Lua calls for Plugins
+lua require('Comment').setup()
+lua require'nvim-tree'.setup()
 
 """ General Settings
 set encoding=UTF-8 nobackup nowritebackup nocursorline splitbelow splitright wildmode=longest,list,full
 set shiftwidth=4 autoindent smartindent tabstop=4 softtabstop=4 expandtab spell spelllang=en_us
 set fillchars+=eob:\ 
-"set number relativenumber
-set tabstop=4  
+set tabstop=4 
+set clipboard+=unnamedplus
+set background=dark
+set termguicolors
 au BufRead,BufNewFile *.fountain set filetype=fountain
 
 """ Usage of Mouse
@@ -44,10 +53,6 @@ if has('mouse')
     set mouse=nvi
   endif
 endif
-
-""" Keyword Highlighting
-au Colorscheme * :hi Keyword gui=italic cterm=italic
-au Colorscheme * :hi Comment gui=italic cterm=italic
 
 """ Status Line
 set laststatus=0
@@ -75,10 +80,13 @@ nnoremap <leader><ENTER> :Goyo<CR>
 nnoremap <leader><Space> :CtrlP<CR>
 nnoremap <leader>n :Lex!<CR>
 nnoremap <leader>z :set invrnu invnu<CR>
+nnoremap <C-e> :NvimTreeToggle<CR>
+nnoremap <C-J> :bprev<CR>
+nnoremap <C-K> :bnext<CR>
 nnoremap <leader><C-l> :set nofoldenable<CR>
 nnoremap <C-l> :set foldmethod=indent<CR>
-nnoremap <C-k> :set foldmethod=syntax<CR>
-nnoremap Q <nop>
+nnoremap Q :q!<CR>
+nnoremap q :q<CR>
 xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '>+1<CR>gv-gv
 nnoremap <Up>    :resize -2<CR>
@@ -91,6 +99,50 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <C-Space>- :sp<CR>
 nnoremap <C-Space>\ :vsp<CR>
 imap qq <Esc>
+" nnoremap <C-k> :set foldmethod=syntax<CR>
+
+""" NvimTree
+let g:nvim_tree_indent_markers = 1 
+let g:nvim_tree_git_hl = 1 
+let g:nvim_tree_highlight_opened_files = 1 
+let g:nvim_tree_root_folder_modifier = ':~' 
+let g:nvim_tree_add_trailing = 1 
+let g:nvim_tree_group_empty = 1 
+let g:nvim_tree_icon_padding = ' ' 
+let g:nvim_tree_symlink_arrow = ' >> ' 
+let g:nvim_tree_respect_buf_cwd = 1 
+let g:nvim_tree_create_in_closed_folder = 1 
+let g:nvim_tree_special_files = { 'README.md': 1, 'Makefile': 1, 'MAKEFILE': 1 } 
+let g:nvim_tree_show_icons = {
+    \ 'git': 1,
+    \ 'folders': 1,
+    \ 'files': 1,
+    \ 'folder_arrows': 1,
+    \ }
+let g:nvim_tree_icons = {
+    \ 'default': '',
+    \ 'symlink': '',
+    \ 'git': {
+    \   'unstaged': "✗",
+    \   'staged': "✓",
+    \   'unmerged': "",
+    \   'renamed': "➜",
+    \   'untracked': "★",
+    \   'deleted': "",
+    \   'ignored': "◌"
+    \   },
+    \ 'folder': {
+    \   'arrow_open': "",
+    \   'arrow_closed': "",
+    \   'default': "",
+    \   'open': "",
+    \   'empty': "",
+    \   'empty_open': "",
+    \   'symlink': "",
+    \   'symlink_open': "",
+    \   }
+    \ }
+highlight NvimTreeFolderIcon guibg=blue
 
 """ Color Settings
 let g:tokyonight_style = "night"
@@ -98,14 +150,17 @@ let g:tokyonight_italic_functions = 1
 let g:tokyonight_italic_variables = 1
 let g:tokyonight_transparent = 1
 let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
-
 let g:tokyonight_colors = {
   \ 'hint': 'orange',
   \ 'error': '#ff0000'
 \ }
 colorscheme tokyonight
-set background=dark
-set termguicolors
+
+"" Keyword Highlighting
+au Colorscheme * :hi Keyword gui=italic cterm=italic
+au Colorscheme * :hi Comment gui=italic cterm=italic
+
+
 let g:limelight_conceal_ctermfg = 240
 let g:limelight_conceal_guifg = '#777777'
 hi! Normal ctermbg=NONE guibg=NONE 
@@ -131,22 +186,17 @@ autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 """ FZF Settings
-"" This is the default extra key bindings
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }
-
-" Enable per-command history.
-" CTRL-N and CTRL-P will be automatically bound to next-history and
-" previous-history instead of down and up. If you don't like the change,
-" explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 let g:fzf_tags_command = 'ctags -R'
 
 "" Border color
 let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.8,'yoffset':0.5,'xoffset': 0.5, 'highlight': 'Todo', 'border': 'sharp' } }
 
+"" FZF defaults
 let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
 let $FZF_DEFAULT_COMMAND="rg --files --hidden -g '!.git/'"
 
