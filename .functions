@@ -7,6 +7,35 @@
 # ╚═╝╚═╝░░░░░░╚═════╝░╚═╝░░╚══╝░╚════╝░░░░╚═╝░░░╚═╝░╚════╝░╚═╝░░╚══╝╚═════╝░
 
 ## Setup Repo
+
+function get_temperature() {
+
+    local response=""
+
+    response=$(curl --silent 'https://api.openweathermap.org/data/2.5/weather?id=5110253&units=imperial&appid=<your_api_key>')
+
+    local status=$(echo $response | jq -r '.cod')
+
+    case $status in
+        200) printf "Location: %s %s\n" "$(echo $response | jq '.name') $(echo $response | jq '.sys.country')"  
+             printf "Forecast: %s\n" "$(echo $response | jq '.weather[].description')" 
+             printf "Temperature: %.1f°F\n" "$(echo $response | jq '.main.temp')" 
+             printf "Temp Min: %.1f°F\n" "$(echo $response | jq '.main.temp_min')" 
+             printf "Temp Max: %.1f°F\n" "$(echo $response | jq '.main.temp_max')" 
+            ;;
+        401) echo "401 error"
+            ;;
+        *) echo "error"
+            ;;
+    esac
+
+}
+
+function empty_trash() {
+    printf "%s\n" "EMPTYING TRASH";
+    sudo rm -rf $HOME/.local/share/Trash/files/*;
+}
+
 function repo() {
 	git init
 	touch README.md .gitignore

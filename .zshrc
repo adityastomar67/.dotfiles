@@ -187,3 +187,4 @@ echo
 # motivate
 header
 echo
+set -o vi
