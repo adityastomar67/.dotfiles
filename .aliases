@@ -92,7 +92,9 @@ alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/p
 alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
 
 ## Adding flags
-alias df='df -h'                          # human-readable sizes
+# alias df='df -h'                          # human-readable sizes
+alias df='duf'
+alias du='ncdu'
 alias free='free -m'                      # show sizes in MB
 # alias lynx='lynx -cfg=~/.lynx/lynx.cfg -lss=~/.lynx/lynx.lss -vikeys'
 # alias vifm='./.config/vifm/scripts/vifmrun'
