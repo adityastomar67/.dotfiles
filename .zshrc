@@ -7,9 +7,18 @@
 
 ## If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+autoload -U colors && colors
+setopt interactive_comments
 
-HISTFILE=~/.zsh_history # Path to History File
-setopt appendhistory
+# History settings.
+export HISTFILE="$HOME/.zsh_history"
+export HISTTIMEFORMAT="%Y/%m/%d %H:%M:%S:   "
+export HISTSIZE=50000        # History lines stored in mememory.
+export SAVEHIST=50000        # History lines stored on disk.
+setopt INC_APPEND_HISTORY    # Immediately append commands to history file.
+setopt HIST_IGNORE_ALL_DUPS  # Never add duplicate entries.
+setopt HIST_IGNORE_SPACE     # Ignore commands that start with a space.
+setopt HIST_REDUCE_BLANKS    # Remove unnecessary blank lines.
 
 ### Basic stuff
 # source ~/.config/zsh/.zprofile #.zshenv stuff
@@ -21,10 +30,11 @@ export PATH=~/.scripts:$PATH   # Making my scripts run without typing the whole 
 export TERMINAL='alacritty'    # default Terminal
 export BROWSER='brave'         # Default Browser
 export LC_CTYPE="en_IN.UTF-8"
+export GPG_TTY="$(tty)"
 
 ## Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='lvim'
+  export EDITOR='vim'
 else
   export EDITOR='nvim'
 fi
@@ -54,12 +64,14 @@ plugins=(
   dirhistory
   forgit
 )
+# zsh-autosuggestions settings.
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 
 ### Sourcing
 source ~/.oh-my-zsh/oh-my-zsh.sh # For plugins
-source ~/.functions              # functions to improve productivity
-source ~/.aliases                # Aliases - For a full list of active aliases, run `alias`.
-source ~/.z-prompt               # For custom zsh prompt.
+[ -f "$HOME/.functions" ] && source ~/.functions              # functions to improve productivity
+[ -f "$HOME/.aliases" ] && source ~/.aliases                # Aliases - For a full list of active aliases, run `alias`.
+[ -f "$HOME/.z-prompt" ] && source ~/.z-prompt               # For custom zsh prompt.
 
 ### Key Bindings
 # bindkey ^v                                 # Vi Mode
@@ -67,7 +79,22 @@ bindkey "^k" up-line-or-beginning-search   # Up
 bindkey "^j" down-line-or-beginning-search # Down
 
 autoload -Uz compinit && compinit                            # need the next two lines for case insensitive tab completion
+_comp_options+=(globdots)
+
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' # Matchlist
+zstyle ':completion:*' menu select=2
+zstyle ':completion:*' auto-description 'specify: %d'
+zstyle ':completion:*' completer _expand _complete _correct _approximate
+zstyle ':completion:*' format 'Suggesting %d'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+zstyle ':completion:*' use-compctl false
+zstyle ':completion:*' verbose true
+
 complete -C aws_completer aws
 
 ### Basic zsh settings
