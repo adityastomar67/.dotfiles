@@ -43,6 +43,7 @@ set tabstop=4
 set clipboard+=unnamedplus
 set background=dark
 set termguicolors
+set updatetime=1000
 au BufRead,BufNewFile *.fountain set filetype=fountain
 
 """ Usage of Mouse
@@ -87,6 +88,7 @@ nnoremap <leader><C-l> :set nofoldenable<CR>
 nnoremap <C-l> :set foldmethod=indent<CR>
 nnoremap Q :q!<CR>
 nnoremap q :q<CR>
+nnoremap W :wq<CR>
 xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '>+1<CR>gv-gv
 nnoremap <Up>    :resize -2<CR>
@@ -100,6 +102,7 @@ nnoremap <C-Space>- :sp<CR>
 nnoremap <C-Space>\ :vsp<CR>
 imap qq <Esc>
 " nnoremap <C-k> :set foldmethod=syntax<CR>
+command Realtime :set autoread | au CursorHold * checktime | call feedkeys("G")
 
 """ NvimTree
 let g:nvim_tree_indent_markers = 1 

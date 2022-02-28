@@ -46,7 +46,7 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'" # "bat" as manpager
 plugins=(
   z
   zsh-autosuggestions
-  zsh-syntax-highlighting
+  fast-syntax-highlighting
   git
   history
   web-search

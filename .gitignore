@@ -49,4 +49,7 @@ Thumbs.db
 # Editor files #
 ################
 .vscode
-.prettierrc
+.prettierrc.config/nvim/pack
+.config/nvim/pack
+~
+.oh-my-zsh/custom/plugins/

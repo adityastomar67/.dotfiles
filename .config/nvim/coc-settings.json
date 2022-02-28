@@ -27,13 +27,6 @@
     "html.format.wrapAttributes": "force",
     "html.format.wrapAttributesIndentSize": 4,
     "html.suggest.html5": true,
-    "languageserver": {
-        "clangd": {
-            "command": "clangd",
-            "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
-            "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
-        }
-    },
     "python.sortImports.path": "/usr/bin/isort",
     "python.formatting.provider": "black",
     "python.formatting.blackPath": "/usr/bin/black",
@@ -47,5 +40,6 @@
     "suggest.timeout": 15000,
     "suggest.floatEnable": false,
     "xml.format.splitAttributes": true,
-    "xml.format.joinContentLines": true
+    "xml.format.joinContentLines": true,
+    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd"
 }

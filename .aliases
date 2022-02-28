@@ -50,6 +50,7 @@ alias weather='clear && curl -s wttr.in/gwalior | head -n $(($(curl -s wttr.in/g
 # alias lock='xscreensaver-command -lock'
 # alias handbrake='ghb'
 alias py=python
+alias tmux="TERM=screen-256color-bce tmux"
 
 ## Editors
 alias v="nvim"
