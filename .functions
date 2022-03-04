@@ -6,16 +6,10 @@
 # ██╗██║░░░░░╚██████╔╝██║░╚███║╚█████╔╝░░░██║░░░██║╚█████╔╝██║░╚███║██████╔╝
 # ╚═╝╚═╝░░░░░░╚═════╝░╚═╝░░╚══╝░╚════╝░░░░╚═╝░░░╚═╝░╚════╝░╚═╝░░╚══╝╚═════╝░
 
-## Setup Repo
-
 function get_temperature() {
-
     local response=""
-
     response=$(curl --silent 'https://api.openweathermap.org/data/2.5/weather?id=5110253&units=imperial&appid=<your_api_key>')
-
     local status=$(echo $response | jq -r '.cod')
-
     case $status in
         200) printf "Location: %s %s\n" "$(echo $response | jq '.name') $(echo $response | jq '.sys.country')"  
              printf "Forecast: %s\n" "$(echo $response | jq '.weather[].description')" 
@@ -28,7 +22,6 @@ function get_temperature() {
         *) echo "error"
             ;;
     esac
-
 }
 
 function empty_trash() {
@@ -62,12 +55,11 @@ function stopwatch(){
    done
 }
 
-function prog() { g++ "$1" && ./a.out && rm -f a.out }
 
 function touchdir() { mkdir -p "$(dirname "$1")" && touch "$1"; }
 
-## Recursively delete `passed type' files
 function del() {
+## Recursively delete `passed type' files
 	find . -type f -name "$1" -ls -delete
 }
 
@@ -86,15 +78,15 @@ function cond() {
 	unset __conda_setup
 }
 
-## Sorting file's content
 function srt() {
+## Sorting file's content
 	mv "$1" "$1.bak"
 	sort "$1.bak" | uniq >$1
 	rm "$1.bak"
 }
 
-## Determine size of a file or total size of a directory
 function fs() {
+## Determine size of a file or total size of a directory
 	if du -b /dev/null >/dev/null 2>&1; then
 		local arg=-sbh
 	else
@@ -107,47 +99,42 @@ function fs() {
 	fi
 }
 
-## Function extract for common file formats
-SAVEIFS=$IFS
-IFS=$(echo -en "\n\b")
-function extract {
-	if [ -z "$1" ]; then
-		# display usage if no parameters given
-		echo "Usage: extract <path/file_name>.<zip|rar|bz2|gz|tar|tbz2|tgz|Z|7z|xz|ex|tar.bz2|tar.gz|tar.xz>"
-		echo "       extract <path/file_name_1.ext> [path/file_name_2.ext] [path/file_name_3.ext]"
-	else
-		for n in "$@"; do
-			if [ -f "$n" ]; then
-				case "${n%,}" in
-				*.cbt | *.tar.bz2 | *.tar.gz | *.tar.xz | *.tbz2 | *.tgz | *.txz | *.tar)
-					tar xvf "$n"
-					;;
-				*.lzma) unlzma ./"$n" ;;
-				*.bz2) bunzip2 ./"$n" ;;
-				*.cbr | *.rar) unrar x -ad ./"$n" ;;
-				*.gz) gunzip ./"$n" ;;
-				*.cbz | *.epub | *.zip) unzip ./"$n" ;;
-				*.z) uncompress ./"$n" ;;
-				*.7z | *.arj | *.cab | *.cb7 | *.chm | *.deb | *.dmg | *.iso | *.lzh | *.msi | *.pkg | *.rpm | *.udf | *.wim | *.xar)
-					7z x ./"$n"
-					;;
-				*.xz) unxz ./"$n" ;;
-				*.exe) cabextract ./"$n" ;;
-				*.cpio) cpio -id <./"$n" ;;
-				*.cba | *.ace) unace x ./"$n" ;;
-				*)
-					echo "extract: '$n' - unknown archive method"
-					return 1
-					;;
-				esac
-			else
-				echo "'$n' - file does not exist"
-				return 1
-			fi
-		done
-	fi
+function prog() { 
+  if [ -f "$1" ] ; then
+    case $1 in
+      *.cpp)       g++ "$1" && ./a.out && rm -f a.out   ;;
+      *.c)         gcc "$1" && ./a.out && rm -f a.out   ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
 }
-IFS=$SAVEIFS
+
+function extract() {
+## Function extract for common file formats
+  if [ -f "$1" ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1   ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *.deb)       ar x $1      ;;
+      *.tar.xz)    tar xf $1    ;;
+      *.tar.zst)   unzstd $1    ;;
+      *)           echo "'$1' cannot be extracted via extract()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
 
 ## Navigation
 function up() {
@@ -210,7 +197,7 @@ function backupToDrive() {
 
 ## Editing .zshrc and sourcing
 function editZsh() {
-	lvim ~/.zshrc
+	nvim ~/.zshrc
 	source ~/.zshrc
 	backupToDrive ~/.zshrc
 	echo "New .zshrc sourced."
@@ -246,11 +233,6 @@ function react() {
 	code .
 }
 
-## Function for find strings in files
-function fif() {
-	findr --type f $1 | xargs grep -n -i $2
-}
-
 ## Use Git’s colored diff when available
 hash git &>/dev/null
 if [ $? -eq 0 ]; then
@@ -268,27 +250,8 @@ function server() {
 	python -c $'import SimpleHTTPServer;\nmap = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map;\nmap[""] = "text/plain";\nfor key, value in map.items():\n\tmap[key] = value + ";charset=UTF-8";\nSimpleHTTPServer.test();' "$port"
 }
 
-## Compare original and gzipped file size
-function gz() {
-	local origsize=$(wc -c <"$1")
-	local gzipsize=$(gzip -c "$1" | wc -c)
-	local ratio=$(echo "$gzipsize * 100 / $origsize" | bc -l)
-	printf "orig: %d bytes\n" "$origsize"
-	printf "gzip: %d bytes (%2.2f%%)\n" "$gzipsize" "$ratio"
-}
-
-## Copy w/ progress
-cp_p() {
-	rsync -WavP --human-readable --progress $1 $2
-}
-
-## Create a new directory and enter it
-function md() {
-	mkdir -p "$@" && cd "$@"
-}
-
 ## Git commit browser. needs fzf
-log() {
+function git_log() {
 	git log --graph --color=always \
 		--format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
 		fzf --ansi --no-sort --reverse --tiebreak=index --toggle-sort=\` \

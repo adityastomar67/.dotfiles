@@ -8,7 +8,8 @@
     "editor.dragAndDrop": false,
     "editor.folding": false,
     "editor.showFoldingControls": "mouseover",
-    "editor.fontFamily": "'Operator Mono Lig', 'Fira Code'",
+    "editor.fontFamily": "'Operator Mono Lig', 'MonoLisa', 'Fira Code'",
+    // "editor.fontLigatures": "'calt' on, 'liga' on 'ss02' on",  // For MonoLisa Fonts
     "editor.fontLigatures": true,
     "editor.tokenColorCustomizations": {
         "textMateRules": [

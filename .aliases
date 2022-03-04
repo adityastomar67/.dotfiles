@@ -62,7 +62,7 @@ alias nano='nano -00x'
 # alias doomupgrade="~/.emacs.d/bin/doom upgrade"
 
 ## Confirm before overwriting something
-alias cp="rsync -r --progress"
+alias cp="rsync -WavP --human-readable --progress"
 alias mv='mv -i'
 alias rm='trash --trash-dir="~/.Trash" --recursive'
 
