@@ -10,13 +10,13 @@ brave-bin
 broot
 btop
 ccls
-duf
 cheese
 cmatrix
 colorpicker
 cool-retro-term
 cowsayw
 dmenu
+duf
 dunst
 exa
 fd
@@ -26,8 +26,8 @@ firefox
 fortune
 fzf
 gcc
+gdrive
 git
-lazygit
 gnome-keyring
 gnuplot
 google-chrome
@@ -101,9 +101,9 @@ xf86-video-vesa
 xlsxwriter
 xorg-bdftopcf
 xorg-docs
+xorg-font-util
 xorg-fonts-100dpi
 xorg-fonts-75dpi
-xorg-font-util
 xorg-iceauth
 xorg-mkfontscale
 xorg-server-devel
@@ -151,4 +151,3 @@ zathura-pdf-poppler
 zip
 zoom
 zsh
-gdrive

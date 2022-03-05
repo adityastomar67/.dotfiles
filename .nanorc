@@ -25,9 +25,9 @@ set tabstospaces
 set smarthome
 set constantshow
 set nohelp
-# set smooth
-# set linenumbers
 unset autoindent
 unset noconvert
 unset nonewlines
 unset softwrap
+# set smooth
+# set linenumbers

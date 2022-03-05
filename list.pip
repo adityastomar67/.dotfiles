@@ -1,6 +1,6 @@
 black
 fonttools
 mercurial
+pynvim
 ranger-fm
 readline
-pynvim

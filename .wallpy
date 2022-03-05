@@ -6,9 +6,8 @@
 # ██╗░░╚██╔╝░╚██╔╝░██║░░██║███████╗███████╗██║░░░░░░░░██║░░░
 # ╚═╝░░░╚═╝░░░╚═╝░░╚═╝░░╚═╝╚══════╝╚══════╝╚═╝░░░░░░░░╚═╝░░░
 
-# Based on pywal
-
+## Based on pywal
 count=$(command ls ~/.config/wall | grep "wall[0-9]*.jpg" | wc -l)
-# wal -a 92 -qi "$HOME/.config/wall/wall$((1 + RANDOM%$count)).jpg"
 
+# wal -a 92 -qi "$HOME/.config/wall/wall$((1 + RANDOM%$count)).jpg"
 wal -a 92 -qi "$HOME/.config/wall/wall41.jpg"

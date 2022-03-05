@@ -104,6 +104,14 @@ function prog() {
     case $1 in
       *.cpp)       g++ "$1" && ./a.out && rm -f a.out   ;;
       *.c)         gcc "$1" && ./a.out && rm -f a.out   ;;
+	  *.java)	   javac "$1" && java "$(basename -s .java "$1")" && rm -f *.class ;;
+	  *.py)        python "$1"                           ;;
+	  *.sh)        bash "$1"                             ;;
+	  *.pl)        perl "$1"                             ;;
+	  *.rb)        ruby "$1"                             ;;
+	  *.go)        go run "$1"                           ;;
+	  *.js)        node "$1"                             ;;
+	  *.php)       php "$1"                              ;;
     esac
   else
     echo "'$1' is not a valid file"
