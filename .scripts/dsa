@@ -1,0 +1,23 @@
+#!/bin/bash
+## TMUX Layout Script for Competetive Programming
+
+SESSION="DSA"
+TERM=screen-256color-bce tmux new-session -d -s $SESSION
+tmux rename-window -t zsh "Practice"
+tmux send-keys "cd /home/adi/Workspace/DSA && nvim practice.cpp" C-m
+tmux split-window -v -p 15
+tmux send-keys "cd /home/adi/Workspace/DSA" C-m
+tmux send-keys 'echo -en "\x1b[2J\x1b[1;1H"' C-m
+tmux select-pane -t 1
+tmux split-window -h -p 20
+tmux send-keys 'echo -en "\x1b[2J\x1b[1;1H"' C-m
+tmux send-keys 'cd /home/adi/Workspace/DSA && nvim input.txt' C-m
+tmux split-window -v
+tmux send-keys 'echo -en "\x1b[2J\x1b[1;1H"' C-m
+tmux send-keys 'cd /home/adi/Workspace/DSA && nvim +Realtime output.txt' C-m
+tmux select-pane -t 1
+tmux new-window -t $SESSION -n 'Other'
+# # Set default window
+tmux select-window -t $SESSION:1
+# # Attach to session
+tmux attach-session -t $SESSION

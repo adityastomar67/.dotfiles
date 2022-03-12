@@ -237,7 +237,7 @@ alias quote='clear && neofetch && fortune ~/.scripts/quotes/quotes'
 alias wget="wget -c"
 
 ## Additional Aliases
-alias dsa='cd /home/adi/Study/DS\ Algo/ && v practice.cpp'
+# alias dsa='cd /home/adi/Study/DS\ Algo/ && v practice.cpp'
 alias src='cd ~/ && source .zshrc'
 alias fetch='clear && neofetch --ascii ~/.config/ascii-neofetch.txt'
 alias c='command'

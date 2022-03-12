@@ -73,7 +73,7 @@ let mapleader=" "
 map <C-f> :Files<CR>
 map <leader>b :Buffers<CR>
 nnoremap <leader>rg :Rg<CR>
-nnoremap <leader>t :Tags<CR>
+nnoremap <leader>t :tags<CR>
 nnoremap <leader>m :Marks<CR>
 nnoremap <leader>s :BLines<CR>
 nnoremap <leader>sr :source ~/.config/nvim/init.vim<CR>
