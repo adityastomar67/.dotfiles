@@ -4,3 +4,4 @@ mercurial
 pynvim
 ranger-fm
 readline
+python3 -m pip install --user pylint black poetry pipenv bandit mypy flake8

@@ -7,28 +7,31 @@
 
 """ PLUGINS - vim-plug
 call plug#begin('~/.config/nvim/plugged')
-Plug 'airblade/vim-rooter'
-Plug 'ap/vim-css-color'
-Plug 'ctrlpvim/ctrlp.vim' 
-Plug 'dylanaraps/wal.vim'
-Plug 'fisadev/vim-isort'
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-Plug 'github/copilot.vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
-Plug 'kyazdani42/nvim-tree.lua'
-Plug 'kyazdani42/nvim-web-devicons'
-Plug 'morhetz/gruvbox'
-Plug 'neoclide/coc.nvim', {'branch': 'release'} 
-Plug 'numToStr/Comment.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope-file-browser.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'psf/black', { 'branch': 'main' }
-Plug 'tpope/vim-markdown'
-Plug 'vim-scripts/fountain.vim' 
+
+    Plug 'airblade/vim-rooter'
+    Plug 'ap/vim-css-color'
+    Plug 'ctrlpvim/ctrlp.vim' 
+    Plug 'dylanaraps/wal.vim'
+    Plug 'fisadev/vim-isort'
+    Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+    Plug 'github/copilot.vim'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+    Plug 'junegunn/goyo.vim'
+    Plug 'junegunn/limelight.vim'
+    Plug 'kyazdani42/nvim-tree.lua'
+    Plug 'kyazdani42/nvim-web-devicons'
+    Plug 'morhetz/gruvbox'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'} 
+    Plug 'numToStr/Comment.nvim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope-file-browser.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
+    Plug 'psf/black', { 'branch': 'main' }
+    Plug 'tpope/vim-markdown'
+    Plug 'vim-scripts/fountain.vim'
+    Plug 'rebelot/kanagawa.nvim'
+
 call plug#end()
 
 """ Lua calls for Plugins
@@ -99,10 +102,11 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <C-Space>- :sp<CR>
+nnoremap <C-s> :w<CR>
 nnoremap <C-Space>\ :vsp<CR>
 imap qq <Esc>
-" nnoremap <C-k> :set foldmethod=syntax<CR>
 command Realtime :set autoread | au CursorHold * checktime | call feedkeys("G")
+" nnoremap <C-k> :set foldmethod=syntax<CR>
 
 """ NvimTree
 let g:nvim_tree_indent_markers = 1 
@@ -147,27 +151,30 @@ let g:nvim_tree_icons = {
     \ }
 highlight NvimTreeFolderIcon guibg=blue
 
+" colorscheme tokyonight
 """ Color Settings
-let g:tokyonight_style = "night"
-let g:tokyonight_italic_functions = 1
-let g:tokyonight_italic_variables = 1
-let g:tokyonight_transparent = 1
-let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
-let g:tokyonight_colors = {
-  \ 'hint': 'orange',
-  \ 'error': '#ff0000'
-\ }
-colorscheme tokyonight
+" let g:tokyonight_style = "night"
+" let g:tokyonight_italic_functions = 1
+" let g:tokyonight_italic_variables = 1
+" let g:tokyonight_transparent = 1
+" let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
+" let g:tokyonight_colors = {
+"   \ 'hint': 'orange',
+"   \ 'error': '#ff0000'
+" \ }
 
-"" Keyword Highlighting
-au Colorscheme * :hi Keyword gui=italic cterm=italic
-au Colorscheme * :hi Comment gui=italic cterm=italic
+" "" Keyword Highlighting
+" au Colorscheme * :hi Keyword gui=italic cterm=italic
+" au Colorscheme * :hi Comment gui=italic cterm=italic
+" let g:limelight_conceal_ctermfg = 240
+" let g:limelight_conceal_guifg = '#777777'
+" hi! Normal ctermbg=NONE guibg=NONE 
+" hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
 
+colorscheme kanagawa
 
-let g:limelight_conceal_ctermfg = 240
-let g:limelight_conceal_guifg = '#777777'
-hi! Normal ctermbg=NONE guibg=NONE 
-hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
+"" For Background Transparency
+hi Normal guibg=NONE ctermbg=NONE 
 
 """ Goyo Settings
 function! s:goyo_enter()

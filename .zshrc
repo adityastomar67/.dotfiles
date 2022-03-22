@@ -214,3 +214,5 @@ echo
 header
 echo
 set -o vi
+#Torrench
+PATH=/home/adi/.torrench/bin:/home/adi/.scripts:/home/adi/.local/bin:/usr/share/archcraft/scripts:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/adi/.config/bspwm/bin
