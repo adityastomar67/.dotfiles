@@ -23,7 +23,7 @@ alias .5='cd ../../../../..'
 ## Directory Shortcuts
 alias d="cd ~/Documents/"
 alias dl="cd ~/Downloads"
-alias dt="cd ~/.dotfiles && clear && ls && echo "
+alias dt="cd ~/.dotfiles && clrscr && ls && echo "
 alias p="cd ~/Projects"
 alias wk='cd ~/Workspace'
 
@@ -37,12 +37,12 @@ alias anime="ani-cli"
 alias flix="notflix"
 alias scim='sc-im'
 alias dmenu='dmenu -i -l 10 -fn "Iosevka Nerd Font" -p "Select File: " -nb "#282a36" -nf "#f8f8f2" -sf "#44475a" -sb "#bd93f9" '
-# alias pvpn='protonvpn-cli'
+alias pvpn='protonvpn-cli'
 # alias s='startx'
 # alias t='bpytop'
 alias tty='tty-clock -C6 -c -t'
 alias pac='sudo pacman -S'
-alias weather='clear && curl -s wttr.in/gwalior | head -n $(($(curl -s wttr.in/gwalior | wc -l)  - 2)) | tail -n $(($(curl -s wttr.in/gwalior | wc -l)  - 4))'
+alias weather='clrscr && curl -s wttr.in/gwalior | head -n $(($(curl -s wttr.in/gwalior | wc -l)  - 2)) | tail -n $(($(curl -s wttr.in/gwalior | wc -l)  - 4))'
 # alias shot='flameshot gui' alias kill='killall -q'
 # alias suck='rm -f config.h ; sudo make install'
 # alias wal='feh --bg-fill -z'
@@ -84,7 +84,8 @@ alias shutdown="sudo /sbin/shutdown"
 alias flighton='sudo rfkill block all'
 alias flightoff='sudo rfkill unblock all'
 alias snr='sudo service network-manager restart'
-alias clear='echo -en "\x1b[2J\x1b[1;1H" ; echo; header; echo'
+alias clrscr='echo -en "\x1b[2J\x1b[1;1H" ; echo; header; echo'
+alias clr='echo -en "\x1b[2J\x1b[1;1H" ; echo; header; echo'
 
 ## Get fastest mirrors
 alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
@@ -221,7 +222,7 @@ alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/mas
 # alias todo='cat ~/Dropbox/writing/notes/To-do.md'
 # alias todoe='nvim ~/Dropbox/writing/notes/To-do.md'
 # alias reset='cd ~; clear; source ~/.config/zsh/.zprofile'
-alias quote='clear && neofetch && fortune ~/.scripts/quotes/quotes'
+alias quote='clrscr && neofetch && fortune ~/.scripts/quotes/quotes'
 
 ## Journal launching aliases
 # alias j1='cd ~/Dropbox/writing/journal; nvim volume-1.md'
@@ -239,7 +240,7 @@ alias wget="wget -c"
 ## Additional Aliases
 # alias dsa='cd /home/adi/Study/DS\ Algo/ && v practice.cpp'
 alias src='cd ~/ && source .zshrc'
-alias fetch='clear && neofetch --ascii ~/.config/ascii-neofetch.txt'
+alias fetch='clrscr && neofetch --ascii ~/.config/ascii-neofetch.txt'
 alias c='command'
 alias findr='\fd'
 alias x='chmod +x'

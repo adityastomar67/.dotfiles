@@ -1,18 +1,20 @@
-"         __                     
-" .--.--.|__|.--------.----.----.
-" |  |  ||  ||        |   _|  __|
-"  \___/ |__||__|__|__|__| |____|
-"
+" ░░░██╗░░░██╗██╗███╗░░░███╗██████╗░░█████╗░
+" ░░░██║░░░██║██║████╗░████║██╔══██╗██╔══██╗
+" ░░░╚██╗░██╔╝██║██╔████╔██║██████╔╝██║░░╚═╝
+" ░░░░╚████╔╝░██║██║╚██╔╝██║██╔══██╗██║░░██╗
+" ██╗░░╚██╔╝░░██║██║░╚═╝░██║██║░░██║╚█████╔╝
+" ╚═╝░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝╚═╝░░╚═╝░╚════╝░
+
 " REQUIRED {{{ 
 
 runtime! debian.vim
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
-source /home/adi/.filetype.vim
-source /home/adi/.abbreviations.vim
-source /home/adi/.keybindings.vim
 
+" source /home/adi/.filetype.vim
+" source /home/adi/.abbreviations.vim
+" source /home/adi/.keybindings.vim
 " }}}
 
 " PLUGINS {{{
@@ -25,14 +27,15 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Customization
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ryanoasis/vim-devicons'			" For icons
-Plugin 'dylanaraps/wal.vim'
+Plugin 'dracula/vim', { 'name': 'dracula' } 
 
 " Must have
 Plugin 'tpope/vim-surround'    
+Plugin 'scrooloose/nerdtree'			" added nerdtree
 Plugin 'junegunn/goyo.vim'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
-Plugin 'farmergreg/vim-lastplace'
 Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
@@ -40,6 +43,8 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-eunuch'
 Plugin 'mhinz/vim-startify'
+
+Plugin 'komissarex/vim-progress'
 
 " Web Development
 Plugin 'ap/vim-css-color'
@@ -51,7 +56,6 @@ Plugin 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 " Syntax highlighting
 Plugin 'vim-python/python-syntax'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'neomutt/neomutt.vim'
 
 " Vim Wiki
 Plugin 'vimwiki/vimwiki'
@@ -68,7 +72,7 @@ set noswapfile
 set number relativenumber
 set path+=**
 set wildmode=longest,list,full
-set wildignore=*.o,*.obj,*.bak,*.exe,*.hi,*.dyn_hi,*.dyn_o,*.zip,*.pdf,*.gif,*.png,*.jpg,*.mp4,*mp3
+set wildignore=*.o,*.obj,*.bak,*.exe,*.hi,*.dyn_hi,*.dyn_o,*.zip,*.pdf
 set encoding=UTF-8
 set nofoldenable
 set foldmethod=marker
@@ -88,12 +92,11 @@ set fillchars+=vert:│,fold:-,eob:\
 set nolist
 set listchars=tab:│\ 
 
-colorscheme wal
+colorscheme dracula
 hi Normal ctermbg=NONE
 
 " Highlight Whitespaces
 highlight Whitespace ctermfg=Grey
-
 
 " Makes comments italic
 highlight Comment cterm=italic
@@ -105,7 +108,7 @@ highlight SpellRare cterm=NONE ctermbg=NONE
 highlight SpellLocal cterm=undercurl ctermbg=NONE
 
 " Customize cursor line
-highlight CursorLine cterm=NONE ctermbg=Black  ctermfg=White
+highlight CursorLine cterm=NONE ctermbg=Black 
 " highlight CursorLineNr cterm=Bold ctermbg=Black ctermfg=White
 
 " highlight LineNr ctermbg=NONE ctermfg=White
@@ -113,6 +116,9 @@ highlight VertSplit ctermbg=NONE ctermfg=White
 
 " Customize folds
 highlight Folded ctermfg=White ctermbg=NONE cterm=bold
+
+" Vertically center documents when in insert mode
+" autocmd InsertEnter * norm zz
 
 " }}}
 
@@ -128,10 +134,7 @@ let g:vim_markdown_toc_autofit = 1
 " }}}
 
 " STARTIFY {{{
-" loading the devicons plugin
-let g:webdevicons_enable = 1
-" adding to vim-startify screen
-let g:webdevicons_enable_startify = 1
+
 let g:startify_files_number = 10
 let g:startify_update_oldfiles = 1
 let g:startify_change_to_vcs_root = 0
@@ -143,20 +146,24 @@ let g:startify_session_dir = '~/.vim/session'
 
 let g:startify_lists = [
           \ { 'type': 'bookmarks', 'header': ['   BOOKMARKS:']      },
-          \ { 'type': 'files',     'header': ['   RECENTS:']        },
+          \ { 'type': 'files',     'header': ['   RECENTS:']            },
+          \ { 'type': 'dir',       'header': ['   CURRENT DIRECTORY: '. getcwd()] },
           \ { 'type': 'sessions',  'header': ['   SESSIONS:']       },
           \ { 'type': 'commands',  'header': ['   COMMANDS:']       },
           \ ]
 
 let g:startify_bookmarks = [
+		\ { 'f': '~/.filetype.vimrc' },
 		\ { 'g': '~/github_token.md' },
+		\ { 'v': '~/.vimrc' },
 		\ { 'w': '~/vimwiki/index.wiki' },
+		\ { 'z': '~/.zshrc' },
 		\]
 
 let g:startify_custom_header = [ "", 
 	\ "",
 	\ "	███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗		",
-	\ "	██��█╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║      ",
+	\ "	████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║      ",
 	\ "	██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║      ",
 	\ "	██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║      ",
 	\ "	██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║		",
@@ -186,16 +193,16 @@ let g:user_emmet_mode='a'    "enable all function in all mode.
 " VIM AIRLINE THEME {{{
 
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 " let g:airline_theme='murmur'
 " let g:airline_theme='minimalist'
-" let g:airline_theme='dracula'
+let g:airline_theme='dracula'
 
 " }}}
 
 " NERD TREE CONFIG {{{
 
-" nnoremap <silent> tt :NERDTreeToggle<CR>
+nnoremap <silent> tt :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '►'
 let g:NERDTreeDirArrowCollapsible = '▼'
 let NERDTreeShowLineNumbers=0
@@ -511,4 +518,4 @@ endif
 
 " vimrc:fdm=marker:foldlevel=0
 
-" }}}�
+" }}}

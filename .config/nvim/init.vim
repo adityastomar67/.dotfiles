@@ -13,6 +13,8 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'ctrlpvim/ctrlp.vim' 
     Plug 'dylanaraps/wal.vim'
     Plug 'fisadev/vim-isort'
+    Plug 'Valloric/YouCompleteMe'
+    Plug 'akinsho/toggleterm.nvim'
     Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
     Plug 'github/copilot.vim'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -42,7 +44,6 @@ lua require'nvim-tree'.setup()
 set encoding=UTF-8 nobackup nowritebackup nocursorline splitbelow splitright wildmode=longest,list,full
 set shiftwidth=4 autoindent smartindent tabstop=4 softtabstop=4 expandtab spell spelllang=en_us
 set fillchars+=eob:\ 
-set tabstop=4 
 set clipboard+=unnamedplus
 set background=dark
 set termguicolors
@@ -73,10 +74,10 @@ set statusline+=\ [%c]
 
 """ Key-bindings
 let mapleader=" "
-map <C-f> :Files<CR>
+map <C-o> :Files<CR>
 map <leader>b :Buffers<CR>
 nnoremap <leader>rg :Rg<CR>
-nnoremap <leader>t :tags<CR>
+nnoremap <leader>t :TermExec size=30 direction=float cmd="clear"<CR>
 nnoremap <leader>m :Marks<CR>
 nnoremap <leader>s :BLines<CR>
 nnoremap <leader>sr :source ~/.config/nvim/init.vim<CR>
@@ -85,25 +86,26 @@ nnoremap <leader><Space> :CtrlP<CR>
 nnoremap <leader>n :Lex!<CR>
 nnoremap <leader>z :set invrnu invnu<CR>
 nnoremap <C-e> :NvimTreeToggle<CR>
-nnoremap <C-J> :bprev<CR>
-nnoremap <C-K> :bnext<CR>
-nnoremap <leader><C-l> :set nofoldenable<CR>
-nnoremap <C-l> :set foldmethod=indent<CR>
+nnoremap <C-h> :bprev<CR>
+nnoremap <C-l> :bnext<CR>
+" nnoremap <leader><C-l> :set nofoldenable<CR>
+" nnoremap <C-l> :set foldmethod=indent<CR>
 nnoremap Q :q!<CR>
 nnoremap q :q<CR>
 nnoremap W :wq<CR>
-xnoremap K :move '<-2<CR>gv-gv
-xnoremap J :move '>+1<CR>gv-gv
-nnoremap <Up>    :resize -2<CR>
-nnoremap <Down>  :resize +2<CR>
-nnoremap <Left>  :vertical resize +2<CR>
-nnoremap <Right> :vertical resize -2<CR>
+" xnoremap K :move '<-2<CR>gv-gv
+" xnoremap J :move '>+1<CR>gv-gv
+" nnoremap <Up>    :resize -2<CR>
+" nnoremap <Down>  :resize +2<CR>
+" nnoremap <Left>  :vertical resize +2<CR>
+" nnoremap <Right> :vertical resize -2<CR>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <C-Space>- :sp<CR>
+" nnoremap <C-Space>- :sp<CR>
 nnoremap <C-s> :w<CR>
-nnoremap <C-Space>\ :vsp<CR>
+" nnoremap <C-Space>\ :vsp<CR>
+nnoremap <leader>er :CocDiagnostics<CR>
 imap qq <Esc>
 command Realtime :set autoread | au CursorHold * checktime | call feedkeys("G")
 " nnoremap <C-k> :set foldmethod=syntax<CR>
@@ -151,26 +153,6 @@ let g:nvim_tree_icons = {
     \ }
 highlight NvimTreeFolderIcon guibg=blue
 
-" colorscheme tokyonight
-""" Color Settings
-" let g:tokyonight_style = "night"
-" let g:tokyonight_italic_functions = 1
-" let g:tokyonight_italic_variables = 1
-" let g:tokyonight_transparent = 1
-" let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
-" let g:tokyonight_colors = {
-"   \ 'hint': 'orange',
-"   \ 'error': '#ff0000'
-" \ }
-
-" "" Keyword Highlighting
-" au Colorscheme * :hi Keyword gui=italic cterm=italic
-" au Colorscheme * :hi Comment gui=italic cterm=italic
-" let g:limelight_conceal_ctermfg = 240
-" let g:limelight_conceal_guifg = '#777777'
-" hi! Normal ctermbg=NONE guibg=NONE 
-" hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
-
 colorscheme kanagawa
 
 "" For Background Transparency
@@ -207,7 +189,7 @@ let g:fzf_tags_command = 'ctags -R'
 let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.8,'yoffset':0.5,'xoffset': 0.5, 'highlight': 'Todo', 'border': 'sharp' } }
 
 "" FZF defaults
-let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
+let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline --bind tab:down,shift-tab:up'
 let $FZF_DEFAULT_COMMAND="rg --files --hidden -g '!.git/'"
 
 "" Customize fzf colors to match your color scheme
@@ -216,7 +198,7 @@ let g:fzf_colors =
   \ 'bg':      ['bg', 'Normal'],
   \ 'hl':      ['fg', 'Comment'],
   \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColoumn'],
   \ 'hl+':     ['fg', 'Statement'],
   \ 'info':    ['fg', 'PreProc'],
   \ 'border':  ['fg', 'Ignore'],

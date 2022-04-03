@@ -203,16 +203,16 @@ export FZF_DEFAULT_OPTS="
 --bind 'ctrl-y:execute-silent(echo {+} | pbcopy)'
 --bind 'ctrl-e:execute(echo {+} | xargs -o nvim)'
 --bind 'ctrl-v:execute(code {+})'
+--bind tab:down,shift-tab:up
+--color=hl:#5085ba
+--color=hl+:#5fd7ff
+--color=info:#d0d0d0,prompt:#d7005f,pointer:#d7005f
+--color=marker:#87ff00,spinner:#af5fff,header:#87afaf
 "
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclude .cache'
 
 ### Calling scrpits and Operations
-# tmux
-echo -en "\x1b[2J\x1b[1;1H"
-echo
+echo -en "\x1b[2J\x1b[1;1H" ;echo
 # motivate
-header
-echo
+header ;echo
 set -o vi
-#Torrench
-PATH=/home/adi/.torrench/bin:/home/adi/.scripts:/home/adi/.local/bin:/usr/share/archcraft/scripts:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/adi/.config/bspwm/bin
