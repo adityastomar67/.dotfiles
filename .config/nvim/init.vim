@@ -72,43 +72,10 @@ set statusline+=%#IncSearch#
 set statusline+=\ %l/%L
 set statusline+=\ [%c]
 
-""" Key-bindings
-let mapleader=" "
-map <C-o> :Files<CR>
-map <leader>b :Buffers<CR>
-nnoremap <leader>rg :Rg<CR>
-nnoremap <leader>t :TermExec size=30 direction=float cmd="clear"<CR>
-nnoremap <leader>m :Marks<CR>
-nnoremap <leader>s :BLines<CR>
-nnoremap <leader>sr :source ~/.config/nvim/init.vim<CR>
-nnoremap <leader><ENTER> :Goyo<CR>
-nnoremap <leader><Space> :CtrlP<CR>
-nnoremap <leader>n :Lex!<CR>
-nnoremap <leader>z :set invrnu invnu<CR>
-nnoremap <C-e> :NvimTreeToggle<CR>
-nnoremap <C-h> :bprev<CR>
-nnoremap <C-l> :bnext<CR>
-" nnoremap <leader><C-l> :set nofoldenable<CR>
-" nnoremap <C-l> :set foldmethod=indent<CR>
-nnoremap Q :q!<CR>
-nnoremap q :q<CR>
-nnoremap W :wq<CR>
-" xnoremap K :move '<-2<CR>gv-gv
-" xnoremap J :move '>+1<CR>gv-gv
-" nnoremap <Up>    :resize -2<CR>
-" nnoremap <Down>  :resize +2<CR>
-" nnoremap <Left>  :vertical resize +2<CR>
-" nnoremap <Right> :vertical resize -2<CR>
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-" nnoremap <C-Space>- :sp<CR>
-nnoremap <C-s> :w<CR>
-" nnoremap <C-Space>\ :vsp<CR>
-nnoremap <leader>er :CocDiagnostics<CR>
-imap qq <Esc>
-command Realtime :set autoread | au CursorHold * checktime | call feedkeys("G")
-" nnoremap <C-k> :set foldmethod=syntax<CR>
+""" Sourcing 
+source $HOME/.keybindings.vim
+source $HOME/.filetype.vim
+source $HOME/.abbreviations.vim
 
 """ NvimTree
 let g:nvim_tree_indent_markers = 1 
