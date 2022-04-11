@@ -35,7 +35,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'rebelot/kanagawa.nvim'
 
 call plug#end()
-
+let g:ycm_global_ycm_extra_conf = '/home/adi/.config/nvim/plugged/YouCompleteMe/.ycm_extra_conf.py'
 """ Lua calls for Plugins
 lua require('Comment').setup()
 lua require'nvim-tree'.setup()
