@@ -16,6 +16,7 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>er :CocDiagnostics<CR>
+nnoremap <leader>lg :LazyGit<CR>
 nnoremap <C-e> :NvimTreeToggle<CR>
 nnoremap <C-o> :Files<CR>
 

@@ -27,6 +27,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'} 
     Plug 'numToStr/Comment.nvim'
     Plug 'nvim-lua/plenary.nvim'
+    Plug 'kdheepak/lazygit.nvim'
     Plug 'nvim-telescope/telescope-file-browser.nvim'
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'psf/black', { 'branch': 'main' }
@@ -35,7 +36,17 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'rebelot/kanagawa.nvim'
 
 call plug#end()
+
+"""YCM - YouCompleteMe Configuration Files
 let g:ycm_global_ycm_extra_conf = '/home/adi/.config/nvim/plugged/YouCompleteMe/.ycm_extra_conf.py'
+
+""" LazyGit Configs
+let g:lazygit_floating_window_winblend = 0 " transparency of floating window
+let g:lazygit_floating_window_scaling_factor = 0.9 " scaling factor for floating window
+let g:lazygit_floating_window_corner_chars = ['╭', '╮', '╰', '╯'] " customize lazygit popup window corner characters
+let g:lazygit_floating_window_use_plenary = 0 " use plenary.nvim to manage floating window if available
+let g:lazygit_use_neovim_remote = 1 " fallback to 0 if neovim-remote is not installed
+
 """ Lua calls for Plugins
 lua require('Comment').setup()
 lua require'nvim-tree'.setup()
