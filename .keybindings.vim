@@ -17,7 +17,7 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>er :CocDiagnostics<CR>
 nnoremap <leader>lg :LazyGit<CR>
-nnoremap <C-e> :NvimTreeToggle<CR>
+nnoremap <C-e> :CocCommand explorer<CR>
 nnoremap <C-o> :Files<CR>
 
 """ WRITING & EXITING
@@ -49,6 +49,11 @@ nmap <Up>    <Nop>
 nmap <Down>  <Nop>
 nmap <Left>  <Nop>
 nmap <Right> <Nop>
+
+imap <C-h> <Left>
+imap <C-j> <Down>
+imap <C-k> <Up>
+imap <C-l> <Right>
 
 map $ <Nop>
 map ^ <Nop>
