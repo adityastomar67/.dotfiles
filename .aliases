@@ -250,4 +250,5 @@ alias :q='exit'
 alias porn='mpv "http://www.pornhub.com/random"' # Opens Random PornHub Video
 alias ip='curl ipinfo.io/ip'
 alias calc='bc -l'
+alias mysql='mysql -u adi -p'
 # _________________ END _____________________ #
