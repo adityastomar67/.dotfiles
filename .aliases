@@ -28,7 +28,7 @@ alias p="cd ~/Projects"
 alias wk='cd ~/Workspace'
 
 ## App launchers
-alias tsm='transmission-cli -D -w ~/Downloads/torrents'
+alias tsm='transmission-cli -D -u 10 -w ~/Downloads/torrents'
 alias r='ranger'
 alias zth='zathura'
 alias f="fzf"

@@ -6,6 +6,8 @@ base
 base-devel
 bat
 bison
+bluez
+bluez-tools
 brave-bin
 broot
 btop
@@ -101,9 +103,9 @@ xf86-video-vesa
 xlsxwriter
 xorg-bdftopcf
 xorg-docs
-xorg-font-util
 xorg-fonts-100dpi
 xorg-fonts-75dpi
+xorg-font-util
 xorg-iceauth
 xorg-mkfontscale
 xorg-server-devel
