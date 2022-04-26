@@ -20,11 +20,13 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'junegunn/goyo.vim'
+    Plug 'lewis6991/gitsigns.nvim'
     Plug 'junegunn/limelight.vim'
     Plug 'kyazdani42/nvim-tree.lua'
     Plug 'kyazdani42/nvim-web-devicons'
     Plug 'morhetz/gruvbox'
     Plug 'neoclide/coc.nvim', {'branch': 'release'} 
+    Plug 'mattn/emmet-vim'
     Plug 'numToStr/Comment.nvim'
     Plug 'nvim-lua/plenary.nvim'
     Plug 'kdheepak/lazygit.nvim'
@@ -50,6 +52,7 @@ let g:lazygit_use_neovim_remote = 1 " fallback to 0 if neovim-remote is not inst
 """ Lua calls for Plugins
 lua require('Comment').setup()
 lua require'nvim-tree'.setup()
+lua require('gitsigns').setup()
 
 """ General Settings
 set encoding=UTF-8 nobackup nowritebackup nocursorline splitbelow splitright wildmode=longest,list,full
