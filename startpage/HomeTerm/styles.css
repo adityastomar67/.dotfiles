@@ -121,8 +121,8 @@ body {
 #terminal {
   background-color: var(--bg);
   box-sizing: border-box;
-  width: 700px;
-  height: 450px;
+  width: 1200px;
+  height: 600px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
   border-radius: 4px;
   padding: 1.5em 0em;

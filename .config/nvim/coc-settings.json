@@ -1,5 +1,5 @@
 {
-    "coc.preferences.extensionUpdateCheck": "daily",
+    "coc.preferences.extensionUpdateCheck": "weekly",
     "coc.preferences.hoverTarget": "echo",
     "coc.preferences.rootPatterns": [
         ".vim",

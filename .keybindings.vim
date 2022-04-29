@@ -54,6 +54,7 @@ imap <C-h> <Left>
 imap <C-j> <Down>
 imap <C-k> <Up>
 imap <C-l> <Right>
+imap <c-f> <Nop>
 
 map $ <Nop>
 map ^ <Nop>

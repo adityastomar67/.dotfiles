@@ -31,5 +31,5 @@ fi
 
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
+[ -f ~/src/exercism_completion.bash ] && source ~/src/exercism_completion.bash
 source /home/adi/.config/broot/launcher/bash/br

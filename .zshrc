@@ -72,6 +72,7 @@ source ~/.oh-my-zsh/oh-my-zsh.sh # For plugins
 [ -f "$HOME/.functions" ] && source ~/.functions              # functions to improve productivity
 [ -f "$HOME/.aliases" ] && source ~/.aliases                # Aliases - For a full list of active aliases, run `alias`.
 [ -f "$HOME/.z-prompt" ] && source ~/.z-prompt               # For custom zsh prompt.
+# [ -f "$HOME/src/exercism_completion.zsh" ] && source ~/src/exercism_completion.zsh # For exercism completion
 
 ### Key Bindings
 # bindkey ^v                                 # Vi Mode
