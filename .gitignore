@@ -2,6 +2,7 @@
 ###############
 .config/wall
 .config/nvim/plugged
+.config/nvim-as67/plugged
 .config/youtube-viewer/watched.txt
 .config/youtube-viewer/watched.txt
 .config/nvim/snippets
