@@ -87,6 +87,8 @@ return packer.startup(function(use)
   use "kdheepak/lazygit.nvim"
   use "lewis6991/gitsigns.nvim"
 
+  use "rcarriga/nvim-notify"
+
   use "akinsho/toggleterm.nvim"
   -- use "numToStr/Comment.nvim" -- Easily comment stuff
 
@@ -170,6 +172,26 @@ return packer.startup(function(use)
         vim.cmd([[ autocmd FileType alpha setlocal nofoldenable ]])
     end
 }
+
+use {'lewis6991/hover.nvim', config = function()
+  require('hover').setup{
+    init = function()
+      -- Require providers
+      require('hover.providers.lsp')
+      require('hover.providers.gh')
+      -- require('hover.providers.man')
+      -- require('hover.providers.dictionary')
+    end,
+    preview_opts = {
+      border = nil
+    },
+    title = true
+  }
+
+  -- Setup keymaps
+  vim.keymap.set('n',  'K', require('hover').hover       , { desc='hover.nvim'         })
+  vim.keymap.set('n', 'gK', require('hover').hover_select, { desc='hover.nvim (select)' })
+end}
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

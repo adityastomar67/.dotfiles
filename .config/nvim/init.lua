@@ -10,4 +10,5 @@ require "core.nvim-tree"
 require "core.null-ls"
 require "core.gitsigns"
 require "core.toggleterm"
--- require "core.comment"
+
+vim.notify = require("notify")
