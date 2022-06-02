@@ -1,6 +1,4 @@
 alacritty-ligatures-git
-spotifyd
-spotify-tui
 amfora
 arc-gtk-theme
 aria2
@@ -81,6 +79,8 @@ rxfetch
 scrcpy
 screenkey
 spotify
+spotifyd
+spotify-tui
 stow
 the_silver_searcher
 tree

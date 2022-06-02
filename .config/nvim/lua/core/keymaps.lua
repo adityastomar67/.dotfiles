@@ -35,7 +35,7 @@ keymap("n", "Y", "y$", opts)
 keymap("n", "q", ":q<CR>", opts)
 keymap("n", "<C-s>", ":w<CR>", opts)
 keymap("n", "Q", ":q!<CR>", opts)
-keymap("n", "W", ":wq<CR>", opts)
+-- keymap("n", "W", ":wq<CR>", opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)

@@ -96,7 +96,7 @@ alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pac
 ## Adding flags
 # alias df='df -h'                          # human-readable sizes
 alias df='duf'
-alias du='ncdu'
+alias du='ncdu -x --color off'
 alias free='free -m'                      # show sizes in MB
 # alias lynx='lynx -cfg=~/.lynx/lynx.cfg -lss=~/.lynx/lynx.lss -vikeys'
 # alias vifm='./.config/vifm/scripts/vifmrun'
@@ -239,7 +239,7 @@ alias wget="wget -c"
 
 ## Additional Aliases
 # alias dsa='cd /home/adi/Study/DS\ Algo/ && v practice.cpp'
-alias src='cd ~/ && source .zshrc'
+alias src='cd ~ && source .zshrc'
 alias fetch='clrscr && neofetch --ascii ~/.config/ascii-neofetch.txt'
 alias c='command'
 alias findr='\fd'
