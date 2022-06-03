@@ -23,9 +23,10 @@ keymap("n", "<leader>z", ":set invrnu invnu<CR>", opts)
 keymap("n", "<C-o>", ":Telescope find_files<CR>", opts)
 keymap("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
-keymap("n", "<leader>f", ":Format<cr>", opts)
+keymap("n", "<leader>ff", ":Format<cr>", opts)
 keymap("n", "<leader>lg", ":LazyGit<CR>", opts)
 keymap("n", "<leader>tt", ':TermExec size=30 direction=float cmd="clear"<CR>', opts)
+keymap("n", "<leader>th", ':TermExec  direction=horizontal cmd="clear"<CR>', opts)
 
 -- Yank all content
 keymap("n", "<leader>y", "ggVGy", opts)

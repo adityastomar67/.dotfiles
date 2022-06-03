@@ -12,3 +12,5 @@ require "core.gitsigns"
 require "core.toggleterm"
 
 vim.notify = require("notify")
+-- source "~/.filetype.vim"
+-- source "~/.abbreviations.vim"

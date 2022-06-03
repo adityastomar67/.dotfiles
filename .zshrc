@@ -73,6 +73,7 @@ source ~/.oh-my-zsh/oh-my-zsh.sh # For plugins
 [ -f "$HOME/.aliases" ] && source ~/.aliases                                                # Aliases - For a full list of active aliases, run `alias`.
 [ -f "$HOME/.z-prompt" ] && source ~/.z-prompt                                              # For custom zsh prompt.
 [ -f "$HOME/src/bitwarden_completion.zsh" ] && source ~/src/bitwarden_completion.zsh        # For Bitwarden completion
+[ -f "$HOME/.alias_temp" ] && source $HOME/.alias_temp
 # [ -f "$HOME/src/exercism_completion.zsh" ] && source ~/src/exercism_completion.zsh        # For exercism completion
 # [ -f "$HOME/src/spotify-tui_completion.zsh" ] && source ~/src/spotify-tui_completion.zsh  # For Spotify-TUI completion
 
