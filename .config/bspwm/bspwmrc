@@ -146,6 +146,11 @@ $HOME/.wallpy
 # Start mpd
 exec mpd &
 
+# Starting Bluetooth Services
+bluetoothctl power on &
+
+sudo pacman -Syyu &
+
 # Start bspwm scripts
 bspcolors
 # $HOME/.config/polybar/launch.sh &
