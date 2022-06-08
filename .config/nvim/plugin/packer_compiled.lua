@@ -165,6 +165,12 @@ _G.packer_plugins = {
     path = "/home/adi/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-comment"] = {
+    config = { "\27LJ\2\nZ\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\17line_mapping\16<leader>gcc\nsetup\17nvim_comment\frequire\0" },
+    loaded = true,
+    path = "/home/adi/.local/share/nvim/site/pack/packer/start/nvim-comment",
+    url = "https://github.com/terrortylor/nvim-comment"
+  },
   ["nvim-lsp-installer"] = {
     loaded = true,
     path = "/home/adi/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
@@ -251,6 +257,10 @@ time([[Config for hover.nvim]], false)
 time([[Config for alpha-nvim]], true)
 try_loadstring("\27LJ\2\nT\0\0\4\0\3\0\a5\0\0\0006\1\1\0009\1\2\1\21\3\0\0B\1\2\0028\1\1\0L\1\2\0\vrandom\tmath\1\5\0\0\vString\15Identifier\fKeyword\vNumber�\1\0\0\t\0\14\0\0266\0\0\0009\0\1\0006\2\2\0B\0\2\2\21\0\0\0006\1\3\0009\1\4\1'\3\5\0B\1\2\0026\2\0\0009\2\6\2B\2\1\2'\3\a\0009\4\b\2'\5\t\0009\6\n\2'\a\t\0009\b\v\2&\3\b\3\18\4\1\0'\5\f\0\18\6\0\0'\a\r\0\18\b\3\0&\4\b\4L\4\2\0\r plugins\v   \npatch\nminor\6.\nmajor\f   v\fversion\31 %d-%m-%Y   %H:%M:%S\tdate\aos\19packer_plugins\rtbl_keys\bvim�\19\1\0\f\0\"\1H6\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0026\2\3\0009\2\4\0026\4\5\0009\4\6\4B\4\1\0A\2\0\0013\2\a\0003\3\b\0005\4\t\0009\5\n\0019\5\v\5=\4\f\0059\5\n\0019\5\v\0059\5\r\5\18\6\2\0B\6\1\2=\6\14\0059\5\n\0019\5\15\0054\6\6\0009\a\16\1'\t\17\0'\n\18\0B\a\3\2>\a\1\0069\a\16\1'\t\19\0'\n\20\0B\a\3\2>\a\2\0069\a\16\1'\t\21\0'\n\22\0B\a\3\2>\a\3\0069\a\16\1'\t\23\0'\n\24\0B\a\3\2>\a\4\0069\a\16\1'\t\25\0'\n\26\0'\v\27\0B\a\4\0?\a\0\0=\6\f\0059\5\n\0019\5\28\5\18\6\3\0B\6\1\2=\6\f\0059\5\n\0019\5\28\0059\5\r\5'\6\29\0=\6\14\0059\5\30\0009\a\r\1B\5\2\0016\5\31\0009\5 \5'\a!\0B\5\2\1K\0\1\0003 autocmd FileType alpha setlocal nofoldenable \bcmd\bvim\nsetup\rConstant\vfooter\f:q!<CR>\14  Quit\6Q\24  Update plugins\f<LDR>ps\22  Git Terminal\f<LDR>lg\19  Find File\f<LDR>fo\23  File Explorer\vCtrl+E\vbutton\fbuttons\ahl\topts\bval\vheader\fsection\1\29\0\0+                                      +                                      +                                      +                                      +                                      +                                      A              ███████████             H            ████▒▒▒▒▒▒▒████          U          ██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██          [        ██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██      T      ██▒▒▒▒▒▒▒▒    ▒▒▒▒▒▒▒▒    ██     a      ██▒▒▒▒▒▒  ▒▒▓▓▒▒▒▒▒▒  ▒▒▓▓▒▒██    a      ██▒▒▒▒▒▒  ▒▒▓▓▒▒▒▒▒▒  ▒▒▓▓▒▒██    ]    ██▒▒▒▒▒▒▒▒▒▒    ▒▒▒▒▒▒▒▒    ▒▒██    m    ██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██    m    ██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██    m    ██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██    m    ██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██    m    ██▒▒██▒▒▒▒▒▒██▒▒▒▒▒▒▒▒██▒▒▒▒▒▒██    [    ████  ██▒▒██  ██▒▒▒▒██  ██▒▒██    C    ██      ██      ████      ████    +                                      +                                      +                                      +                                      +                                      +                                      +                                      \0\0\ttime\aos\15randomseed\tmath\27alpha.themes.dashboard\nalpha\frequire\v����\4\0", "config", "alpha-nvim")
 time([[Config for alpha-nvim]], false)
+-- Config for: nvim-comment
+time([[Config for nvim-comment]], true)
+try_loadstring("\27LJ\2\nZ\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\17line_mapping\16<leader>gcc\nsetup\17nvim_comment\frequire\0", "config", "nvim-comment")
+time([[Config for nvim-comment]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-cmp ]]

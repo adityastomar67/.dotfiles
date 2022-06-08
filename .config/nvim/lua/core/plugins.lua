@@ -201,6 +201,14 @@ return packer.startup(function(use)
 	--
 	--}
 
+	use({
+		"terrortylor/nvim-comment",
+		config = function()
+			require("nvim_comment").setup({
+				line_mapping = "<leader>gcc",
+			})
+		end,
+	})
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
