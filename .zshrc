@@ -220,3 +220,5 @@ echo -en "\x1b[2J\x1b[1;1H" ;echo
 # motivate
 header ;echo
 set -o vi
+
+if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then exec tmux; fi

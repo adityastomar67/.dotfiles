@@ -28,6 +28,10 @@ keymap("n", "<leader>lg", ":LazyGit<CR>", opts)
 keymap("n", "<leader>tt", ':TermExec size=30 direction=float cmd="clear"<CR>', opts)
 keymap("n", "<leader>th", ':TermExec  direction=horizontal cmd="clear"<CR>', opts)
 
+keymap('i', '<F2>', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
+keymap('n', '<leader>rn', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
+keymap('v', '<leader>rn', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
+
 -- Yank all content
 keymap("n", "<leader>y", "ggVGy", opts)
 keymap("n", "Y", "y$", opts)

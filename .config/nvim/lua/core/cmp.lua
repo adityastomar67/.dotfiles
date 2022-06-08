@@ -8,6 +8,8 @@ if not snip_status_ok then
   return
 end
 
+vim.opt.completeopt = "menuone,noselect"
+
 require("luasnip/loaders/from_vscode").lazy_load()
 
 local check_backspace = function()
@@ -18,30 +20,39 @@ end
 --   פּ ﯟ   some other good icons
 local kind_icons = {
   Text = "",
-  Method = "m",
-  Function = "",
-  Constructor = "",
-  Field = "",
-  Variable = "",
-  Class = "",
+  Method = "",
+  Function = "",
+  Constructor = "",
+  Field = "ﰠ",
+  Variable = "",
+  Class = "ﴯ",
   Interface = "",
   Module = "",
-  Property = "",
-  Unit = "",
+  Property = "ﰠ",
+  Unit = "塞",
   Value = "",
   Enum = "",
   Keyword = "",
-  Snippet = "",
+  Snippet = "",
   Color = "",
   File = "",
-  Reference = "",
+  Reference = "",
   Folder = "",
   EnumMember = "",
-  Constant = "",
-  Struct = "",
+  Constant = "",
+  Struct = "פּ",
   Event = "",
   Operator = "",
   TypeParameter = "",
+  Table = " ",
+  Object = "",
+  Tag = " ",
+  Array = " ",
+  Boolean = "蘒",
+  Number = "",
+  String = "",
+  Calendar = " ",
+  Watch = "",
 }
 -- find more here: https://www.nerdfonts.com/cheat-sheet
 
@@ -95,17 +106,17 @@ cmp.setup {
     }),
   },
   formatting = {
-    fields = { "kind", "abbr", "menu" },
-    format = function(entry, vim_item)
+    fields = { "abbr", "kind", "menu" },
+    format = function(_, vim_item)
       -- Kind icons
-      vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
-      -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
-      vim_item.menu = ({
-        copilot = "[Copilot]",
-        luasnip = "[Snippet]",
-        buffer = "[Buffer]",
-        path = "[Path]",
-      })[entry.source.name]
+      -- vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
+      vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
+      -- vim_item.menu = ({
+      --   copilot = "[Copilot]",
+      --   luasnip = "[Snippet]",
+      --   buffer = "[Buffer]",
+      --   path = "[Path]",
+      -- })[entry.source.name]
       return vim_item
     end,
   },

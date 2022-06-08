@@ -6,6 +6,16 @@
 # ██╗██║░░░░░╚██████╔╝██║░╚███║╚█████╔╝░░░██║░░░██║╚█████╔╝██║░╚███║██████╔╝
 # ╚═╝╚═╝░░░░░░╚═════╝░╚═╝░░╚══╝░╚════╝░░░░╚═╝░░░╚═╝░╚════╝░╚═╝░░╚══╝╚═════╝░
 
+_fzf_comprun() {
+  local command=$1
+  shift
+
+  case "$command" in
+    cd)           fzf "$@" --preview 'tree -C {} | head -200' ;;
+    *)            fzf "$@" ;;
+  esac
+}
+
 function get_temperature() {
     local response=""
     response=$(curl --silent 'https://api.openweathermap.org/data/2.5/weather?id=5110253&units=imperial&appid=<your_api_key>')

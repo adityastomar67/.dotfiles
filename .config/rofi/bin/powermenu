@@ -22,6 +22,7 @@ case $chosen in
     $shutdown)
 		ans=$($HOME/.config/rofi/bin/confirm)
 		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
+        tmux kill-server
         systemctl poweroff
 		elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
         exit
@@ -32,6 +33,7 @@ case $chosen in
     $reboot)
 		ans=$($HOME/.config/rofi/bin/confirm)
 		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
+        tmux kill-server
         systemctl reboot
 		elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
         exit
