@@ -1,11 +1,11 @@
-local opts = { noremap = true, silent = true }
+local opts = {noremap = true, silent = true}
 
-local term_opts = { silent = true }
+local term_opts = {silent = true}
 
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
---Remap space as leader key
+-- Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -25,12 +25,17 @@ keymap("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 keymap("n", "<leader>ff", ":Format<cr>", opts)
 keymap("n", "<leader>lg", ":LazyGit<CR>", opts)
-keymap("n", "<leader>tt", ':TermExec size=30 direction=float cmd="clear"<CR>', opts)
-keymap("n", "<leader>th", ':TermExec  direction=horizontal cmd="clear"<CR>', opts)
+keymap("n", "<leader>tt", ':TermExec size=30 direction=float cmd="clear"<CR>',
+       opts)
+keymap("n", "<leader>th", ':TermExec  direction=horizontal cmd="clear"<CR>',
+       opts)
 
-keymap('i', '<F2>', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
-keymap('n', '<leader>rn', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
-keymap('v', '<leader>rn', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
+keymap('i', '<F2>', '<cmd>lua require("renamer").rename()<cr>',
+       {noremap = true, silent = true})
+keymap('n', '<leader>rn', '<cmd>lua require("renamer").rename()<cr>',
+       {noremap = true, silent = true})
+keymap('v', '<leader>rn', '<cmd>lua require("renamer").rename()<cr>',
+       {noremap = true, silent = true})
 
 -- Yank all content
 keymap("n", "<leader>y", "ggVGy", opts)
