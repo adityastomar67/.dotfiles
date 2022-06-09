@@ -78,7 +78,6 @@ source ~/.oh-my-zsh/oh-my-zsh.sh # For plugins
 # [ -f "$HOME/src/spotify-tui_completion.zsh" ] && source ~/src/spotify-tui_completion.zsh  # For Spotify-TUI completion
 
 ### Key Bindings
-# bindkey ^v                                 # Vi Mode
 bindkey "^k" up-line-or-beginning-search   # Up
 bindkey "^j" down-line-or-beginning-search # Down
 
@@ -218,7 +217,8 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclu
 ### Calling scrpits and Operations
 echo -en "\x1b[2J\x1b[1;1H" ;echo
 # motivate
-header ;echo
-set -o vi
+header ;echo # Header for adityastomar67
+set -o vi  # Vi-mode
 
+# Tmux Launching
 if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then exec tmux; fi

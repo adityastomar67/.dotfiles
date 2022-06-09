@@ -105,14 +105,14 @@ function fs() {
 	if [[ -n "$@" ]]; then
 		du $arg -- "$@"
 	else
-		du $arg .[^.]* ./*
+        du $arg .[^.]* ./*
 	fi
 }
 
 function prog() { 
   if [ -f "$1" ] ; then
     case $1 in
-      *.cpp)       g++ "$1" && ./a.out && rm -f a.out   ;;
+      *.cpp)       g++ -std=c++20 "$1" && ./a.out && rm -f a.out   ;;
       *.c)         gcc "$1" && ./a.out && rm -f a.out   ;;
 	  *.java)	   javac "$1" && java "$(basename -s .java "$1")" && rm -f *.class ;;
 	  *.py)        python "$1"                           ;;

@@ -78,8 +78,10 @@ keymap("i", '""', '""<Left>', opts)
 keymap("i", "''", "''<Left>", opts)
 keymap("i", "``", "``<Left>", opts)
 
--- Press jk fast to enter
+-- Press qq fast to enter
 keymap("i", "qq", "<ESC>", opts)
+
+keymap("i", "<C-s>", "<ESC>:w<CR>", opts)
 
 -- Better Navigation in insert mode
 keymap("i", "<C-h>", "<Left>", opts)
