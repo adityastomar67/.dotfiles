@@ -25,9 +25,10 @@ keymap("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 keymap("n", "<leader>ff", ":Format<cr>", opts)
 keymap("n", "<leader>lg", ":LazyGit<CR>", opts)
+keymap("n", "<leader>pr", ':TermExec cmd="clear && prog %"<CR>', opts)
 keymap("n", "<leader>tt", ':TermExec size=30 direction=float cmd="clear"<CR>',
        opts)
-keymap("n", "<leader>th", ':TermExec  direction=horizontal cmd="clear"<CR>',
+keymap("n", "<leader>th", ':TermExec  direction=horiz""ontal cmd="clear"<CR>',
        opts)
 
 keymap('i', '<F2>', '<cmd>lua require("renamer").rename()<cr>',
@@ -66,6 +67,8 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Insert --
+keymap("i", "<leader>pr", '<ESC>:TermExec cmd="clear && prog %"<CR>', opts)
+
 -- Braces pairing
 keymap("i", "<>", "<><Left>", opts)
 keymap("i", "{}", "{}<Left>", opts)
