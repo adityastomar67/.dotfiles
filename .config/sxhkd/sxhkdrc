@@ -24,7 +24,7 @@ super + n
 
 # Rofi Themes Menu
 ctrl + alt + t
-	sh ~/.config/rofi/bin/themes
+	tmux kill-server
 
 # Rofi Menus/Applets
 super + {w,m,x,r,p,i}
