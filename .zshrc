@@ -212,7 +212,8 @@ export FZF_DEFAULT_OPTS="
 --color=info:#d0d0d0,prompt:#d7005f,pointer:#d7005f
 --color=marker:#87ff00,spinner:#af5fff,header:#87afaf
 "
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclude .cache'
+# export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclude .cache'
+export FZF_DEFAULT_COMMAND='fd --hidden --follow --exclude .git --exclude .cache'
 
 ### Calling scrpits and Operations
 echo -en "\x1b[2J\x1b[1;1H" ;echo

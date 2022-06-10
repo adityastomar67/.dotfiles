@@ -6,13 +6,28 @@
 # ██╗██║░░░░░╚██████╔╝██║░╚███║╚█████╔╝░░░██║░░░██║╚█████╔╝██║░╚███║██████╔╝
 # ╚═╝╚═╝░░░░░░╚═════╝░╚═╝░░╚══╝░╚════╝░░░░╚═╝░░░╚═╝░╚════╝░╚═╝░░╚══╝╚═════╝░
 
+# Use fd to generate the list for directory completion
+_fzf_compgen_dir() {
+    fd --type d --hidden --follow --color=always --exclude ".git" --exclude ".hg" --exclude "node_modules" . "$1"
+}
+
+_fzf_compgen_unalias() {
+    tmpfile=$(mktemp /tmp/zsh-complete.XXXXXX)
+    alias > "$tmpfile"
+    fzf "$@" --preview 'ESCAPED=$(printf "%s=" {} | sed -e '"'"'s/[]\/$*.^[]/\\&/g'"'"'); cat '"$tmpfile"' | grep "^$ESCAPED"'
+    rm "$tmpfile"
+}
+
 _fzf_comprun() {
   local command=$1
   shift
 
   case "$command" in
     cd)           fzf "$@" --preview 'tree -C {} | head -200' ;;
-    *)            fzf "$@" ;;
+    export|unset) fzf "$@" --preview "eval 'echo \$'{}" ;;
+    ssh|telnet)   fzf "$@" --preview 'echo {}' ;;
+    unalias)      _fzf_compgen_unalias "$@" ;;
+    *)            fzf "$@" ;; 
   esac
 }
 
