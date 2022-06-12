@@ -25,6 +25,7 @@ setopt HIST_REDUCE_BLANKS    # Remove unnecessary blank lines.
 
 ### Exports
 export TERM="xterm-256color"   # Default term
+export PATH=$PATH:/usr/local/go/bin
 export PATH=~/.local/bin:$PATH # Bin Path to run Commands
 export PATH=~/.scripts:$PATH   # Making my scripts run without typing the whole path
 export TERMINAL='alacritty'    # default Terminal
@@ -50,6 +51,7 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'" # "bat" as manpager
 [ ! -d "$HOME/Workspace" ] && mkdir $HOME/Workspace
 [ ! -d "$HOME/Study-Material" ] && mkdir $HOME/Study-Material
 [ ! -d "$HOME/.nano-backups" ] && mkdir $HOME/.nano-backups
+[ ! -d "$HOME/.Trash" ] && mkdir  $HOME/.Trash
 
 ### Plugins
 ## Standard plugins can be found in $ZSH/plugins/ & Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -222,4 +224,4 @@ header ;echo # Header for adityastomar67
 set -o vi  # Vi-mode
 
 # Tmux Launching
-if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then exec tmux; fi
+if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then tmux; fi

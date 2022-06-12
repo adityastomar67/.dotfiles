@@ -54,7 +54,6 @@ return packer.startup(function(use)
     use("neovim/nvim-lspconfig")                                -- enable LSP
     use("williamboman/nvim-lsp-installer")                      -- simple to use language server installer
     use("jose-elias-alvarez/null-ls.nvim")                      -- for formatters and linters
-    use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}) -- treesitter
     use("p00f/nvim-ts-rainbow")                                 -- rainbow colors for syntax highlighting
     use("nvim-treesitter/playground")                           -- playground for treesitter
     use("nvim-telescope/telescope.nvim")                        -- telescope for quick navigation
@@ -63,6 +62,7 @@ return packer.startup(function(use)
     use("lewis6991/gitsigns.nvim")                              -- gitsigns for git
     use("rcarriga/nvim-notify")                                 -- notify for notifications
     use("akinsho/toggleterm.nvim")                              -- toggleterm for terminal
+    use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}) -- treesitter
     use({"zbirenbaum/copilot-cmp", after = {"copilot.lua", "nvim-cmp"}}) 
     use({
         "zbirenbaum/copilot.lua",

@@ -51,7 +51,7 @@ function get_temperature() {
 
 function empty_trash() {
     printf "%s\n" "EMPTYING TRASH";
-    sudo rm -rf $HOME/.local/share/Trash/files/*;
+    sudo rm -rf $HOME/.Trash/files/*;
 }
 
 function repo() {

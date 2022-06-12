@@ -64,7 +64,7 @@ alias nano='nano -00x'
 ## Confirm before overwriting something
 alias cp="rsync -WavP --human-readable --progress"
 alias mv='mv -i'
-alias rm='trash --trash-dir="~/.Trash" --recursive'
+alias rm="trash --trash-dir='$HOME/.Trash' --recursive"
 
 ## File printing with Bat instead of cat
 alias cat='bat'
