@@ -10,7 +10,7 @@ require "core.nvim-tree"
 require "core.null-ls"
 require "core.gitsigns"
 require "core.toggleterm"
-require "core.lspp"
+require "core.lspInstaller"
 
 vim.notify = require("notify")
 -- source "~/.filetype.vim"
