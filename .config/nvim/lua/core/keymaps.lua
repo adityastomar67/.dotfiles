@@ -26,13 +26,13 @@ keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 keymap("n", "<leader>lg", ":LazyGit<CR>", opts)
 keymap("n", "<leader>pr", ':TermExec cmd="clear && prog %"<CR>', opts)
 keymap("n", "<leader>tt", ':TermExec size=30 direction=float cmd="clear"<CR>', opts)
-keymap("n", "<leader>th", ':TermExec  direction=horiz""ontal cmd="clear"<CR>', opts)
+keymap("n", "<leader>th", ':TermExec  direction=horizontal cmd="clear"<CR>', opts)
 keymap("n", "<leader>sh", ':!chmod +x % && source %<CR>', opts)
 -- keymap("n", "<leader>ff", ":Format<cr>", opts)
 
-keymap("i", "<F2>", '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
-keymap("n", "<leader>rn", '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
-keymap("v", "<leader>rn", '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
+-- keymap("i", "<F2>", '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
+-- keymap("n", "<leader>rn", '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
+-- keymap("v", "<leader>rn", '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
 
 -- Yank all content
 keymap("n", "<leader>y", "ggVGy", opts)
@@ -42,7 +42,7 @@ keymap("n", "Y", "y$", opts)
 keymap("n", "q", ":q<CR>", opts)
 keymap("n", "<C-s>", ":w<CR>", opts)
 keymap("n", "Q", ":q!<CR>", opts)
--- keymap("n", "W", ":wq<CR>", opts)
+keymap("n", "<C-c>", ":bw<CR>", opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
