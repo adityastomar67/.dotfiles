@@ -28,6 +28,7 @@ keymap("n", "<leader>pr", ':TermExec cmd="clear && prog %"<CR>', opts)
 keymap("n", "<leader>tt", ':TermExec size=30 direction=float cmd="clear"<CR>', opts)
 keymap("n", "<leader>th", ':TermExec  direction=horizontal cmd="clear"<CR>', opts)
 keymap("n", "<leader>sh", ':!chmod +x % && source %<CR>', opts)
+keymap("n", "<leader>sr", ':source ~/.config/nvim/init.lua<CR>', opts)
 -- keymap("n", "<leader>ff", ":Format<cr>", opts)
 
 -- keymap("i", "<F2>", '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
