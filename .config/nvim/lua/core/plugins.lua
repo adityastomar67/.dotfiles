@@ -63,7 +63,7 @@ return packer.startup(function(use)
     use("rcarriga/nvim-notify")                                 -- notify for notifications
     use("akinsho/toggleterm.nvim")                              -- toggleterm for terminal
     use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}) -- treesitter
-    use({"zbirenbaum/copilot-cmp", after = {"copilot.lua", "nvim-cmp"}}) 
+    use({"zbirenbaum/copilot-cmp", after = {"copilot.lua", "nvim-cmp"}})
     use({
         "zbirenbaum/copilot.lua",
         event = {"VimEnter"},

@@ -13,9 +13,4 @@ require "core.toggleterm"
 require "core.lspInstaller"
 
 vim.notify = require("notify")
--- source "~/.filetype.vim"
--- source "~/.abbreviations.vim"
-
 vim.cmd('source ~/.abbreviations.vim')
-vim.cmd('au Colorscheme * :hi Keyword gui=italic cterm=italic')
-vim.cmd('au ColorScheme * highlight pythonClassVar gui=italic')

@@ -97,9 +97,9 @@ for _, sign in ipairs(diagnostic_signs) do
 end
 
 vim.diagnostic.config(lsp.diagnostic)
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, lsp.float)
-vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, lsp.float)
-vim.lsp.handlers["textDocument/definition"] = vim.lsp.with(vim.lsp.handlers.definition, lsp.float)
-vim.lsp.handlers["textDocument/typeDefinition"] = vim.lsp.with(vim.lsp.handlers.type_definition, lsp.float)
+-- vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, lsp.float)
+-- vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, lsp.float)
+-- vim.lsp.handlers["textDocument/definition"] = vim.lsp.with(vim.lsp.handlers.definition, lsp.float)
+-- vim.lsp.handlers["textDocument/typeDefinition"] = vim.lsp.with(vim.lsp.handlers.type_definition, lsp.float)
 
 vim.cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]])

@@ -30,7 +30,7 @@ keymap("n", "<leader>th", ':TermExec  direction=horizontal cmd="clear"<CR>', opt
 keymap("n", "<leader>sh", ':!chmod +x % && source %<CR>', opts)
 keymap("n", "<leader>sr", ':source ~/.config/nvim/init.lua<CR>', opts)
 -- keymap("n", "<leader>ff", ":Format<cr>", opts)
-
+keymap("n", "<CR>", ":noh<CR><CR>", opts)
 -- keymap("i", "<F2>", '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
 -- keymap("n", "<leader>rn", '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
 -- keymap("v", "<leader>rn", '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
@@ -40,7 +40,7 @@ keymap("n", "<leader>y", "ggVGy", opts)
 keymap("n", "Y", "y$", opts)
 
 -- Writing & exiting
-keymap("n", "q", ":q<CR>", opts)
+-- keymap("n", "q", ":q<CR>", opts)
 keymap("n", "<C-s>", ":w<CR>", opts)
 keymap("n", "Q", ":q!<CR>", opts)
 keymap("n", "<C-c>", ":bw<CR>", opts)
@@ -51,7 +51,7 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
-keymap("n", "<leader>n", ":Lex 30<cr>", opts)
+-- keymap("n", "<leader>n", ":Lex 30<cr>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)
