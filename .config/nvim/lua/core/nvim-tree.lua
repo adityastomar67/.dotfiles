@@ -10,6 +10,7 @@ end
 
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
+
 nvim_tree.setup({
 	renderer = {
 		icons = {
