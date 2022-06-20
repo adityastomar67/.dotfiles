@@ -187,7 +187,6 @@ export FZF_DEFAULT_OPTS="
 --height=80%
 --multi
 --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
---color='hl:148,hl+:154,pointer:032,marker:010,bg+:237,gutter:008'
 --prompt='∼ ' --pointer='▶' --marker='✓'
 --bind 'ctrl-a:select-all'
 --bind 'ctrl-y:execute-silent(echo {+} | pbcopy)'
@@ -195,6 +194,7 @@ export FZF_DEFAULT_OPTS="
 --bind 'ctrl-v:execute(code {+})'
 --bind tab:down,shift-tab:up
 --color=hl:#5085ba
+--color='hl:148,hl+:154,pointer:032,marker:010,bg+:237,gutter:008'
 --color=hl+:#5fd7ff
 --color=info:#d0d0d0,prompt:#d7005f,pointer:#d7005f
 --color=marker:#87ff00,spinner:#af5fff,header:#87afaf

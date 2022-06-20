@@ -37,6 +37,10 @@ opt.laststatus = 0                          -- set the last status line to 0
 opt.hidden = true                           -- hide the status line
 opt.whichwrap:append "<>[]hl"               -- set the wrap characters
 opt.signcolumn = "yes"                      -- show the sign column
+opt.foldmethod = "indent"
+opt.foldnestmax = 10
+opt.foldenable = false
+opt.foldlevel = 2
 -- opt.hlsearch = true                         -- highlight all matches on previous search pattern
 -- opt.cmdheight = 2                           -- more space in the neovim command line for displaying messages
 -- opt.showtabline = 2                         -- always show tabs

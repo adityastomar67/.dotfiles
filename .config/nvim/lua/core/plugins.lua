@@ -64,6 +64,10 @@ return packer.startup(function(use)
     use("akinsho/toggleterm.nvim")                              -- toggleterm for terminal
     use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}) -- treesitter
     use({"zbirenbaum/copilot-cmp", after = {"copilot.lua", "nvim-cmp"}})
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
     use({
         "zbirenbaum/copilot.lua",
         event = {"VimEnter"},
@@ -169,6 +173,12 @@ return packer.startup(function(use)
             require("nvim_comment").setup({line_mapping = "<leader>gcc"})
         end
     })
+    use({
+    'norcalli/nvim-colorizer.lua',
+    config =function ()
+        require("colorizer").setup()
+    end
+    })
     use {
       "folke/todo-comments.nvim",
       requires = "nvim-lua/plenary.nvim",
@@ -183,7 +193,8 @@ return packer.startup(function(use)
               alt = { "FIXME", "BUG", "FIXIT", "ISSUE" }, -- a set of other keywords that all map to this FIX keywords
               -- signs = false, -- configure signs for some keywords individually
             },
-            TODO = { icon = " ", color = "info" },
+            TODO = { icon = "✖", color = "info" },
+            DONE = { icon = " ", color = "done" },
             HACK = { icon = " ", color = "warning" },
             WARN = { icon = " ", color = "error", alt = { "WARNING", "XXX" } },
             PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
@@ -203,6 +214,7 @@ return packer.startup(function(use)
             error = { "DiagnosticError", "ErrorMsg", "#DC2626" },
             warning = { "DiagnosticWarning", "WarningMsg", "#FBBF24" },
             info = { "DiagnosticInfo", "#7FB4CA" },
+            done = { "DiagnosticDone", "#00A600" },
             hint = { "DiagnosticHint", "#10B981" },
             default = { "Identifier", "#C34043" },
           },

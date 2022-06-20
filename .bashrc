@@ -11,6 +11,7 @@
 ## Exports
 export PATH=~/.local/bin:$PATH
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export PATH=~/.scripts:$PATH   # Making my scripts run without typing the whole path
 
 ## Sourcing
 source ~/.aliases
@@ -29,16 +30,14 @@ fi
 ### SETTING THE STARSHIP PROMPT ###
 # eval "$(starship init bash)"
 
-
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 [ -f ~/src/exercism_completion.bash ] && source ~/src/exercism_completion.bash
-source /home/adi/.config/broot/launcher/bash/br
+[ -f /home/adi/.config/broot/launcher/bash/br ] && source /home/adi/.config/broot/launcher/bash/br
 
-# If not running interactively, don't do anything
-case $- in
-  *i*) ;;
-    *) return;;
-esac
+if [ ! -d ~/.bash_it ]; then
+   git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.dotfiles/.bash_it
+   ~/.bash_it/install.sh
+fi
 
 # Path to the bash it configuration
 export BASH_IT="/home/adi/.bash_it"
@@ -116,3 +115,12 @@ export SCM_CHECK=true
 
 # Load Bash It
 source "$BASH_IT"/bash_it.sh
+
+### Calling scrpits and Operations
+echo -en "\x1b[2J\x1b[1;1H" ;echo
+# motivate
+header ;echo # Header for adityastomar67
+set -o vi  # Vi-mode
+
+# Tmux Launching
+# if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then command tmux -2; fi # -2 flag for TMUX to enable 256 colors
