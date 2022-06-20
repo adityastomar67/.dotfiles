@@ -5,13 +5,14 @@ end
 local servers = {
 	"pyright",
 	"clangd",
-	"tsserver",
 	"bashls",
 	"sqls",
 	"sumneko_lua",
 	"jsonls",
 	"eslint",
-	"tailwindcss",
+    -- "emmet_ls"
+	-- "tsserver",
+	-- "tailwindcss",
 	-- "jdtls",
 }
 

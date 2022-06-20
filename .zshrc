@@ -26,6 +26,7 @@ setopt HIST_REDUCE_BLANKS    # Remove unnecessary blank lines.
 ### Exports
 export TERM="xterm-256color"   # Default term
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/home/adi/.spicetify
 export PATH=~/.local/bin:$PATH # Bin Path to run Commands
 export PATH=~/.scripts:$PATH   # Making my scripts run without typing the whole path
 export TERMINAL='alacritty'    # default Terminal
@@ -119,7 +120,8 @@ complete -C aws_completer aws
 ## Theme.sh Config
 if command -v theme.sh > /dev/null; then
 	[ -e ~/.theme_history ] && theme.sh "$(theme.sh -l|tail -n1)"
-#Optional
+
+    #Optional
     Bind C-o to the last theme.
 	last_theme() {
 		theme.sh "$(theme.sh -l|tail -n2|head -n1)"
@@ -127,9 +129,11 @@ if command -v theme.sh > /dev/null; then
 	zle -N last_theme
 	bindkey '^O' last_theme
 	alias th='theme.sh -i'
-#Interactively load a light theme
+    
+    #Interactively load a light theme
 	alias thl='theme.sh --light -i'
-#Interactively load a dark theme
+
+    #Interactively load a dark theme
 	alias thd='theme.sh --dark -i'
 fi
 
