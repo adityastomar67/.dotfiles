@@ -1,0 +1,120 @@
+source /usr/local/share/mutt-wizard/mutt-wizard.muttrc
+source /home/adi/.config/mutt/accounts/adityastomar67@gmail.com.muttrc
+macro index,pager i1 '<sync-mailbox><enter-command>source /home/adi/.config/mutt/accounts/adityastomar67@gmail.com.muttrc<enter><change-folder>!<enter>;<check-stats>' "switch to adityastomar67@gmail.com"
+
+# # About Me
+set from = "adityastomar67@gmail.com"
+set realname = "Aditya Singh Tomar"
+#
+# # My credentials
+# set smtp_url = "smtp://email@server:port"
+# set smtp_pass = "password"
+# set smtp_authenticators = "gssapi:login"
+# set from = "alain@alainpicard.ca"
+# set realname = "Alain Picard"
+#
+# #set ssl_starttls = yes
+# #set ssl_force_tls = yes
+# set spoolfile = "+INBOX"
+# set record = "+Sent"
+# set postponed = "+Drafts"
+# set sort = threads
+# set header_cache = ~/.mutt/headercache
+# set message_cachedir = ~/.mutt/messagecache
+#
+# # My imap
+# set imap_user = "alain@alainpicard.ca"
+# set imap_pass = "password"
+# set imap_authenticators="login"
+# set folder = "imaps://server:port"
+# set spoolfile = "+INBOX"
+#
+# # Where to put the stuff
+# set header_cache = "~/.mutt/cache/headers"
+# set message_cachedir = "~/.mutt/cache/bodies"
+# set certificate_file = "~/.mutt/certificates"
+
+# Etc
+set mail_check = 30
+set move = no
+set imap_keepalive = 900
+set sort = threads
+set editor = "nvim"
+
+## Options city
+# Quit without confirming
+set quit
+# Don't ask to confirm the recipient and the subject when reply to an e-mail
+set fast_reply=yes
+set include=yes
+# always show X number of mails in the index
+set pager_index_lines = 10
+# Make mutt faster
+set sleep_time = 0
+# Default is: Mutt with %?m?%m messages&no messages?%?n? [%n NEW]?
+set ts_status_format = 'mutt %m messages%?n?, %n new?'
+# A customizable header
+set edit_headers = yes
+set folder_format = '%4C %t %f'
+# Pager options
+set smart_wrap
+# Pad blank lines in pager with ~ (ala vi)
+set tilde
+set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+set sort = 'reverse-date' # sorting the mails in threads in index (mails-list-view)
+set sort_aux = reverse-last-date-received # and the thread themselves reverse-date
+set uncollapse_jump # don't collapse on an unread message
+set sort_re # thread based on regex
+set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
+# Default is: "-%Z- %C/%m: %-20.20n   %s%*  -- (%P)"
+set pager_format = '=%b %C/%m: %-20.20F   %s%* (%P)'
+set forward_format = "Fwd: %s"
+# charset
+set charset = "utf-8"
+set assumed_charset = "utf-8"
+set send_charset = "utf-8:iso-8859-15:us-ascii"
+# sidebar
+set sidebar_visible
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set mail_check_stats
+
+## Security
+unset user_agent
+my_hdr User-Agent: Every email client sucks, this one just sucks less.
+
+# general ------------ foreground ---- background -----------------------------
+color error        color231    color212
+color indicator        color231    color241
+color markers        color210    default
+color message        default        default
+color normal        default        default
+color prompt        default            default
+color search        color84        default
+color status         color141    color236
+color tilde        color231    default
+color tree        color141    default
+
+# message index ------ foreground ---- background -----------------------------
+color index        color210    default     ~D # deleted messages
+color index        color84        default     ~F # flagged messages
+color index        color117    default     ~N # new messages
+color index        color212    default     ~Q # messages which have been replied to
+color index        color215    default     ~T # tagged messages
+color index        color141    default        ~v # messages part of a collapsed thread
+
+# message headers ---- foreground ---- background -----------------------------
+color hdrdefault    color117    default
+color header        color231    default        ^Subject:.*
+# message body ------- foreground ---- background -----------------------------
+color attachment    color228    default
+color body        color231    default        [\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+               # email addresses
+color body        color228    default        (https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9]+        # URLs
+color body        color231    default        (^|[[:space:]])\\*[^[:space:]]+\\*([[:space:]]|$) # *bold* text
+color body        color231    default        (^|[[:space:]])_[^[:space:]]+_([[:space:]]|$)     # _underlined_ text
+color body        color231    default        (^|[[:space:]])/[^[:space:]]+/([[:space:]]|$)     # /italic/ text
+color quoted        color61        default
+color quoted1        color117    default
+color quoted2        color84        default
+color quoted3        color215    default
+color quoted4        color212    default
+color signature color212 default
