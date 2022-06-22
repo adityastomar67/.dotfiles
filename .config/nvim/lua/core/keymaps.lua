@@ -1,5 +1,4 @@
 local opts = { noremap = true, silent = true }
-
 local term_opts = { silent = true }
 
 -- Shorten function name
@@ -27,13 +26,11 @@ keymap("n", "<leader>lg", ":LazyGit<CR>", opts)
 keymap("n", "<leader>pr", ':TermExec cmd="clear && prog %"<CR>', opts)
 keymap("n", "<leader>tt", ':TermExec size=30 direction=float cmd="clear"<CR>', opts)
 keymap("n", "<leader>th", ':TermExec  direction=horizontal cmd="clear"<CR>', opts)
-keymap("n", "<leader>sh", ':!chmod +x % && source %<CR>', opts)
-keymap("n", "<leader>sr", ':source ~/.config/nvim/init.lua<CR>', opts)
--- keymap("n", "<leader>ff", ":Format<cr>", opts)
+keymap("n", "<leader>sh", ":!chmod +x % && source %<CR>", opts)
+keymap("n", "<leader>sr", ":source ~/.config/nvim/init.lua<CR>", opts)
 keymap("n", "<CR>", ":noh<CR><CR>", opts)
--- keymap("i", "<F2>", '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
--- keymap("n", "<leader>rn", '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
--- keymap("v", "<leader>rn", '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
+keymap("n", "f", ":HopWord<CR>", opts)
+keymap("n", "F", ":HopLine<CR>", opts)
 
 -- Yank all content
 keymap("n", "<leader>y", "ggVGy", opts)
@@ -50,6 +47,12 @@ keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
+
+-- Getting Rid Of Bad Habbits
+keymap("n", "<Up>", "<Nop>", opts)
+keymap("n", "<Down>", "<Nop>", opts)
+keymap("n", "<Left>", "<Nop>", opts)
+keymap("n", "<Right>", "<Nop>", opts)
 
 -- keymap("n", "<leader>n", ":Lex 30<cr>", opts)
 
@@ -75,12 +78,19 @@ keymap("i", '""', '""<Left>', opts)
 keymap("i", "''", "''<Left>", opts)
 keymap("i", "``", "``<Left>", opts)
 
+keymap("i", "<C-F>", "<ESC>:HopLine<CR>", opts)
+
 -- Press qq fast to enter
 keymap("i", "qq", "<ESC>", opts)
 
 keymap("i", "<C-s>", "<ESC>:w<CR>", opts)
 
 -- Better Navigation in insert mode
+keymap("i", "<Up>", "<Nop>", opts)
+keymap("i", "<Down>", "<Nop>", opts)
+keymap("i", "<Left>", "<Nop>", opts)
+keymap("i", "<Right>", "<Nop>", opts)
+
 keymap("i", "<C-h>", "<Left>", opts)
 keymap("i", "<C-l>", "<Right>", opts)
 keymap("i", "<C-j>", "<Down>", opts)

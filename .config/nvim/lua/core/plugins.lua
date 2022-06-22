@@ -65,6 +65,14 @@ return packer.startup(function(use)
     use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}) -- treesitter
     use({"zbirenbaum/copilot-cmp", after = {"copilot.lua", "nvim-cmp"}})
     use {
+      'phaazon/hop.nvim',
+      branch = 'v1', -- optional but strongly recommended
+      config = function()
+        -- you can configure Hop the way you like here; see :h hop-config
+        require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+      end
+    }
+    use {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
