@@ -255,3 +255,4 @@ alias spotify='spt'
 alias bt='bluetoothctl'
 # _________________ END _____________________ #
 alias lz="lazygit"
+alias mail="neomutt"
