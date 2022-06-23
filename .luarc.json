@@ -5,6 +5,8 @@
         "unused-local"
     ],
     "Lua.diagnostics.globals": [
-        "vim"
+        "vim",
+        "custom_codeAction_callback",
+        "clocal"
     ]
 }

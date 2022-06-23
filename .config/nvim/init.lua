@@ -11,6 +11,7 @@ require "core.null-ls"
 require "core.gitsigns"
 require "core.toggleterm"
 require "core.lspInstaller"
+require "core.dressing"
 
 vim.notify = require("notify")
 vim.cmd('source ~/.abbreviations.vim')

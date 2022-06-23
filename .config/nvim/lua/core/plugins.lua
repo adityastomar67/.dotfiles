@@ -34,6 +34,7 @@ packer.init({
 
 -- Install your plugins here
 return packer.startup(function(use)
+    use('stevearc/dressing.nvim')
     use("wbthomason/packer.nvim")                               -- Have packer manage itself
     -- use "lunarvim/colorschemes"                                 -- A bunch of colorschemes you can try out
     use("rebelot/kanagawa.nvim")                                -- Colorscheme of choice
