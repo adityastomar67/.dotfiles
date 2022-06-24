@@ -19,7 +19,8 @@ vim.g.maplocalleader = " "
 
 -- Normal --
 keymap("n", "<leader>z", ":set invrnu invnu<CR>", opts)
-keymap("n", "<C-o>", ":Telescope find_files<CR>", opts)
+keymap("n", "<C-o>", ":lua require('telescope.builtin').find_files(require('telescope.themes').get_ivy({ winblend = 90 }))<CR>", opts)
+-- keymap("n", "<C-o>", ":Telescope find_files<CR>", opts)
 keymap("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 keymap("n", "<leader>lg", ":LazyGit<CR>", opts)
@@ -31,6 +32,9 @@ keymap("n", "<leader>sr", ":source ~/.config/nvim/init.lua<CR>", opts)
 keymap("n", "<CR>", ":noh<CR><CR>", opts)
 keymap("n", "f", ":HopWord<CR>", opts)
 keymap("n", "F", ":HopLine<CR>", opts)
+keymap("n", "U", "<C-r>", opts)
+keymap("n", "<leader>|", "<C-w>v", opts)
+keymap("n", "<leader>_", "<C-w>s", opts)
 
 -- Yank all content
 keymap("n", "<leader>y", "ggVGy", opts)
