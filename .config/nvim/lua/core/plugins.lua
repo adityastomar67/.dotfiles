@@ -34,7 +34,7 @@ packer.init({
 
 -- Install your plugins here
 return packer.startup(function(use)
-    use('stevearc/dressing.nvim')
+    use('stevearc/dressing.nvim')                               -- For the sweet sweet UI Components
     use("wbthomason/packer.nvim")                               -- Have packer manage itself
     -- use "lunarvim/colorschemes"                                 -- A bunch of colorschemes you can try out
     use("rebelot/kanagawa.nvim")                                -- Colorscheme of choice
@@ -52,6 +52,7 @@ return packer.startup(function(use)
     use("hrsh7th/cmp-nvim-lua")                                 -- lua completions
     use("L3MON4D3/LuaSnip")                                     -- snippet engine
     use("rafamadriz/friendly-snippets")                         -- a bunch of snippets to use
+    use("notomo/cmp-neosnippet")                                -- a bunch of snippets to use
     use("neovim/nvim-lspconfig")                                -- enable LSP
     use("williamboman/nvim-lsp-installer")                      -- simple to use language server installer
     use("jose-elias-alvarez/null-ls.nvim")                      -- for formatters and linters
@@ -64,19 +65,26 @@ return packer.startup(function(use)
     use("rcarriga/nvim-notify")                                 -- notify for notifications
     use("akinsho/toggleterm.nvim")                              -- toggleterm for terminal
     use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}) -- treesitter
+
+    -- For Getting Copilot Suggestions in Completion Engine
     use({"zbirenbaum/copilot-cmp", after = {"copilot.lua", "nvim-cmp"}})
+
+    -- For the awesome Hoping Word Features
     use {
       'phaazon/hop.nvim',
       branch = 'v1', -- optional but strongly recommended
       config = function()
-        -- you can configure Hop the way you like here; see :h hop-config
         require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
       end
     }
+
+    -- For Auto-Pairing the Brackets
     use {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
+
+    -- For Copilot Engine in Lua
     use({
         "zbirenbaum/copilot.lua",
         event = {"VimEnter"},
@@ -86,6 +94,7 @@ return packer.startup(function(use)
     })
     -- use "github/copilot.vim"
 
+    -- For The Dahboard
     use({
         "goolord/alpha-nvim",
         requires = {"kyazdani42/nvim-web-devicons"},
@@ -153,12 +162,12 @@ return packer.startup(function(use)
         end
     })
 
+    -- For Hovering the information eg: Diagnostics
     use({
         "lewis6991/hover.nvim",
         config = function()
             require("hover").setup({
                 init = function()
-                    -- Require providers
                     require("hover.providers.lsp")
                     require("hover.providers.gh")
                     -- require('hover.providers.man')
@@ -167,8 +176,6 @@ return packer.startup(function(use)
                 preview_opts = {border = nil},
                 title = true
             })
-
-            -- Setup keymaps
             vim.keymap.set("n", "K", require("hover").hover,
                            {desc = "hover.nvim"})
             vim.keymap.set("n", "gK", require("hover").hover_select,
@@ -176,30 +183,35 @@ return packer.startup(function(use)
         end
     })
 
+    -- For Provind the Comments Functionality
     use({
         "terrortylor/nvim-comment",
         config = function()
             require("nvim_comment").setup({line_mapping = "<leader>gcc"})
         end
     })
+
+    -- More Colors
     use({
     'norcalli/nvim-colorizer.lua',
     config =function ()
         require("colorizer").setup()
     end
     })
+
+    -- TODO: Comments in the Code
     use {
       "folke/todo-comments.nvim",
       requires = "nvim-lua/plenary.nvim",
       config = function()
         require("todo-comments").setup {
-          signs = true, -- show icons in the signs column
-          sign_priority = 8, -- sign priority
+          signs = true,
+          sign_priority = 8,
           keywords = {
             FIX = {
-              icon = " ", -- icon used for the sign, and in search results
-              color = "#C34043", -- can be a hex color, or a named color (see below)
-              alt = { "FIXME", "BUG", "FIXIT", "ISSUE" }, -- a set of other keywords that all map to this FIX keywords
+              icon = " ",
+              color = "#C34043",
+              alt = { "FIXME", "BUG", "FIXIT", "ISSUE" },
               -- signs = false, -- configure signs for some keywords individually
             },
             TODO = { icon = "✖", color = "info" },
