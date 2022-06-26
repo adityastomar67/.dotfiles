@@ -1,3 +1,4 @@
+local cmd = vim.cmd
 local opt = vim.opt
 local g = vim.g
 
@@ -49,5 +50,5 @@ opt.foldlevel = 2
 -- opt.guifont = "monospace:h17"               -- the font used in graphical neovim applications
 
 -- vim.cmd "set whichwrap+=<,>,[,],h,l"
-vim.cmd [[set iskeyword+=-]]
+cmd [[set iskeyword+=-]]
 -- vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work

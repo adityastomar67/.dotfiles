@@ -96,6 +96,8 @@ keymap("i", "``", "``<Left>", opts)
 
 -- Press qq fast to enter Normal Mode
 keymap("i", "qq", "<ESC>", opts)
+keymap("v", "qq", "<ESC>", opts)
+keymap("x", "qq", "<ESC>", opts)
 
 -- Getting Rid Of Bad Habbits
 keymap("n", "<Up>",    "<Nop>", opts)
