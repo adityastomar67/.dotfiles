@@ -39,6 +39,8 @@ alias scim='sc-im'
 alias dmenu='dmenu -i -l 10 -fn "Iosevka Nerd Font" -p "Select File: " -nb "#282a36" -nf "#f8f8f2" -sf "#44475a" -sb "#bd93f9" '
 alias pvpn='protonvpn-cli'
 # alias s='startx'
+alias lz="lazygit"
+alias mail="neomutt"
 # alias t='bpytop'
 alias tty='tty-clock -C6 -c -t'
 alias pac='sudo pacman -S'
@@ -254,5 +256,3 @@ alias mysql='mysql -u adi -p'
 alias spotify='spt'
 alias bt='bluetoothctl'
 # _________________ END _____________________ #
-alias lz="lazygit"
-alias mail="neomutt"

@@ -148,6 +148,7 @@ exec mpd &
 
 # Starting Bluetooth Services
 bluetoothctl power on &
+xset s off -dpms
 
 # Start bspwm scripts
 bspcolors

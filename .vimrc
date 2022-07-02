@@ -21,40 +21,40 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin('~/.vim/plugins')
 
-Plugin 'VundleVim/Vundle.vim'
+        Plugin 'VundleVim/Vundle.vim'
 
-" Customization
-Plugin 'vim-airline/vim-airline'
-Plugin 'ryanoasis/vim-devicons'			" For icons
-Plugin 'dylanaraps/wal.vim'
+        " Customization
+        Plugin 'vim-airline/vim-airline'
+        Plugin 'ryanoasis/vim-devicons'			" For icons
+        Plugin 'dylanaraps/wal.vim'
 
-" Must have
-Plugin 'tpope/vim-surround'    
-Plugin 'junegunn/goyo.vim'
-Plugin 'neoclide/coc.nvim', {'branch': 'release'}
-Plugin 'farmergreg/vim-lastplace'
-Plugin 'xuhdev/vim-latex-live-preview'
-Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plugin 'junegunn/fzf.vim'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-eunuch'
-Plugin 'mhinz/vim-startify'
+        " Must have
+        Plugin 'tpope/vim-surround'    
+        Plugin 'junegunn/goyo.vim'
+        Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+        Plugin 'farmergreg/vim-lastplace'
+        Plugin 'xuhdev/vim-latex-live-preview'
+        Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+        Plugin 'junegunn/fzf.vim'
+        Plugin 'terryma/vim-multiple-cursors'
+        Plugin 'tpope/vim-commentary'
+        Plugin 'tpope/vim-eunuch'
+        Plugin 'mhinz/vim-startify'
 
-" Web Development
-Plugin 'ap/vim-css-color'
-Plugin 'mattn/emmet-vim'
+        " Web Development
+        Plugin 'ap/vim-css-color'
+        Plugin 'mattn/emmet-vim'
 
-" Python Development
-Plugin 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+        " Python Development
+        Plugin 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
-" Syntax highlighting
-Plugin 'vim-python/python-syntax'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'neomutt/neomutt.vim'
+        " Syntax highlighting
+        Plugin 'vim-python/python-syntax'
+        Plugin 'plasticboy/vim-markdown'
+        Plugin 'neomutt/neomutt.vim'
 
-" Vim Wiki
-Plugin 'vimwiki/vimwiki'
+        " Vim Wiki
+        Plugin 'vimwiki/vimwiki'
 
 call vundle#end()
 
