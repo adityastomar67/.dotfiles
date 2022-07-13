@@ -15,6 +15,7 @@ code --force --install-extension coenraads.bracket-pair-colorizer
 code --force --install-extension viktorqvarfordt.vscode-pitch-black-theme
 code --force --install-extension PKief.material-icon-theme
 # code --force --install-extension GitHub.github-vscode-theme
+code --force --install-extension moalamri.inline-fold
 # code --force --install-extension vscodevim.vim
 code --force --install-extension foxundermoon.shell-format
 
