@@ -213,5 +213,5 @@ header ;echo # Header for adityastomar67
 set -o vi  # Vi-mode
 
 # Tmux Launching
-# if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then command tmux -2; fi # -2 flag for TMUX to enable 256 colors
-if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then exec tmux -2; fi # -2 flag for TMUX to enable 256 colors
+if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then command tmux -2; fi # -2 flag for TMUX to enable 256 colors
+# if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then exec tmux -2; fi # -2 flag for TMUX to enable 256 colors, this closes terminal after the closing of the server
