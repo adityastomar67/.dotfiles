@@ -15,4 +15,9 @@ require "core.dressing"
 require "core.cmds"
 
 vim.notify = require("notify")
-vim.cmd('source ~/.abbreviations.vim')
+vim.cmd('source $HOME/.abbreviations.vim')
+
+-- NOTE: Needs to be checked
+require("notify").setup({
+  background_colour = "#000000",
+})
