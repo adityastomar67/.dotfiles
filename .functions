@@ -143,7 +143,7 @@ function prog() {
   fi
 }
 
-function extract() {
+function ex() {
 ## Function extract for common file formats
   if [ -f "$1" ] ; then
     case $1 in
