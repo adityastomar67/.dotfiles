@@ -42,6 +42,7 @@ opt.foldmethod = "indent"
 opt.foldnestmax = 10
 opt.foldenable = false
 opt.foldlevel = 2
+opt.cole  = 1
 -- opt.hlsearch = true                         -- highlight all matches on previous search pattern
 -- opt.cmdheight = 2                           -- more space in the neovim command line for displaying messages
 -- opt.showtabline = 2                         -- always show tabs
