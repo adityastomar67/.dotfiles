@@ -36,4 +36,4 @@
 (((dot_index_expression) @field (#eq? @field "vim.bo"      )) (#set! conceal "B"))
 (((dot_index_expression) @field (#eq? @field "vim.wo"      )) (#set! conceal "W"))
 
-(((dot_index_expression) @field (#eq? @field "vim.keymap.set")) (#set! conceal "  "))
+(((dot_index_expression) @field (#eq? @field "vim.keymap.set")) (#set! conceal ""))
