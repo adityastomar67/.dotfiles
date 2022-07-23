@@ -101,12 +101,12 @@ local function code_keymap()
 			keymap_c.t = { "<cmd>2TermExec cmd='yarn test'<cr>", "Yarn Test" }
 		end
 
-		if next(keymap_c) ~= nil then
-			whichkey.register(
-				{ c = keymap_c },
-				{ mode = "n", silent = true, noremap = true, buffer = bufnr, prefix = "<leader>" }
-			)
-		end
+		-- if next(keymap_c) ~= nil then
+		-- 	whichkey.register(
+		-- 		{ c = keymap_c },
+		-- 		{ mode = "n", silent = true, noremap = true, buffer = bufnr, prefix = "<leader>" }
+		-- 	)
+		-- end
 	end
 end
 
