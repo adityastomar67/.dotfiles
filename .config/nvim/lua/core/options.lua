@@ -44,11 +44,6 @@ opt.foldlevel = 2
 opt.cole  = 1                               -- Conceal applied
 opt.cursorline = true                       -- highlight the current line
 opt.cursorlineopt = "number"                -- show the line numbers highlighted
--- opt.hlsearch = true                         -- highlight all matches on previous search pattern
--- opt.cmdheight = 2                           -- more space in the neovim command line for displaying messages
--- opt.showtabline = 2                         -- always show tabs
--- opt.conceallevel = 0                        -- so that `` is visible in markdown files
--- opt.guifont = "monospace:h17"               -- the font used in graphical neovim applications
 opt.formatoptions = "l"
 opt.formatoptions = opt.formatoptions
     - "a" -- Auto formatting is BAD.
@@ -69,10 +64,6 @@ opt.guicursor = {
     "sm:block-blinkwait175-blinkoff150-blinkon175",
 }
 
--- vim.cmd "set whichwrap+=<,>,[,],h,l"
-cmd [[set iskeyword+=-]]
--- vim.cmd [[set formatoptions-=cro]]        -- TODO: this doesn't seem to work
-
 -- IMPROVE NEOVIM STARTUP
 vim.g.loaded_python_provier = 0
 vim.g.loaded_python3_provider = 0
@@ -88,7 +79,7 @@ vim.g.do_filetype_lua = 1
 vim.g.did_load_filetypes = 0
 vim.g.nojoinspaces = true
 
--- disable builtins plugins
+-- Disable builtins plugins
 local disabled_built_ins = {
     "2html_plugin",
     "getscript",
@@ -112,8 +103,7 @@ local disabled_built_ins = {
     "zipPlugin",
     "matchparen", -- matchparen.nvim disables the default
 }
+
 for _, plugin in pairs(disabled_built_ins) do
     vim.g["loaded_" .. plugin] = 1
 end
-
-
