@@ -144,3 +144,21 @@ keymap("n", "<leader>ps", ":PackerSync<CR>", opts)
 
 -- For Alligning of Text Easliy
 keymap("v", "sa", ":SimpleAlign ", opts)
+
+-- For Conceal enable/disable
+vim.keymap.set("n",  "<F10>" , function()
+	if vim.o.conceallevel > 0 then
+		vim.o.conceallevel = 0
+	else
+		vim.o.conceallevel = 2
+	end
+end, opts)
+
+vim.keymap.set("n",  "<F11>" , function()
+	if vim.o.concealcursor == "n" then
+		vim.o.concealcursor = ""
+	else
+		vim.o.concealcursor = "n"
+	end
+end, opts)
+

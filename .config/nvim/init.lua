@@ -13,6 +13,7 @@ require "core.toggleterm"
 require "core.lspInstaller"
 require "core.dressing"
 require "core.cmds"
+-- require "core.files"
 
 vim.notify = require("notify")
 vim.cmd('source $HOME/.abbreviations.vim')
@@ -22,20 +23,7 @@ require("notify").setup({
   background_colour = "#000000",
 })
 
-local opts = { noremap = true, silent = true }
-
-vim.keymap.set("n",  "<F10>" , function()
-	if vim.o.conceallevel > 0 then
-		vim.o.conceallevel = 0
-	else
-		vim.o.conceallevel = 2
-	end
-end, opts)
-
-vim.keymap.set("n",  "<F11>" , function()
-	if vim.o.concealcursor == "n" then
-		vim.o.concealcursor = ""
-	else
-		vim.o.concealcursor = "n"
-	end
-end, opts)
+-- TODO: Need to move it to LSP config file
+require'lspconfig'.eslint.setup{}
+require'lspconfig'.emmet_ls.setup{}
+require'lspconfig'.jsonls.setup{}

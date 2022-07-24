@@ -1,6 +1,5 @@
 local cmd = vim.cmd
 local opt = vim.opt
-local g = vim.g
 
 ---- :help options
 opt.backup = false                          -- creates a backup file
@@ -50,7 +49,71 @@ opt.cursorlineopt = "number"                -- show the line numbers highlighted
 -- opt.showtabline = 2                         -- always show tabs
 -- opt.conceallevel = 0                        -- so that `` is visible in markdown files
 -- opt.guifont = "monospace:h17"               -- the font used in graphical neovim applications
+opt.formatoptions = "l"
+opt.formatoptions = opt.formatoptions
+    - "a" -- Auto formatting is BAD.
+    - "t" -- Don't auto format my code. I got linters for that.
+    + "c" -- In general, I like it when comments respect textwidth
+    + "q" -- Allow formatting comments w/ gq
+    - "o" -- O and o, don't continue comments
+    + "r" -- But do continue when pressing enter.
+    + "n" -- Indent past the formatlistpat, not underneath it.
+    + "j" -- Auto-remove comments if possible.
+    - "2" -- I'm not in gradeschool anymore
+opt.guicursor = {
+    "n-v:block",
+    "i-c-ci-ve:ver25",
+    "r-cr:hor20",
+    "o:hor50",
+    "i:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor",
+    "sm:block-blinkwait175-blinkoff150-blinkon175",
+}
 
 -- vim.cmd "set whichwrap+=<,>,[,],h,l"
 cmd [[set iskeyword+=-]]
 -- vim.cmd [[set formatoptions-=cro]]        -- TODO: this doesn't seem to work
+
+-- IMPROVE NEOVIM STARTUP
+vim.g.loaded_python_provier = 0
+vim.g.loaded_python3_provider = 0
+vim.g.python_host_skip_check = 1
+vim.g.python_host_prog='/bin/python2'
+vim.g.python3_host_skip_check = 1
+vim.g.python3_host_prog='/bin/python3'
+vim.opt.pyxversion=3
+vim.g.EditorConfig_core_mode = 'external_command'
+vim.g.matchparen_timeout = 20
+vim.g.matchparen_insert_timeout = 20
+vim.g.do_filetype_lua = 1
+vim.g.did_load_filetypes = 0
+vim.g.nojoinspaces = true
+
+-- disable builtins plugins
+local disabled_built_ins = {
+    "2html_plugin",
+    "getscript",
+    "getscriptPlugin",
+    "gzip",
+    "logipat",
+    "matchit",
+    "netrw",
+    "netrwFileHandlers",
+    "loaded_remote_plugins",
+    "loaded_tutor_mode_plugin",
+    "netrwPlugin",
+    "netrwSettings",
+    "rrhelper",
+    "spellfile_plugin",
+    "tar",
+    "tarPlugin",
+    "vimball",
+    "vimballPlugin",
+    "zip",
+    "zipPlugin",
+    "matchparen", -- matchparen.nvim disables the default
+}
+for _, plugin in pairs(disabled_built_ins) do
+    vim.g["loaded_" .. plugin] = 1
+end
+
+
