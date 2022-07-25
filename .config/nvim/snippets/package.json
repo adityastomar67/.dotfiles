@@ -1,66 +1,90 @@
 {
-  "name": "snippets",
-  "version": "1.0.0",
-  "description": "\"Snipmate snippets for code completion\"",
-
-  "contributes": {
-    "snippets": [
-
+    "name": "snippets",
+    "version": "1.0.0",
+    "description": "\"Snipmate snippets for code completion\"",
+    "contributes": {
+        "snippets": [
             {
-                "language": ["actionscript"],
+                "language": [
+                    "actionscript"
+                ],
                 "path": "./actionscript.snippets"
             },
             {
-            "language": ["ada"],
-            "path": "./ada.snippets"
+                "language": [
+                    "ada"
+                ],
+                "path": "./ada.snippets"
             },
             {
-            "language": ["alpaca"],
-            "path": "./alpaca.snippets"
+                "language": [
+                    "alpaca"
+                ],
+                "path": "./alpaca.snippets"
             },
             {
-            "language": ["apache"],
-            "path": "./apache.snippets"
+                "language": [
+                    "apache"
+                ],
+                "path": "./apache.snippets"
             },
             {
-            "language": ["arduino"],
-            "path": "./arduino.snippets"
+                "language": [
+                    "arduino"
+                ],
+                "path": "./arduino.snippets"
             },
             {
-            "language": ["autoit"],
-            "path": "./autoit.snippets"
+                "language": [
+                    "autoit"
+                ],
+                "path": "./autoit.snippets"
             },
             {
-            "language": ["awk"],
-            "path": "./awk.snippets"
+                "language": [
+                    "awk"
+                ],
+                "path": "./awk.snippets"
             },
             {
-            "language": ["chef"],
-            "path": "./chef.snippets"
+                "language": [
+                    "chef"
+                ],
+                "path": "./chef.snippets"
             },
             {
-            "language": ["clojure"],
-            "path": "./clojure.snippets"
+                "language": [
+                    "clojure"
+                ],
+                "path": "./clojure.snippets"
             },
             {
-            "language": ["cmake"],
-            "path": "./cmake.snippets"
+                "language": [
+                    "cmake"
+                ],
+                "path": "./cmake.snippets"
             },
             {
-            "language": ["codeigniter"],
-            "path": "./codeigniter.snippets"
+                "language": [
+                    "codeigniter"
+                ],
+                "path": "./codeigniter.snippets"
             },
             {
-                "language": [ "coffee", ],
+                "language": [
+                    "coffee"
+                ],
                 "path": "./coffe/coffee.snippets"
             },
             {
-                "language": [ "angular_coffee", ],
+                "language": [
+                    "angular_coffee"
+                ],
                 "path": "./coffe/angular_coffee.snippets"
             },
             {
                 "language": [
-                    "jquery_coffee",
+                    "jquery_coffee"
                 ],
                 "path": "./coffe/jquery_coffee.snippets"
             },
@@ -80,446 +104,665 @@
                 "path": "./coffe/coffee.snippets"
             },
             {
-                "language": ["cpp"],
+                "language": [
+                    "cpp"
+                ],
                 "path": "./cpp.snippets"
             },
             {
-                "language": ["crystal"],
+                "language": [
+                    "crystal"
+                ],
                 "path": "./crystal.snippets"
             },
             {
-                "language": ["c"],
+                "language": [
+                    "c"
+                ],
                 "path": "./c.snippets"
             },
             {
-                "language": ["cs"],
+                "language": [
+                    "cs"
+                ],
                 "path": "./cs.snippets"
             },
             {
-                "language": ["css"],
+                "language": [
+                    "css"
+                ],
                 "path": "./css.snippets"
             },
             {
-                "language": ["cuda"],
+                "language": [
+                    "cuda"
+                ],
                 "path": "./cuda.snippets"
             },
             {
-                "language": ["dart-flutter"],
+                "language": [
+                    "dart-flutter"
+                ],
                 "path": "./dart-flutter.snippets"
             },
             {
-                "language": ["dart"],
+                "language": [
+                    "dart"
+                ],
                 "path": "./dart.snippets"
             },
             {
-                "language": ["diff"],
+                "language": [
+                    "diff"
+                ],
                 "path": "./diff.snippets"
             },
             {
-                "language": ["django"],
+                "language": [
+                    "django"
+                ],
                 "path": "./django.snippets"
             },
             {
-                "language": ["dosini"],
+                "language": [
+                    "dosini"
+                ],
                 "path": "./dosini.snippets"
             },
             {
-                "language": ["d"],
+                "language": [
+                    "d"
+                ],
                 "path": "./d.snippets"
             },
             {
-                "language": ["eelixir"],
+                "language": [
+                    "eelixir"
+                ],
                 "path": "./eelixir.snippets"
             },
             {
-                "language": ["elixir"],
+                "language": [
+                    "elixir"
+                ],
                 "path": "./elixir.snippets"
             },
             {
-                "language": ["elm"],
+                "language": [
+                    "elm"
+                ],
                 "path": "./elm.snippets"
             },
             {
-                "language": ["erlang"],
+                "language": [
+                    "erlang"
+                ],
                 "path": "./erlang.snippets"
             },
             {
-                "language": ["eruby"],
+                "language": [
+                    "eruby"
+                ],
                 "path": "./eruby.snippets"
             },
             {
-                "language": ["falcon"],
+                "language": [
+                    "falcon"
+                ],
                 "path": "./falcon.snippets"
             },
             {
-                "language": ["fortran"],
+                "language": [
+                    "fortran"
+                ],
                 "path": "./fortran.snippets"
             },
             {
-                "language": ["freemarker"],
+                "language": [
+                    "freemarker"
+                ],
                 "path": "./freemarker.snippets"
             },
             {
-                "language": ["fsharp"],
+                "language": [
+                    "fsharp"
+                ],
                 "path": "./fsharp.snippets"
             },
             {
-                "language": ["gitcommit"],
+                "language": [
+                    "gitcommit"
+                ],
                 "path": "./gitcommit.snippets"
             },
             {
-                "language": ["go"],
+                "language": [
+                    "go"
+                ],
                 "path": "./go.snippets"
             },
             {
-                "language": ["haml"],
+                "language": [
+                    "haml"
+                ],
                 "path": "./haml.snippets"
             },
             {
-                "language": ["handlebars"],
+                "language": [
+                    "handlebars"
+                ],
                 "path": "./handlebars.snippets"
             },
             {
-                "language": ["haskell"],
+                "language": [
+                    "haskell"
+                ],
                 "path": "./haskell.snippets"
             },
             {
-                "language": ["helm"],
+                "language": [
+                    "helm"
+                ],
                 "path": "./helm.snippets"
             },
             {
-                "language": ["htmldjango"],
+                "language": [
+                    "htmldjango"
+                ],
                 "path": "./htmldjango.snippets"
             },
             {
-            "language": ["html"],
-            "path": "./html.snippets"
+                "language": [
+                    "html"
+                ],
+                "path": "./html.snippets"
             },
             {
-                "language": ["htmltornado"],
+                "language": [
+                    "htmltornado"
+                ],
                 "path": "./htmltornado.snippets"
             },
             {
-                "language": ["idris"],
+                "language": [
+                    "idris"
+                ],
                 "path": "./idris.snippets"
             },
             {
-                "language": ["jade"],
+                "language": [
+                    "jade"
+                ],
                 "path": "./jade.snippets"
             },
             {
-                "language": ["javascript"],
+                "language": [
+                    "javascript"
+                ],
                 "path": "./javascript/javascript.snippets"
             },
             {
-                "language": ["javascript-bemjson"],
+                "language": [
+                    "javascript-bemjson"
+                ],
                 "path": "./javascript-bemjson.snippets"
             },
             {
-                "language": ["javascript-d3"],
+                "language": [
+                    "javascript-d3"
+                ],
                 "path": "./javascript-d3.snippets"
             },
             {
-            "language": ["javascript-jasmine"],
-            "path": "./javascript/javascript-jasmine.snippets"
+                "language": [
+                    "javascript-jasmine"
+                ],
+                "path": "./javascript/javascript-jasmine.snippets"
             },
             {
-            "language": ["javascript-mocha"],
-            "path": "./javascript-mocha.snippets"
+                "language": [
+                    "javascript-mocha"
+                ],
+                "path": "./javascript-mocha.snippets"
             },
             {
-            "language": ["javascript-openui5"],
-            "path": "./javascript-openui5.snippets"
+                "language": [
+                    "javascript-openui5"
+                ],
+                "path": "./javascript-openui5.snippets"
             },
             {
-            "language": ["java"],
-            "path": "./java.snippets"
+                "language": [
+                    "java"
+                ],
+                "path": "./java.snippets"
             },
             {
-            "language": ["jenkins"],
-            "path": "./jenkins.snippets"
+                "language": [
+                    "jenkins"
+                ],
+                "path": "./jenkins.snippets"
             },
             {
-            "language": ["jinja"],
-            "path": "./jinja.snippets"
+                "language": [
+                    "jinja"
+                ],
+                "path": "./jinja.snippets"
             },
             {
-            "language": ["jsp"],
-            "path": "./jsp.snippets"
+                "language": [
+                    "jsp"
+                ],
+                "path": "./jsp.snippets"
             },
             {
-            "language": ["julia"],
-            "path": "./julia.snippets"
+                "language": [
+                    "julia"
+                ],
+                "path": "./julia.snippets"
             },
             {
-            "language": ["kotlin"],
-            "path": "./kotlin.snippets"
+                "language": [
+                    "kotlin"
+                ],
+                "path": "./kotlin.snippets"
             },
             {
-            "language": ["laravel"],
-            "path": "./laravel.snippets"
+                "language": [
+                    "laravel"
+                ],
+                "path": "./laravel.snippets"
             },
             {
-            "language": ["ledger"],
-            "path": "./ledger.snippets"
+                "language": [
+                    "ledger"
+                ],
+                "path": "./ledger.snippets"
             },
             {
-            "language": ["lfe"],
-            "path": "./lfe.snippets"
+                "language": [
+                    "lfe"
+                ],
+                "path": "./lfe.snippets"
             },
             {
-            "language": ["liquid"],
-            "path": "./liquid.snippets"
+                "language": [
+                    "liquid"
+                ],
+                "path": "./liquid.snippets"
             },
             {
-            "language": ["lpc"],
-            "path": "./lpc.snippets"
+                "language": [
+                    "lpc"
+                ],
+                "path": "./lpc.snippets"
             },
             {
-                "language": ["ls"],
+                "language": [
+                    "ls"
+                ],
                 "path": "./ls.snippets"
             },
             {
-                "language": ["lua"],
+                "language": [
+                    "lua"
+                ],
                 "path": "./lua.snippets"
             },
             {
-                "language": ["make"],
+                "language": [
+                    "make"
+                ],
                 "path": "./make.snippets"
             },
             {
-                "language": ["mako"],
+                "language": [
+                    "mako"
+                ],
                 "path": "./mako.snippets"
             },
             {
-                "language": ["markdown"],
+                "language": [
+                    "markdown"
+                ],
                 "path": "./markdown.snippets"
             },
             {
-                "language": ["matlab"],
+                "language": [
+                    "matlab"
+                ],
                 "path": "./matlab.snippets"
             },
             {
-                "language": ["mustache"],
+                "language": [
+                    "mustache"
+                ],
                 "path": "./mustache.snippets"
             },
             {
-                "language": ["objc"],
+                "language": [
+                    "objc"
+                ],
                 "path": "./objc.snippets"
             },
             {
-                "language": ["ocaml"],
+                "language": [
+                    "ocaml"
+                ],
                 "path": "./ocaml.snippets"
             },
             {
-                "language": ["octave"],
+                "language": [
+                    "octave"
+                ],
                 "path": "./octave.snippets"
             },
             {
-                "language": ["openfoam"],
+                "language": [
+                    "openfoam"
+                ],
                 "path": "./openfoam.snippets"
             },
             {
-                "language": ["pandoc"],
+                "language": [
+                    "pandoc"
+                ],
                 "path": "./pandoc.snippets"
             },
             {
-                "language": ["perl6"],
+                "language": [
+                    "perl6"
+                ],
                 "path": "./perl6.snippets"
             },
             {
-            "language": ["perl"],
-            "path": "./perl.snippets"
+                "language": [
+                    "perl"
+                ],
+                "path": "./perl.snippets"
             },
             {
-            "language": ["phoenix"],
-            "path": "./phoenix.snippets"
+                "language": [
+                    "phoenix"
+                ],
+                "path": "./phoenix.snippets"
             },
             {
-            "language": ["php"],
-            "path": "./php.snippets"
+                "language": [
+                    "php"
+                ],
+                "path": "./php.snippets"
             },
             {
-            "language": ["plsql"],
-            "path": "./plsql.snippets"
+                "language": [
+                    "plsql"
+                ],
+                "path": "./plsql.snippets"
             },
             {
-            "language": ["po"],
-            "path": "./po.snippets"
+                "language": [
+                    "po"
+                ],
+                "path": "./po.snippets"
             },
             {
-            "language": ["processing"],
-            "path": "./processing.snippets"
+                "language": [
+                    "processing"
+                ],
+                "path": "./processing.snippets"
             },
             {
-            "language": ["progress"],
-            "path": "./progress.snippets"
+                "language": [
+                    "progress"
+                ],
+                "path": "./progress.snippets"
             },
             {
-            "language": ["ps1"],
-            "path": "./ps1.snippets"
+                "language": [
+                    "ps1"
+                ],
+                "path": "./ps1.snippets"
             },
             {
-            "language": ["puppet"],
-            "path": "./puppet.snippets"
+                "language": [
+                    "puppet"
+                ],
+                "path": "./puppet.snippets"
             },
             {
-            "language": ["purescript"],
-            "path": "./purescript.snippets"
+                "language": [
+                    "purescript"
+                ],
+                "path": "./purescript.snippets"
             },
             {
-            "language": ["python"],
-            "path": "./python.snippets"
+                "language": [
+                    "python"
+                ],
+                "path": "./python.snippets"
             },
             {
-            "language": ["racket"],
-            "path": "./racket.snippets"
+                "language": [
+                    "racket"
+                ],
+                "path": "./racket.snippets"
             },
             {
-            "language": ["rails"],
-            "path": "./rails.snippets"
+                "language": [
+                    "rails"
+                ],
+                "path": "./rails.snippets"
             },
             {
-            "language": ["reason"],
-            "path": "./reason.snippets"
+                "language": [
+                    "reason"
+                ],
+                "path": "./reason.snippets"
             },
             {
-            "language": ["rmd"],
-            "path": "./rmd.snippets"
+                "language": [
+                    "rmd"
+                ],
+                "path": "./rmd.snippets"
             },
             {
-            "language": ["r"],
-            "path": "./r.snippets"
+                "language": [
+                    "r"
+                ],
+                "path": "./r.snippets"
             },
             {
-            "language": ["rst"],
-            "path": "./rst.snippets"
+                "language": [
+                    "rst"
+                ],
+                "path": "./rst.snippets"
             },
             {
-            "language": ["ruby"],
-            "path": "./ruby.snippets"
+                "language": [
+                    "ruby"
+                ],
+                "path": "./ruby.snippets"
             },
             {
-                "language": ["rust"],
+                "language": [
+                    "rust"
+                ],
                 "path": "./rust.snippets"
             },
             {
-                "language": ["sass"],
+                "language": [
+                    "sass"
+                ],
                 "path": "./sass.snippets"
             },
             {
-                "language": ["scala"],
+                "language": [
+                    "scala"
+                ],
                 "path": "./scala.snippets"
             },
             {
-                "language": ["scheme"],
+                "language": [
+                    "scheme"
+                ],
                 "path": "./scheme.snippets"
             },
             {
-                "language": ["scss"],
+                "language": [
+                    "scss"
+                ],
                 "path": "./scss.snippets"
             },
             {
-                "language": ["sh"],
+                "language": [
+                    "sh"
+                ],
                 "path": "./sh.snippets"
             },
             {
-                "language": ["simplemvcf"],
+                "language": [
+                    "simplemvcf"
+                ],
                 "path": "./simplemvcf.snippets"
             },
             {
-                "language": ["slim"],
+                "language": [
+                    "slim"
+                ],
                 "path": "./slim.snippets"
             },
             {
-                "language": ["_"],
+                "language": [
+                    "_"
+                ],
                 "path": "./_.snippets"
             },
             {
-            "language": ["snippets"],
-            "path": "./snippets.snippets"
+                "language": [
+                    "snippets"
+                ],
+                "path": "./snippets.snippets"
             },
             {
-                "language": ["sql"],
+                "language": [
+                    "sql"
+                ],
                 "path": "./sql.snippets"
             },
             {
-                "language": ["stylus"],
+                "language": [
+                    "stylus"
+                ],
                 "path": "./stylus.snippets"
             },
             {
-                "language": ["supercollider"],
+                "language": [
+                    "supercollider"
+                ],
                 "path": "./supercollider.snippets"
             },
             {
-                "language": ["svelte"],
+                "language": [
+                    "svelte"
+                ],
                 "path": "./svelte.snippets"
             },
             {
-                "language": ["systemverilog"],
+                "language": [
+                    "systemverilog"
+                ],
                 "path": "./systemverilog.snippets"
             },
             {
-                "language": ["tcl"],
+                "language": [
+                    "tcl"
+                ],
                 "path": "./tcl.snippets"
             },
             {
-                "language": ["tex"],
+                "language": [
+                    "tex"
+                ],
                 "path": "./tex.snippets"
             },
             {
-                "language": ["textile"],
+                "language": [
+                    "textile"
+                ],
                 "path": "./textile.snippets"
             },
             {
-                "language": ["twig"],
+                "language": [
+                    "twig"
+                ],
                 "path": "./twig.snippets"
             },
             {
-            "language": ["typescriptreact"],
-            "path": "./typescriptreact.snippets"
+                "language": [
+                    "typescriptreact"
+                ],
+                "path": "./typescriptreact.snippets"
             },
             {
-                "language": ["typescript"],
+                "language": [
+                    "typescript"
+                ],
                 "path": "./typescript.snippets"
             },
             {
-                "language": ["verilog"],
+                "language": [
+                    "verilog"
+                ],
                 "path": "./verilog.snippets"
             },
             {
-                "language": ["vhdl"],
+                "language": [
+                    "vhdl"
+                ],
                 "path": "./vhdl.snippets"
             },
             {
-                "language": ["vim"],
+                "language": [
+                    "vim"
+                ],
                 "path": "./vim.snippets"
             },
             {
-                "language": ["vue"],
+                "language": [
+                    "vue"
+                ],
                 "path": "./vue.snippets"
             },
             {
-                "language": ["xml"],
+                "language": [
+                    "xml"
+                ],
                 "path": "./xml.snippets"
             },
             {
-                "language": ["xslt"],
+                "language": [
+                    "xslt"
+                ],
                 "path": "./xslt.snippets"
             },
             {
-                "language": ["yii-chtml"],
+                "language": [
+                    "yii-chtml"
+                ],
                 "path": "./yii-chtml.snippets"
             },
             {
-                "language": ["yii"],
+                "language": [
+                    "yii"
+                ],
                 "path": "./yii.snippets"
             },
             {
-                "language": ["zsh"],
+                "language": [
+                    "zsh"
+                ],
                 "path": "./zsh.snippets"
-            },
-
-    ]
+            }
+        ]
     }
 }
