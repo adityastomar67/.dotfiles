@@ -89,15 +89,15 @@ local on_attach = function(client, bufnr)
 	)
 end
 
-for _, lsp in pairs(servers) do
-	require("lspconfig")[_].setup({
-		on_attach = on_attach,
-		flags = {
-			-- This will be the default in neovim 0.7+
-			debounce_text_changes = 150,
-		},
-	})
-end
+-- for _, lsp in pairs(servers) do
+-- 	require("lspconfig")[_].setup({
+-- 		on_attach = on_attach,
+-- 		flags = {
+-- 			-- This will be the default in neovim 0.7+
+-- 			debounce_text_changes = 150,
+-- 		},
+-- 	})
+-- end
 
 vim.diagnostic.config({ virtual_text = false })
 
@@ -140,3 +140,16 @@ vim.diagnostic.config(lsp.diagnostic)
 -- vim.lsp.handlers["textDocument/typeDefinition"] = vim.lsp.with(vim.lsp.handlers.type_definition, lsp.float)
 
 vim.cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]])
+
+require'lspconfig'.eslint.setup{}
+require'lspconfig'.emmet_ls.setup{}
+require'lspconfig'.html.setup{}
+require'lspconfig'.tsserver.setup{}
+require'lspconfig'.jsonls.setup{}
+require'lspconfig'.pyright.setup{}
+require'lspconfig'.clangd.setup{}
+require'lspconfig'.jdtls.setup{}
+require'lspconfig'.bashls.setup{}
+require'lspconfig'.sqls.setup{}
+require'lspconfig'.sumneko_lua.setup{}
+require'lspconfig'.tailwindcss.setup{}

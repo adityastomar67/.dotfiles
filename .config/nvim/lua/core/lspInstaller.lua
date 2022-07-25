@@ -7,7 +7,7 @@ local SETTINGS = {
 		"clangd",
 		"tsserver",
 		"jdtls",
-		-- "emmet_ls",
+		"emmet_ls",
 		"bashls",
 		"sqls",
 		"sumneko_lua",
