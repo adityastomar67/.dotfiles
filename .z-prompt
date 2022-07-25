@@ -17,10 +17,10 @@ PROMPTS=(
 autoload -Uz vcs_info
 autoload -U colors && colors
 
-## Enable only git 
-zstyle ':vcs_info:*' enable git 
+## Enable only git
+zstyle ':vcs_info:*' enable git
 
-## Setup a hook that runs before every ptompt. 
+## Setup a hook that runs before every prompt.
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
@@ -45,37 +45,3 @@ zstyle ':vcs_info:git:*' formats " %{$fg[blue]%}(%{$fg[red]%}%m%u%c%{$fg[yellow]
 ignition=${PROMPTS[1 + $RANDOM%6]}
 PROMPT='%T %F{yellow}$ignition%f %F{blue}%1~%f '
 RPROMPT=\$vcs_info_msg_0_
-# ------------------ END ------------------- #
-
-### Older Prompt Settings - 2
-# format our main prompt for hostname current folder, and permissions.
-# PROMPT="%B%{$fg[blue]%}[%{$fg[white]%}%n%{$fg[red]%}@%{$fg[white]%}%m%{$fg[blue]%}] %(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )%{$fg[cyan]%}%c%{$reset_color%}"
-# PROMPT="%{$fg[green]%}%n@%m %~ %{$reset_color%}%#> "
-# PROMPT+="\$vcs_info_msg_0_ "
-# TODO look into this for more colors
-# https://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/
-# also ascii escape codes
-
-### Older Prompt Settings - 2
-# declare -a PROMPTS
-# PROMPTS=(
-#      " "
-#      "▶"
-#      ">>>"
-#      "-->"
-#      "➤"
-#      "󰮯 "
-#    )
-# # RANDOM=$$$(date +%s)
-# # ignition=${PROMPTS[$RANDOM % ${#RANDOM[*]}+1]}
-# ignition=${PROMPTS[1 + $RANDOM%6]}
-# PROMPT='%F{yellow}$ignition%f %F{blue}%1~%f '
-
-# ## Git Prompt Settings
-# autoload -Uz vcs_info
-# precmd_vcs_info() { vcs_info }
-# precmd_functions+=( precmd_vcs_info )
-# setopt prompt_subst
-# RPROMPT=\$vcs_info_msg_0_
-# zstyle ':vcs_info:git:*' formats '%F{blue}(%b)%r%f '
-# zstyle ':vcs_info:*' enable git
