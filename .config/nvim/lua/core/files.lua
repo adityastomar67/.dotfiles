@@ -1,8 +1,3 @@
--- File: /home/sergio/.config/nvim/lua/files.lua
--- Last Change: Thu, 17 Mar 2022 15:05
--- https://github.com/nvim-telescope/telescope.nvim/wiki/Configuration-Recipes
--- https://youtu.be/Ua8FkgTL-94
-
 local status_ok, telescope = pcall(require, "telescope")
 if not status_ok then
     return
@@ -10,8 +5,6 @@ end
 
 local M = {}
 
--- copied from https://github.com/nvim-telescope/telescope.nvim/wiki/Gallery
--- :Telescope find_files previewer=false theme=get_dropdown
 local dropdown_theme = require('telescope.themes').get_dropdown({
   results_height = 20,
   -- winblend = 20;

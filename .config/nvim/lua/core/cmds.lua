@@ -39,17 +39,6 @@ vim.cmd([[command! Scratch new | setlocal bt=nofile bh=wipe nobl noswapfile nu]]
 vim.cmd([[command! Blockwise lua require('core.utils').blockwise_clipboard()]])
 vim.cmd([[command! SaveAsRoot w !doas tee %]])
 vim.cmd([[command! ReloadConfig lua require("utils").ReloadConfig()]])
-vim.cmd([[cnoreab cls Cls]])
-vim.cmd([[cnoreab Bo BufOnly]])
-vim.cmd([[cnoreab W w]])
-vim.cmd([[cnoreab W! w!]])
-vim.cmd([[cnoreab Bw Blockwise]])
-vim.cmd([[cnoreab cls Cls]])
-vim.cmd([[inoreab Fname <c-r>=expand("%:p")<cr>]])
-vim.cmd([[inoreab Iname <c-r>=expand("%:p")<cr>]])
-vim.cmd([[inoreab fname <c-r>=expand("%:t")<cr>]])
-vim.cmd([[inoreab iname <c-r>=expand("%:t")<cr>]])
-vim.cmd([[inoreabbrev idate <C-R>=strftime("%b %d %Y %H:%M")<CR>]])
 vim.cmd([[syntax sync minlines=64]])           -- faster syntax hl
 vim.cmd([[cmap w!! w !doas tee % >/dev/null]]) -- save as root, in my case I use the command 'doas'
 vim.cmd([[set iskeyword+=-]])
@@ -198,6 +187,9 @@ local autocmds = {
     },
     make_scripts_executable = {
         {'BufWritePost', '*.sh,*.py,*.zsh', [[!chmod +x %]]},
+    },
+    live_reload_webDev = {
+        {'BufWritePost', '*.html,*.css,*.js', [[silent! !~/.scripts/refresh]]},
     },
     custom_updates = {
         {'BufWritePost', '~/.Xresources', '!xrdb -merge ~/.Xresources'},
