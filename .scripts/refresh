@@ -1,0 +1,5 @@
+#!/bin/sh
+# switch to Firefox and refresh the active tab
+xdotool search --name "Mozilla Firefox" windowactivate --sync
+sleep 0.5
+xdotool key ctrl+r
