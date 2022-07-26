@@ -168,6 +168,10 @@ local autocmds = {
         -- {"BufWritePost",[[$VIM_PATH/{*.vim,*.yaml,vimrc} nested source $MYVIMRC | redraw]]};
         { "BufWritePre", "$MYVIMRC", "lua require('core.utils').ReloadConfig()" },
     },
+    conceal_quotations = {
+        { "BufEnter", "*", 'syntax match singlequotes "\'" conceal'},
+        { "BufEnter", "*", "syntax match singlequotes '\"' conceal"},
+    },
     general_settings = {
         { "Filetype", "qf,help,man,lspinfo", ":nnoremap <silent> <buffer> q :close<CR>" },
         { "Filetype", "qf", ":set nobuflisted" },
