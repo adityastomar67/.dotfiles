@@ -37,7 +37,7 @@ scrolling:
   multiplier: 3
 
 ## Background opacity
-background_opacity: 0.9 
+background_opacity: 0.9
 
 ## Cursor
 cursor:

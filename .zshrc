@@ -24,7 +24,7 @@ setopt HIST_REDUCE_BLANKS    # Remove unnecessary blank lines.
 # source ~/.config/zsh/.zprofile #.zshenv stuff
 
 ### Exports
-export TERM="xterm-256color"   # Default term
+export TERM="screen-256color"   # Default term
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/home/adi/.spicetify
 export PATH=~/.local/bin:$PATH # Bin Path to run Commands
@@ -129,7 +129,7 @@ if command -v theme.sh > /dev/null; then
 	zle -N last_theme
 	bindkey '^O' last_theme
 	alias th='theme.sh -i'
-    
+
     #Interactively load a light theme
 	alias thl='theme.sh --light -i'
 

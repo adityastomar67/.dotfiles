@@ -26,13 +26,13 @@ keymap("n", "<leader>lg", ":LazyGit<CR>", opts)
 
 -- Pawning the Terminal
 keymap("n" , "<leader>tt" , ':TermExec size=30 direction=float cmd="clear"<CR>' , opts)
-keymap("n" , "<leader>th" , ':TermExec  direction=horizontal cmd="clear"<CR>'   , opts)
+keymap("n" , "<leader>th" , ':TermExec size=8 direction=horizontal cmd="clear"<CR>'   , opts)
 
 -- Shell file Runner
 keymap("n", "<leader>sh", ":!chmod +x % && source %<CR>", opts)
 
 -- Source init.lua
-keymap("n", "<leader>sr", ":source ~/.config/nvim/init.lua<CR>", opts)
+keymap("n", "<leader>so", ":so %<CR>", opts)
 
 -- Remove the Highlighting from the search
 keymap("n", "<CR>", ":noh<CR><CR>", opts)
@@ -67,6 +67,7 @@ keymap("n" , "Y"         , "y$"    , opts)
 keymap("n" , "Q"     , ":q!<CR>"     , opts)
 keymap("n" , "<C-c>" , ":bw<CR>"     , opts)
 keymap("n" , "<C-s>" , ":w<CR>"      , opts)
+keymap("n" , "qo"    , ":on<CR>"     , opts)
 keymap("i" , "<C-s>" , "<ESC>:w<CR>" , opts)
 
 -- Better window navigation
