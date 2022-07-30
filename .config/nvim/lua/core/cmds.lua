@@ -168,6 +168,9 @@ local autocmds = {
         -- {"BufWritePost",[[$VIM_PATH/{*.vim,*.yaml,vimrc} nested source $MYVIMRC | redraw]]};
         { "BufWritePre", "$MYVIMRC", "lua require('core.utils').ReloadConfig()" },
     },
+    clear_cmdline = {
+        { "CmdlineLeave", "*", "echo ''" },
+    },
     conceal_quotations = {
         { "BufEnter", "*", 'syntax match singlequotes "\'" conceal'},
         { "BufEnter", "*", "syntax match singlequotes '\"' conceal"},
