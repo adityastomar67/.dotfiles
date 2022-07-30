@@ -4,7 +4,7 @@
 SESSION="DSA"
 TERM=screen-256color-bce tmux new-session -d -s $SESSION
 tmux rename-window -t zsh "Practice"
-tmux send-keys "cd /home/adi/Workspace/DSA && nvim practice.cpp" C-m
+tmux send-keys "cd /home/adi/Workspace/DSA && nvim +'TermExec size=8 direction=horizontal cmd="clear"' practice.cpp" C-m
 # tmux split-window -v -p 15
 # tmux send-keys "cd /home/adi/Workspace/DSA" C-m
 # tmux send-keys 'echo -en "\x1b[2J\x1b[1;1H"' C-m
