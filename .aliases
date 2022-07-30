@@ -55,7 +55,6 @@ alias py=python
 alias tmux="TERM=screen-256color-bce tmux"
 
 ## Editors
-alias v="nvim"
 alias nano='nano -00x'
 # alias em="/usr/bin/emacs -nw"
 # alias emacs="emacsclient -c -a 'emacs'"

@@ -6,31 +6,30 @@
 # ╚═╝╚══════╝╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░
 
 ## If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
 autoload -U colors && colors
 setopt interactive_comments
 
 # History settings.
-export HISTFILE="$HOME/.zsh_history"
-export HISTTIMEFORMAT="%Y/%m/%d %H:%M:%S:   "
-export HISTSIZE=50000        # History lines stored in mememory.
-export SAVEHIST=50000        # History lines stored on disk.
-setopt INC_APPEND_HISTORY    # Immediately append commands to history file.
-setopt HIST_IGNORE_ALL_DUPS  # Never add duplicate entries.
-setopt HIST_IGNORE_SPACE     # Ignore commands that start with a space.
-setopt HIST_REDUCE_BLANKS    # Remove unnecessary blank lines.
+export HISTFILE="$HOME/.zsh_history"          # Realocating History file for ZSH
+export HISTTIMEFORMAT="%Y/%m/%d %H:%M:%S:   " # Format for History File
+export HISTSIZE=50000                         # History lines stored in mememory.
+export SAVEHIST=50000                         # History lines stored on disk.
+setopt INC_APPEND_HISTORY                     # Immediately append commands to history file.
+setopt HIST_IGNORE_ALL_DUPS                   # Never add duplicate entries.
+setopt HIST_IGNORE_SPACE                      # Ignore commands that start with a space.
+setopt HIST_REDUCE_BLANKS                     # Remove unnecessary blank lines.
 
-### Basic stuff
+## Basic stuff
 # source ~/.config/zsh/.zprofile #.zshenv stuff
 
 ### Exports
-export TERM="screen-256color"   # Default term
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:/home/adi/.spicetify
-export PATH=~/.local/bin:$PATH # Bin Path to run Commands
-export PATH=~/.scripts:$PATH   # Making my scripts run without typing the whole path
-export TERMINAL='alacritty'    # default Terminal
-export BROWSER='brave'         # Default Browser
+export TERM="screen-256color"          # Default term
+export PATH=$PATH:/usr/local/go/bin    # Path Env for GO
+export PATH=$PATH:/home/adi/.spicetify # Path for spicetify, Spotify Client for Customization
+export PATH=~/.local/bin:$PATH         # Bin Path to run Commands
+export PATH=~/.scripts:$PATH           # Making my scripts run without typing the whole path
+export TERMINAL='alacritty'            # default Terminal
+export BROWSER='brave'                 # Default Browser
 export LC_CTYPE="en_IN.UTF-8"
 export GPG_TTY="$(tty)"
 
@@ -48,13 +47,13 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'" # "bat" as manpager
 
 ### Directory
 [ ! -d "$HOME/Downloads/git-repos" ] && mkdir $HOME/Downloads/git-repos
-[ ! -d "$HOME/Downloads/torrents" ] && mkdir $HOME/Downloads/torrents
-[ ! -d "$HOME/Workspace" ] && mkdir $HOME/Workspace
-[ ! -d "$HOME/Study-Material" ] && mkdir $HOME/Study-Material
-[ ! -d "$HOME/.nano-backups" ] && mkdir $HOME/.nano-backups
-[ ! -d "$HOME/.Trash" ] && mkdir  $HOME/.Trash
+[ ! -d "$HOME/Downloads/torrents" ]  && mkdir $HOME/Downloads/torrents
+[ ! -d "$HOME/Workspace" ]           && mkdir $HOME/Workspace
+[ ! -d "$HOME/Study-Material" ]      && mkdir $HOME/Study-Material
+[ ! -d "$HOME/.nano-backups" ]       && mkdir $HOME/.nano-backups
+[ ! -d "$HOME/.Trash" ]              && mkdir $HOME/.Trash
 
-### Plugins
+## Plugins
 ## Standard plugins can be found in $ZSH/plugins/ & Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(
   z
@@ -70,17 +69,17 @@ plugins=(
 # zsh-autosuggestions settings.
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 
-### Sourcing
+## Sourcing
 source ~/.oh-my-zsh/oh-my-zsh.sh # For plugins
-[ -f "$HOME/.functions" ] && source ~/.functions                                            # functions to improve productivity
-[ -f "$HOME/.aliases" ] && source ~/.aliases                                                # Aliases - For a full list of active aliases, run `alias`.
-[ -f "$HOME/.z-prompt" ] && source ~/.z-prompt                                              # For custom zsh prompt.
-[ -f "$HOME/src/bitwarden_completion.zsh" ] && source ~/src/bitwarden_completion.zsh        # For Bitwarden completion
-[ -f "$HOME/.alias_temp" ] && source $HOME/.alias_temp
-# [ -f "$HOME/src/exercism_completion.zsh" ] && source ~/src/exercism_completion.zsh        # For exercism completion
-# [ -f "$HOME/src/spotify-tui_completion.zsh" ] && source ~/src/spotify-tui_completion.zsh  # For Spotify-TUI completion
+[ -f "$HOME/.functions" ]                     && source ~/.functions                     # functions to improve productivity
+[ -f "$HOME/.aliases" ]                       && source ~/.aliases                       # Aliases - For a full list of active aliases, run `alias`.
+[ -f "$HOME/.z-prompt" ]                      && source ~/.z-prompt                      # For custom zsh prompt.
+[ -f "$HOME/src/bitwarden_completion.zsh" ]   && source ~/src/bitwarden_completion.zsh   # For Bitwarden completion
+[ -f "$HOME/.alias_temp" ]                    && source $HOME/.alias_temp                # Temporary Aliases for Trials
+# [ -f "$HOME/src/exercism_completion.zsh" ]    && source ~/src/exercism_completion.zsh    # For exercism completion
+# [ -f "$HOME/src/spotify-tui_completion.zsh" ] && source ~/src/spotify-tui_completion.zsh # For Spotify-TUI completion
 
-### Key Bindings
+## Key Bindings
 bindkey "^k" up-line-or-beginning-search   # Up
 bindkey "^j" down-line-or-beginning-search # Down
 
@@ -103,8 +102,6 @@ zstyle ':completion:*' verbose true
 
 complete -C aws_completer aws
 
-### Basic zsh settings
-### Themes
 ## Set name of the theme to load --- if set to "random", it will load a random theme each time oh-my-zsh is loaded, in which case, to know which specific one was loaded, run: echo $RANDOM_THEME
 ## See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="daveverwer"
@@ -170,7 +167,7 @@ HIST_STAMPS="mm/dd/yyyy"
 ## Compilation flags
 export ARCHFLAGS="-arch x86_64"
 
-### On-demand rehash
+## On-demand rehash
 zshcache_time="$(date +%s%N)"
 autoload -Uz add-zsh-hook
  rehash_precmd() {
@@ -184,7 +181,7 @@ autoload -Uz add-zsh-hook
  }
 add-zsh-hook -Uz precmd rehash_precmd
 
-### Fzf Finder config
+## Fzf Finder config
 export FZF_DEFAULT_OPTS="
 --layout=reverse
 --info=inline
@@ -206,12 +203,12 @@ export FZF_DEFAULT_OPTS="
 # export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclude .cache'
 export FZF_DEFAULT_COMMAND='fd --hidden --follow --exclude .git --exclude .cache'
 
-### Calling scrpits and Operations
-echo -en "\x1b[2J\x1b[1;1H" ;echo
-# motivate
-header ;echo # Header for adityastomar67
-set -o vi  # Vi-mode
+## Calling scrpits and Operations
+echo -en "\x1b[2J\x1b[1;1H" ;echo # For faster clearing the Terminal
+# motivate                          # Random Motivational Quotes
+header ;echo                      # Header for adityastomar67
+set -o vi                         # Vi-mode
 
-# Tmux Launching
+## Tmux Launching
 if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then command tmux -2; fi # -2 flag for TMUX to enable 256 colors
 # if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then exec tmux -2; fi # -2 flag for TMUX to enable 256 colors, this closes terminal after the closing of the server

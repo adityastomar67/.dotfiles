@@ -6,7 +6,11 @@
 # ██╗██║░░░░░╚██████╔╝██║░╚███║╚█████╔╝░░░██║░░░██║╚█████╔╝██║░╚███║██████╔╝
 # ╚═╝╚═╝░░░░░░╚═════╝░╚═╝░░╚══╝░╚════╝░░░░╚═╝░░░╚═╝░╚════╝░╚═╝░░╚══╝╚═════╝░
 
-# Use fd to generate the list for directory completion
+v() {
+   # For Launcing NeoVim and SudoEdit with same command
+   [ -w $1 ] && nvim $1 || sudoedit $1
+}
+
 _fzf_compgen_dir() {
     fd --type d --hidden --follow --color=always --exclude ".git" --exclude ".hg" --exclude "node_modules" . "$1"
 }
@@ -27,7 +31,7 @@ _fzf_comprun() {
     export|unset) fzf "$@" --preview "eval 'echo \$'{}" ;;
     ssh|telnet)   fzf "$@" --preview 'echo {}' ;;
     unalias)      _fzf_compgen_unalias "$@" ;;
-    *)            fzf "$@" ;; 
+    *)            fzf "$@" ;;
   esac
 }
 
@@ -36,11 +40,11 @@ function get_temperature() {
     response=$(curl --silent 'https://api.openweathermap.org/data/2.5/weather?id=5110253&units=imperial&appid=<your_api_key>')
     local status=$(echo $response | jq -r '.cod')
     case $status in
-        200) printf "Location: %s %s\n" "$(echo $response | jq '.name') $(echo $response | jq '.sys.country')"  
-             printf "Forecast: %s\n" "$(echo $response | jq '.weather[].description')" 
-             printf "Temperature: %.1f°F\n" "$(echo $response | jq '.main.temp')" 
-             printf "Temp Min: %.1f°F\n" "$(echo $response | jq '.main.temp_min')" 
-             printf "Temp Max: %.1f°F\n" "$(echo $response | jq '.main.temp_max')" 
+        200) printf "Location: %s %s\n" "$(echo $response | jq '.name') $(echo $response | jq '.sys.country')"
+             printf "Forecast: %s\n" "$(echo $response | jq '.weather[].description')"
+             printf "Temperature: %.1f°F\n" "$(echo $response | jq '.main.temp')"
+             printf "Temp Min: %.1f°F\n" "$(echo $response | jq '.main.temp_min')"
+             printf "Temp Max: %.1f°F\n" "$(echo $response | jq '.main.temp_max')"
             ;;
         401) echo "401 error"
             ;;
@@ -65,17 +69,17 @@ function repo() {
 }
 
 function countdown(){
-   date1=$((`date +%s` + $1)); 
-   while [ "$date1" -ge `date +%s` ]; do 
+   date1=$((`date +%s` + $1));
+   while [ "$date1" -ge `date +%s` ]; do
      echo -ne "$(date -u --date @$(($date1 - `date +%s`)) +%H:%M:%S)\r";
      sleep 0.1
    done
 }
 
 function stopwatch(){
-  date1=`date +%s`; 
-   while true; do 
-    echo -ne "$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)\r"; 
+  date1=`date +%s`;
+   while true; do
+    echo -ne "$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)\r";
     sleep 0.1
    done
 }
@@ -124,19 +128,19 @@ function fs() {
 	fi
 }
 
-function prog() { 
+function prog() {
   if [ -f "$1" ] ; then
     case $1 in
-      *.cpp)       g++ -std=c++20 "$1" && ./a.out && rm -f a.out   ;;
-      *.c)         gcc "$1" && ./a.out && rm -f a.out   ;;
-	  *.java)	   javac "$1" && java "$(basename -s .java "$1")" && rm -f *.class ;;
-	  *.py)        python "$1"                           ;;
-	  *.sh)        bash "$1"                             ;;
-	  *.pl)        perl "$1"                             ;;
-	  *.rb)        ruby "$1"                             ;;
-	  *.go)        go run "$1"                           ;;
-	  *.js)        node "$1"                             ;;
-	  *.php)       php "$1"                              ;;
+      *.cpp)       g++ -std=c++20 "$1" && ./a.out && rm -f a.out                   ;;
+      *.c)         gcc "$1" && ./a.out && rm -f a.out                              ;;
+      *.java)	   javac "$1" && java "$(basename -s .java "$1")" && rm -f *.class ;;
+      *.py)        python "$1"                                                     ;;
+      *.sh)        bash "$1"                                                       ;;
+      *.pl)        perl "$1"                                                       ;;
+      *.rb)        ruby "$1"                                                       ;;
+      *.go)        go run "$1"                                                     ;;
+      *.js)        node "$1"                                                       ;;
+      *.php)       php "$1"                                                        ;;
     esac
   else
     echo "'$1' is not a valid file"
@@ -292,4 +296,3 @@ function git_log() {
                 echo '{}' | grep -o '[a-f0-9]\{7\}' | head -1 |
                 xargs -I % sh -c 'git show --color=always % | less -R'"
 }
-# _________________________ END _________________________ #
