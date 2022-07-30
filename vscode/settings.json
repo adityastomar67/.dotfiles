@@ -442,7 +442,7 @@
     "vetur.completion.autoImport": false,
     "vetur.experimental.templateInterpolationService": true,
     "rust-analyzer.inlayHints.enable": false,
-    "workbench.colorTheme": "Pitch Black",
+    "workbench.colorTheme": "Andromeda Colorizer",
     "editor.semanticHighlighting.enabled": false,
     "workbench.colorCustomizations": {
         "activityBar.activeBorder": "#e5b358",

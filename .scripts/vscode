@@ -1,6 +1,4 @@
 # EXTENSIONs
-# code --force --install-extension teabyii.ayu@0.20.2
-# code --force --install-extension matklad.rust-analyzer@0.2.727
 code --force --install-extension ms-vscode.sublime-keybindings@4.0.10
 code --force --install-extension octref.vetur@0.34.1
 code --force --install-extension s-nlf-fh.glassit
@@ -14,10 +12,13 @@ code --force --install-extension ms-python.vscode-pylance
 code --force --install-extension coenraads.bracket-pair-colorizer
 code --force --install-extension viktorqvarfordt.vscode-pitch-black-theme
 code --force --install-extension PKief.material-icon-theme
-# code --force --install-extension GitHub.github-vscode-theme
 code --force --install-extension moalamri.inline-fold
-# code --force --install-extension vscodevim.vim
 code --force --install-extension foxundermoon.shell-format
+code --force --install-extension EliverLara.andromeda
+# code --force --install-extension teabyii.ayu@0.20.2
+# code --force --install-extension matklad.rust-analyzer@0.2.727
+# code --force --install-extension GitHub.github-vscode-theme
+# code --force --install-extension vscodevim.vim
 
 cd ~/.config/Code/User
 
