@@ -152,7 +152,7 @@ keymap("n", "<C-e>", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<leader>ps", ":PackerSync<CR>", opts)
 
 -- For Alligning of Text Easliy
-keymap("v", "sa", ":SimpleAlign ", opts)
+keymap("v", "sa", ":SimpleAlign ", opts) -- For Alligning items, need to put any character whose respect to which it Align
 
 -- For Conceal enable/disable
 vim.keymap.set("n",  "<F10>" , function()
