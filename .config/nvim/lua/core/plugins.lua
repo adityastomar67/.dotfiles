@@ -34,8 +34,8 @@ packer.init({
 
 -- Install your plugins here
 return packer.startup(function(use)
-    use('stevearc/dressing.nvim')                               -- For the sweet sweet UI Components
     use("wbthomason/packer.nvim")                               -- Have packer manage itself
+    use("stevearc/dressing.nvim")                               -- For the sweet sweet UI Components
     -- use "lunarvim/colorschemes"                                 -- A bunch of colorschemes you can try out
     use("rebelot/kanagawa.nvim")                                -- Colorscheme of choice
     use("nvim-lua/popup.nvim")                                  -- An implementation of the Popup API from vim in Neovim
@@ -65,6 +65,7 @@ return packer.startup(function(use)
     use("rcarriga/nvim-notify")                                 -- notify for notifications
     use("akinsho/toggleterm.nvim")                              -- toggleterm for terminal
     use("kg8m/vim-simple-align")                                -- for allignment of text, look on internet for references
+    use("anuvyklack/hydra.nvim")
     use("cometsong/CommentFrame.vim")                           -- For Fancy CommentFrame
     use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}) -- treesitter
 
