@@ -6,11 +6,10 @@
 # ╚═╝╚══════╝╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░
 
 ## If you come from bash you might have to change your $PATH.
-source ~/.oh-my-zsh/oh-my-zsh.sh # For plugins
 
 ## Sourcing setup files
 while read file
-do 
+do
   source "$HOME/zsh/$file.zsh"
 done <<-EOF
 theme
@@ -23,7 +22,7 @@ EOF
 
 ## Directories Generation if not present already.
 while read directory
-do 
+do
   [ ! -d "$HOME/$directory" ] && command mkdir $HOME/$directory
 done <<-EOF
 Downloads/git-repos
@@ -46,6 +45,7 @@ plugins=(
   forgit
 )
 
+source ~/.oh-my-zsh/oh-my-zsh.sh # For plugins
 ## Sourcing other files
 [ -f "$HOME/.functions" ]                     && source ~/.functions                     # functions to improve productivity
 [ -f "$HOME/.aliases" ]                       && source ~/.aliases                       # Aliases - For a full list of active aliases, run `alias`.
