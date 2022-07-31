@@ -5,7 +5,7 @@
 [core]
 	editor = nvim
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	pager = delta
+	pager = less -x4
 
 [web]
 	browser = google-chrome
@@ -274,7 +274,7 @@
 	#editor = st -n -w    # Sublime Text
 	editor = code -n -w    # VS Code
 	ignorecase = false
-	excludesfile = ~/.gitignore_global
+	excludesfile = /home/adi/.gitignore_global
 
 [color]
 	ui = true
@@ -289,7 +289,7 @@
 	notify-command = osascript -e \"display notification \\\"$DESCRIPTION\\\" with title \\\"$TITLE\\\" sound name \\\"Hero\\\"\"
 
 [push]
-	default = upstream
+	default = simple
 
 [credential]
 	helper = osxkeychain
@@ -311,3 +311,10 @@
 
 [fetch]
 	prune = true
+[pull]
+	rebase = true
+	ff = only
+[merge]
+	ff = false
+[grep]
+	lineNumber = true
