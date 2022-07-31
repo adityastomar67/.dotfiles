@@ -23,7 +23,8 @@ setopt HIST_REDUCE_BLANKS                     # Remove unnecessary blank lines.
 # source ~/.config/zsh/.zprofile #.zshenv stuff
 
 ### Exports
-export TERM="screen-256color"          # Default term
+# export TERM="screen-256color"          # Default term but doesn't support italics
+export TERM="xterm-256color"          # Default term
 export PATH=$PATH:/usr/local/go/bin    # Path Env for GO
 export PATH=$PATH:/home/adi/.spicetify # Path for spicetify, Spotify Client for Customization
 export PATH=~/.local/bin:$PATH         # Bin Path to run Commands
