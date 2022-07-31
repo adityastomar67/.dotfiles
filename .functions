@@ -7,8 +7,9 @@
 # ╚═╝╚═╝░░░░░░╚═════╝░╚═╝░░╚══╝░╚════╝░░░░╚═╝░░░╚═╝░╚════╝░╚═╝░░╚══╝╚═════╝░
 
 v() {
-   # For Launcing NeoVim and SudoEdit with same command
-   [ -w $1 ] && nvim $1 || sudoedit $1
+    # For Launcing NeoVim and SudoEdit with same command
+    [ ! -f $1 ] && nvim $1 && return
+    [ -w $1 ] && nvim $1 || sudoedit $1
 }
 
 _fzf_compgen_dir() {
@@ -55,7 +56,7 @@ function get_temperature() {
 
 function empty_trash() {
     printf "%s\n" "EMPTYING TRASH";
-    command rm -rf $HOME/.Trash/files/*;
+    sudo rm -rf $HOME/.Trash/files/*;
 }
 
 function repo() {
