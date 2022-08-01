@@ -16,6 +16,7 @@ export PATH=~/.scripts:$PATH   # Making my scripts run without typing the whole 
 ## Sourcing
 source ~/.aliases
 source ~/.functions
+source ~/zsh/*
 
 ### RANDOM COLOR SCRIPT ###
 # Get this script from my GitLab: gitlab.com/dwt1/shell-color-scripts
