@@ -1,11 +1,11 @@
 <div align="center">
-  <h2>Module: ZSH.</h1>
+  <h2>Module: NVIM.</h1>
   Brief description of how this sub configuration actually works.
 </div>
 
 #### Installation
 
-Noting really, if you have ZSH installed then you can just symlink the `home/.zshenv` to `$HOME` and run zsh. All of the plugins will be downloaded automatically as it is bootstrapped.
+Noting really, if you have (Neo)vim installed then you can just backup your previous config if any, then just clone this repo and create a symlink of this configuration to your ~/.config/nvim
 
 #### Before we proceed
 
