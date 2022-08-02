@@ -24,3 +24,4 @@ if not status_ok then
 end
 
 vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
+

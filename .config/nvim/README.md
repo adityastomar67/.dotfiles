@@ -7,6 +7,18 @@
 
 Noting really, if you have (Neo)vim installed then you can just backup your previous config if any, then just clone this repo and create a symlink of this configuration to your ~/.config/nvim
 
+```bash
+  # move to home dir
+  cd ~
+  # back up current config
+  cp -r ~/.config/nvim ~/.config/nvim.backup
+  # clone repository
+  git clone git@github.com:adityastomar67/.dotfiles.git
+  # copy nvim configurations from repository to your config directory
+  cp -r ~/.dotfiles/nvim ~/.config/
+  # now open the Neovim and insatll plugins
+  nvim +PackerSync
+```
 #### Before we proceed
 
 If the reader is well versed or, has a general experience with shell scripting or, know what you are doing then they may skip this section.
