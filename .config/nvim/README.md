@@ -18,6 +18,8 @@ Noting really, if you have (Neo)vim installed then you can just backup your prev
   cp -r ~/.dotfiles/nvim ~/.config/
   # now open the Neovim and insatll plugins
   nvim +PackerSync
+  # cleanup
+  rm -rf ~/.dotfiles
 ```
 #### Before we proceed
 
