@@ -49,7 +49,20 @@ nvim
 └── snippets
 ```
 
-#### Installation
+## Installation
+
+```bash
+  # move to home dir
+  cd ~
+  # back up current config
+  cp -r ~/.config/nvim ~/.config/nvim.backup
+  # clone repository
+  git clone git@github.com:adityastomar67/.dotfiles.git
+  # copy nvim configurations from repository to your config directory
+  cp -r ~/.dotfiles/nvim ~/.config/
+  # cleanup
+  rm -rf ~/.dotfiles
+```
 
 ## Install language servers
 
@@ -110,21 +123,6 @@ _brew, apt_ etc.
 sudo pip install yamlfmt
 ```
 
-```bash
-  # move to home dir
-  cd ~
-  # back up current config
-  cp -r ~/.config/nvim ~/.config/nvim.backup
-  # clone repository
-  git clone git@github.com:adityastomar67/.dotfiles.git
-  # copy nvim configurations from repository to your config directory
-  cp -r ~/.dotfiles/nvim ~/.config/
-  # now open the Neovim and insatll plugins
-  nvim +PackerSync
-  # cleanup
-  rm -rf ~/.dotfiles
-```
-
 ## Launch Nvim
 
 On the first run of nvim be sure to install plugins.
@@ -168,15 +166,14 @@ One test snippet is included as an example.
 8. [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp) Auto completions, suggestions and imports
 
    Source completion includes:
-
-   1. [ hrsh7th/cmp-cmdline ](https://github.com/hrsh7th/cmp-cmdline) command line
-   2. [ hrsh7th/cmp-buffer ](https://github.com/hrsh7th/cmp-buffer) buffer completions
-   3. [ hrsh7th/cmp-nvim-lua ](https://github.com/hrsh7th/cmp-nvim-lua) nvim config completions
-   4. [ hrsh7th/cmp-nvim-lsp ](https://github.com/hrsh7th/cmp-nvim-lsp) lsp completions
-   5. [ hrsh7th/cmp-path ](https://github.com/hrsh7th/cmp-path) file path completions
-   6. [ saadparwaiz1/cmp_luasnip ](https://github.com/saadparwaiz1/cmp_luasnip) snippets completions
-   7. [L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip) Snippets
-   8. [rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
+   - [ hrsh7th/cmp-cmdline ](https://github.com/hrsh7th/cmp-cmdline) command line
+   - [ hrsh7th/cmp-buffer ](https://github.com/hrsh7th/cmp-buffer) buffer completions
+   - [ hrsh7th/cmp-nvim-lua ](https://github.com/hrsh7th/cmp-nvim-lua) nvim config completions
+   - [ hrsh7th/cmp-nvim-lsp ](https://github.com/hrsh7th/cmp-nvim-lsp) lsp completions
+   - [ hrsh7th/cmp-path ](https://github.com/hrsh7th/cmp-path) file path completions
+   - [ saadparwaiz1/cmp_luasnip ](https://github.com/saadparwaiz1/cmp_luasnip) snippets completions
+   - [L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip) Snippets
+   - [rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
 
 9. [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive) Git tools
 10. [tpope/vim-surround](https://github.com/tpope/vim-surround) Surroundings
@@ -244,5 +241,3 @@ One test snippet is included as an example.
 
 [Plugin Finder](https://neovimcraft.com/)
 Noting really, if you have (Neo)vim installed then you can just backup your previous config if any, then just clone this repo and create a symlink of this configuration to your ~/.config/nvim
-
-
