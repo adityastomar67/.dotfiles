@@ -86,7 +86,7 @@ sudo pacman -S lua-language-server pyright deno rust-analyzer gopls shellcheck
 
 ## Install formatters
 
-prettier with npm
+[ prettier ](https://prettier.io/) with npm
 
 ```bash
 npm i -g prettier
