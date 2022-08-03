@@ -6,8 +6,8 @@
 # ██╗██║░░░░░╚██████╔╝██║░╚███║╚█████╔╝░░░██║░░░██║╚█████╔╝██║░╚███║██████╔╝
 # ╚═╝╚═╝░░░░░░╚═════╝░╚═╝░░╚══╝░╚════╝░░░░╚═╝░░░╚═╝░╚════╝░╚═╝░░╚══╝╚═════╝░
 
+# For Launcing NeoVim and SudoEdit with same command
 function v() {
-    # For Launcing NeoVim and SudoEdit with same command
     # [ ! -f $1 ] && nvim $1 && retu gccrn
     # [ -w $1 ] && nvim $1 || sudoedit $1
     file=$1
