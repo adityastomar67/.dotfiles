@@ -169,6 +169,9 @@ local autocmds = {
         -- {"BufWritePost",[[$VIM_PATH/{*.vim,*.yaml,vimrc} nested source $MYVIMRC | redraw]]};
         { "BufWritePre", "$MYVIMRC", "lua require('core.utils').ReloadConfig()" },
     },
+    dsa = {
+        { "BufWritePre", "practice.cpp", [[!g++ -std=c++20 % && ./a.out && rm -f a.out]] },
+    },
     clear_cmdline = {
         { "CmdlineLeave", "*", "echo ''" },
     },
