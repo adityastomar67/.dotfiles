@@ -3,9 +3,9 @@
   Brief description of how this sub configuration actually works.
 </div>
 
-#### Before we proceed
+#### Before we proceed, File Structure is like
 
-If the reader is well versed or, has a general experience with shell scripting or, know what you are doing then they may skip this section.
+If the reader is well versed or, has a general experience with shell scripting, Lua language or, know what you are doing then they may skip this section. But it advised to take a good understanding of the file structure before making any changes.
 
 ```
 nvim
