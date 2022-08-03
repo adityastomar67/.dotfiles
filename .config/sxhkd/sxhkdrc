@@ -23,6 +23,10 @@ super + n
    nmd
 
 # Rofi Themes Menu
+ctrl + alt + q
+	bspc node -{c,k} && tmux kill-server
+
+# Rofi Themes Menu
 ctrl + alt + t
 	tmux kill-server
 
@@ -80,7 +84,7 @@ XF86Audio{RaiseVolume,LowerVolume}
 
 XF86AudioMute
 	volume --toggle
-	
+
 # Music control
 XF86Audio{Next,Prev,Play,Stop}
 	mpc {next,prev,toggle,stop}
@@ -102,7 +106,7 @@ ctrl + alt + Escape
 # Quit/Restart bspwm
 ctrl + shift + {q,r}
 	bspc {quit,wm -r}
-	
+
 # Split horizontal, vertical or cancel
 super + {e,s,q}
    bspc node -p {east,south,cancel}
@@ -157,7 +161,7 @@ super + control + {h,l,j,k}
 ## Shrinking windows
 super + alt + {h,l,j,k}
 	bspc node -z {left 20 0,right -20 0,top 0 20,bottom 0 -20}
-	
+
 ## Move floating windows
 alt + shift + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}

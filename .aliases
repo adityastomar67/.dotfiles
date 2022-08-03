@@ -11,7 +11,7 @@
 
 if [ $(command -v exa) ]; then
     alias ls='exa -al --color=always --icons --git --group-directories-first'
-    # alias ls='echo " \033[3;4:2;33mDirectory --> $(pwd)\033[23;4:0m\n" && exa -al --color=always --icons --git --group-directories-first' 
+    # alias ls='echo " \033[3;4:2;33mDirectory --> $(pwd)\033[23;4:0m\n" && exa -al --color=always --icons --git --group-directories-first'
     alias la='exa -a --color=always --icons --group-directories-first'
     alias ll='exa -l --color=always --icons --group-directories-first'
     alias lt='exa -aT --level=2 --color=always --group-directories-first'
@@ -167,7 +167,7 @@ alias xclip='xclip -selection clipboard'
 
 alias tb="nc termbin.com 9999"
 alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
-alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys" 
+alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
 
 alias ddate='date +"%R - %a, %B %d, %Y" | xclip -select clipboard && date +"%R - %a, %B %d, %Y"'
 alias dday='date +"%Y.%m.%d - " | xclip -select clipboard ; date +"%Y.%m.%d"'
@@ -175,7 +175,8 @@ alias week='date +%V'
 alias ping='ping -c 5'
 alias fastping='ping -c 100 -s .2'
 alias rec='gpg --recv-keys --keyserver hkp://pgp.mit.edu'
-alias todo='cat ~/Dropbox/writing/notes/To-do.md'
+# alias todo='cat ~/Dropbox/writing/notes/To-do.md'
+alias todo="clr && glow ~/.dotfiles/todo.md"
 
 ## Journal launching aliases
 alias j1='cd ~/Dropbox/writing/journal; nvim volume-1.md'
@@ -193,11 +194,11 @@ alias fetch='clrscr && neofetch --ascii ~/.config/ascii-neofetch.txt'
 alias c='command'
 alias findr='\fd'
 alias x='chmod +x'
-alias porn='mpv "http://www.pornhub.com/random"' 
+alias porn='mpv "http://www.pornhub.com/random"'
 alias ip='curl ipinfo.io/ip'
 alias :q='exit'
 
-alias todoe='nvim ~/Dropbox/writing/notes/To-do.md'
+# alias todoe='nvim ~/Dropbox/writing/notes/To-do.md'
 alias nvconfig="nvim ~/.config/nvim/"
 alias zedit="nvim $XDG_CONFIG_HOME/zsh/.zshrc"
 alias bedit="nvim $HOME/.bashrc"

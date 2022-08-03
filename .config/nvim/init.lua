@@ -20,5 +20,5 @@ vim.cmd('source $HOME/.abbreviations.vim')
 
 -- NOTE: Needs to be checked
 require("notify").setup({
-  background_colour = "#000000",
+    background_colour = "#000000",
 })

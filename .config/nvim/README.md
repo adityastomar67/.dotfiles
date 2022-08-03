@@ -10,7 +10,7 @@
 Most available via npm
 
 ```bash
-npm install -g typescript typescript-language-server vscode-langservers-extracted vls @tailwindcss/language-server yaml-language-server @prisma/language-server emmet-ls neovim graphql-language-service-cli graphql-language-service-server @astrojs/language-server
+npm install -g typescript typescript-language-server vscode-langservers-extracted vls @tailwindcss/language-server yaml-language-server @prisma/language-server emmet-ls neovim graphql-language-service-cli graphql-language-service-server @astrojs/language-server bash-language-server
 
 ```
 
@@ -22,7 +22,7 @@ Check your package manager for availability if not on an Arch based distro -
 _brew, apt_ etc.
 
 ```bash
-sudo pacman -S lua-language-server pyright deno rust-analyzer gopls
+sudo pacman -S lua-language-server pyright deno rust-analyzer gopls shellcheck shfmt
 ```
 
 ## Install formatters
@@ -36,7 +36,7 @@ npm i -g prettier
 [ stylua ](https://github.com/JohnnyMorganz/StyLua) is in the AUR
 
 ```bash
-pamac install stylua
+sudo pacman -S stylua
 ```
 
 Check your package manager for availability if not on an Arch based distro -
