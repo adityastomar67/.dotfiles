@@ -5,7 +5,7 @@
 
 #### Before we proceed, File Structure is like
 
-If the reader is well versed or, has a general experience with shell scripting, Lua language or, know what you are doing then they may skip this section. But it advised to take a good understanding of the file structure before making any changes.
+If the reader is well versed or, has a general experience with shell scripting, Lua language or, know what they are doing then they may skip this section. But it advised to take a good understanding of the file structure before making any changes.
 
 ```
 nvim
@@ -68,7 +68,7 @@ Check your package manager for availability if not on an Arch based distro -
 _brew, apt_ etc.
 
 ```bash
-sudo pacman -S lua-language-server pyright deno rust-analyzer gopls shellcheck shfmt
+sudo pacman -S lua-language-server pyright deno rust-analyzer gopls shellcheck
 ```
 
 ## Install formatters
@@ -77,6 +77,12 @@ prettier with npm
 
 ```bash
 npm i -g prettier
+```
+
+[ shfmt ](https://github.com/mvdan/sh) is in the AUR
+
+```bash
+sudo pacman -S shfmt
 ```
 
 [ stylua ](https://github.com/JohnnyMorganz/StyLua) is in the AUR
