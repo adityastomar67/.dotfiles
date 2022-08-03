@@ -6,11 +6,11 @@ sudo pacman -S - < list.pacman
 
 cp ~/.dotfiles/.scripts/text.txt $HOME
 cp ~/.dotfiles/.scripts/stw $HOME
-cd $HOME
+cd $HOME || exit
 chmod +x ./stw
 ./stw
 
-cd ~/.dotfiles/.scripts
+cd ~/.dotfiles/.scripts || exit
 ./fonts
 ./wall
 # apps

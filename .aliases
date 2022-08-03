@@ -197,11 +197,12 @@ alias x='chmod +x'
 alias porn='mpv "http://www.pornhub.com/random"'
 alias ip='curl ipinfo.io/ip'
 alias :q='exit'
+alias pip-update='pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U'
 
 # alias todoe='nvim ~/Dropbox/writing/notes/To-do.md'
 alias nvconfig="nvim ~/.config/nvim/"
-alias zedit="nvim $XDG_CONFIG_HOME/zsh/.zshrc"
-alias bedit="nvim $HOME/.bashrc"
+alias zedit="nvim ~/.zshrc"
+alias bedit="nvim ~/.bashrc"
 alias fedit="nvim $XDG_CONFIG_HOME/fish/config.fish"
 alias visudo="nvim /etc/sudoers"
 

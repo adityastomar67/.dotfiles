@@ -3,6 +3,52 @@
   Brief description of how this sub configuration actually works.
 </div>
 
+#### Before we proceed
+
+If the reader is well versed or, has a general experience with shell scripting or, know what you are doing then they may skip this section.
+
+```
+nvim
+├── after
+│   ├── queries
+│   │   ├── cpp
+│   │   │   └── highlights.scm
+│   │   ├── lua
+│   │   │   └── highlights.scm
+│   │   └── python
+│   │       └── highlights.scm
+│   └── syntax
+│       ├── markdown.vim
+│       └── python.vim
+├── init.lua
+├── install.sh
+├── lua
+│   └── core
+│       ├── cmds.lua
+│       ├── cmp.lua
+│       ├── colorscheme.lua
+│       ├── comment.lua
+│       ├── dressing.lua
+│       ├── files.lua
+│       ├── gitsigns.lua
+│       ├── keymaps.lua
+│       ├── lspInstaller.lua
+│       ├── lsp.lua
+│       ├── null-ls.lua
+│       ├── nvim-tree.lua
+│       ├── options.lua
+│       ├── plugins.lua
+│       ├── shared
+│       │   └── ascii_art.lua
+│       ├── telescope.lua
+│       ├── toggleterm.lua
+│       ├── treesitter.lua
+│       └── utils.lua
+├── plugin
+│   └── packer_compiled.lua
+└── snippets
+```
+
 #### Installation
 
 ## Install language servers
@@ -194,15 +240,3 @@ One test snippet is included as an example.
 Noting really, if you have (Neo)vim installed then you can just backup your previous config if any, then just clone this repo and create a symlink of this configuration to your ~/.config/nvim
 
 
-#### Before we proceed
-
-If the reader is well versed or, has a general experience with shell scripting or, know what you are doing then they may skip this section.
-
-```zsh
-:: env.zsh       -    environment variables
-:: keys.zsh      -    ZSH keybindings
-:: opts.zsh      -    ZSH options and ZSH plugin options
-:: plugs.zsh     -    plugins and plugin manager setup
-:: prompt.zsh    -    ZSH prompt custom made
-:: theme.zsh     -    ZSH LC_COLORS colors and FZF opt colors
-```
