@@ -49,7 +49,7 @@ nvim
 └── snippets
 ```
 
-## Installation
+# Installation
 
 ```bash
   # move to home dir
