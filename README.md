@@ -25,3 +25,18 @@ A bunch of files that start with . and makes linux more awesome.
 █▄▄ █▄█   ▄▄   ▄▀█ █▀▄ █ ▀█▀ █▄█ ▄▀█ █▀ ▀█▀ █▀█ █▀▄▀█ ▄▀█ █▀█ █▄▄ ▀▀█
 █▄█ ░█░   ░░   █▀█ █▄▀ █ ░█░ ░█░ █▀█ ▄█ ░█░ █▄█ █░▀░█ █▀█ █▀▄ █▄█ ░░█
 ```
+
+
+# TODO For this Repo
+
+
+
+### Tasks
+
+- [ ] Try emacs 
+
+  - [ ] more precisely doom emacs 
+
+
+
+- [x] Change the telescope config
