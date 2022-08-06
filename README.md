@@ -4,7 +4,7 @@
 ▀  ▀    ▀▀▀ ▀▀▀ ▀▀▀ ▀▀▀
 ```
 
-A bunch of files that start with . and makes linux more awesome.
+A bunch of files that start with .(dot) and makes linux more awesome.
 
 - OS: [Archcraft Linux](https://archcraft.io/)
 - WM : [bspwm](https://wiki.archlinux.org/index.php/Bspwm)
