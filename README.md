@@ -33,10 +33,10 @@ A bunch of files that start with .(dot) and makes linux more awesome.
 
 ### Tasks
 
+- [ ] Minimap in NeoVim
+
 - [ ] Try emacs 
 
   - [ ] more precisely doom emacs 
-
-
 
 - [x] Change the telescope config
