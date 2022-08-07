@@ -37,6 +37,6 @@ A bunch of files that start with .(dot) and makes linux more awesome.
 
 - [ ] Try emacs 
 
-  - [ ] more precisely doom emacs 
+-  - [ ] more precisely doom emacs 
 
 - [x] Change the telescope config
