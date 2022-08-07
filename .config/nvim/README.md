@@ -241,3 +241,8 @@ One test snippet is included as an example.
 
 [Plugin Finder](https://neovimcraft.com/)
 Noting really, if you have (Neo)vim installed then you can just backup your previous config if any, then just clone this repo and create a symlink of this configuration to your ~/.config/nvim
+
+**SUGGESTION**
+
+* Font: Operator Mono
+* [dot_files](https://github.com/adityastomar67/.dotfiles/)
