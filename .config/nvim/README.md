@@ -57,7 +57,7 @@ nvim
   # back up current config
   cp -r ~/.config/nvim ~/.config/nvim.backup
   # clone repository
-  git clone git@github.com:adityastomar67/.dotfiles.git
+  git clone https://github.com/adityastomar67/.dotfiles.git
   # copy nvim configurations from repository to your config directory
   cp -r ~/.dotfiles/nvim ~/.config/
   # cleanup
