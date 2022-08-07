@@ -54,3 +54,4 @@ Thumbs.db
 ~
 .oh-my-zsh/custom/plugins/
 todo.md
+.config/nvim/plugin

@@ -25,3 +25,9 @@ end
 
 vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
 
+-- Data for limelight_conceal
+vim.cmd("let g:limelight_conceal_ctermfg = 'gray'")
+vim.cmd("let g:limelight_conceal_ctermfg = 240")
+vim.cmd("let g:limelight_conceal_guifg = 'DarkGray'")
+vim.cmd("let g:limelight_conceal_guifg = '#777777'")
+vim.cmd("let g:limelight_default_coefficient = 0.9")

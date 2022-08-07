@@ -28,6 +28,7 @@ function nvim_create_augroups(definitions)
     end
 end
 
+vim.api.nvim_create_autocmd({"VimEnter"}, {pattern = "*", command = "Limelight"})
 vim.cmd([[autocmd InsertEnter * norm zz]]) -- Vertically center document when entering insert mode
 vim.cmd([[command! Realtime set autoread | au CursorHold * checktime | call feedkeys("lh")]]) -- Automatic update of any Buffer when not in use
 vim.cmd([[command! Cls lua require("core.utils").preserve('%s/\\s\\+$//ge')]])
