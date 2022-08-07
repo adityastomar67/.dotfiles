@@ -25,6 +25,9 @@ end
 
 vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
 
+-- Split color modification
+vim.cmd("highlight VertSplit guibg=#ff000000")
+
 -- Data for limelight_conceal
 vim.cmd("let g:limelight_conceal_ctermfg = 'gray'")
 vim.cmd("let g:limelight_conceal_ctermfg = 240")
