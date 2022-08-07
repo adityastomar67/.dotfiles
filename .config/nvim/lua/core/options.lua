@@ -1,5 +1,6 @@
 local cmd = vim.cmd
 local opt = vim.opt
+local wo = vim.wo
 
 ---- :help options
 opt.backup = false                          -- creates a backup file

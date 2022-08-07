@@ -35,6 +35,7 @@ packer.init({
 -- Install your plugins here
 return packer.startup(function(use)
     use("wbthomason/packer.nvim")                               -- Have packer manage itself
+    use('wfxr/minimap.vim')
     use("junegunn/limelight.vim")
     use("stevearc/dressing.nvim")                               -- For the sweet sweet UI Components
     -- use "lunarvim/colorschemes"                                 -- A bunch of colorschemes you can try out
