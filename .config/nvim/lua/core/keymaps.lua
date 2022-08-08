@@ -46,10 +46,10 @@ keymap("n" , "F"     , ":HopLine<CR>"      , opts)
 keymap("i" , "<C-F>" , "<ESC>:HopLine<CR>" , opts)
 
 -- Telescope Stuff
-keymap("n" , "<C-o>"      , ":lua require('telescope.builtin').find_files(require('telescope.themes').get_ivy({ winblend = 90 }))<CR>" , opts)
-keymap("n" , "<leader>fg" , ":Telescope live_grep<CR>"                                                                                 , opts)
-keymap("n" , "<leader>fb" , ":Telescope buffers<CR>"                                                                                   , opts)
-keymap("n" , "<leader>ft" , ":Telescope tags<CR>"                                                                                      , opts)
+-- keymap("n" , "<C-o>"      , ":lua require('telescope.builtin').find_files(require('telescope.themes').get_ivy({ winblend = 90 }))<CR>" , opts)
+-- keymap("n" , "<leader>fg" , ":Telescope live_grep<CR>"                                                                                 , opts)
+-- keymap("n" , "<leader>fb" , ":Telescope buffers<CR>"                                                                                   , opts)
+-- keymap("n" , "<leader>ft" , ":Telescope tags<CR>"                                                                                      , opts)
 
 -- For Running the current buffer
 keymap("n" , "<leader>pr" , ':TermExec cmd="clear && prog %"<CR>'      , opts)
