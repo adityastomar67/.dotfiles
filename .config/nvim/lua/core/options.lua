@@ -80,6 +80,21 @@ vim.g.do_filetype_lua = 1
 vim.g.did_load_filetypes = 0
 vim.g.nojoinspaces = true
 
+-- Give me some fenced codeblock goodness
+vim.g.markdown_fenced_languages = {
+    "html",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "json",
+    "css",
+    "scss",
+    "lua",
+    "vim",
+    "bash",
+    "ts=typescript",
+}
+
 -- Disable builtins plugins
 local disabled_built_ins = {
     "2html_plugin",
