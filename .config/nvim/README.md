@@ -18,8 +18,14 @@ nvim
 │   │   └── python
 │   │       └── highlights.scm
 │   └── syntax
+│       ├── go.vim
+│       ├── html.vim
+│       ├── javascript.vim
 │       ├── markdown.vim
-│       └── python.vim
+│       ├── python.vim
+│       ├── ruby.vim
+│       ├── rust.vim
+│       └── xml.vim
 ├── init.lua
 ├── install.sh
 ├── lua

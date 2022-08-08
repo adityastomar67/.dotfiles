@@ -1,5 +1,7 @@
 scriptencoding utf-8
 
+autocmd FileType python :setlocal sw=4 ts=4 sts=4
+
 if exists('g:no_vim_fancy_text') || !has('conceal') || &enc != 'utf-8'
   finish
 endif
