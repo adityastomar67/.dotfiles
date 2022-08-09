@@ -41,6 +41,9 @@ opt.signcolumn = "yes"                      -- show the sign column
 opt.foldmethod = "indent"
 opt.foldnestmax = 10
 opt.foldenable = false
+opt.winblend = 0
+opt.wildoptions = 'pum'
+opt.pumblend = 5
 opt.foldlevel = 2
 opt.cole  = 1                               -- Conceal applied
 opt.cursorline = true                       -- highlight the current line
@@ -125,3 +128,7 @@ for _, plugin in pairs(disabled_built_ins) do
 end
 
 vim.cmd([[let &statusline='%#Normal# ']])
+
+
+
+

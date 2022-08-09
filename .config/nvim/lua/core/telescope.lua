@@ -5,7 +5,13 @@ end
 
 telescope.load_extension("media_files")
 
-local actions = require("telescope.actions")
+local actions = require('telescope.actions')
+local builtin = require("telescope.builtin")
+
+local function telescope_buffer_dir() return vim.fn.expand('%:p:h') end
+
+local fb_actions = require"telescope".extensions.file_browser.actions
+
 local options = {
 	defaults = {
 		vimgrep_arguments = {

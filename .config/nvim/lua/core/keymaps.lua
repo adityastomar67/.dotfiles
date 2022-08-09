@@ -21,6 +21,13 @@ vim.g.maplocalleader = " "
 -- Show/Unshow Relative line Numbers
 keymap("n", "<leader>z", ":set invrnu invnu<CR>", opts)
 
+-- Increment/decrement
+keymap('n', '+', '<C-a>',opts)
+keymap('n', '-', '<C-x>',opts)
+
+-- Delete a word backwards
+keymap('n', 'db', 'vb"_d', opts)
+
 -- LazyGit Inside the Terminal
 keymap("n", "<leader>lg", ":LazyGit<CR>", opts)
 
@@ -50,6 +57,9 @@ keymap("i" , "<C-F>" , "<ESC>:HopLine<CR>" , opts)
 -- keymap("n" , "<leader>fg" , ":Telescope live_grep<CR>"                                                                                 , opts)
 -- keymap("n" , "<leader>fb" , ":Telescope buffers<CR>"                                                                                   , opts)
 -- keymap("n" , "<leader>ft" , ":Telescope tags<CR>"                                                                                      , opts)
+
+-- For not yanking when deleting chars
+keymap('n', 'x', '"_x', opts)
 
 -- For Running the current buffer
 keymap("n" , "<leader>pr" , ':TermExec cmd="clear && prog %"<CR>'      , opts)

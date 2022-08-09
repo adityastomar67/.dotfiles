@@ -66,7 +66,9 @@ return packer.startup(function(use)
     use("lewis6991/gitsigns.nvim")                                                  -- gitsigns for git
     use("rcarriga/nvim-notify")                                                     -- notify for notifications
     use("akinsho/toggleterm.nvim")                                                  -- toggleterm for terminal
+    use("glepnir/lspsaga.nvim")                                                     -- LSP UIs
     use("kg8m/vim-simple-align")                                                    -- for allignment of text, look on internet for references
+    use("nvim-telescope/telescope-file-browser.nvim")
     use("anuvyklack/hydra.nvim")                                                    -- Vim Submodes using Hydra
     use("cometsong/CommentFrame.vim")                                               -- For Fancy CommentFrame
     use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"})                     -- treesitter
@@ -74,7 +76,11 @@ return packer.startup(function(use)
     use({"zbirenbaum/copilot-cmp", after = {"copilot.lua", "nvim-cmp"}})            -- For Getting Copilot Suggestions in Completion Engine
     use({"goolord/alpha-nvim", requires = "kyazdani42/nvim-web-devicons"})          -- For The Dahboard
     use({"folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim"})           -- Todo Comments
-
+    -- use("tjdevries/colorbuddy.nvim")
+    use {
+        'svrana/neosolarized.nvim',
+        requires = { 'tjdevries/colorbuddy.nvim' }
+      }
     -- For the awesome Hoping Word Features
     use {
       'phaazon/hop.nvim',

@@ -1,10 +1,10 @@
 -- CORE
+require "core.plugins"
 require "core.options"
 require "core.colorscheme"
 require "core.keymaps"
 require "core.cmds"
 require "core.files"
-require "core.plugins"
 
 -- PLUGS
 require "core.alpha"
@@ -18,6 +18,7 @@ require "core.gitsigns"
 require "core.toggleterm"
 require "core.lspInstaller"
 require "core.lsp"
+require "core.lsp-saga"
 
 vim.notify = require("notify")
 vim.cmd('source $HOME/.abbreviations.vim')
