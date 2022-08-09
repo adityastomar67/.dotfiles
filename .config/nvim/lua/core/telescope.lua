@@ -26,23 +26,44 @@ local options = {
 		layout_strategy = "horizontal",
 		layout_config = {
 			horizontal = {
+				mirror = false,
 				prompt_position = "top",
-				preview_width = 0.55,
+				width = 0.75,
+				height = 0.75,
+				preview_cutoff = 120,
+				results_height = 1,
 				results_width = 0.8,
 			},
-			vertical = { mirror = false },
-			width = 0.87,
-			height = 0.80,
-			preview_cutoff = 120,
+			vertical = {
+				mirror = false, -- makes prompt on top
+			},
 		},
 		file_sorter = require("telescope.sorters").get_fuzzy_file,
-		file_ignore_patterns = { "node_modules", ".git" },
+		file_ignore_patterns = {
+			"luadisabled",
+			"vimdisabled",
+			"forks",
+			".backup",
+			".swap",
+			".langservers",
+			".session",
+			".undo",
+			".git/",
+			"node_modules",
+			"vendor",
+			".cache",
+			".vscode-server",
+			".Desktop",
+			".Documents",
+			"classes",
+			"quantumimage",
+		},
 		generic_sorter = require("telescope.sorters").get_generic_fuzzy_sorter,
 		path_display = { "smart" },
-		winblend = 100,
+		winblend = 0,
 		border = {},
-		borderchars = { "─", "", "", "", "", "", "", "" },
-		-- borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
+		-- borderchars = { "─", "", "", "", "", "", "", "" },
+		borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
 		color_devicons = true,
 		set_env = { ["COLORTERM"] = "truecolor" }, -- default = nil,
 		file_previewer = require("telescope.previewers").vim_buffer_cat.new,
@@ -105,3 +126,44 @@ local options = {
 	},
 }
 telescope.setup(options)
+
+vim.cmd([[highlight TelescopeBorder guifg=#4c4c4c]])
+vim.cmd([[highlight TelescopeSelection guifg=#ffffff guibg=#393939 gui=bold]])
+vim.cmd([[highlight TelescopeSelectionCaret guifg=#749484 gui=bold]])
+
+local M = {}
+M.search_dotfiles = function()
+	require("telescope.builtin").find_files({
+		prompt_title = "< VimRC >",
+		-- winblend = 5,
+		-- border = true,
+		-- cwd = '$HOME/.config/nvim/',
+		-- find_command={ 'rg', '--files'},
+		search_dirs = {
+			vim.fn.stdpath("config"),
+			"~/.config/zsh/scripts",
+			"~/.config/zsh/commands/",
+			"~/.config/zsh/configs/",
+		},
+	})
+end
+
+M.git_branches = function()
+	require("telescope.builtin").git_branches({
+		attach_mappings = function(prompt_bufnr, map)
+			map("i", "<c-d>", actions.git_delete_branch)
+			map("n", "dd", actions.git_delete_branch)
+			return true
+		end,
+	})
+end
+
+M.installed_plugins = function()
+	require("telescope.builtin").find_files(require("telescope.themes").get_dropdown({
+		-- winblend = 5,
+		border = true,
+		cwd = vim.fn.stdpath("data") .. "/site/pack/packer/start/",
+	}))
+end
+
+return M
