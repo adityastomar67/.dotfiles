@@ -18,6 +18,7 @@ plugs
 opts
 keys
 prompt
+fzf
 EOF
 
 ## Directories Generation if not present already.

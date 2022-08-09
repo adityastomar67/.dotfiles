@@ -10,7 +10,7 @@
 # alias "alias_name"=<alias_command>
 
 if [ $(command -v exa) ]; then
-    alias ls='exa -al --color=always --icons --git --group-directories-first'
+    alias ls='clr && exa -al --color=always --icons --git --group-directories-first'
     # alias ls='echo " \033[3;4:2;33mDirectory --> $(pwd)\033[23;4:0m\n" && exa -al --color=always --icons --git --group-directories-first'
     alias la='exa -a --color=always --icons --group-directories-first'
     alias ll='exa -l --color=always --icons --group-directories-first'
