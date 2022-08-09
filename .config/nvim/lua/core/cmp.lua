@@ -106,17 +106,12 @@ cmp.setup({
             -- Kind icons
             -- vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
             vim_item.kind = string.format("%s %s", kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
-            -- vim_item.menu = ({
-            --   copilot = "[Copilot]",
-            --   luasnip = "[Snippet]",
-            --   buffer = "[Buffer]",
-            --   path = "[Path]",
-            -- })[entry.source.name]
             return vim_item
         end,
     },
     sources = {
         { name = "copilot"      , group_index = 2 } ,
+        { name = "cmp_tabnine" },
         { name = "nvim_lsp"     , group_index = 2 } ,
         { name = "path"         , group_index = 2 } ,
         { name = "buffer"       , group_index = 2 } ,
@@ -124,10 +119,6 @@ cmp.setup({
         { name = "neosnippet" } ,
     },
     confirm_opts = { behavior = cmp.ConfirmBehavior.Replace, select = false },
-    --   documentation = {
-    -- border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-    -- documentation = { border = 'single' },
-    --   },
     window = {
         documentation = cmp.config.window.bordered(),
         completion = cmp.config.window.bordered(),

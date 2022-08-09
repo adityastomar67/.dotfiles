@@ -69,6 +69,7 @@ keymap("n" , "<C-c>" , ":bw<CR>"     , opts)
 keymap("n" , "<C-s>" , ":w<CR>"      , opts)
 keymap("n" , "qo"    , ":on<CR>"     , opts)
 keymap("i" , "<C-s>" , "<ESC>:w<CR>" , opts)
+keymap("v" , "q"     , "<ESC>"       , opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -170,6 +171,9 @@ vim.keymap.set("n",  "<F11>" , function()
 		vim.o.concealcursor = "n"
 	end
 end, opts)
+
+-- Hacks for Problems
+-- keymap("n", "A", "$i<Right><Right>", opts)
 
 -- More Extra Stuff
 vim.cmd([[cnoreab cls Cls]])

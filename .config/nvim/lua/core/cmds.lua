@@ -187,7 +187,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
         vim.cmd [[ syntax off ]]
       end
     end
-  })
+})
 
 -- Highlight on yank
 local yankGrp = api.nvim_create_augroup("YankHighlight", { clear = true })

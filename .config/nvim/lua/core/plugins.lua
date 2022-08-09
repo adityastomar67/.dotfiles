@@ -34,45 +34,46 @@ packer.init({
 
 -- Install your plugins here
 return packer.startup(function(use)
-    use("wbthomason/packer.nvim")                               -- Have packer manage itself
-    use('wfxr/minimap.vim')
-    use("junegunn/limelight.vim")
-    use("stevearc/dressing.nvim")                               -- For the sweet sweet UI Components
-    -- use "lunarvim/colorschemes"                                 -- A bunch of colorschemes you can try out
-    use("rebelot/kanagawa.nvim")                                -- Colorscheme of choice
-    use("nvim-lua/popup.nvim")                                  -- An implementation of the Popup API from vim in Neovim
-    use("nvim-lua/plenary.nvim")                                -- Useful lua functions used ny lots of plugins
-    use("psliwka/vim-smoothie")                                 -- For smooth scrolling
-    use("kyazdani42/nvim-web-devicons")                         -- Icons for webdev
-    use("kyazdani42/nvim-tree.lua")                             -- Tree view for files
-    use("hrsh7th/nvim-cmp")                                     -- The completion plugin
-    use("hrsh7th/cmp-buffer")                                   -- buffer completions
-    use("hrsh7th/cmp-path")                                     -- path completions
-    use("hrsh7th/cmp-cmdline")                                  -- cmdline completions
-    use("saadparwaiz1/cmp_luasnip")                             -- snippet completions
-    use("hrsh7th/cmp-nvim-lsp")                                 -- lsp completions
-    use("hrsh7th/cmp-nvim-lua")                                 -- lua completions
-    use("L3MON4D3/LuaSnip")                                     -- snippet engine
-    use("rafamadriz/friendly-snippets")                         -- a bunch of snippets to use
-    use("notomo/cmp-neosnippet")                                -- a bunch of snippets to use
-    use("neovim/nvim-lspconfig")                                -- enable LSP
-    use("williamboman/nvim-lsp-installer")                      -- simple to use language server installer
-    use("jose-elias-alvarez/null-ls.nvim")                      -- for formatters and linters
-    use("p00f/nvim-ts-rainbow")                                 -- rainbow colors for syntax highlighting
-    use("nvim-treesitter/playground")                           -- playground for treesitter
-    use("nvim-telescope/telescope.nvim")                        -- telescope for quick navigation
-    use("nvim-telescope/telescope-media-files.nvim")            -- telescope for quick navigation
-    use("kdheepak/lazygit.nvim")                                -- lazygit for git
-    use("lewis6991/gitsigns.nvim")                              -- gitsigns for git
-    use("rcarriga/nvim-notify")                                 -- notify for notifications
-    use("akinsho/toggleterm.nvim")                              -- toggleterm for terminal
-    use("kg8m/vim-simple-align")                                -- for allignment of text, look on internet for references
-    use("anuvyklack/hydra.nvim")
-    use("cometsong/CommentFrame.vim")                           -- For Fancy CommentFrame
-    use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}) -- treesitter
-
-    -- For Getting Copilot Suggestions in Completion Engine
-    use({"zbirenbaum/copilot-cmp", after = {"copilot.lua", "nvim-cmp"}})
+    use("wbthomason/packer.nvim")                                                   -- Have packer manage itself
+    use("wfxr/minimap.vim")                                                         -- For VSCode like Minimap
+    use("junegunn/limelight.vim")                                                   -- Better focus when other code is dimmed out
+    use("stevearc/dressing.nvim")                                                   -- For the sweet sweet UI Components
+    -- use "lunarvim/colorschemes"                                                    -- A bunch of colorschemes you can try out
+    use("rebelot/kanagawa.nvim")                                                    -- Colorscheme of choice
+    use("nvim-lua/popup.nvim")                                                      -- An implementation of the Popup API from vim in Neovim
+    use("nvim-lua/plenary.nvim")                                                    -- Useful lua functions used ny lots of plugins
+    use("psliwka/vim-smoothie")                                                     -- For smooth scrolling
+    use("kyazdani42/nvim-web-devicons")                                             -- Icons for webdev
+    use("kyazdani42/nvim-tree.lua")                                                 -- Tree view for files
+    use("hrsh7th/nvim-cmp")                                                         -- The completion plugin
+    use("hrsh7th/cmp-buffer")                                                       -- buffer completions
+    use("hrsh7th/cmp-path")                                                         -- path completions
+    use("hrsh7th/cmp-cmdline")                                                      -- cmdline completions
+    use("saadparwaiz1/cmp_luasnip")                                                 -- snippet completions
+    use("hrsh7th/cmp-nvim-lsp")                                                     -- lsp completions
+    use("hrsh7th/cmp-nvim-lua")                                                     -- lua completions
+    use("L3MON4D3/LuaSnip")                                                         -- snippet engine
+    use("rafamadriz/friendly-snippets")                                             -- a bunch of snippets to use
+    use("notomo/cmp-neosnippet")                                                    -- a bunch of snippets to use
+    use("neovim/nvim-lspconfig")                                                    -- enable LSP
+    use("williamboman/nvim-lsp-installer")                                          -- simple to use language server installer
+    use("jose-elias-alvarez/null-ls.nvim")                                          -- for formatters and linters
+    use("p00f/nvim-ts-rainbow")                                                     -- rainbow colors for syntax highlighting
+    use("nvim-treesitter/playground")                                               -- playground for treesitter
+    use("nvim-telescope/telescope.nvim")                                            -- telescope for quick navigation
+    use("nvim-telescope/telescope-media-files.nvim")                                -- telescope for quick navigation
+    use("kdheepak/lazygit.nvim")                                                    -- lazygit for git
+    use("lewis6991/gitsigns.nvim")                                                  -- gitsigns for git
+    use("rcarriga/nvim-notify")                                                     -- notify for notifications
+    use("akinsho/toggleterm.nvim")                                                  -- toggleterm for terminal
+    use("kg8m/vim-simple-align")                                                    -- for allignment of text, look on internet for references
+    use("anuvyklack/hydra.nvim")                                                    -- Vim Submodes using Hydra
+    use("cometsong/CommentFrame.vim")                                               -- For Fancy CommentFrame
+    use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"})                     -- treesitter
+    use({'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}) -- Autocomplete engine for tabnine
+    use({"zbirenbaum/copilot-cmp", after = {"copilot.lua", "nvim-cmp"}})            -- For Getting Copilot Suggestions in Completion Engine
+    use({"goolord/alpha-nvim", requires = "kyazdani42/nvim-web-devicons"})          -- For The Dahboard
+    use({"folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim"})           -- Todo Comments
 
     -- For the awesome Hoping Word Features
     use {
@@ -98,74 +99,6 @@ return packer.startup(function(use)
         end
     })
     -- use "github/copilot.vim"
-
-    -- For The Dahboard
-    use({
-        "goolord/alpha-nvim",
-        requires = {"kyazdani42/nvim-web-devicons"},
-        config = function()
-            local alpha = require("alpha")
-            local dashboard = require("alpha.themes.dashboard")
-            math.randomseed(os.time())
-            local function pick_color()
-                local colors = {"String", "Identifier", "Keyword", "Number"}
-                return colors[math.random(#colors)]
-            end
-            local function footer()
-                local total_plugins = #vim.tbl_keys(packer_plugins)
-                local datetime = os.date(" %d-%m-%Y   %H:%M:%S")
-                local version = vim.version()
-                local nvim_version_info =
-                    "   v" .. version.major .. "." .. version.minor .. "." ..
-                        version.patch
-                return datetime .. "   " .. total_plugins .. " plugins" ..
-                           nvim_version_info
-            end
-            local logo = {
-                "                                      ",
-                "                                      ",
-                "                                      ",
-                "                                      ",
-                "                                      ",
-                "                                      ",
-                "              ███████████             ",
-                "            ████▒▒▒▒▒▒▒████          ",
-                "          ██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██          ",
-                "        ██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██      ",
-                "      ██▒▒▒▒▒▒▒▒    ▒▒▒▒▒▒▒▒    ██     ",
-                "      ██▒▒▒▒▒▒  ▒▒▓▓▒▒▒▒▒▒  ▒▒▓▓▒▒██    ",
-                "      ██▒▒▒▒▒▒  ▒▒▓▓▒▒▒▒▒▒  ▒▒▓▓▒▒██    ",
-                "    ██▒▒▒▒▒▒▒▒▒▒    ▒▒▒▒▒▒▒▒    ▒▒██    ",
-                "    ██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██    ",
-                "    ██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██    ",
-                "    ██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██    ",
-                "    ██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██    ",
-                "    ██▒▒██▒▒▒▒▒▒██▒▒▒▒▒▒▒▒██▒▒▒▒▒▒██    ",
-                "    ████  ██▒▒██  ██▒▒▒▒██  ██▒▒██    ",
-                "    ██      ██      ████      ████    ",
-                "                                      ",
-                "                                      ",
-                "                                      ",
-                "                                      ",
-                "                                      ",
-                "                                      ",
-                "                                      "
-            }
-            dashboard.section.header.val = logo
-            dashboard.section.header.opts.hl = pick_color()
-            dashboard.section.buttons.val = {
-                dashboard.button("Ctrl+E"  , "  File Explorer")  ,
-                dashboard.button("<LDR>fo" , "  Find File")      ,
-                dashboard.button("<LDR>lg" , "  Git Terminal")   ,
-                dashboard.button("<LDR>ps" , "  Update plugins") ,
-                dashboard.button("Q"       , "  Quit"            , ":q!<CR>")
-            }
-            dashboard.section.footer.val = footer()
-            dashboard.section.footer.opts.hl = "Constant"
-            alpha.setup(dashboard.opts)
-            vim.cmd([[ autocmd FileType alpha setlocal nofoldenable ]])
-        end
-    })
 
     -- For Hovering the information eg: Diagnostics
     use({
@@ -204,60 +137,6 @@ return packer.startup(function(use)
     end
     })
 
-    -- TODO: Comments in the Code
-    use {
-      "folke/todo-comments.nvim",
-      requires = "nvim-lua/plenary.nvim",
-      config = function()
-        require("todo-comments").setup {
-          signs         = true,
-          sign_priority = 8,
-          keywords      = {
-          FIX           = {
-              icon  = " ",
-              color = "#C34043",
-              alt   = { "FIXME", "BUG", "FIXIT", "ISSUE" },
-              -- signs = false, -- configure signs for some keywords individually
-            },
-            TODO = { icon = "✖"  , color  = "info" }   ,
-            DONE = { icon = " " , color = "done" }    ,
-            HACK = { icon = " " , color = "warning" } ,
-            WARN = { icon = " " , color = "error"     , alt = { "WARNING"   , "XXX" } }      ,
-            PERF = { icon = " " , alt   = { "OPTIM"   , "PERFORMANCE" , "OPTIMIZE" } } ,
-            NOTE = { icon = " " , color = "hint"      , alt = { "INFO" } } ,
-          },
-          merge_keywords = true, -- when true, custom keywords will be merged with the defaults
-          highlight = {
-            before        = "",                    -- "fg" or "bg" or empty
-            keyword       = "wide",                -- "fg", "bg", "wide" or empty. (wide is the same as bg, but will also highlight surrounding characters)
-            after         = "fg",                  -- "fg" or "bg" or empty
-            pattern       = [[.*<(KEYWORDS)\s*:]], -- pattern or table of patterns, used for highlightng (vim regex)
-            comments_only = true,                  -- uses treesitter to match keywords in comments only
-            max_line_len  = 400,                   -- ignore lines longer than this
-            exclude       = {},                    -- list of file types to exclude highlighting
-          },
-          colors = {
-            error   = { "DiagnosticError"   , "ErrorMsg"   , "#DC2626" } ,
-            warning = { "DiagnosticWarning" , "WarningMsg" , "#FBBF24" } ,
-            info    = { "DiagnosticInfo"    , "#7FB4CA" }  ,
-            done    = { "DiagnosticDone"    , "#00A600" }  ,
-            hint    = { "DiagnosticHint"    , "#10B981" }  ,
-            default = { "Identifier"        , "#C34043" }  ,
-          },
-          search = {
-            command = "rg",
-            args = {
-              "--color=never",
-              "--no-heading",
-              "--with-filename",
-              "--line-number",
-              "--column",
-            },
-            pattern = [[\b(KEYWORDS):]], -- ripgrep regex
-          },
-        }
-      end
-    }
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then require("packer").sync() end
