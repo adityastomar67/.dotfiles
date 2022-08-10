@@ -97,6 +97,5 @@ pip3 install pynvim
 npm install neovim
 
 echo "Dependencies installed"
-
 echo
 echo "Installation finished"

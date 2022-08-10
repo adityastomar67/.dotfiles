@@ -77,10 +77,7 @@ return packer.startup(function(use)
     use({"goolord/alpha-nvim", requires = "kyazdani42/nvim-web-devicons"})          -- For The Dahboard
     use({"folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim"})           -- Todo Comments
     -- use("tjdevries/colorbuddy.nvim")
-    use {
-        'svrana/neosolarized.nvim',
-        requires = { 'tjdevries/colorbuddy.nvim' }
-      }
+
     -- For the awesome Hoping Word Features
     use {
       'phaazon/hop.nvim',

@@ -20,6 +20,7 @@ require "core.lspInstaller"
 require "core.lsp"
 require "core.lsp-saga"
 
+-- EXTRAS / OTHERS
 vim.notify = require("notify")
 vim.cmd('source $HOME/.abbreviations.vim')
 

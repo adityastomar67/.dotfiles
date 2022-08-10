@@ -133,7 +133,7 @@ local options = {
 }
 telescope.setup(options)
 
-vim.cmd([[highlight TelescopeBorder guifg=#4c4c4c]])
+-- vim.cmd([[highlight TelescopeBorder guifg=#4c4c4c]])
 vim.cmd([[highlight TelescopeSelection guifg=#ffffff guibg=#393939 gui=bold]])
 vim.cmd([[highlight TelescopeSelectionCaret guifg=#749484 gui=bold]])
 
