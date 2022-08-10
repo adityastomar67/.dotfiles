@@ -153,3 +153,4 @@ require'lspconfig'.bashls.setup{}
 require'lspconfig'.sqls.setup{}
 require'lspconfig'.sumneko_lua.setup{}
 require'lspconfig'.tailwindcss.setup{}
+require'lspconfig'.ccls.setup{}

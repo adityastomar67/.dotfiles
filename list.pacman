@@ -1,4 +1,5 @@
 alacritty-ligatures-git
+llvm
 amfora
 arc-gtk-theme
 aria2
@@ -40,7 +41,7 @@ libmp4v2
 libxft-bgra
 libxlsxreader
 libxml-2.0
-libzip 
+libzip
 linux
 linux-firmware
 linux-headers
