@@ -323,10 +323,10 @@ local autocmds = {
         -- {'BufWritePost', '*bspwmrc', '!bspc wm -r; dunstify "bspwm restarted!"'},
     },
     make_scripts_executable = {
-        { "BufWritePost", "*.sh,*.py,*.zsh", [[!chmod +x %]] },
+        { "BufWritePost", "*.sh,*.py,*.zsh", [[silent !chmod +x %]] },
     },
     live_reload_webDev = {
-        { "BufWritePost", "*.html,*.css,*.js", [[silent! !~/.scripts/refresh]] },
+        { "BufWritePost", "index.html,*.css", [[silent! !~/.scripts/refresh]] },
     },
     custom_updates = {
         { "BufWritePost", "~/.Xresources", "!xrdb -merge ~/.Xresources" },
