@@ -20,7 +20,7 @@ vim.g.maplocalleader = " "
 
 -- Comments
 keymap("n", "<C-/>", "<leader>gcc", opts)
-keymap("v", "<C-/>, "<leader>gc", opts)
+keymap("v", "<C-/>" , "<leader>gc", opts)
 
 -- Show/Unshow Relative line Numbers
 keymap("n", "<leader>z", ":set invrnu invnu<CR>", opts)
