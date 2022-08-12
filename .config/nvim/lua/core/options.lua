@@ -128,7 +128,3 @@ for _, plugin in pairs(disabled_built_ins) do
 end
 
 vim.cmd([[let &statusline='%#Normal# ']])
-
-
-
-

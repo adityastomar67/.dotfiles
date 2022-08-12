@@ -54,9 +54,9 @@ keymap("i" , "<C-F>" , "<ESC>:HopLine<CR>" , opts)
 
 -- Telescope Stuff
 keymap("n" , "<C-o>"      , ":Telescope find_files<CR>" , opts)
-keymap("n" , "<leader>fg" , ":Telescope live_grep<CR>"                                                                                 , opts)
-keymap("n" , "<leader>fb" , ":Telescope buffers<CR>"                                                                                   , opts)
-keymap("n" , "<leader>ft" , ":Telescope tags<CR>"                                                                                      , opts)
+keymap("n" , "<leader>fg" , ":Telescope live_grep<CR>"  , opts)
+keymap("n" , "<leader>fb" , ":Telescope buffers<CR>"    , opts)
+keymap("n" , "<leader>ft" , ":Telescope tags<CR>"       , opts)
 
 -- For not yanking when deleting chars
 keymap('n', 'x', '"_x', opts)
