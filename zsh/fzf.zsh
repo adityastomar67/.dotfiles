@@ -1,4 +1,4 @@
-AWESOME_FZF_LOCATION="/path/to/awsome-fzf.zsh"
+AWESOME_FZF_LOCATION="~/.dotfiles/zsh/fzf.zsh"
 
 
 #List Awesome FZF Functions
@@ -164,4 +164,51 @@ fzf-checkout(){
     else
         echo "Can't check out or create branch. Not in a git repo"
     fi
+}
+
+# Git Braches Selecting
+fzf-git-branches(){
+    if [ -d "./.git" ]; then
+      git fetch
+      selected_remote_branch=$(git branch -r | fzf | sed -e 's/^[[:space:]]*//')
+
+      if [ -n "$selected_remote_branch" ]; then
+        selected_branch=$(echo "$selected_remote_branch" | sed -e 's/origin\///');
+
+        if git rev-parse --verify "$selected_branch"; then
+          git checkout "$selected_branch"
+        else
+          git checkout --track "$selected_remote_branch"
+        fi
+      else
+        echo "Exit: You haven't selected a branch..."
+      fi
+    else
+      echo "Error: There's no .git dir..."
+      exit 1
+    fi
+}
+
+function _fzf_compgen_dir() {
+    fd --type d --hidden --follow --color=always --exclude ".git" --exclude ".hg" --exclude "node_modules" . "$1"
+}
+
+function _fzf_compgen_unalias() {
+    tmpfile=$(mktemp /tmp/zsh-complete.XXXXXX)
+    alias > "$tmpfile"
+    fzf "$@" --preview 'ESCAPED=$(printf "%s=" {} | sed -e '"'"'s/[]\/$*.^[]/\\&/g'"'"'); cat '"$tmpfile"' | grep "^$ESCAPED"'
+    rm "$tmpfile"
+}
+
+function _fzf_comprun() {
+    local command=$1
+    shift
+
+    case "$command" in
+        cd)           fzf "$@" --preview 'tree -C {} | head -200' ;;
+        export|unset) fzf "$@" --preview "eval 'echo \$'{}" ;;
+        ssh|telnet)   fzf "$@" --preview 'echo {}' ;;
+        unalias)      _fzf_compgen_unalias "$@" ;;
+        *)            fzf "$@" ;;
+    esac
 }
