@@ -45,6 +45,8 @@ plugins=(
   dirhistory
   forgit
 )
+zle -N create_completion
+bindkey '^X' create_completion
 
 source ~/.oh-my-zsh/oh-my-zsh.sh # For plugins
 ## Sourcing other files
