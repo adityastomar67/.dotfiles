@@ -551,3 +551,7 @@ alias rel-xsettingsd="pkill -HUP xsettingsd"
 alias fontcfg="font-config-info"
 alias spotifyd="spotifyd --config-path '$XDG_CONFIG_HOME/spotifyd/spotifyd.conf' --no-daemon"
 alias luamake="$HOME/.opt/lua-language-server/3rd/luamake/luamake"
+
+# Tmux Aliases
+alias attach='tmux attach -t'
+alias lsmux="tmux ls"
