@@ -33,9 +33,4 @@ A bunch of files that start with .(dot) and makes linux more awesome.
 
 ### Tasks
 
-- [x] Minimap in NeoVim
 - [ ] screen-256 & xterm-256 color conflict solution
-- [ ] COnfigure python syntax file in Neovim and other langs conceal after that
-- [ ] Try emacs
--  - [ ] more precisely doom emacs
-- [x] Change the telescope config
