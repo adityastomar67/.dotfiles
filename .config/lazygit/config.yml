@@ -8,7 +8,7 @@ os:
 
 customCommands:
   - key: "Z"
-    command: "git cz"
+    command: "npx cz"
     context: "files"
     loadingText: "opening commitizen commit tool"
     subprocess: true
