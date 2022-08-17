@@ -37,6 +37,7 @@ EOF
 plugins=(
   z
   zsh-autosuggestions
+  zsh_codex
   fast-syntax-highlighting
   git
   history

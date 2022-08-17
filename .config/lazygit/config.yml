@@ -5,3 +5,10 @@ git:
 
 os:
   editCommand: 'nvim'
+
+customCommands:
+  - key: "Z"
+    command: "git cz"
+    context: "files"
+    loadingText: "opening commitizen commit tool"
+    subprocess: true
