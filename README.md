@@ -32,5 +32,5 @@ A bunch of files that start with .(dot) and makes linux more awesome.
 
 
 ### Tasks
-
+- [ ] Maintain File Structure 
 - [ ] screen-256 & xterm-256 color conflict solution
