@@ -60,8 +60,8 @@ source ~/.oh-my-zsh/oh-my-zsh.sh # For plugins
 
 ## Calling scrpits and Operations
 echo -en "\x1b[2J\x1b[1;1H" ;echo # For faster clearing the Terminal
-# motivate                          # Random Motivational Quotes
-header ;echo                      # Header for adityastomar67
+motivate ;echo                    # Random Motivational Quotes
+# header ;echo                      # Header for adityastomar67
 set -o vi                         # Vi-mode
 
 ## Tmux Launching
