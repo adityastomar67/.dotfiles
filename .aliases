@@ -197,7 +197,8 @@ alias x='chmod +x'
 alias porn='mpv "http://www.pornhub.com/random"'
 alias ip='curl ipinfo.io/ip'
 alias :q='exit'
-alias pip-update='pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U'
+alias pip-update='sudo pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U'
+alias npm-update='sudo npm install npm@latest -g'
 
 # alias todoe='nvim ~/Dropbox/writing/notes/To-do.md'
 alias nvconfig="nvim ~/.config/nvim/"
@@ -282,8 +283,8 @@ alias pacfiles='pacman -F'
 alias pacls='pacman -Ql'
 alias pacown='pacman -Qo'
 alias pacupd="sudo pacman -Sy"
-alias upgrade='sudo pacman -Syyu'
-alias update='sudo pacman -Syu'
+alias upgrade='npm-update; pip-update; sudo pacman -Syyu'
+alias update='sudo pacman -Syyu'
 alias unlock='sudo rm /var/lib/pacman/db.lck'
 alias cleanup='sudo pacman -Rns (pacman -Qtdq)'
 
