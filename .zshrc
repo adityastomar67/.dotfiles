@@ -51,8 +51,8 @@ bindkey '^X' create_completion
 
 source ~/.oh-my-zsh/oh-my-zsh.sh # For plugins
 ## Sourcing other files
-[ -f "$HOME/.functions" ]                     && source ~/.functions                     # functions to improve productivity
 [ -f "$HOME/.aliases" ]                       && source ~/.aliases                       # Aliases - For a full list of active aliases, run `alias`.
+[ -f "$HOME/.functions" ]                     && source ~/.functions                     # functions to improve productivity
 [ -f "$HOME/src/bitwarden_completion.zsh" ]   && source ~/src/bitwarden_completion.zsh   # For Bitwarden completion
 [ -f "$HOME/.alias_temp" ]                    && source $HOME/.alias_temp                # Temporary Aliases for Trials
 # [ -f "$HOME/src/exercism_completion.zsh" ]    && source ~/src/exercism_completion.zsh    # For exercism completion

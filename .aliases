@@ -47,10 +47,6 @@ if [ $(command -v ranger) ]; then
     alias fm="ranger"
 fi
 
-if [ $(command -v lazygit) ]; then
-    alias lz="lazygit"
-fi
-
 if [ $(command -v broot) ]; then
     alias br='broot -dhp'
     alias bs='broot --sizes'
