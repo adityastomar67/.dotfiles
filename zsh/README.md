@@ -13,6 +13,7 @@ If the reader is well versed or, has a general experience with shell scripting o
 
 ```zsh
 :: env.zsh       -    environment variables
+:: fzf.zsh       -    fzf functions
 :: keys.zsh      -    ZSH keybindings
 :: opts.zsh      -    ZSH options and ZSH plugin options
 :: plugs.zsh     -    plugins and plugin manager setup
