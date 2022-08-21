@@ -65,5 +65,4 @@ motivate ;echo                    # Random Motivational Quotes
 set -o vi                         # Vi-mode
 
 ## Tmux Launching
-if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then command tmux -2; fi # -2 flag for TMUX to enable 256 colors
-# if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then exec tmux -2; fi # -2 flag for TMUX to enable 256 colors, this closes terminal after the closing of the server
+if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then command tmux -2; fi # -2 flag for TMUX to enable 256 colors, use exec in place of command to make terminal close after exiting
