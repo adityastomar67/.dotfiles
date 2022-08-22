@@ -1,9 +1,9 @@
-"         __                     
+"         __
 " .--.--.|__|.--------.----.----.
 " |  |  ||  ||        |   _|  __|
 "  \___/ |__||__|__|__|__| |____|
 "
-" REQUIRED {{{ 
+" REQUIRED {{{
 
 runtime! debian.vim
 
@@ -29,7 +29,7 @@ call vundle#begin('~/.vim/plugins')
         Plugin 'dylanaraps/wal.vim'
 
         " Must have
-        Plugin 'tpope/vim-surround'    
+        Plugin 'tpope/vim-surround'
         Plugin 'junegunn/goyo.vim'
         Plugin 'neoclide/coc.nvim', {'branch': 'release'}
         Plugin 'farmergreg/vim-lastplace'
@@ -80,13 +80,13 @@ set ignorecase				" Do case insensitive matching
 set smartcase				" Do smart case matching
 set clipboard+=unnamedplus	" Use System Clipboard
 set mouse=a					" Enable mouse usage (all modes)
-set tabstop=4     
-set shiftwidth=4  
-set softtabstop=4 
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set spelllang=en_us
-set fillchars+=vert:│,fold:-,eob:\ 
+set fillchars+=vert:│,fold:-,eob:\
 set nolist
-set listchars=tab:│\ 
+set listchars=tab:│\
 
 colorscheme wal
 hi Normal ctermbg=NONE
@@ -153,7 +153,7 @@ let g:startify_bookmarks = [
 		\ { 'w': '~/vimwiki/index.wiki' },
 		\]
 
-let g:startify_custom_header = [ "", 
+let g:startify_custom_header = [ "",
 	\ "",
 	\ "	███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗		",
 	\ "	██��█╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║      ",
@@ -245,7 +245,7 @@ let g:NERDCommentEmptyLines = 0
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
 
-" Enable NERDCommenterToggle to check all selected lines is commented or not 
+" Enable NERDCommenterToggle to check all selected lines is commented or not
 let g:NERDToggleCheckAllLines = 1
 
 " }}}
@@ -256,7 +256,7 @@ let g:goyo_width = 80
 let g:goyo_height = 30
 let g:goyo_liner = 0
 
-map <silent> <leader>gy :Goyo<CR> 
+map <silent> <leader>gy :Goyo<CR>
 
 " }}}
 
@@ -422,7 +422,7 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " LATEX PREVIEW {{{
 
 let g:livepreview_previewer = 'zathura'
-let g:livepreview_engine = 'xelatex' 
+let g:livepreview_engine = 'xelatex'
 
 map <leader>lp :LLPStartPreview<CR>
 
@@ -444,7 +444,7 @@ let g:fzf_preview_window = ['up:40%:hidden', 'ctrl-/']
 " Empty value to disable preview window altogether
 let g:fzf_preview_window = []
 
- 
+
 nnoremap <leader>g :GFiles<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>f :Files<CR>
@@ -467,7 +467,7 @@ nnoremap <A-c> :bnext<CR>
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
 nnoremap <silent> <A-t> :TabVifm<CR>
-nnoremap <silent> <A-n> :tabnew<CR> 
+nnoremap <silent> <A-n> :tabnew<CR>
 nnoremap <silent> <A-,> :tabmove -<CR>
 nnoremap <silent> <A-.> :tabmove +<CR>
 
