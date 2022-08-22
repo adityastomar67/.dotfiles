@@ -194,6 +194,7 @@ alias porn='mpv "http://www.pornhub.com/random"'
 alias ip='curl ipinfo.io/ip'
 alias :q='exit'
 alias pip-update='sudo pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U'
+
 alias npm-update='sudo npm install npm@latest -g'
 
 # alias todoe='nvim ~/Dropbox/writing/notes/To-do.md'
@@ -364,7 +365,7 @@ alias ggpush='git push origin "$(git_current_branch)"'
 alias ggsup='git branch --set-upstream-to=origin/$(git_current_branch)'
 alias ghh='git help'
 alias gignore='git update-index --assume-unchanged'
-alias gignored='git ls-files -v | grep "^[[:lower:]]"'
+alias gignored=`git ls-files -v | grep "^[[:lower:]]"`
 alias git-svn-dcommit-push='git svn dcommit && git push github $(git_main_branch):svntrunk'
 alias gk='\gitk --all --branches &!'
 alias gke='\gitk --all $(git log -g --pretty=%h) &!'
@@ -471,7 +472,6 @@ alias lS='ls -1FSsh'
 alias lart='ls -1Fcart'
 alias lrt='ls -1Fcrt'
 
-alias grep='grep --color'
 alias grepin='grep -i'
 alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,CVS} '
 
@@ -484,6 +484,7 @@ alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 alias -g H='| head'
 alias -g T='| tail'
 alias -g G='| grep'
+alias -g S='| sed'
 alias -g L="| less"
 alias -g M="| most"
 alias -g LL="2>&1 | less"
