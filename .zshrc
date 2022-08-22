@@ -10,15 +10,15 @@
 ## Sourcing setup files
 while read file
 do
-  source "$HOME/zsh/$file.zsh"
+  [ -f "$HOME/zsh/$file.zsh" ] && source "$HOME/zsh/$file.zsh"
 done <<-EOF
-theme
+#theme
 env
-plugs
+#plugs
 opts
 keys
 prompt
-fzf
+#fzf
 EOF
 
 ## Directories Generation if not present already.
@@ -50,6 +50,7 @@ zle -N create_completion
 bindkey '^X' create_completion
 
 source ~/.oh-my-zsh/oh-my-zsh.sh # For plugins
+
 ## Sourcing other files
 [ -f "$HOME/.aliases" ]                       && source ~/.aliases                       # Aliases - For a full list of active aliases, run `alias`.
 [ -f "$HOME/.functions" ]                     && source ~/.functions                     # functions to improve productivity

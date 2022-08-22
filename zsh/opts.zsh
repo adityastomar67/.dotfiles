@@ -84,7 +84,7 @@ COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="mm/dd/yyyy"
 
 while read -r option
-do 
+do
   setopt $option
 done <<-EOF
 AUTOCD
