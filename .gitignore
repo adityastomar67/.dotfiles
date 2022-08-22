@@ -57,3 +57,9 @@ todo.md
 .config/nvim/plugin
 
 .config/nvim/plugin/packer_compiled.lua
+.config/cmus/playlists
+.config/cmus/autosave
+.config/cmus/cache
+.config/cmus/command-history
+.config/cmus/lib.pl
+.config/cmus/search-history
