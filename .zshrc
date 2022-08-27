@@ -37,18 +37,13 @@ EOF
 plugins=(
   z
   zsh-autosuggestions
-  zsh_codex
   fast-syntax-highlighting
   git
   history
   web-search
   copybuffer
   dirhistory
-  forgit
 )
-zle -N create_completion
-bindkey '^X' create_completion
-
 source ~/.oh-my-zsh/oh-my-zsh.sh # For plugins
 
 ## Sourcing other files
