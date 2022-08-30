@@ -30,7 +30,7 @@ A bunch of files that start with .(dot) and makes linux more awesome.
 Run this code snippet in your terminal **(Coming soon...)**
 ```bash
 curl -sL https://raw.githubusercontent.com/adityastomar67/Fresh-Install/master/Fresh-Install.sh | sh -s -- --dots
-
+```
 
 # TODO For this Repo
 
