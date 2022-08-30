@@ -4,11 +4,12 @@ mkdir -p $HOME/.config/wall/Wallpapers
 [ -d "$HOME/.config/wall/Wallpapers" ] && rm -rf ~/.config/wall/Wallpapers
 
 cd ~/.config/wall/
-if [ -f 'wall1.jpg' ]; then
+if [ -f 'wall*' ]; then
+    echo "yes"
   command rm wall*
 fi
 
-git clone https://github.com/adityastomar67/Wallpapers 
+git clone https://github.com/adityastomar67/Wallpapers
 mv ~/.config/wall/Wallpapers/wall* .
 rm -rf ~/.config/wall/Wallpapers
 ls | grep "wall[0-9]*.png" > list.txt
