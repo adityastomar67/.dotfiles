@@ -26,11 +26,14 @@ A bunch of files that start with .(dot) and makes linux more awesome.
 █▄█ ░█░   ░░   █▀█ █▄▀ █ ░█░ ░█░ █▀█ ▄█ ░█░ █▄█ █░▀░█ █▀█ █▀▄ █▄█ ░░█
 ```
 
+## For Complete Automated install
+Run this code snippet in your terminal **(Coming soon...)**
+```bash
+curl -sL https://raw.githubusercontent.com/adityastomar67/Fresh-Install/master/Fresh-Install.sh | sh -s -- --dots
+
 
 # TODO For this Repo
 
-
-
 ### Tasks
-- [ ] Maintain File Structure 
+- [ ] Maintain File Structure
 - [ ] screen-256 & xterm-256 color conflict solution
