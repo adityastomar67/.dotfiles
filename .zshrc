@@ -18,7 +18,7 @@ env
 opts
 keys
 prompt
-#fzf
+fzf
 EOF
 
 ## Directories Generation if not present already.
