@@ -203,6 +203,7 @@ alias zedit="nvim ~/.zshrc"
 alias bedit="nvim ~/.bashrc"
 alias fedit="nvim $XDG_CONFIG_HOME/fish/config.fish"
 alias visudo="nvim /etc/sudoers"
+alias vim="vim -u ~/.config/vim/.vimrc"
 
 alias reboot="sudo /sbin/reboot"
 alias poweroff="sudo /sbin/poweroff"

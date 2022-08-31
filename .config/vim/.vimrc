@@ -9,9 +9,9 @@ runtime! debian.vim
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
-source $HOME/.filetype.vim
-source $HOME/.abbreviations.vim
-source $HOME/.keybindings.vim
+source $HOME/.config/vim/.filetype.vim
+source $HOME/.config/vim/.abbreviations.vim
+source $HOME/.config/vim/.keybindings.vim
 
 " }}}
 
