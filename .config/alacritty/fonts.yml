@@ -5,22 +5,22 @@
 font:
   # Normal (roman) font face
   normal:
-    family: "Operator Mono Lig"
+    family: "Cascursive"
     style: Regular
 
   # Bold font face
   bold:
-    family: "Operator Mono Lig"
+    family: "Cascursive"
     style: Bold
 
   # Italic font face
   italic:
-    family: "Operator Mono Lig"
+    family: "Cascursive"
     style: Italic
 
   # Bold italic font face
   bold_italic:
-    family: "Operator Mono Lig"
+    family: "Cascursive"
     style: Bold Italic
 
   # Point size
