@@ -34,6 +34,21 @@ A bunch of files that start with .(dot) and makes linux more awesome.
 - Shell     : [zsh](https://wiki.archlinux.org/index.php/Zsh)
 - ASCII     : [fsymbols](https://fsymbols.com/text-art)
 
+| Program                             | Name                                                                                                                           |
+| :---                                | :---                                                                                                                           |
+| Linux Distribution                  | [Arch Linux](https://www.archlinux.org/)                                                                                       |
+| Window Manager                      | [bspwm](https://github.com/baskerville/bspwm)                                                                                  |
+| Bar                                 | [polybar](https://github.com/jaagr/polybar)                                                                                    |
+| Program Launcher                    | [rofi](https://github.com/DaveDavenport/rofi)                                                                                  |
+| Wallpaper Setter                    | [feh](https://github.com/derf/feh)                                                                                             |
+| Web Browser                         | [Firefox](https://firefox.com)                                                                                                 |
+| Code Editor                         | [Nvim](https://neovim.io/)                                                                                                     |
+| Text editors/Terminal font          | [Cascursive](https://github.com/sainnhe/icursive-nerd-font)                                                                    |
+| Shell                               | [zsh](https://www.zsh.org/)                                                                                                    |
+| Terminal Emulator                   | [st](https://st.suckless.org/), [Alacritty](https://github.com/alacritty/alacritty)                                            |
+| Document Viewer                     | [Zathura](https://pwmt.org/projects/zathura/)                                                                                  |
+| Music Player                        | [ncmpcpp/mpd](https://github.com/ncmpcpp/ncmpcpp)                                                                              |
+| Lockscreen                          | [i3lock-color(v2.13c2+)](https://github.com/Raymo111/i3lock-color)    
 
 
 
