@@ -73,6 +73,7 @@ static unsigned int cursorthickness = 2;
  */
 static int bellvolume = 0;
 
+float alpha = 0.8;
 /* default TERM value */
 char *termname = "st-256color";
 
