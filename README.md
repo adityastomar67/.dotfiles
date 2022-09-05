@@ -40,10 +40,13 @@ A bunch of files that start with .(dot) and makes linux more awesome.
 | Lockscreen                          | [i3lock-color(v2.13c2+)](https://github.com/Raymo111/i3lock-color)                                                            |
 | ASCII Art                           | [fsymbols](https://fsymbols.com/text-art)                                                                                      |
 
+## Installation
+I suggest you to go through configs and cherrypick what you need. Might be time consuming, but will provide you a setup you're happy with.
+
+Though if you simply wish to clone my setup on your machine, first step is to install the applications I use on your distro. The major ones are listed above.
 
 
-
-## For Complete Automated install
+### For Complete Automated install
 Run this code snippet in your terminal **(Coming soon...)**
 ```bash
 curl -sL https://raw.githubusercontent.com/adityastomar67/Fresh-Install/master/Fresh-Install.sh | sh -s -- --dots
