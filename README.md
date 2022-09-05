@@ -4,6 +4,7 @@
 ▀  ▀    ▀▀▀ ▀▀▀ ▀▀▀ ▀▀▀
 A bunch of files that start with .(dot) and makes linux more awesome.
 ```
+<hr>
 
 - OS        : [Archcraft Linux](https://archcraft.io/)
 - WM.       : [bspwm](https://wiki.archlinux.org/index.php/Bspwm)
