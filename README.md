@@ -22,41 +22,26 @@ A bunch of files that start with .(dot) and makes linux more awesome.
 <img alt="Last Updated" src="https://img.shields.io/github/last-commit/adityastomar67/.dotfiles?style=flat&color=e06c75&label="> </a>
 </div>
 
-
-- OS        : [Archcraft Linux](https://archcraft.io/)
-- WM.       : [bspwm](https://wiki.archlinux.org/index.php/Bspwm)
-- Bar       : [Polybar](https://github.com/polybar/polybar)
-- Menu      : [Rofi](https://github.com/adityastomar67/.dotfiles/tree/master/.config/rofi)
-- Startpage : [Termstart](https://github.com/adityastomar67/.dotfiles/tree/master/startpage/termstart)
-- Editor.   : [Neovim](https://neovim.org/)
-- Font      : [Operator Mono](https://github.com/kiliman/operator-mono-lig)
-- Terminal  : [Alacritty](https://github.com/alacritty/alacritty)
-- Shell     : [zsh](https://wiki.archlinux.org/index.php/Zsh)
-- ASCII     : [fsymbols](https://fsymbols.com/text-art)
-
 | Program                             | Name                                                                                                                           |
 | :---                                | :---                                                                                                                           |
 | Linux Distribution                  | [Arch Linux](https://www.archlinux.org/)                                                                                       |
 | Window Manager                      | [bspwm](https://github.com/baskerville/bspwm)                                                                                  |
-| Bar                                 | [polybar](https://github.com/jaagr/polybar)                                                                                    |
+| Bar                                 | [polybar](https://github.com/jaagr/polybar) (Hidden)                                                                           |
 | Program Launcher                    | [rofi](https://github.com/DaveDavenport/rofi)                                                                                  |
 | Wallpaper Setter                    | [feh](https://github.com/derf/feh)                                                                                             |
 | Web Browser                         | [Firefox](https://firefox.com)                                                                                                 |
+| Startpage                           | [Termstart](https://github.com/adityastomar67/.dotfiles/tree/master/startpage/termstart)                                       |
 | Code Editor                         | [Nvim](https://neovim.io/)                                                                                                     |
 | Text editors/Terminal font          | [Cascursive](https://github.com/sainnhe/icursive-nerd-font)                                                                    |
 | Shell                               | [zsh](https://www.zsh.org/)                                                                                                    |
 | Terminal Emulator                   | [st](https://st.suckless.org/), [Alacritty](https://github.com/alacritty/alacritty)                                            |
 | Document Viewer                     | [Zathura](https://pwmt.org/projects/zathura/)                                                                                  |
 | Music Player                        | [ncmpcpp/mpd](https://github.com/ncmpcpp/ncmpcpp)                                                                              |
-| Lockscreen                          | [i3lock-color(v2.13c2+)](https://github.com/Raymo111/i3lock-color)    
+| Lockscreen                          | [i3lock-color(v2.13c2+)](https://github.com/Raymo111/i3lock-color)                                                            |
+| ASCII Art                           | [fsymbols](https://fsymbols.com/text-art)                                                                                      |
 
 
 
-
-```
-█▄▄ █▄█   ▄▄   ▄▀█ █▀▄ █ ▀█▀ █▄█ ▄▀█ █▀ ▀█▀ █▀█ █▀▄▀█ ▄▀█ █▀█ █▄▄ ▀▀█
-█▄█ ░█░   ░░   █▀█ █▄▀ █ ░█░ ░█░ █▀█ ▄█ ░█░ █▄█ █░▀░█ █▀█ █▀▄ █▄█ ░░█
-```
 
 ## For Complete Automated install
 Run this code snippet in your terminal **(Coming soon...)**
