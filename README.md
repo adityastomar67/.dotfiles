@@ -37,7 +37,7 @@ A bunch of files that start with .(dot) and makes linux more awesome.
 | Terminal Emulator                   | [st](https://st.suckless.org/), [Alacritty](https://github.com/alacritty/alacritty)                                            |
 | Document Viewer                     | [Zathura](https://pwmt.org/projects/zathura/)                                                                                  |
 | Music Player                        | [ncmpcpp/mpd](https://github.com/ncmpcpp/ncmpcpp)                                                                              |
-| Lockscreen                          | [i3lock-color(v2.13c2+)](https://github.com/Raymo111/i3lock-color)                                                            |
+| Lockscreen                          | [i3lock-color(v2.13c2+)](https://github.com/Raymo111/i3lock-color)                                                             |
 | ASCII Art                           | [fsymbols](https://fsymbols.com/text-art)                                                                                      |
 
 ## Installation

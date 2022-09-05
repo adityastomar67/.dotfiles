@@ -66,7 +66,7 @@ zstyle ':autocomplete:*' add-space executables aliases functions builtins reserv
 
 # complete -C aws_completer aws
 
-HISTFILE="$XDG_CACHE_HOME/zsh/.zhistory"
+HISTFILE="$HOME/.zsh_history"
 HISTSIZE=50000
 SAVEHIST=50000
 HISTTIMEFORMAT="%Y/%m/%d %H:%M:%S:   "

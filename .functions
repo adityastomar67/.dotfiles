@@ -6,6 +6,13 @@
 # ██╗██║░░░░░╚██████╔╝██║░╚███║╚█████╔╝░░░██║░░░██║╚█████╔╝██║░╚███║██████╔╝
 # ╚═╝╚═╝░░░░░░╚═════╝░╚═╝░░╚══╝░╚════╝░░░░╚═╝░░░╚═╝░╚════╝░╚═╝░░╚══╝╚═════╝░
 
+# Mini-Commit
+function comit(){
+    git add .
+    commit -m "$1"
+    git push origin HEAD
+}
+
 # For Launcing NeoVim and SudoEdit with same command
 function v() {
     # [ ! -f $1 ] && nvim $1 && retu gccrn

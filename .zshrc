@@ -29,8 +29,6 @@ done <<-EOF
 Downloads/git-repos
 Downloads/torrents
 Workspace
-Study-Material
-.nano-backups
 .Trash
 EOF
 
