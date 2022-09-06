@@ -57,3 +57,4 @@ curl -sL https://raw.githubusercontent.com/adityastomar67/Fresh-Install/master/F
 ### Tasks
 - [ ] Maintain File Structure
 - [ ] screen-256 & xterm-256 color conflict solution
+- [ ] Add dependency installation guide
