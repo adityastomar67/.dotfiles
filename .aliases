@@ -106,13 +106,13 @@ fi
 
 alias d="cd ~/Documents/"
 alias dl="cd ~/Downloads"
-alias dt="cd ~/.dotfiles && clrscr && ls --grid && echo"
+alias dt="cd ~/.dotfiles && clr && ls --grid && echo"
 alias p="cd ~/Projects"
 alias wk='cd ~/Workspace'
 
 alias tsm='transmission-cli -D -u 10 -w ~/Downloads/torrents'
 alias zth='zathura'
-alias f="fzf"
+alias f="clr && fzf"
 alias music="youtube-viewer"
 alias anime="ani-cli"
 alias flix="notflix"
