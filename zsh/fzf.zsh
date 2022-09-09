@@ -226,7 +226,7 @@ export FZF_DEFAULT_OPTS="
   --color pointer:$base07
   --color marker:$base03
   --color border:$background
-  --color gutter:$base00
+  --color gutter:-1
   --color info:$base05
   --color header:$base08
   --bind 'ctrl-j:preview-down'
@@ -241,6 +241,6 @@ export FZF_DEFAULT_OPTS="
   --prompt '  '
   --pointer ' '
   --layout=reverse
-  --border horizontal
+  --border none
   --height 40"
 export FZF_DEFAULT_COMMAND='fd --hidden --follow'
