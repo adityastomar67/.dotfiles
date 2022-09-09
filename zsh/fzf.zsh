@@ -212,3 +212,35 @@ function _fzf_comprun() {
         *)            fzf "$@" ;;
     esac
 }
+
+# FZF Defaults
+export FZF_DEFAULT_OPTS="
+  --color fg:$base07
+  --color fg+:$base00
+  --color bg+:$base09
+  --color hl:$base10
+  --color hl+:$base15
+  --color info:$base02
+  --color prompt:$base01
+  --color spinner:$base12
+  --color pointer:$base07
+  --color marker:$base03
+  --color border:$background
+  --color gutter:$base00
+  --color info:$base05
+  --color header:$base08
+  --bind 'ctrl-j:preview-down'
+  --bind 'ctrl-k:preview-up'
+  --bind 'ctrl-a:select-all'
+  --bind 'ctrl-y:execute-silent(echo {+} | pbcopy)'
+  --bind 'ctrl-e:execute(echo {+} | xargs -o nvim)'
+  --bind 'Return:execute(echo {+} | xargs -o nvim)'
+  --bind 'ctrl-v:execute(code {+})'
+  --bind tab:down,shift-tab:up
+  --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
+  --prompt '  '
+  --pointer ' '
+  --layout=reverse
+  --border horizontal
+  --height 40"
+export FZF_DEFAULT_COMMAND='fd --hidden --follow'

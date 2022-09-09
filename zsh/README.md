@@ -21,7 +21,7 @@ If the reader is well versed or, has a general experience with shell scripting o
 :: theme.zsh     -    ZSH LC_COLORS colors and FZF opt colors
 ```
 
-#### To Install ZSH alone frome this config, run this command
+#### To Install ZSH alone frome this config, run this command (Coming Soon!!)
 ```bash
 curl -sL https://raw.githubusercontent.com/adityastomar67/Fresh-Install/master/Fresh-Install.sh | sh -s -- --zsh
 ```
