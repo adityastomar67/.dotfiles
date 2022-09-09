@@ -5,7 +5,7 @@
 
 #### Installation
 
-Noting really, if you have ZSH installed then you can just symlink the `home/.zshenv` to `$HOME` and run zsh. All of the plugins will be downloaded automatically as it is bootstrapped.
+Noting really, if you have ZSH installed then you can just symlink the `.dotfiles/zsh` to `$HOME` and run zsh. All of the plugins will be downloaded automatically as it is bootstrapped.
 
 #### Before we proceed
 
@@ -19,4 +19,9 @@ If the reader is well versed or, has a general experience with shell scripting o
 :: plugs.zsh     -    plugins and plugin manager setup
 :: prompt.zsh    -    ZSH prompt custom made
 :: theme.zsh     -    ZSH LC_COLORS colors and FZF opt colors
+```
+
+#### To Install ZSH alone frome this config, run this command
+```bash
+curl -sL https://raw.githubusercontent.com/adityastomar67/Fresh-Install/master/Fresh-Install.sh | sh -s -- --zsh
 ```
