@@ -12,9 +12,9 @@ while read file
 do
   [ -f "$HOME/zsh/$file.zsh" ] && source "$HOME/zsh/$file.zsh"
 done <<-EOF
-#theme
+# theme
 env
-#plugs
+# plugs
 opts
 keys
 prompt
