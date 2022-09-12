@@ -593,3 +593,7 @@ function lz()
     fi
 }
 fi
+
+## Not Working correcly...Need to check
+# fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim
+
