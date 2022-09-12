@@ -73,7 +73,9 @@ static unsigned int cursorthickness = 2;
  */
 static int bellvolume = 0;
 
-float alpha = 0.8;
+// For the transparency
+float alpha = 0.6;
+
 /* default TERM value */
 char *termname = "st-256color";
 
@@ -118,7 +120,7 @@ static const char *colorname[] = {
 	"#A6ADC8",
 
 [256] = "#CDD6F4", /* default foreground colour */
-[257] = "#1E1E2E", /* default background colour */
+[257] = "#000000", /* default background colour */
 [258] = "#F5E0DC", /*575268*/
 
 };
