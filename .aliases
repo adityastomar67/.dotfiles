@@ -104,11 +104,11 @@ if [ $(command -v emacs) ]; then
     alias doomupgrade="~/.emacs.d/bin/doom upgrade"
 fi
 
-alias d="cd ~/Documents/"
-alias dl="cd ~/Downloads"
+alias dc="cd ~/Documents && clr && ls --grid && echo"
+alias dl="cd ~/Downloads && clr && ls --grid && echo"
 alias dt="cd ~/.dotfiles && clr && ls --grid && echo"
-alias p="cd ~/Projects"
-alias wk='cd ~/Workspace'
+alias wk="cd ~/Workspace && clr && ls --grid && echo"
+alias pj="cd ~/Projects && clr && ls --grid && echo"
 
 alias tsm='transmission-cli -D -u 10 -w ~/Downloads/torrents'
 alias zth='zathura'
