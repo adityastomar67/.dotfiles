@@ -5,7 +5,7 @@
 
 #### Installation
 
-Noting really, if you have ZSH installed then you can just symlink the `.dotfiles/zsh` to `$HOME` and run zsh. All of the plugins will be downloaded automatically as it is bootstrapped.
+Noting really, if you have ZSH installed then you can just symlink the `.dotfiles/zsh` to `$HOME` and run `source $HOME/zsh/.zshrc`. All of the plugins will be downloaded automatically including oh-my-zsh as it is completely bootstrapped.
 
 #### Before we proceed
 
