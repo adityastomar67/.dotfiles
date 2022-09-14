@@ -234,7 +234,6 @@ export FZF_DEFAULT_OPTS="
   --bind 'ctrl-a:select-all'
   --bind 'ctrl-y:execute-silent(echo {+} | pbcopy)'
   --bind 'ctrl-e:execute(echo {+} | xargs -o nvim)'
-  --bind 'Return:execute(echo {+} | xargs -o nvim)'
   --bind 'ctrl-v:execute(code {+})'
   --bind tab:down,shift-tab:up
   --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
