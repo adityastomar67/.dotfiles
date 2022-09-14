@@ -22,6 +22,10 @@
 A bunch of files that start with .(dot) and makes linux more awesome.
 ```
 
+![Screenshot](https://github.com/adityastomar67/.dotfiles/blob/master/bin/img/Screenshot.png)
+
+## List of Common Dependencies
+
 | Program                             | Name                                                                                                                           |
 | :---                                | :---                                                                                                                           |
 | Linux Distribution                  | [Arch Linux](https://www.archlinux.org/)                                                                                       |
