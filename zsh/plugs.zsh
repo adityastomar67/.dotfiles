@@ -50,7 +50,7 @@ then
 if [ -r ~/zsh/.zshrc ]; then
     source ~/zsh/.zshrc
 fi
-    " > .zshrc
+    " > $HOME/.zshrc
 fi
 
 plugins=(
