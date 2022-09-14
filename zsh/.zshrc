@@ -12,13 +12,13 @@ while read file
 do
   [ -f "$HOME/zsh/$file.zsh" ] && source "$HOME/zsh/$file.zsh"
 done <<-EOF
-# theme
-env
-plugs
-opts
-keys
-prompt
-fzf
+    # theme
+    env
+    plugs
+    opts
+    keys
+    prompt
+    fzf
 EOF
 
 ## Directories Generation if not present already.
