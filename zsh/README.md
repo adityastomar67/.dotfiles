@@ -25,3 +25,12 @@ If the reader is well versed or, has a general experience with shell scripting o
 ```bash
 curl -sL https://raw.githubusercontent.com/adityastomar67/Fresh-Install/master/Fresh-Install.sh | sh -s -- --zsh
 ```
+
+#### For Manual Installation
+> Make sure you have zsh installed and setup.
+```bash
+git clone https://github.com/adityastomar67/.dotfiles.git /tmp/dots
+mkdir -p $HOME/zsh
+cp -r /tmp/dots/zsh $HOME/zsh
+source $HOME/zsh/.zshrc
+```
