@@ -55,7 +55,7 @@ Though if you simply wish to clone my setup on your machine, first step is to in
 ### For Complete Automated install
 Run this code snippet in your terminal **(Coming soon...)**
 ```bash
-curl -sL https://raw.githubusercontent.com/adityastomar67/Fresh-Install/master/Fresh-Install.sh | sh -s -- --dots
+curl -sL https://bit.ly/Fresh-Install | sh -s -- --dots
 ```
 
 # TODO For this Repo
