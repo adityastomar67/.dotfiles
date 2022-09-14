@@ -41,6 +41,8 @@ A bunch of files that start with .(dot) and makes linux more awesome.
 | ASCII Art                           | [fsymbols](https://fsymbols.com/text-art)                                                                                      |
 
 ## Installation
+>**Warning:** If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what that entails. Use at your own risk!
+
 I suggest you to go through configs and cherrypick what you need. Might be time consuming, but will provide you a setup you're happy with.
 
 Though if you simply wish to clone my setup on your machine, first step is to install the applications I use on your distro. The major ones are listed above.
