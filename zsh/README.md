@@ -30,7 +30,6 @@ curl -sL https://raw.githubusercontent.com/adityastomar67/Fresh-Install/master/F
 > Make sure you have zsh installed and setup.
 ```bash
 git clone https://github.com/adityastomar67/.dotfiles.git /tmp/dots
-mkdir -p $HOME/zsh
 cp -r /tmp/dots/zsh $HOME/zsh
 source $HOME/zsh/.zshrc
 ```
