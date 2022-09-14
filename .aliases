@@ -9,6 +9,9 @@
 ## Example aliases
 # alias "alias_name"=<alias_command>
 
+# Use neovim for vim if present.
+[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+
 if [ $(command -v exa) ]; then
     alias ls='clr && exa -al --color=always --icons --git --group-directories-first'
     # alias ls='echo " \033[3;4:2;33mDirectory --> $(pwd)\033[23;4:0m\n" && exa -al --color=always --icons --git --group-directories-first'
@@ -554,3 +557,8 @@ alias luamake="$HOME/.opt/lua-language-server/3rd/luamake/luamake"
 # Tmux Aliases
 alias attach='tmux attach -t'
 alias lsmux="tmux ls"
+
+# sudo not required for some system commands
+for command in mount umount sv pacman updatedb su shutdown poweroff reboot ; do
+	alias $command="sudo $command"
+done; unset command
