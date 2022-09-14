@@ -14,7 +14,7 @@ do
 done <<-EOF
 # theme
 env
-# plugs
+plugs
 opts
 keys
 prompt
@@ -31,18 +31,6 @@ Downloads/torrents
 Workspace
 .Trash
 EOF
-
-plugins=(
-  z
-  zsh-autosuggestions
-  fast-syntax-highlighting
-  git
-  history
-  web-search
-  copybuffer
-  dirhistory
-)
-source ~/.oh-my-zsh/oh-my-zsh.sh # For plugins
 
 ## Sourcing other files
 [ -f "$HOME/.aliases" ]                       && source ~/.aliases                       # Aliases - For a full list of active aliases, run `alias`.
