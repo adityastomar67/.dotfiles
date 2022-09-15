@@ -1,5 +1,7 @@
-## zinit setup
+OMZ_HOME="$HOME/.oh-my-zsh"
 ZINIT_HOME="$XDG_DATA_HOME/zsh/zinit"
+
+## zinit setup
 if [ ! -d "$ZINIT_HOME" ]
 then
     echo "ZINIT not found. Cloning..."
@@ -23,9 +25,7 @@ use zdharma-continuum/fast-syntax-highlighting
 use MichaelAquilina/zsh-you-should-use
 use zsh-users/zsh-autosuggestions
 use Aloxaf/fzf-tab
-
-# FZF tab is better. Fight me.
-# use marlonrichert/zsh-autocomplete
+use marlonrichert/zsh-autocomplete
 
 ice wait'3' lucid
 load zsh-users/zsh-history-substring-search
@@ -38,19 +38,16 @@ load zdharma-continuum/history-search-multi-word
 unalias use snip ice load
 
 ## oh-my-zsh setup
-OMZ_HOME="$HOME/.oh-my-zsh"
 if [ ! -d "$OMZ_HOME" ]
 then
     echo "OH-MY-ZSH not found. Cloning..."
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    echo "
-# This file was created by the dotfiles sourced zshrc by adityastomar67.
+    echo "# This file was created by the dotfiles sourced zshrc by adityastomar67.
 # Do not edit the file directly. Instead, add any settings overrides in this file.
 
 if [ -r ~/zsh/.zshrc ]; then
     source ~/zsh/.zshrc
-fi
-    " > $HOME/.zshrc
+fi" > $HOME/.zshrc
 fi
 
 plugins=(
