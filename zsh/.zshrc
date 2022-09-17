@@ -10,14 +10,6 @@ if [ ! -f "$HOME/.zshrc" ]; then
     touch "$HOME/.zshrc"
 fi
 
-echo "
-# This file was created by the dotfiles sourced zshrc by adityastomar67.
-# Do not edit the file directly. Instead, add any settings overrides in this file.
-if [ -r ~/zsh/.zshrc ]; then
-    source ~/zsh/.zshrc
-fi
-" > $HOME/.zshrc
-
 ## Sourcing setup files
 while read file
 do
@@ -50,6 +42,14 @@ EOF
 [ -f "$HOME/.alias_temp" ]                    && source $HOME/.alias_temp                # Temporary Aliases for Trials
 # [ -f "$HOME/src/exercism_completion.zsh" ]    && source ~/src/exercism_completion.zsh    # For exercism completion
 # [ -f "$HOME/src/spotify-tui_completion.zsh" ] && source ~/src/spotify-tui_completion.zsh # For Spotify-TUI completion
+
+echo "
+# This file was created by the dotfiles sourced zshrc by adityastomar67.
+# Do not edit the file directly. Instead, add any settings overrides in this file.
+if [ -r ~/zsh/.zshrc ]; then
+    source ~/zsh/.zshrc
+fi
+" > $HOME/.zshrc
 
 ## Calling scrpits and Operations
 echo -en "\x1b[2J\x1b[1;1H" ;echo # For faster clearing the Terminal
