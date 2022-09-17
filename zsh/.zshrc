@@ -6,6 +6,7 @@
 # ╚═╝╚══════╝╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░
 
 ## If you come from bash you might have to change your $PATH.
+[ ! -f "$HOME/.zshrc" ] && touch "$HOME/.zshrc"
 
 ## Sourcing setup files
 while read file
