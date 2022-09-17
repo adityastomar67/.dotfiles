@@ -52,4 +52,4 @@ plugins=(
   copybuffer
   dirhistory
 )
-source "$OMZ_HOME/oh-my-zsh.sh"
+# source "$OMZ_HOME/oh-my-zsh.sh"
