@@ -40,6 +40,7 @@ unalias use snip ice load
 ## oh-my-zsh setup
 if [ ! -d "$OMZ_HOME" ]
 then
+    [ ! -f "$HOME/.zshrc" ] && touch "$HOME/.zshrc"
     echo "OH-MY-ZSH not found. Cloning..."
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     echo "# This file was created by the dotfiles sourced zshrc by adityastomar67.
