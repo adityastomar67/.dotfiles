@@ -1,5 +1,5 @@
 OMZ_HOME="$HOME/.oh-my-zsh"
-ZINIT_HOME="$XDG_DATA_HOME/zsh/zinit"
+ZINIT_HOME="$HOME/.zinit"
 
 ## zinit setup
 if [ ! -d "$ZINIT_HOME" ]
