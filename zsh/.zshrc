@@ -6,7 +6,17 @@
 # ╚═╝╚══════╝╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░
 
 ## If you come from bash you might have to change your $PATH.
-[ ! -f "$HOME/.zshrc" ] && touch "$HOME/.zshrc"
+if [ ! -f "$HOME/.zshrc" ]; then
+    touch "$HOME/.zshrc"
+fi
+
+echo "
+# This file was created by the dotfiles sourced zshrc by adityastomar67.
+# Do not edit the file directly. Instead, add any settings overrides in this file.
+if [ -r ~/zsh/.zshrc ]; then
+    source ~/zsh/.zshrc
+fi
+" > $HOME/.zshrc
 
 ## Sourcing setup files
 while read file

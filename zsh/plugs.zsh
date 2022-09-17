@@ -42,12 +42,6 @@ if [ ! -d "$OMZ_HOME" ]
 then
     echo "OH-MY-ZSH not found. Cloning..."
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    echo "# This file was created by the dotfiles sourced zshrc by adityastomar67.
-# Do not edit the file directly. Instead, add any settings overrides in this file.
-
-if [ -r ~/zsh/.zshrc ]; then
-    source ~/zsh/.zshrc
-fi" > $HOME/.zshrc
 fi
 
 plugins=(
