@@ -23,9 +23,9 @@ while read file
 do
   [ -f "$HOME/zsh/$file.zsh" ] && source "$HOME/zsh/$file.zsh"
 done <<-EOF
+    plugs
     # theme
     env
-    plugs
     opts
     keys
     prompt
