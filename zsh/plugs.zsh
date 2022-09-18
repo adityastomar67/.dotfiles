@@ -5,7 +5,7 @@ ZINIT_HOME="$HOME/.zinit"
 if [ ! -d "$ZINIT_HOME" ]
 then
     echo "ZINIT not found. Cloning..."
-    sudo git clone --depth 1 https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+    git clone --depth 1 https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
 source "$ZINIT_HOME/zinit.zsh"
