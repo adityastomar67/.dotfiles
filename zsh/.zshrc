@@ -27,7 +27,7 @@ EOF
 ## Directories Generation if not present already.
 while read directory
 do
-  [ ! -d "$HOME/$directory" ] && command mkdir $HOME/$directory
+  [ ! -d "$HOME/$directory" ] && command mkdir -p $HOME/$directory
 done <<-EOF
 Downloads/git-repos
 Downloads/torrents
@@ -36,12 +36,8 @@ Workspace
 EOF
 
 ## Sourcing other files
-[ -f "$HOME/.aliases" ]                       && source ~/.aliases                       # Aliases - For a full list of active aliases, run `alias`.
-[ -f "$HOME/.functions" ]                     && source ~/.functions                     # functions to improve productivity
-[ -f "$HOME/src/bitwarden_completion.zsh" ]   && source ~/src/bitwarden_completion.zsh   # For Bitwarden completion
-[ -f "$HOME/.alias_temp" ]                    && source $HOME/.alias_temp                # Temporary Aliases for Trials
-# [ -f "$HOME/src/exercism_completion.zsh" ]    && source ~/src/exercism_completion.zsh    # For exercism completion
-# [ -f "$HOME/src/spotify-tui_completion.zsh" ] && source ~/src/spotify-tui_completion.zsh # For Spotify-TUI completion
+[ -f "$HOME/.aliases" ]    && source ~/.aliases     # Aliases - For a full list of active aliases, run `alias`.
+[ -f "$HOME/.functions" ]  && source ~/.functions   # functions to improve productivity
 
 echo "
 # This file was created by the dotfiles sourced zshrc by adityastomar67.
