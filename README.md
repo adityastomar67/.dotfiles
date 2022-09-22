@@ -58,6 +58,39 @@ Run this code snippet in your terminal **(Coming soon...)**
 curl -sL https://bit.ly/Fresh-Install | sh -s -- --dots
 ```
 
+### Install Manually
+
+```bash
+# Download
+git clone https://github.com/adityastomar67/.dotfiles.git $HOME
+cd ~/.dotfiles
+
+# Install
+./install.sh
+
+# zsh plugin install
+exec zsh
+```
+
+### Temporary Install
+>If you do not want to dirty your `$HOME` directory
+```bash
+# Creating a temporary home directory and Downloading
+mkdir /tmp/tmphome
+cd /tmp/tmphome
+git clone https://github.com/adityastomar67/.dotfiles.git
+cd .dotfiles
+
+# Set HOME environment temporary
+export HOME=/tmp/tmphome
+
+# Install
+./install.sh
+
+# zsh plugin install
+exec zsh
+```
+
 # TODO For this Repo
 
 ### Tasks
