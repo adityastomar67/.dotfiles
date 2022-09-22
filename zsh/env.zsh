@@ -33,6 +33,7 @@ export GPG_TTY="$(tty)"
 # export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # export MANPAGER='/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
 export MANPAGER='nvim +Man! +"set nocul" +"set noshowcmd" +"set noruler" +"set noshowmode" +"set laststatus=0" +"set showtabline=0" +"set nonumber"'
+
 if [ ! $(echo $MANPAGER | awk '{print $1}') = nvim ]; then
   export MANPAGER="less -s +M +Gg"
   export LESS="--RAW-CONTROL-CHARS"

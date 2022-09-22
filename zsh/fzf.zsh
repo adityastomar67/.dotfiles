@@ -1,6 +1,5 @@
 AWESOME_FZF_LOCATION="~/.dotfiles/zsh/fzf.zsh"
 
-
 #List Awesome FZF Functions
 function fzf-awesome-list() {
 if [[ -f $AWESOME_FZF_LOCATION ]]; then
@@ -13,7 +12,6 @@ fi
         *) "fzf-"$selected;;
     esac
 }
-
 
 #Enhanced rm
 function fzf-rm() {
