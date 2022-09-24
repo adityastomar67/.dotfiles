@@ -6,7 +6,7 @@ if [[ ! $(command -v stow) ]]; then
 fi
 
 ## Making Backups
-list="$HOME/.dotfiles/bin/text.txt"
+list="$HOME/.dotfiles/bin/file.txt"
 while IFS= read -r item; do
     mv "$item" "$item.backup"
 done <"$list"
