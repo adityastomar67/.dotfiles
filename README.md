@@ -69,7 +69,7 @@ cd ~/.dotfiles
 ./install.sh
 
 # zsh plugin install
-exec zsh
+source $HOME/zsh/.zshrc
 ```
 
 ### Temporary Install
@@ -88,7 +88,7 @@ export HOME=/tmp/tmphome
 ./install.sh
 
 # zsh plugin install
-exec zsh
+source $HOME/zsh/.zshrc
 ```
 
 # TODO For this Repo
