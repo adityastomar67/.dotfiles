@@ -12,6 +12,7 @@
 import:
   - ~/.config/alacritty/colors.yml
   - ~/.config/alacritty/fonts.yml
+# - ~/.config/alacritty/keys.yml
 
 ## Set environment variables
 env:
