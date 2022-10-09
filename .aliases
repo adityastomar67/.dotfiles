@@ -266,7 +266,7 @@ alias afind='ack -il'
 alias rd='rmdir'
 alias run-help='man'
 
-alias pac="sudo pacman -S"
+alias i="sudo pacman -S"
 alias pacupg='sudo pacman -Syu'
 alias pacin='sudo pacman -S'
 alias pacins='sudo pacman -U'
@@ -563,3 +563,4 @@ alias lsmux="tmux ls"
 for command in mount umount sv pacman updatedb su shutdown poweroff reboot ; do
 	alias $command="sudo $command"
 done; unset command
+alias l='exa -l --color=always --icons --git --group-directories-first'
