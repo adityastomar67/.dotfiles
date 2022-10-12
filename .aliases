@@ -564,3 +564,4 @@ for command in mount umount sv pacman updatedb su shutdown poweroff reboot ; do
 	alias $command="sudo $command"
 done; unset command
 alias l='exa -l --color=always --icons --git --group-directories-first'
+alias yt="ytfzf -t"
