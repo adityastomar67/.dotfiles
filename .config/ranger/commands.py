@@ -63,3 +63,27 @@ class my_edit(Command):
         # This is a generic tab-completion function that iterates through the
         # content of the current directory.
         return self._tab_directory_content()
+
+
+class change_wall(Command):
+    def execute(self):
+        if self.arg(1):
+            target_filename = self.rest(1)
+        else:
+            target_filename = self.fm.thisfile.path
+
+        if not os.path.exists(target_filename):
+            self.fm.notify("The given file does not exist!", bad=True)
+            return
+
+        _, file_extension = os.path.splitext(target_filename)
+
+        if file_extension == ".jpg" or file_extension == ".png":
+            os.system("feh --bg-fill " + target_filename)
+            self.fm.notify("File " + target_filename + " is set as Wallpaper")
+
+        else:
+            self.fm.notify("File " + target_filename + " is not a Picture Format", bad=True)
+
+    def tab(self, _):
+        return self._tab_directory_content()
