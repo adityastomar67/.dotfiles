@@ -133,6 +133,8 @@ ksuperkey -e 'Super_R=Alt_L|F1' &
 conky -b &
 conky -q -c /home/adi/.config/conky/.conkyrc &
 
+xrdb merge ~/.config/st/.xresources
+
 # Enable power management
 xfce4-power-manager &
 
