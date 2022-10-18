@@ -202,7 +202,7 @@ alias pip-update='sudo pip3 list --outdated --format=freeze | grep -v '^\-e' | c
 alias npm-update='sudo npm install npm@latest -g'
 
 # alias todoe='nvim ~/Dropbox/writing/notes/To-do.md'
-alias nvconfig="nvim ~/.config/nvim/init.lua"
+alias nvconfig="cd ~/.config/nvim && nvim init.lua"
 alias zedit="nvim ~/zsh/.zshrc"
 alias bedit="nvim ~/.bashrc"
 alias fedit="nvim $XDG_CONFIG_HOME/fish/config.fish"
