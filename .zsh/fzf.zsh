@@ -217,8 +217,8 @@ export FZF_DEFAULT_OPTS="
   --color fg:$base07
   --color fg+:$base00
   --color bg+:-1
-  --color hl:$base10
-  --color hl+:$base15
+  --color hl:#FF5858
+  --color hl+:#FCE700
   --color info:$base02
   --color prompt:$base01
   --color spinner:$base12
