@@ -237,7 +237,7 @@ export FZF_DEFAULT_OPTS="
   --bind tab:down,shift-tab:up
   --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
   --prompt '  '
-  --pointer ' '
+  --pointer ' '
   --layout=reverse
   --border none
   --height 40"
