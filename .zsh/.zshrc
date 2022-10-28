@@ -44,6 +44,8 @@ echo "# This file was created by the dotfiles sourced zshrc by adityastomar67.
 if [ -r ~/.zsh/.zshrc ]; then
     source ~/.zsh/.zshrc
 fi
+
+[ -f "$HOME/.alias_temp" ] && source "$HOME/.alias_temp"
 " > $HOME/.zshrc
 
 ## Calling scrpits and Operations
