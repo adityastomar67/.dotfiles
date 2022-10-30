@@ -122,5 +122,3 @@ EQUALS
 EOF
 
 command -v zoxide &>/dev/null && eval "$(zoxide init zsh)"
-
-# vim:ft=zsh:nowrap
