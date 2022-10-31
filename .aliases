@@ -512,7 +512,7 @@ alias unexport='unset'
 
 alias cp="rsync -WavP --human-readable --progress"
 alias mv='mv -i'
-alias rm="trash --trash-dir='$HOME/.Trash' --recursive"
+# alias rm="trash --trash-dir='$HOME/.Trash' --recursive"
 
 alias -s pdf=zathura
 alias -s ps=gv
