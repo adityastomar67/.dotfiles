@@ -18,6 +18,6 @@ static char *expand(DynamicArray *s) { if (!p_alloc(s, 1)) return NULL; s->init 
 static inline void pop(DynamicArray* s) { s->init -= s->elSize; }
 static inline void empty(DynamicArray* s) { s->init = 0; }
 static inline int size(DynamicArray const * s) { return s->init / s->elSize; }
-static inline void assign(DynamicArray* s, DynamicArray const *o) { 
+static inline void assign(DynamicArray* s, DynamicArray const *o) {
 	if (p_alloc(s, size(o))) memcpy(s->content, o->content, (s->init=o->init));
 }
