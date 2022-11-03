@@ -142,6 +142,10 @@ function fzf-git-status() {
     fi
 }
 
+function fzf-tldr() {
+    tldr --list | fzf --preview "tldr {1} --color=always" --preview-window=right,70% | xargs tldr
+}
+
 # Checkout to existing branch or else create new branch. gco <branch-name>.
 # Falls back to fuzzy branch selector list powered by fzf if no args.
 function fzf-checkout() {
