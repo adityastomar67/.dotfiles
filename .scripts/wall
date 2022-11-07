@@ -1,17 +1,19 @@
 #!/bin/bash
 # Script to Download my Updated Wallpapers from Github
-mkdir -p $HOME/.config/wall/Wallpapers
+[ ! -e "$HOME/.config/wall" ] && mkdir -p $HOME/.config/wall
 [ -d "$HOME/.config/wall/Wallpapers" ] && rm -rf ~/.config/wall/Wallpapers
 
-cd ~/.config/wall/
+cd ~/.config/wall
 if [ -f 'wall*' ]; then
     echo "yes"
   command rm wall*
 fi
 
-git clone https://github.com/adityastomar67/Wallpapers
-mv ~/.config/wall/Wallpapers/wall* .
-rm -rf ~/.config/wall/Wallpapers
+git clone https://github.com/adityastomar67/Wallpapers $HOME/.config/wall/
+# mv ~/.config/wall/Wallpapers/wall* .
+# rm -rf ~/.config/wall/Wallpapers
+cd $HOME/.config/wall/
+mv Static/* .
 ls | grep "wall[0-9]*.png" > list.txt
 
 list="./list.txt"

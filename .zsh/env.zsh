@@ -79,7 +79,7 @@ EOF
 ## Adding to the PATH
 while read directory
 do
-  [ ! -d "$HOME/$directory" ] && export PATH="$PATH:$HOME/$directory"
+  [ -d "$HOME/$directory" ] && export PATH="$PATH:$HOME/$directory"
 done <<-EOF
 .spicetify
 .config/adb-fastboot/platform-tools

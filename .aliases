@@ -21,6 +21,11 @@ if [ $(command -v exa) ]; then
     alias l.='exa -a | egrep "^\."'
 fi
 
+alias mysql='mysql -u adi -p'
+if [ $(command -v mycli) ]; then
+    alias mysql='mycli -u adi'
+fi
+
 if [ $(command -v logo-ls) ]; then
     alias lls="logo-ls"
     alias lla="logo-ls -l --all"
@@ -144,7 +149,6 @@ alias most='du -hsx * | sort -rh | head -10'
 alias wget="wget -c"
 alias tips='lbrynet txo spend --type=support --is_not_my_input --blocking'
 alias calc='bc -l'
-alias mysql='mysql -u adi -p'
 alias bt='bluetoothctl'
 alias jctl="journalctl -p 3 -xb"
 alias grep='grep --color=auto'
