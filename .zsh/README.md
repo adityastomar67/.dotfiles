@@ -31,6 +31,6 @@ curl -sL https://bit.ly/Fresh-Install | sh -s -- --zsh
 > Make sure you have zsh installed and setup.
 ```bash
 git clone https://github.com/adityastomar67/.dotfiles.git /tmp/dots
-cp -r /tmp/dots/zsh $HOME/zsh
-source $HOME/zsh/.zshrc
+cp -r /tmp/dots/.zsh $HOME/.zsh
+source $HOME/.zsh/.zshrc
 ```
