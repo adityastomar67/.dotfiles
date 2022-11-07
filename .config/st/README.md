@@ -1,89 +1,53 @@
-Similar to [dwm-flexipatch](https://github.com/bakkeby/dwm-flexipatch) this st 0.8.5 (baa9357, 2022-05-01) project has a different take on st patching. It uses preprocessor directives to decide whether or not to include a patch during build time. Essentially this means that this build, for better or worse, contains both the patched _and_ the original code. The aim being that you can select which patches to include and the build will contain that code and nothing more.
+<div align="center">
+  <h2>Module: Suckless Terminal.</h1>
+  Brief description of how this sub configuration actually works.
+</div>
 
-For example to include the `alpha` patch then you would only need to flip this setting from 0 to 1 in [patches.h](https://github.com/bakkeby/st-flexipatch/blob/master/patches.def.h):
+#### Dependencies
+```bash
+# Void
+xbps-install libXft-devel libX11-devel harfbuzz-devel libXext-devel libXrender-devel libXinerama-devel
+
+# Debian (and ubuntu probably)
+apt install build-essential libxft-dev libharfbuzz-dev
+
+# most of these are already installed on Arch based distros
+```
+
+#### Installation
+
+This version ST uses preprocessor directives to decide whether or not to include a patch during build time. Essentially this means that this build, for better or worse, contains both the patched _and_ the original code. The aim being that you can select which patches to include and the build will contain that code and nothing more.
+
+For example to include the `alpha` patch then you would only need to flip this setting from 0 to 1 in [patches.h](https://github.com/adityastomar67/.dotfiles/blob/master/.config/st/patches.def.h):
 ```c
 #define ALPHA_PATCH 1
 ```
 
 Once you have found out what works for you and what doesn't then you should be in a better position to choose patches should you want to start patching from scratch.
 
-Alternatively if you have found the patches you want, but don't want the rest of the flexipatch entanglement on your plate then you may want to have a look at [flexipatch-finalizer](https://github.com/bakkeby/flexipatch-finalizer); a custom pre-processor tool that removes all the unused flexipatch code leaving you with a build that contains the patches you selected.
-
 Refer to [https://st.suckless.org/](https://st.suckless.org/) for details on the st terminal, how to install it and how it works.
 
----
+#### To Install ST alone frome this config, run this command (Coming Soon!!)
+```bash
+curl -sL https://bit.ly/Fresh-Install | sh -s -- --st
+```
 
-### Changelog:
+#### For Manual Installation
+```bash
+git clone https://github.com/adityastomar67/.dotfiles.git /tmp/dots
+cp -r /tmp/dots/.config/st $HOME/.config/st
+cd ~/.config/st
+sudo make install
+xrdb merge pathToXresourcesFile
+```
+> TIP: Put the xrdb merge command in your wm's autostart or similar
 
-2022-04-11 - Added the background image reload patch
-
-2022-03-10 - Added the background image patch
-
-2022-02-24 - Upgraded to st 0.8.5 e823e23, 2022-02-17 - removing osc_10_11_12_2 patch as no longer relevant
-
-2021-08-18 - Added the CSI 22 & 23 patch
-
-2021-07-26 - Added columns patch
-
-2021-07-07 - Added sixel scrollback and the openurlonclick patch
-
-2021-06-09 - Added the hide terminal cursor patch
-
-2021-05-16 - Added swapmouse patch
-
-2021-05-11 - Added default cursor patch
-
-2021-05-10 - Upgrade to 46b02f, 2021-03-28
-
-2021-05-09 - Added the sync, alpha-focus-hightlight and vim browse patches
-
-2021-05-08 - Added blinking cursor, delkey, undercurl,universcroll, desktopentry, netwmicon and osc_10_11_12_2 patches
-
-2021-05-07 - Added xresources reload patch
-
-2021-04-21 - Added (temporary?) hack for Variable Fonts (VT) support
-
-2021-03-10 - Added sixel support
-
-2021-02-26 - Added the dynamic cursor color patch
-
-2021-02-15 - Added the alpha gradient patch
-
-2020-11-14 - Added the wide glyphs patch
-
-2020-10-23 - Added the monochrome patch
-
-2020-08-08 - Re-added the visualbell patch
-
-2020-06-26 - Added the single drawable buffer patch as per the FAQ in order to get w3m images to display
-
-2020-06-25 - Upgrade to 0.8.4 (367803, 2020-06-19)
-
-2020-06-14 - Added w3m patch
-
-2020-06-10 - Upgrade to 249ef9, 2020-06-01
-
-2020-06-05 - Added the ligatures patch
-
-2020-05-20 - Upgrade to 222876, 2020-05-09, and removed visualbell 1, 2, 3 patches and force redraw after keypress due to incompatibility. Refer to tag [371878](https://github.com/bakkeby/st-flexipatch/tree/371878) if you want to try these out.
-
-2020-04-20 - Upgrade to c279f5, 2020-04-19, and added the force redraw on pselect after key is pressed patch and the externalpipein patch
-
-2020-03-29 - Added invert and workingdir patches
-
-2020-03-24 - Upgraded to latest (master) of st (commit 51e19ea11dd42eefed1ca136ee3f6be975f618b1 at the time of writing). Custom changes to make the altscreen mouse scollback patch working.
-
-2020-03-21 - Added font2 patch
-
-2020-01-07 - Added st embedder patch
-
-2019-10-16 - Introduced [flexipatch-finalizer](https://github.com/bakkeby/flexipatch-finalizer)
-
-2019-09-17 - Added relativeborder, fix-keyboard-input, iso14755, visualbell, right-click-to-plumb, boxdraw and keyboard-select patches
-
-2019-09-16 - Added alpha, anysize, bold-is-not-bright, clipboard, copyurl, disable-fonts, externalpipe, fixime, hidecursor, newterm, open-copied-url, vertcenter, scrollback, spoiler, themed cursor and xresources patches
-
-### Patches included:
+<details>
+  <summary>
+  
+   #### Patches included:
+  
+  </summary>
 
    - [alpha](https://st.suckless.org/patches/alpha/)
       - adds transparency for the terminal
@@ -289,3 +253,13 @@ Refer to [https://st.suckless.org/](https://st.suckless.org/) for details on the
    - [xresources](https://st.suckless.org/patches/xresources/)
       - adds the ability to configure st via Xresources
       - during startup, st will read and apply the resources named in the resources[] array in config.h
+      
+ </details>
+ 
+#### Xresources live-reload
+
+```bash
+# make an alias for this command
+
+alias rel="xrdb merge pathToXresourcesFile && kill -USR1 $(pidof st)"
+```
