@@ -201,7 +201,7 @@ alias porn='mpv "http://www.pornhub.com/random"'
 alias ip='curl ipinfo.io/ip'
 alias :q='exit'
 alias please='sudo $(fc -ln -1)'
-alias pip-update='sudo pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U'
+alias pip-update='sudo pip3 list --outdated | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U'
 
 alias npm-update='sudo npm install npm@latest -g'
 
@@ -503,8 +503,6 @@ alias -g NUL="> /dev/null 2>&1"
 alias -g P="2>&1| pygmentize -l pytb"
 
 alias dud='du -d 1 -h'
-alias duf='du -sh *'
-(( $+commands[fd] )) || alias fd='find . -type d -name'
 alias ff='find . -type f -name'
 
 alias h='history'
