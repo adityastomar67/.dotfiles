@@ -17,6 +17,15 @@ function fzf-awesome-list() {
     esac
 }
 
+#Enhanced Uninstall
+function fzf-uninstall() {
+    sudo -v &> /dev/null
+    clear
+    echo "${RED_FG}Uninstall Menu...${RESET}"
+    pacman -Qq | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns
+    echo "${GREEN_BG}Uninstalled!${RESET}"
+}
+
 #Enhanced rm
 function fzf-rm() {
     if [[ "$#" -eq 0 ]]; then
