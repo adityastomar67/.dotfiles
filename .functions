@@ -38,6 +38,7 @@ function get_temperature() {
 
 function empty_trash() {
     printf "%s\n" "EMPTYING TRASH";
+    [ ! -d "$HOME/.Trash/files" ] && mkdir -p "$HOME/.Trash/files"
     sudo rm -rf $HOME/.Trash/files/*;
 }
 
