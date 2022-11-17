@@ -34,7 +34,7 @@ if [ -r ~/.zsh/.zshrc ]; then
     source ~/.zsh/.zshrc
 fi
 
-[ -f "$HOME/.alias_temp" ] && source "$HOME/.alias_temp"
+[ -f "$HOME/.dotfiles/.alias_temp" ] && source "$HOME/.dotfiles/.alias_temp"
 " > $HOME/.zshrc
 
 ## Calling scrpits and Operations
