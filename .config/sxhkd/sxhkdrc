@@ -2,8 +2,7 @@
 
 # Terminal (alacritty)
 super + Return
-	alacritty
-
+    st
 ##---------- Rofi Launcher & Menus ----------##
 
 # Rofi App Launcher
