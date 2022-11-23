@@ -19,11 +19,13 @@ if [ $(command -v exa) ]; then
     alias ll='exa -l --color=always --icons --group-directories-first'
     alias lt='exa -aT --level=2 --color=always --group-directories-first'
     alias l.='exa -a | egrep "^\."'
+    alias l='exa -l --color=always --icons --git --group-directories-first'
 fi
 
-alias mysql='mysql -u adi -p'
 if [ $(command -v mycli) ]; then
     alias mysql='mycli -u adi'
+else
+    alias mysql='mysql -u adi -p'
 fi
 
 if [ $(command -v logo-ls) ]; then
@@ -79,9 +81,10 @@ if [ $(command -v youtube-dl) ]; then
     alias ytv-best="youtube-dl -f bestvideo+bestaudio "
 fi
 
-alias df='df -h'
 if [ $(command -v duf) ]; then
     alias df='duf'
+else
+    alias df='df -h'
 fi
 
 if [ $(command -v yay) ]; then
@@ -240,7 +243,7 @@ alias ccbonsai="cbonsai -ilt 0.02 -c '  ,  ,  ,  ,  ' -L 5"
 alias fzi="$HOME/.fzfimg.sh"
 alias fzr="fzf --layout=reverse --prompt ' ' --pointer '=>' --preview='less {}' --bind shift-up:preview-page-up,shift-down:preview-page-down"
 
-alias yts="ytfzf -t"
+alias yt="ytfzf -t"
 alias startx='startx -- -keeptty >~/.xorg.log 2>&1'
 
 alias cd..='cd ../'
@@ -489,7 +492,7 @@ alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 
-# Command line head / tail shortcuts
+# Command line shortcuts
 alias -g H='| head'
 alias -g T='| tail'
 alias -g G='| grep'
@@ -559,11 +562,9 @@ alias luamake="$HOME/.opt/lua-language-server/3rd/luamake/luamake"
 
 # Tmux Aliases
 alias attach='tmux attach -t'
-alias lsmux="tmux ls"
+alias ts="tmux ls"
 
 # sudo not required for some system commands
 for command in mount umount sv pacman updatedb su shutdown poweroff reboot ; do
 	alias $command="sudo $command"
 done; unset command
-alias l='exa -l --color=always --icons --git --group-directories-first'
-alias yt="ytfzf -t"

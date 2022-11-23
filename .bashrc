@@ -16,7 +16,6 @@ export PATH=~/.scripts:$PATH   # Making my scripts run without typing the whole 
 ## Sourcing
 source ~/.aliases
 source ~/.functions
-source ~/zsh/*
 
 ### RANDOM COLOR SCRIPT ###
 # Get this script from my GitLab: gitlab.com/dwt1/shell-color-scripts
@@ -41,7 +40,7 @@ if [ ! -d ~/.bash_it ]; then
 fi
 
 # Path to the bash it configuration
-export BASH_IT="/home/adi/.bash_it"
+export BASH_IT="$HOME/.bash_it"
 
 # Lock and Load a custom theme file.
 # Leave empty to disable theming.

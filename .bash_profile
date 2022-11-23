@@ -5,6 +5,4 @@
 # ██║░░░░░██║░░██║╚█████╔╝██║░░░░░██║███████╗███████╗
 # ╚═╝░░░░░╚═╝░░╚═╝░╚════╝░╚═╝░░░░░╚═╝╚══════╝╚══════╝
 
-[[ -f ~/.bashrc ]] && . ~/.bashrc
-
-source /home/adi/.config/broot/launcher/bash/br
+[[ -f ~/.dotfiles/.bashrc ]] && . ~/.dotfiles/.bashrc
