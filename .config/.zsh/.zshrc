@@ -30,8 +30,8 @@ EOF
 
 echo "# This file was created by the dotfiles sourced zshrc by adityastomar67.
 # Do not edit the file directly. Instead, add any settings overrides in this file.
-if [ -r ~/.zsh/.zshrc ]; then
-    source ~/.zsh/.zshrc
+if [ -r ~/.config/.zsh/.zshrc ]; then
+    source ~/.config/.zsh/.zshrc
 fi
 
 [ -f "$HOME/.dotfiles/.alias_temp" ] && source "$HOME/.dotfiles/.alias_temp"
@@ -43,4 +43,4 @@ motivate ;echo                    # Random Motivational Quotes
 # header ;echo                      # Header for adityastomar67
 set -o vi                         # Vi-mode
 
-source $HOME/.zsh/tmux.zsh
+source $HOME/.config/.zsh/tmux.zsh
