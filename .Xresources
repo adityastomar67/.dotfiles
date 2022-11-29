@@ -8,3 +8,4 @@
 #include ".config/.Xresources.d/colors"
 #include ".config/.Xresources.d/fonts"
 #include ".config/.Xresources.d/rxvt-unicode"
+#include ".config/.Xresources.d/st"
