@@ -31,7 +31,7 @@ workspaces
 
 bspc config border_width 0
 bspc config window_gap 10
-bspc config split_ratio 0.50
+bspc config split_ratio 0.60
 
 bspc config focused_border_color "#FF8E00"
 bspc config normal_border_color "$BACKGROUND"
@@ -51,6 +51,7 @@ bspc rule -r *:*
 
 # 1 > terminal
 bspc rule -a Alacritty desktop='^1' follow=on focus=on
+bspc rule -a St desktop='^1' follow=on focus=on
 bspc rule -a Xfce4-terminal desktop='^1' follow=on focus=on
 
 # 2 > web
@@ -132,8 +133,6 @@ ksuperkey -e 'Super_R=Alt_L|F1' &
 # Launch Conky
 conky -b &
 conky -q -c /home/adi/.config/conky/.conkyrc &
-
-xrdb merge ~/.config/st/.xresources
 
 # Enable power management
 xfce4-power-manager &
