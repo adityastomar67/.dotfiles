@@ -1,6 +1,11 @@
 # --theme=OneHalfDark
+# --theme="Sublime Snazzy" # Supports Italics here and there
+--theme=fly16
 --style=full
+# --style="header,grid"
+# --color=always
+# --decorations=always
 --italic-text=always
---color=always
---decorations=always
---theme="Sublime Snazzy" # Supports Italics here and there
+--map-syntax "*bashrc:Bourne Again Shell (bash)"
+--map-syntax "*inputrc:Bourne Again Shell (bash)"
+--map-syntax "*vimrc:VimL"
