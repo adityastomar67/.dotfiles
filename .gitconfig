@@ -3,9 +3,6 @@
 	name = Aditya Singh Tomar
 
 [core]
-	editor = nvim
-	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	pager = delta
 
 [web]
 	browser = google-chrome
@@ -267,12 +264,12 @@
 	process = git-lfs filter-process
 	required = true
 
-[rerere]
-	enabled = true
-
 [core]
 	#editor = st -n -w    # Sublime Text
-	editor = code -n -w    # VS Code
+    #editor = code -n -w    # VS Code
+	editor = nvim
+	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	pager = delta
 	ignorecase = false
 	excludesfile = /home/adi/.gitignore_global
 
