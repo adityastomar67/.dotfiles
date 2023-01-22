@@ -131,8 +131,8 @@ ksuperkey -e 'Super_L=Alt_L|F1' &
 ksuperkey -e 'Super_R=Alt_L|F1' &
 
 # Launch Conky
-conky -b &
-conky -q -c /home/adi/.config/conky/.conkyrc &
+# conky -b &
+# conky -q -c /home/adi/.config/conky/.conkyrc &
 
 # Enable power management
 xfce4-power-manager &
