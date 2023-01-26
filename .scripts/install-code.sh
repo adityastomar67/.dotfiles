@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # EXTENSIONs
 code --force --install-extension ms-vscode.sublime-keybindings@4.0.10
 code --force --install-extension octref.vetur@0.34.1
