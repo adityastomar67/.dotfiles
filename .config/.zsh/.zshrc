@@ -17,9 +17,6 @@ if [ ! -f "$HOME/.zshrc" ]; then
     " > $HOME/.zshrc
 fi
 
-## Explicitly launching of tmux
-source $HOME/.config/.zsh/tmux.zsh
-
 ## Sourcing config files
 while read file
 do
@@ -34,10 +31,13 @@ done <<-EOF
     fzf
 EOF
 
+## Explicitly launching of tmux
+source $HOME/.config/.zsh/tmux.zsh
+
 ## Sourcing other files
 [ -f "$HOME/.dotfiles/.aliases" ]    && source $HOME/.dotfiles/.aliases     # Aliases - For a full list of active aliases, run `alias`.
 [ -f "$HOME/.dotfiles/.functions" ]  && source $HOME/.dotfiles/.functions   # functions to improve productivity
-[ -f "$HOME/.dotfiles/.alias_temp" ] && source "$HOME/.dotfiles/.alias_temp"
+[ -f "$HOME/.dotfiles/.temp_src" ]   && source "$HOME/.dotfiles/.temp_src"
 
 ## Calling scrpits and Operations
 # echo -en "\x1b[2J\x1b[1;1H" ;echo # For faster clearing the Terminal
