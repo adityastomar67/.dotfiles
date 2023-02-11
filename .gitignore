@@ -65,3 +65,5 @@ todo.md
 .config/cmus/lib.pl
 .config/cmus/search-history
 text.txt
+.config/Thunar
+.temp_src

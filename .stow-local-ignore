@@ -1,4 +1,6 @@
 bin
+.aliases
+.functions
 .config/NVIM.BAK
 .config/nvim-NvChad
 .config/tmux
