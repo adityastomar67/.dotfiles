@@ -40,7 +40,7 @@ source $HOME/.config/.zsh/tmux.zsh
 [ -f "$HOME/.dotfiles/.temp_src" ]   && source "$HOME/.dotfiles/.temp_src"
 
 ## Calling scrpits and Operations
-# echo -en "\x1b[2J\x1b[1;1H" ;echo # For faster clearing the Terminal
+echo -en "\x1b[2J\x1b[1;1H" ;echo # For faster clearing the Terminal
 motivate ;echo                    # Random Motivational Quotes
 # header ;echo                      # Header for adityastomar67
 set -o vi                         # Vi-mode
