@@ -6,8 +6,14 @@
 # ██╗░░╚██╔╝░╚██╔╝░██║░░██║███████╗███████╗██║░░░░░░░░██║░░░
 # ╚═╝░░░╚═╝░░░╚═╝░░╚═╝░░╚═╝╚══════╝╚══════╝╚═╝░░░░░░░░╚═╝░░░
 
+## Cheack for the program is installed or not
+if ! command -v wal &> /dev/null
+then
+    sudo pacman -S pywal --noconfirm
+fi
+
 ## Based on pywal
 count=$(command ls ~/.config/wall | grep "wall[0-9]*.jpg" | wc -l)
 # wal -a 92 -qi "$HOME/.config/wall/wall$((1 + RANDOM%$count)).jpg"
 
-wal -a 92 -qi "$HOME/.config/wall/wall71.jpg"
+wal -a 92 -qi "$HOME/.config/wall/wall78.jpg"
