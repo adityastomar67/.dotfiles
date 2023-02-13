@@ -227,20 +227,20 @@ function _fzf_comprun() {
 
 # FZF Defaults
 export FZF_DEFAULT_OPTS="
-  --color fg:$base07
-  --color fg+:$base00
+  --color fg:#d4d4d5
+  --color fg+:#f5c9c9
   --color bg+:-1
-  --color hl:#FF5858
+  --color hl:#0080ff
   --color hl+:#FCE700
-  --color info:$base02
-  --color prompt:$base01
-  --color spinner:$base12
-  --color pointer:$base07
-  --color marker:$base03
-  --color border:$background
+  --color info:#79dcaa
+  --color prompt:#00788A
+  --color spinner:#3877ff
+  --color pointer:#d4d4d5
+  --color marker:#ffe59e
+  --color border:#101317
   --color gutter:-1
-  --color info:$base05
-  --color header:$base08
+  --color info:#c397d8
+  --color header:#949494
   --bind 'ctrl-j:preview-down'
   --bind 'ctrl-k:preview-up'
   --bind 'ctrl-a:select-all'
@@ -251,7 +251,6 @@ export FZF_DEFAULT_OPTS="
   --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
   --prompt '  '
   --pointer ' '
-  --layout=reverse
   --border none
   --height 40"
 export FZF_DEFAULT_COMMAND='fd --hidden --follow'
