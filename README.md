@@ -22,7 +22,8 @@
 A bunch of files that start with .(dot) and makes linux more awesome.
 ```
 
-![Screenshot](https://github.com/adityastomar67/.dotfiles/blob/master/bin/img/Screenshot.png)
+![Screenshot](https://user-images.githubusercontent.com/33474611/218635275-147eef14-e6f7-4967-852f-19410069012a.png)
+<!--![Screenshot](https://github.com/adityastomar67/.dotfiles/blob/master/bin/img/Screenshot.png)-->
 
 ## List of Common Dependencies
 
@@ -69,7 +70,7 @@ cd ~/.dotfiles
 ./install.sh
 
 # zsh plugin install
-source $HOME/zsh/.zshrc
+source $HOME/.config/.zsh/.zshrc
 ```
 
 ### Temporary Install
@@ -88,9 +89,59 @@ export HOME=/tmp/tmphome
 ./install.sh
 
 # zsh plugin install
-source $HOME/zsh/.zshrc
+source $HOME/.config/.zsh/.zshrc
 ```
+## :art: <samp>COLORSCHEME</samp>
 
+   Apparently, my colorscheme doesn't have a name yet. It is based around [rxyhn](https://github.com/rxyhn)'s colorscheme. Feel free to suggest a name for it on the [discussions](https://github.com/janleigh/dotfiles/discussions) tab. Also, here's a nice preview of it.
+
+   <p align="center">
+      <img src="https://user-images.githubusercontent.com/33474611/218638930-dfc983ee-ae4a-41f1-8755-688772152b36.png" alt="Colorscheme Showcase">
+   </p>
+
+   <details>
+   <summary><strong>Xresources</strong></summary>
+
+   ```
+    ! special
+    *.foreground:   #c5c8c9
+    *.background:   #0B0F10
+
+    ! black
+    *.color0:       #2C3333
+    *.color8:       #131718
+
+    ! red
+    *.color1:       #df5b61
+    *.color9:       #ee6a70
+
+    ! green
+    *.color2:       #87c7a1
+    *.color10:      #96d6b0
+
+    ! yellow
+    *.color3:       #de8f78
+    *.color11:      #ffb29b
+
+    ! blue
+    *.color4:       #6791c9
+    *.color12:      #7ba5dd
+
+    ! magenta
+    *.color5:       #bc83e3
+    *.color13:      #cb92f2
+
+    ! cyan
+    *.color6:       #70b9cc
+    *.color14:      #7fc8db
+
+    ! white
+    *.color7:       #c4c4c4
+    *.color15:      #cccccc
+   ```
+
+   </details>
+   
 # TODO For this Repo
 
 ### Tasks
