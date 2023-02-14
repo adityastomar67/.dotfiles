@@ -93,8 +93,6 @@ source $HOME/.config/.zsh/.zshrc
 ```
 ## :art: <samp>COLORSCHEME</samp>
 
-   Apparently, my colorscheme doesn't have a name yet. It is based around [rxyhn](https://github.com/rxyhn)'s colorscheme. Feel free to suggest a name for it on the [discussions](https://github.com/janleigh/dotfiles/discussions) tab. Also, here's a nice preview of it.
-
    <p align="center">
       <img src="https://user-images.githubusercontent.com/33474611/218638930-dfc983ee-ae4a-41f1-8755-688772152b36.png" alt="Colorscheme Showcase">
    </p>
