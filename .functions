@@ -6,6 +6,21 @@
 # ██╗██║░░░░░╚██████╔╝██║░╚███║╚█████╔╝░░░██║░░░██║╚█████╔╝██║░╚███║██████╔╝
 # ╚═╝╚═╝░░░░░░╚═════╝░╚═╝░░╚══╝░╚════╝░░░░╚═╝░░░╚═╝░╚════╝░╚═╝░░╚══╝╚═════╝░
 
+# If $1 is a directory, remove it with rm only
+function rm () {
+    for arg in "$@"; do
+        # check if the argument is a directory
+        if [ -d "$arg" ]; then
+            # if it is, then remove it with rm
+            command rm -rf "$arg"
+            # and continue to the next argument
+            continue
+        fi
+        # if it is not a directory, then remove it with the original rm
+        command rm "$arg"
+    done
+}
+
 # For Launcing NeoVim and SudoEdit with same command
 function v() {
     # [ ! -f $1 ] && nvim $1 && retu gccrn
