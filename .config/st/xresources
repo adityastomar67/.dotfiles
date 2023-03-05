@@ -6,7 +6,7 @@ Xft.rgba:	      rgb
 Xft.lcdfilter:	  lcddefault
 
 ! font
-st.font:          Operator Mono Lig:style:medium:pixelsize=16
+st.font:          Operator Mono Lig:style:medium:pixelsize=18
 
 ! window-padding
 st.borderpx:      20

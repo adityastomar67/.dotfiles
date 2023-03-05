@@ -142,7 +142,7 @@ xsetroot -cursor_name left_ptr
 
 # Restore wallpaper
 # bash $HOME/.fehbg_
-$HOME/.wallpy
+$HOME/.fehbg
 
 # Start mpd
 exec mpd &

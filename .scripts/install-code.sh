@@ -22,6 +22,7 @@ code --force --install-extension PKief.material-icon-theme
 code --force --install-extension moalamri.inline-fold
 code --force --install-extension foxundermoon.shell-format
 code --force --install-extension EliverLara.andromeda
+code --force --insatll-extension Chouzz.vscode-better-align
 # code --force --install-extension teabyii.ayu@0.20.2
 # code --force --install-extension matklad.rust-analyzer@0.2.727
 # code --force --install-extension GitHub.github-vscode-theme

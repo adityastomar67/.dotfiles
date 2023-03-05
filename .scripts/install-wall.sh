@@ -20,4 +20,4 @@ done < "$list"
 
 # Remove unnecessary files and set wallpaper
 command rm -rf .git/ README.md Static list.txt
-~/.wallpy
+[ -f "$HOME/.wallpy" ] && ~/.wallpy

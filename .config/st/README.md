@@ -44,9 +44,9 @@ xrdb merge pathToXresourcesFile
 
 <details>
   <summary>
-  
+
    #### Patches included:
-  
+
   </summary>
 
    - [alpha](https://st.suckless.org/patches/alpha/)
@@ -253,10 +253,16 @@ xrdb merge pathToXresourcesFile
    - [xresources](https://st.suckless.org/patches/xresources/)
       - adds the ability to configure st via Xresources
       - during startup, st will read and apply the resources named in the resources[] array in config.h
-      
+
  </details>
- 
+
 #### Xresources live-reload
+
+### shortcuts
+```
+alt + <comma>  -  Zoom In
+alt + <period> -  Zoom Out
+```
 
 ```bash
 # make an alias for this command
